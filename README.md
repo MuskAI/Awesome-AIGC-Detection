@@ -1,7 +1,7 @@
 # Awesome-AIGC-Detection [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  
 ![](ai-detector-social.jpg)
 
-This repo is created based on [This](https://github.com/RFAI2025/Awesome-AIGC-Image-Detection/tree/main)
+This repo is created based on [This](https://github.com/RFAI2025/Awesome-AIGC-Image-Detection/tree/main). Many thanks for their contribution and we will further expand latest papers and datasets here.
 
 Photographs are a means for people to document their daily experiences and are often seen as reliable sources of information. However, there is increasing concern that advancements in artificial intelligence (AI) technology could lead to the creation of fake images, potentially causing confusion and eroding trust in the authenticity of photos. The rapid advancement of AI-Generated Content (AIGC) has greatly impacted our daily lives, making the detection of such content a critical challenge for AI safety today. This is a collection list of research on AIGC image detection, intended to support progress in related areas.  
 
@@ -24,7 +24,7 @@ Photographs are a means for people to document their daily experiences and are o
 ## Papers
 <details open>
   <summary>2025</summary>
-
+  - [**Arxiv**] Orthogonal Subspace Decomposition for Generalizable AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2411.15633)]
   - [**KDD '25**] Improving Synthetic Image Detection Towards Generalization: An Image Transformation Perspective [[Paper](https://arxiv.org/pdf/2408.06741)][[Code](https://github.com/Ouxiang-Li/SAFE)]
   - [**arxiv**] TextureCrop: Enhancing Synthetic Image Detection through Texture-based Cropping [[Paper](https://arxiv.org/pdf/2407.15500)]
 </details>
