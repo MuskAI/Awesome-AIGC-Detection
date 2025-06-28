@@ -27,12 +27,22 @@ Photographs are a means for people to document their daily experiences and are o
 
   - [**ICML '25**] Few-Shot Learner Generalizes Across AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2501.08763)][[Code](https://github.com/teheperinko541/Few-Shot-AIGI-Detector)]
   - [**CVPR '25**] D<sup>3</sup> Scaling Up Deepfake Detection by Learning [[Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Yang_D3_Scaling_Up_Deepfake_Detection_by_Learning_from_Discrepancy_CVPR_2025_paper.pdf)][[Code](https://github.com/BigAandSmallq/D3)]
+  - [**CVPR '25**] SIDA: Social Media Image Deepfake Detection, Localization and Explanation with Large Multimodal Model [[Paper](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Huang_SIDA_Social_Media_CVPR_2025_supplemental.pdf)][[Code](https://github.com/hzlsaber/SIDA)]
   - [**CVPR '25**] A Bias-Free Training Paradigm for More General AI-generated Image Detection [[Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Guillaro_A_Bias-Free_Training_Paradigm_for_More_General_AI-generated_Image_Detection_CVPR_2025_paper.pdf)][[Code](https://github.com/grip-unina/B-Free)]
   - [**CVPR '25**] Any-Resolution AI-Generated Image Detection by Spectral Learning [[Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Karageorgiou_Any-Resolution_AI-Generated_Image_Detection_by_Spectral_Learning_CVPR_2025_paper.pdf)][[Code](https://github.com/mever-team/spai)]
   - [**CVPR '25**] TextureCrop: Enhancing Synthetic Image Detection through Texture-based Cropping [[Paper](https://arxiv.org/pdf/2407.15500)][[Code](https://github.com/mever-team/texture-crop)]
+  - [**CVPR '25**] HEIE: MLLM-Based Hierarchical Explainable AIGC Image Implausibility Evaluator [[Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Yang_HEIE_MLLM-Based_Hierarchical_Explainable_AIGC_Image_Implausibility_Evaluator_CVPR_2025_paper.pdf)][[Dataset](https://github.com/yfthu/HEIE/tree/main/Expl-AIGI-Eval%20Dataset)][[Code](https://github.com/yfthu/HEIE/tree/main/Expl-AIGI-Eval%20Dataset)]
   - [**KDD '25**] Improving Synthetic Image Detection Towards Generalization: An Image Transformation Perspective [[Paper](https://arxiv.org/pdf/2408.06741)][[Code](https://github.com/Ouxiang-Li/SAFE)]
-  - [**arxiv**] Orthogonal Subspace Decomposition for Generalizable AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2411.15633)][[code](https://github.com/YZY-stack/Effort-AIGI-Detection)]
+  - [**ICML '25**] Orthogonal Subspace Decomposition for Generalizable AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2411.15633)][[code](https://github.com/YZY-stack/Effort-AIGI-Detection)]
+  - [**WACV '25**] SFLD: Reducing the content bias for AI-generated Image Detection [[Paper](https://openaccess.thecvf.com/content/WACV2025/papers/Gye_Reducing_the_Content_Bias_for_AI-Generated_Image_Detection_WACV_2025_paper.pdf)]
+  - [**ICLR '25**] A SANITY CHECK FOR AI-GENERATED IMAGE DETECTION [[Paper](https://arxiv.org/pdf/2406.19435)][[Code](https://github.com/shilinyan99/AIDE)]
+  - [**ICLR '25**] FAKESHIELD: EXPLAINABLE IMAGE FORGERY DETECTION AND LOCALIZATION VIA MULTI-MODAL LARGE LANGUAGE MODELS [[Paper](https://arxiv.org/pdf/2410.02761)][[Code](https://github.com/zhipeixu/FakeShield)]
+  - [**arxiv**] Exploring the Collaborative Advantage of Low-level Information on Generalizable AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2504.00463)]
+  - [**arxiv**] HYPERDET: GENERALIZABLE DETECTION OF SYNTHESIZED IMAGES BY GENERATING AND MERGING A MIXTURE OF HYPER LORAS [[Paper](https://arxiv.org/pdf/2410.06044)]
   - [**arxiv**] Zooming In on Fakes: A Novel Dataset for Localized AI-Generated Image Detection with Forgery Amplification Approach [[Paper](https://arxiv.org/pdf/2504.11922)][[Code](https://github.com/clpbc/BR-Gen)]
+  - [**arxiv**] AntifakePrompt: Prompt-Tuned Vision-Language Models are Fake Image Detectors [[Paper](https://arxiv.org/pdf/2310.17419)][[Code](https://github.com/nctu-eva-lab/AntifakePrompt)]
+  - [**arxiv**] Can GPT tell us why these images are synthesized? Empowering Multimodal Large Language Models for Forensics [[Paper](https://arxiv.org/pdf/2504.11686)]
+  - [**arxiv**] Exploring Modality Disruption in Multimodal Fake News Detection [[Paper](https://arxiv.org/pdf/2504.09154)]
 </details>
 
 <details open>
@@ -43,6 +53,7 @@ Photographs are a means for people to document their daily experiences and are o
   - [**CVPR '24**] Rethinking the Up-Sampling Operations in CNN-based Generative Network for Generalizable Deepfake Detection [[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Tan_Rethinking_the_Up-Sampling_Operations_in_CNN-based_Generative_Network_for_Generalizable_CVPR_2024_paper.pdf)][[Code](https://github.com/chuangchuangtan/NPR-DeepfakeDetection)]
   - [**CVPR '24**] LaRE<sup>2</sup>: Latent Reconstruction Error Based Method for Diffusion-Generated Image Detection [[Paper](https://arxiv.org/pdf/2403.17465)][[Code](https://github.com/luo3300612/LaRE)]
   - [**CVPR '24**] AEROBLADE: Training-Free Detection of Latent Diffusion Images Using Autoencoder Reconstruction Error [[Paper](https://arxiv.org/pdf/2401.17879)][[Code](https://github.com/jonasricker/aeroblade)]
+  - [**ACL '24**] MiRAGeNews: Multimodal Realistic AI-Generated News Detection [[Paper](https://aclanthology.org/2024.findings-emnlp.959.pdf)][[Code](https://github.com/nosna/miragenews)]
   - [**ECCV '24**] Zero-Shot Detection of AI-Generated Images [[Paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02665.pdf)][[Code](https://github.com/grip-unina/ZED/)]
   - [**ECCV '24**] Leveraging Representations from Intermediate Encoder-blocks for Synthetic Image Detection [[Paper](https://arxiv.org/pdf/2402.19091)][[Code](https://github.com/mever-team/rine/tree/main?tab=readme-ov-file)]
   - [**ECCV '24**] Contrasting Deepfakes Diffusion via Contrastive Learning and Global-Local Similarities [[Paper](https://arxiv.org/pdf/2407.20337)][[Code](https://github.com/aimagelab/CoDE)]
@@ -65,6 +76,7 @@ Photographs are a means for people to document their daily experiences and are o
   - [**arxiv**] Let Real Images be as a Judger, Spotting Fake Images Synthesized with Generative Models [[Paper](https://arxiv.org/pdf/2403.16513)]
   - [**arxiv**] Detecting Image Attribution for Text-to-Image Diffusion Models in RGB and Beyond [[Paper](https://arxiv.org/pdf/2403.19653)][[Code](https://github.com/k8xu/ImageAttribution)][[Code](https://github.com/k8xu/ImageAttribution)]
   - [**arxiv**] MLEP: Multi-granularity Local Entropy Patterns for Generalized AI-generated Image Detection [[Paper](https://arxiv.org/pdf/2504.13726)]
+  - [**arxiv**] FFAA: Multimodal Large Language Model based Explainable Open-World Face Forgery Analysis Assistant [[Paper](https://arxiv.org/pdf/2408.10072)][[Code](https://ffaa-vl.github.io)]
 </details>
 
 <details open>
