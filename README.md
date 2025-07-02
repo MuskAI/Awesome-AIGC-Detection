@@ -5,13 +5,13 @@ This repo is created based on [This](https://github.com/RFAI2025/Awesome-AIGC-Im
 
 Photographs are a means for people to document their daily experiences and are often seen as reliable sources of information. However, there is increasing concern that advancements in artificial intelligence (AI) technology could lead to the creation of fake images, potentially causing confusion and eroding trust in the authenticity of photos. The rapid advancement of AI-Generated Content (AIGC) has greatly impacted our daily lives, making the detection of such content a critical challenge for AI safety today. This is a collection list of research on AIGC image detection, intended to support progress in related areas.  
 
-## Contents
+## 📃Contents
 - [Datasets](#Datasets)
 - [Papers](#Papers)
 - [Tools](#Tools)
 - [Others](#Others)
 
-## Datasets
+## 📚Datasets
 |  Year   | Dataset  |  Number of Real  |  Number of Fake  |  Source of Real Image  |  Generation Method of Fake Image  |
 |  ----  | ----  |  ----  | ----  |  ----  | ----  |
 | 2020  | [CNNSpot](https://peterwang512.github.io/CNNDetection/) | 362,000  |  362,000 | LSUN, ImageNet, CelebA, COCO... | ProGAN, StyleGAN, BigGAN, CRN, SITD... |
@@ -21,7 +21,7 @@ Photographs are a means for people to document their daily experiences and are o
 | 2023  | [DiffusionDB](https://github.com/poloclub/diffusiondb) | 3,300,000  |  16,000,000 | DiscordChatExporter | SD |
 | 2024  | WildFake | 2,557,278  | 1,013,446 | ImagNet, Laion, Wukong, COO...  | BigGAN, StyleGAN, StarGAN, Midjourney, DALLE... |
 
-## Papers
+## 📝Papers
 <details open>
   <summary>2025</summary>
 
