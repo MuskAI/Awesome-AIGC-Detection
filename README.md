@@ -24,7 +24,7 @@ Photographs are a means for people to document their daily experiences and are o
 ## 📝Papers
 <details open>
   <summary>2️⃣0️⃣2️⃣5️⃣</summary>
-
+  - ![](https://img.shields.io/badge/25-CVPR-green) Forensic Self-Descriptions Are All You Need for Zero-Shot Detection, Open-Set Source Attribution, and Clustering of AI-generated Images [[Paper](https://arxiv.org/abs/2503.21003)]
   - ![](https://img.shields.io/badge/25-ICML-blue) Few-Shot Learner Generalizes Across AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2501.08763)][[Code](https://github.com/teheperinko541/Few-Shot-AIGI-Detector)]
   - ![](https://img.shields.io/badge/25-ICML-blue) Orthogonal Subspace Decomposition for Generalizable AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2411.15633)][[code](https://github.com/YZY-stack/Effort-AIGI-Detection)]
   - ![](https://img.shields.io/badge/25-CVPR-green) D<sup>3</sup> Scaling Up Deepfake Detection by Learning [[Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Yang_D3_Scaling_Up_Deepfake_Detection_by_Learning_from_Discrepancy_CVPR_2025_paper.pdf)][[Code](https://github.com/BigAandSmallq/D3)]
