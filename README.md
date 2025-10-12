@@ -22,6 +22,7 @@ Photographs are a means for people to document their daily experiences and are o
 | 2024  | WildFake | 2,557,278  | 1,013,446 | ImagNet, Laion, Wukong, COO...  | BigGAN, StyleGAN, StarGAN, Midjourney, DALLE... |
 
 ## 📝Papers
+### Image
 <details open>
   <summary>2️⃣0️⃣2️⃣5️⃣</summary>
 
@@ -130,6 +131,10 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
   - ![](https://img.shields.io/badge/20-ECCV-yellow) What makes fake images detectable? Understanding properties that generalize [[Paper](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123710103.pdf)][[Code](https://github.com/chail/patch-forensics)]
   - ![](https://img.shields.io/badge/20-ECCV-yellow) FingerprintNet: Synthesized Fingerprints for Generated Image Detection [[Paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136740071.pdf)][[Code](https://github.com/prip-lab/fingerprint-synthesis)]🏷️
 </details>
+
+### Video
+
+### Text
 
 ## 🔧Tools
 
