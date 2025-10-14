@@ -134,6 +134,14 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 
 ### Video
 
+
+<details open>
+  <summary>2️⃣0️⃣2️⃣4️⃣</summary>
+
+  - ![](https://img.shields.io/badge/24-WACV-red) VideoFACT: Detecting Video Forgeries Using Attention, Scene Context, and Forensic Traces [[Paper](https://arxiv.org/abs/2211.15775)][[Code](https://github.com/ductai199x/videofact-wacv-2024)]
+
+</details>
+
 ### Text
 
 ## 🔧Tools
