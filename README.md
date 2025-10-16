@@ -134,6 +134,12 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 
 ### Video
 
+<details open>
+  <summary>2️⃣0️⃣2️⃣5️⃣</summary>
+
+  - ![](https://img.shields.io/badge/25-CVPR-green) Towards a Universal Synthetic Video Detector： From Face or Background Manipulations to Fully AI-Generated Content [[Paper](https://arxiv.org/abs/2412.12278)]
+
+</details>
 
 <details open>
   <summary>2️⃣0️⃣2️⃣4️⃣</summary>
