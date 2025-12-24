@@ -151,12 +151,20 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 ### Text
 
 <details open>
+  <summary>2️⃣0️⃣2️⃣5️⃣</summary>
+
+  - ![](https://img.shields.io/badge/25-NIPS-blue) Zero-Shot Detection of LLM-Generated Text via Implicit Reward Model [[Paper](https://openreview.net/forum?id=2VdsYVXLDl)]
+  - ![](https://img.shields.io/badge/25-ICLR-green) Training-free LLM-generated Text Detection by Mining Token Probability Sequences [[Paper](https://openreview.net/forum?id=vo4AHjowKi&noteId=tRSR0PLUwD)][[code](https://github.com/TrustMedia-zju/Lastde_Detector)]
+
+</details>
+
+<details open>
   <summary>2️⃣0️⃣2️⃣3️⃣</summary>
 
-   - ![](https://img.shields.io/badge/23-ICML-blue) DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature [[Paper](https://arxiv.org/abs/2301.11305)][[code](https://github.com/eric-mitchell/detect-gpt)]
+   - ![](https://img.shields.io/badge/23-ICML-yellow) DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature [[Paper](https://arxiv.org/abs/2301.11305)][[code](https://github.com/eric-mitchell/detect-gpt)]
 </details>
 
 ## 🔧Tools
 
 ## 🏙️Others
-Last updated on 2025.7.2
+Last updated on 2025.12.24
