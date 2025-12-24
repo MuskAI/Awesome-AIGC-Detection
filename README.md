@@ -55,7 +55,7 @@ Photographs are a means for people to document their daily experiences and are o
 
 <details open>
   <summary>2️⃣0️⃣2️⃣4️⃣</summary>
-  
+
   - ![](https://img.shields.io/badge/24-CVPR-green) FakeInversion: Learning to Detect Images from Unseen Text-to-Image Models by Inverting Stable Diffusion [[Paper](https://arxiv.org/pdf/2406.08603)][[Code](https://fake-inversion.github.io/)]
   - ![](https://img.shields.io/badge/24-CVPR-green) Forgery-aware Adaptive Transformer for Generalizable Synthetic [[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Forgery-aware_Adaptive_Transformer_for_Generalizable_Synthetic_Image_Detection_CVPR_2024_paper.pdf)][[Code](https://github.com/Michel-liu/FatFormer?tab=readme-ov-file)]
   - ![](https://img.shields.io/badge/24-CVPR-green) Rethinking the Up-Sampling Operations in CNN-based Generative Network for Generalizable Deepfake Detection [[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Tan_Rethinking_the_Up-Sampling_Operations_in_CNN-based_Generative_Network_for_Generalizable_CVPR_2024_paper.pdf)][[Code](https://github.com/chuangchuangtan/NPR-DeepfakeDetection)]
@@ -149,6 +149,12 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 </details>
 
 ### Text
+
+<details open>
+  <summary>2️⃣0️⃣2️⃣3️⃣</summary>
+
+   - ![](https://img.shields.io/badge/23-ICML-blue) DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature [[Paper](https://arxiv.org/abs/2301.11305)][[code](https://github.com/eric-mitchell/detect-gpt)]
+</details>
 
 ## 🔧Tools
 
