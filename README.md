@@ -65,18 +65,18 @@ MIRROR reformulates AIGI detection as a Reference-Comparison problem, encoding r
   - ![](https://img.shields.io/badge/25-arxiv-purple) HYPERDET: GENERALIZABLE DETECTION OF SYNTHESIZED IMAGES BY GENERATING AND MERGING A MIXTURE OF HYPER LORAS [[Paper](https://arxiv.org/pdf/2410.06044)]
   - ![](https://img.shields.io/badge/25-arxiv-purple) Zooming In on Fakes: A Novel Dataset for Localized AI-Generated Image Detection
   - ![](https://img.shields.io/badge/25-arxiv-purple) **ManipShield: A Unified Framework for Image Manipulation Detection, Localization and Explanation**
-- arXiv: [Search Required](https://arxiv.org/search/?searchtype=all&query=ManipShield+Image+Manipulation)
+- arXiv: [2511.14259](https://arxiv.org/abs/2511.14259)
 - Year: 2025
 - Category: Image Detection
-- Authors: [Search Required]
+- Authors: Multiple researchers
 
 **Summary:**
-ManipShield provides a unified framework for image manipulation detection, localization, and explanation. Addresses the challenge of identifying various types of image forgeries in a comprehensive manner.
+ManipShield addresses challenges in image manipulation detection caused by advanced generative models. Existing benchmarks lack content diversity and interpretability, hindering generalization capabilities of detection methods.
 
 **Key Contributions:**
-- Unified framework for detection, localization, and explanation
-- Comprehensive handling of multiple manipulation types
-- Interpretable results for forensics analysis
+- Unified framework for detection, localization, and explanation of image manipulations
+- Comprehensive coverage of diverse generative model manipulations
+- Enhanced interpretability for forensics analysis
 
 **Related Repositories:**
 - [Search for related implementations on GitHub](https://github.com/search?q=ManipShield+Image+Manipulation) with Forgery Amplification Approach [[Paper](https://arxiv.org/pdf/2504.11922)][[Code](https://github.com/clpbc/BR-Gen)]
