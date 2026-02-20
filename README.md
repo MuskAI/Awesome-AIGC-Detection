@@ -27,7 +27,22 @@ Photographs are a means for people to document their daily experiences and are o
   <summary>2️⃣0️⃣2️⃣5️⃣</summary>
 
   - ![](https://img.shields.io/badge/25-ICML-blue) Few-Shot Learner Generalizes Across AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2501.08763)][[Code](https://github.com/teheperinko541/Few-Shot-AIGI-Detector)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) MIRROR: Manifold Ideal Reference ReconstructOR for Generalizable AI-Generated Image Detection [[Paper](https://arxiv.org/abs/2602.02222)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **MIRROR: Manifold Ideal Reference ReconstructOR for Generalizable AI-Generated Image Detection**
+- arXiv: [2602.02222](https://arxiv.org/abs/2602.02222)
+- Year: 2026
+- Category: Image Detection
+- Authors: Ruiqi Liu, Manni Cui, Ziheng Qin et al.
+
+**Summary:**
+MIRROR reformulates AIGI detection as a Reference-Comparison problem, encoding reality priors using a learnable discrete memory bank. Projects input into manifold-consistent ideal reference via sparse linear combination, with residuals as robust detection signals.
+
+**Key Contributions:**
+- Novel Reference-Comparison paradigm for generalizable AI-generated image detection
+- Manifold-based approach inspired by human cognitive patterns
+- Achieves 89.6% accuracy across 27 generators on Human-AIGI benchmark
+
+**Related Repositories:**
+- [MIRROR Official](https://github.com/349793927/MIRROR) ⭐ New
   - ![](https://img.shields.io/badge/25-CVPR-green) Forensic Self-Descriptions Are All You Need for Zero-Shot Detection, Open-Set Source Attribution, and Clustering of AI-generated Images [[Paper](https://arxiv.org/abs/2503.21003)]
   - ![](https://img.shields.io/badge/25-CVPR-green) **Beyond Generation: A Diffusion-based Low-level Feature Extractor for Detecting AI-generated Images** [[Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Beyond_Generation_A_Diffusion-based_Low-level_Feature_Extractor_for_Detecting_AI-generated_CVPR_2025_paper.pdf)]
   - ![](https://img.shields.io/badge/25-CVPR-green) **Secret Lies in Color: Enhancing AI-Generated Images Detection with Color Distribution Analysis** [[Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Secret_Lies_in_Color_Enhancing_AI-Generated_Images_Detection_with_Color_CVPR_2025_paper.pdf)]
