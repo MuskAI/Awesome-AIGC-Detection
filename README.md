@@ -63,7 +63,23 @@ MIRROR reformulates AIGI detection as a Reference-Comparison problem, encoding r
   - ![](https://img.shields.io/badge/25-ICLR-orange) FAKESHIELD: EXPLAINABLE IMAGE FORGERY DETECTION AND LOCALIZATION VIA MULTI-MODAL LARGE LANGUAGE MODELS [[Paper](https://arxiv.org/pdf/2410.02761)][[Code](https://github.com/zhipeixu/FakeShield)]
   - ![](https://img.shields.io/badge/25-arxiv-purple) Exploring the Collaborative Advantage of Low-level Information on Generalizable AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2504.00463)]
   - ![](https://img.shields.io/badge/25-arxiv-purple) HYPERDET: GENERALIZABLE DETECTION OF SYNTHESIZED IMAGES BY GENERATING AND MERGING A MIXTURE OF HYPER LORAS [[Paper](https://arxiv.org/pdf/2410.06044)]
-  - ![](https://img.shields.io/badge/25-arxiv-purple) Zooming In on Fakes: A Novel Dataset for Localized AI-Generated Image Detection with Forgery Amplification Approach [[Paper](https://arxiv.org/pdf/2504.11922)][[Code](https://github.com/clpbc/BR-Gen)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) Zooming In on Fakes: A Novel Dataset for Localized AI-Generated Image Detection
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **ManipShield: A Unified Framework for Image Manipulation Detection, Localization and Explanation**
+- arXiv: [Search Required](https://arxiv.org/search/?searchtype=all&query=ManipShield+Image+Manipulation)
+- Year: 2025
+- Category: Image Detection
+- Authors: [Search Required]
+
+**Summary:**
+ManipShield provides a unified framework for image manipulation detection, localization, and explanation. Addresses the challenge of identifying various types of image forgeries in a comprehensive manner.
+
+**Key Contributions:**
+- Unified framework for detection, localization, and explanation
+- Comprehensive handling of multiple manipulation types
+- Interpretable results for forensics analysis
+
+**Related Repositories:**
+- [Search for related implementations on GitHub](https://github.com/search?q=ManipShield+Image+Manipulation) with Forgery Amplification Approach [[Paper](https://arxiv.org/pdf/2504.11922)][[Code](https://github.com/clpbc/BR-Gen)]
   - ![](https://img.shields.io/badge/25-arxiv-purple) AntifakePrompt: Prompt-Tuned Vision-Language Models are Fake Image Detectors [[Paper](https://arxiv.org/pdf/2310.17419)][[Code](https://github.com/nctu-eva-lab/AntifakePrompt)]
   - ![](https://img.shields.io/badge/25-arxiv-purple) Can GPT tell us why these images are synthesized? Empowering Multimodal Large Language Models for Forensics [[Paper](https://arxiv.org/pdf/2504.11686)]
   - ![](https://img.shields.io/badge/25-arxiv-purple) Exploring Modality Disruption in Multimodal Fake News Detection [[Paper](https://arxiv.org/pdf/2504.09154)]
