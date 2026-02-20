@@ -138,6 +138,7 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
   <summary>2️⃣0️⃣2️⃣5️⃣</summary>
 
   - ![](https://img.shields.io/badge/25-CVPR-green) Towards a Universal Synthetic Video Detector： From Face or Background Manipulations to Fully AI-Generated Content [[Paper](https://arxiv.org/abs/2412.12278)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) Veritas: Generalizable Deepfake Detection via Pattern-Aware Reasoning [[Paper](https://arxiv.org/abs/2508.21048)]
 
 </details>
 
