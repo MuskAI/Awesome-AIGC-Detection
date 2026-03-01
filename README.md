@@ -57,10 +57,6 @@ git clone https://github.com/MuskAI/Awesome-AIGC-Detection.git
 <details>
   <summary>2026</summary>
 
-  - ![](https://img.shields.io/badge/26-arxiv-purple) NeXT-IMDL: Next-Generation Image Manipulation Detection [[Paper](https://arxiv.org/abs/2512.20056)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) LogicLens: Visual-Logical Co-Reasoning for Text-Centric Forgery Analysis [[Paper](https://arxiv.org/abs/2512.16287)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) Video Reality Test: Can AI-Generated ASMR Videos Fool VLMs? [[Paper](https://arxiv.org/abs/2512.10021)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) RobustSora: De-Watermarked Benchmark for AI-Generated Video Detection [[Paper](https://arxiv.org/abs/2512.06753)]
 </details>
 
 <details>
@@ -208,7 +204,6 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 <details>
   <summary>2023</summary>
 
-   - ![](https://img.shields.io/badge/23-ICML-yellow) DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature [[Paper](https://arxiv.org/abs/2301.11305)][[code](https://github.com/eric-mitchell/detect-gpt)]
 </details>
 
 ## 🔧Tools
