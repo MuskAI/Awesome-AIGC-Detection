@@ -57,7 +57,6 @@ git clone https://github.com/MuskAI/Awesome-AIGC-Detection.git
 <details>
   <summary>2026</summary>
 
-  - ![](https://img.shields.io/badge/26-arxiv-purple) **ArtifactLens: Hundreds of Labels Are Enough for Artifact Detection with VLMs** [[Paper](https://arxiv.org/abs/2602.03015)][[Code](https://github.com/google/artifact-lens)]
   - ![](https://img.shields.io/badge/26-arxiv-purple) Universal Anti-forensics Attack against Image Forgery Detection [[Paper](https://arxiv.org/abs/2602.01891)]
   - ![](https://img.shields.io/badge/26-arxiv-purple) HyperPotter: High-Order Interactions in Audio Deepfake Detection [[Paper](https://arxiv.org/abs/2602.01900)]
   - ![](https://img.shields.io/badge/26-arxiv-purple) Backdoor Sentinel: Detecting Backdoors in Diffusion Models [[Paper](https://arxiv.org/abs/2602.00947)]
