@@ -1,15 +1,40 @@
 # Awesome-AIGC-Detection 
 
+<div align="center">
+
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub stars](https://img.shields.io/github/stars/MuskAI/Awesome-AIGC-Detection?style=flat-square)](https://github.com/MuskAI/Awesome-AIGC-Detection/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/MuskAI/Awesome-AIGC-Detection?style=flat-square)](https://github.com/MuskAI/Awesome-AIGC-Detection/network)
+[![License](https://img.shields.io/github/license/MuskAI/Awesome-AIGC-Detection?style=flat-square)](LICENSE)
+
+</div>
+
+---
 
 ![](ai-detector-social.jpg)
+
+> 🔍 A comprehensive collection of papers, datasets, and tools for AI-Generated Content (AIGC) detection research.
+
+---
 
 This repo is created based on [This](https://github.com/RFAI2025/Awesome-AIGC-Image-Detection/tree/main). Many thanks for their contribution and we will further expand latest papers and datasets here.
 
 Photographs are a means for people to document their daily experiences and are often seen as reliable sources of information. However, there is increasing concern that advancements in artificial intelligence (AI) technology could lead to the creation of fake images, potentially causing confusion and eroding trust in the authenticity of photos. The rapid advancement of AI-Generated Content (AIGC) has greatly impacted our daily lives, making the detection of such content a critical challenge for AI safety today. This is a collection list of research on AIGC image detection, intended to support progress in related areas.  
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/MuskAI/Awesome-AIGC-Detection.git
+
+# Explore the papers by year
+# Check out the latest 2026 papers below!
+```
+
+---
 
 ## 📋 Table of Contents
 - [Datasets](#Datasets)
@@ -30,7 +55,34 @@ Photographs are a means for people to document their daily experiences and are o
 ## 📝Papers
 ### Image
 <details>
+  <summary>2026</summary>
+
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **ArtifactLens: Hundreds of Labels Are Enough for Artifact Detection with VLMs** [[Paper](https://arxiv.org/abs/2602.03015)][[Code](https://github.com/google/artifact-lens)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) Universal Anti-forensics Attack against Image Forgery Detection [[Paper](https://arxiv.org/abs/2602.01891)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) HyperPotter: High-Order Interactions in Audio Deepfake Detection [[Paper](https://arxiv.org/abs/2602.01900)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) Backdoor Sentinel: Detecting Backdoors in Diffusion Models [[Paper](https://arxiv.org/abs/2602.00947)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) S^2F-Net: Spatial-Spectral Fusion for Cross-Model AIGC Detection [[Paper](https://arxiv.org/abs/2601.01891)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) R$^2$BD: Reconstruction-Based Method for Generalizable Fake Image Detection [[Paper](https://arxiv.org/abs/2601.00589)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) Attack-Resistant Watermarking for AIGC Image Forensics [[Paper](https://arxiv.org/abs/2601.00587)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) On the Holistic Approach for Detecting Human Image Forgery [[Paper](https://arxiv.org/abs/2601.00345)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) DDNet: Dual-Stream Graph Learning for Temporal Forgery Localization [[Paper](https://arxiv.org/abs/2601.00098)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) NeXT-IMDL: Next-Generation Image Manipulation Detection [[Paper](https://arxiv.org/abs/2512.20056)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) LogicLens: Visual-Logical Co-Reasoning for Text-Centric Forgery Analysis [[Paper](https://arxiv.org/abs/2512.16287)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) Video Reality Test: Can AI-Generated ASMR Videos Fool VLMs? [[Paper](https://arxiv.org/abs/2512.10021)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) RobustSora: De-Watermarked Benchmark for AI-Generated Video Detection [[Paper](https://arxiv.org/abs/2512.06753)]
+</details>
+
+<details>
   <summary>2025</summary>
+
+
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **ArtifactLens**: Hundreds of Labels Are Enough for Artifact Detection with VLMs [[Paper](https://arxiv.org/abs/2602.09475)][[Code](https://jmhb0.github.io/ArtifactLens/)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **R^2BD**: A Reconstruction-Based Method for Generalizable and Efficient Detection of Fake Images [[Paper](https://arxiv.org/abs/2601.08867)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **ForensicHub**: A Unified Benchmark & Codebase for All-Domain Fake Image Detection [[Paper](https://arxiv.org/abs/2505.11003)][[Code](https://github.com/scu-zjz/ForensicHub)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **IVY-FAKE**: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection [[Paper](https://arxiv.org/abs/2506.00979)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **DINO-Detect**: A Simple yet Effective Framework for Blur-Robust AI-Generated Image Detection [[Paper](https://arxiv.org/abs/2511.12511)]
+  - ![](https://img.shields.io/badge/26-arxiv-purple) **DiffSeg30k**: A Multi-Turn Diffusion Editing Benchmark for Localized AIGC Detection [[Paper](https://arxiv.org/abs/2511.19111)]
+
 
   - ![](https://img.shields.io/badge/25-ICML-blue) Few-Shot Learner Generalizes Across AI-Generated Image Detection [[Paper](https://arxiv.org/pdf/2501.08763)][[Code](https://github.com/teheperinko541/Few-Shot-AIGI-Detector)]
   - ![](https://img.shields.io/badge/25-CVPR-green) Forensic Self-Descriptions Are All You Need for Zero-Shot Detection, Open-Set Source Attribution, and Clustering of AI-generated Images [[Paper](https://arxiv.org/abs/2503.21003)]
@@ -172,4 +224,26 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 *(Coming soon...)*
 
 ## 🏙️Others
-Last updated on 2025.12.24
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-paper`)
+3. Commit your changes (`git commit -m 'Add amazing paper'`)
+4. Push to the branch (`git push origin feature/amazing-paper`)
+5. Open a Pull Request
+
+---
+
+## 📬 Contact
+
+If you have any questions or suggestions, please feel free to open an issue!
+
+---
+
+Last updated on 2026.03.01
+
