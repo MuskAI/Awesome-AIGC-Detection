@@ -57,14 +57,6 @@ git clone https://github.com/MuskAI/Awesome-AIGC-Detection.git
 <details>
   <summary>2026</summary>
 
-  - ![](https://img.shields.io/badge/26-arxiv-purple) Universal Anti-forensics Attack against Image Forgery Detection [[Paper](https://arxiv.org/abs/2602.01891)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) HyperPotter: High-Order Interactions in Audio Deepfake Detection [[Paper](https://arxiv.org/abs/2602.01900)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) Backdoor Sentinel: Detecting Backdoors in Diffusion Models [[Paper](https://arxiv.org/abs/2602.00947)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) S^2F-Net: Spatial-Spectral Fusion for Cross-Model AIGC Detection [[Paper](https://arxiv.org/abs/2601.01891)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) R$^2$BD: Reconstruction-Based Method for Generalizable Fake Image Detection [[Paper](https://arxiv.org/abs/2601.00589)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) Attack-Resistant Watermarking for AIGC Image Forensics [[Paper](https://arxiv.org/abs/2601.00587)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) On the Holistic Approach for Detecting Human Image Forgery [[Paper](https://arxiv.org/abs/2601.00345)]
-  - ![](https://img.shields.io/badge/26-arxiv-purple) DDNet: Dual-Stream Graph Learning for Temporal Forgery Localization [[Paper](https://arxiv.org/abs/2601.00098)]
   - ![](https://img.shields.io/badge/26-arxiv-purple) NeXT-IMDL: Next-Generation Image Manipulation Detection [[Paper](https://arxiv.org/abs/2512.20056)]
   - ![](https://img.shields.io/badge/26-arxiv-purple) LogicLens: Visual-Logical Co-Reasoning for Text-Centric Forgery Analysis [[Paper](https://arxiv.org/abs/2512.16287)]
   - ![](https://img.shields.io/badge/26-arxiv-purple) Video Reality Test: Can AI-Generated ASMR Videos Fool VLMs? [[Paper](https://arxiv.org/abs/2512.10021)]
