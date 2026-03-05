@@ -180,14 +180,53 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 <details>
   <summary>2025</summary>
 
-  - ![](https://img.shields.io/badge/25-CVPR-green) Towards a Universal Synthetic Video Detector： From Face or Background Manipulations to Fully AI-Generated Content [[Paper](https://arxiv.org/abs/2412.12278)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **NSG-VD**: Physics-Driven Spatiotemporal Modeling for AI-Generated Video Detection [[Paper](https://arxiv.org/pdf/2510.08073)][[Code](https://github.com/ZSHsh98/NSG-VD)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **VIDGUARD-R1**: AI-Generated Video Detection and Explanation via Reasoning MLLMs and RL [[Paper](https://arxiv.org/pdf/2510.02282)][[Code](https://vidguard-r1.github.io/)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) Video Forgery Detection with Optical Flow Residuals and Spatial-Temporal Consistency [[Paper](https://arxiv.org/pdf/2508.00397)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **D3**: Training-Free AI-Generated Video Detection Using Second-Order Features [[Paper](https://arxiv.org/pdf/2508.00701)][[Code](https://github.com/Zig-HS/D3)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **BusterX++**: Towards Unified Cross-Modal AI-Generated Content Detection and Explanation with MLLM [[Paper](https://arxiv.org/abs/2507.14632)][[Code](https://github.com/l8cv/BusterX)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **IVY-FAKE**: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection [[Paper](https://arxiv.org/abs/2506.00979)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **BusterX**: MLLM-Powered AI-Generated Video Forgery Detection and Explanation [[Paper](https://arxiv.org/pdf/2505.12620v2)]
+  - ![](https://img.shields.io/badge/25-arxiv-purple) **GenVidBench**: A Challenging Benchmark for Detecting AI-Generated Video [[Paper](https://arxiv.org/abs/2501.11340)][[Code](https://github.com/genvidbench/GenVidBench)]
+  - ![](https://img.shields.io/badge/25-CVPR-green) Towards a Universal Synthetic Video Detector: From Face or Background Manipulations to Fully AI-Generated Content [[Paper](https://arxiv.org/abs/2412.12278)]
 
 </details>
 
 <details>
   <summary>2024</summary>
 
+  - ![](https://img.shields.io/badge/24-CVPRW-green) Beyond Deepfake Images: Detecting AI-Generated Videos [[Paper](https://openaccess.thecvf.com/content/CVPR2024W/WMF/papers/Vahdati_Beyond_Deepfake_Images_Detecting_AI-Generated_Videos_CVPRW_2024_paper.pdf)]
+  - ![](https://img.shields.io/badge/24-arxiv-purple) What Matters in Detecting AI-Generated Videos like Sora? [[Paper](https://arxiv.org/pdf/2406.19568)][[Code](https://justin-crchang.github.io/3DCNNDetection.github.io/)]
+  - ![](https://img.shields.io/badge/24-CVPRW-green) Turns Out I'm Not Real: Towards Robust Detection of AI-Generated Videos [[Paper](https://arxiv.org/pdf/2406.09601)]
+  - ![](https://img.shields.io/badge/24-arxiv-purple) **DeMamba**: AI-Generated Video Detection on Million-Scale GenVideo Benchmark [[Paper](https://arxiv.org/abs/2405.19707)][[Code](https://github.com/chenhaoxing/DeMamba)]
+  - ![](https://img.shields.io/badge/24-arxiv-purple) Exposing AI-generated Videos: A Benchmark Dataset and a Local-and-Global Temporal Defect Based Detection Method [[Paper](https://arxiv.org/abs/2405.04133)]
+  - ![](https://img.shields.io/badge/24-arxiv-purple) Distinguish Any Fake Videos: Unleashing the Power of Large-scale Data and Motion Features [[Paper](https://arxiv.org/pdf/2405.15343)]
+  - ![](https://img.shields.io/badge/24-arxiv-purple) AI-Generated Video Detection via Spatio-Temporal Anomaly Learning [[Paper](https://arxiv.org/pdf/2403.16638)]
+  - ![](https://img.shields.io/badge/24-arxiv-purple) **DeCoF**: Generated Video Detection via Frame Consistency [[Paper](https://arxiv.org/pdf/2402.02085)]
   - ![](https://img.shields.io/badge/24-WACV-red) VideoFACT: Detecting Video Forgeries Using Attention, Scene Context, and Forensic Traces [[Paper](https://arxiv.org/abs/2211.15775)][[Code](https://github.com/ductai199x/videofact-wacv-2024)]
+
+</details>
+
+<details>
+  <summary>2023</summary>
+
+  - ![](https://img.shields.io/badge/23-ICCV-red) **TALL**: Thumbnail Layout for Deepfake Video Detection [[Paper](https://openaccess.thecvf.com/content/ICCV2023/papers/Xu_TALL_Thumbnail_Layout_for_Deepfake_Video_Detection_ICCV_2023_paper.pdf)][[Code](https://github.com/rainy-xu/TALL4Deepfake)]
+  - ![](https://img.shields.io/badge/23-TIFS-red) **ISTVT**: Interpretable Spatial-Temporal Video Transformer for Deepfake Detection [[Paper](https://ieeexplore.ieee.org/abstract/document/10024806)]
+  - ![](https://img.shields.io/badge/23-TCSVT-red) Exploiting Complementary Dynamic Incoherence for DeepFake Video Detection [[Paper](https://ieeexplore.ieee.org/abstract/document/10023530)]
+
+</details>
+
+<details>
+  <summary>2022</summary>
+
+  - ![](https://img.shields.io/badge/22-ECCV-red) Hierarchical Contrastive Inconsistency Learning for Deepfake Video Detection [[Paper](https://link.springer.com/chapter/10.1007/978-3-031-19775-8_35)]
+
+</details>
+
+<details>
+  <summary>2021</summary>
+
+  - ![](https://img.shields.io/badge/21-ACMMM-red) Spatiotemporal Inconsistency Learning for DeepFake Video Detection [[Paper](https://arxiv.org/pdf/2109.01860)][[Code](https://github.com/Tencent/TFace)]
 
 </details>
 
