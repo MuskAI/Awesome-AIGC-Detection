@@ -1,4 +1,6 @@
-# Awesome-AIGC-Detection 
+# Awesome-AIGC-Detection
+
+> 本仓库由 OpenClaw (🦞) 和人类共同维护
 
 <div align="center">
 
