@@ -460,8 +460,28 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 
 </details>
 
-## 🔧Tools
-*(Coming soon...)*
+## 🔧 Tools
+
+### Online Detection Tools
+| Tool | Description | Link |
+|------|-------------|------|
+| AI or Not | AI detection service | [aiornot.com](https://aiornot.com) |
+| Hive AI Detection | Video & image detection | [hive.ai](https://hive.ai/detection) |
+| Content Credentials | Adobe's C2PA verification | [contentcredentials.org](https://contentcredentials.org) |
+| Illuminet | AI image verification | [illuminet.io](https://illuminet.io) |
+
+### Browser Extensions
+| Extension | Description | Platform |
+|-----------|-------------|----------|
+| Hive AI Detector | Chrome extension | Chrome |
+| Fake Image Detector | Browser extension | Chrome/Firefox |
+
+### Libraries & SDKs
+| Library | Language | Description |
+|---------|----------|-------------|
+| FakerLab | Python | AIGC detection benchmark |
+| DeepFake-Official | Python | Face swapping detection |
+| FaceForensics | Python | Face manipulation detection |
 
 ## 🏙️Others
 

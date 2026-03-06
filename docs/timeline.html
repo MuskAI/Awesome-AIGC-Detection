@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Awesome AIGC Detection — Timeline</title>
 <style>
   :root {
@@ -16,63 +16,63 @@
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, sans-serif;
          display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
 
-  header { padding: 14px 24px; border-bottom: 1px solid var(--border); flex-shrink: 0;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: var(--surface); }
-  header h1 { font-size: 1.15rem; font-weight: 600; }
+  header { padding: 12px 16px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; background: var(--surface); }
+  header h1 { font-size: 1rem; font-weight: 600; }
   header h1 span { color: var(--accent); }
-  .stat-row { display: flex; gap: 14px; font-size: 0.8rem; color: var(--muted); }
+  .stat-row { display: flex; gap: 10px; font-size: 0.75rem; color: var(--muted); }
   .stat-row b { color: var(--text); }
 
-  .toolbar { padding: 10px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
-    display: flex; gap: 6px; flex-wrap: wrap; align-items: center; flex-shrink: 0; }
+  .toolbar { padding: 8px 12px; background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; gap: 6px; flex-wrap: wrap; align-items: center; flex-shrink: 0; overflow-x: auto; }
   .toolbar input { background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
-    color: var(--text); padding: 6px 12px; font-size: 0.82rem; outline: none; min-width: 160px; }
+    color: var(--text); padding: 6px 10px; font-size: 0.8rem; outline: none; min-width: 120px; flex: 1; max-width: 200px; }
   .toolbar input:focus { border-color: var(--accent); }
-  .sep { width: 1px; height: 22px; background: var(--border); margin: 0 6px; }
-  .btn { padding: 5px 12px; border-radius: 5px; font-size: 0.78rem; cursor: pointer;
-    border: 1px solid var(--border); background: var(--bg); color: var(--text);
-    transition: all 0.15s; }
+  .sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+  .btn { padding: 4px 10px; border-radius: 5px; font-size: 0.72rem; cursor: pointer; white-space: nowrap;
+    border: 1px solid var(--border); background: var(--bg); color: var(--text); transition: all 0.15s; }
   .btn:hover { border-color: var(--accent); color: var(--accent); }
   .btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
 
-  #main-area { flex: 1; overflow: hidden; position: relative; background: var(--bg); }
-  #main-svg { width: 100%; height: 100%; cursor: grab; }
-  #main-svg:active { cursor: grabbing; }
+  #main-area { flex: 1; overflow: hidden; position: relative; background: var(--bg); touch-action: pan-x pan-y; }
+  #main-svg { width: 100%; height: 100%; touch-action: none; }
 
   #zoom-controls { position: absolute; bottom: 16px; right: 16px; display: flex; gap: 6px; z-index: 100; }
 
   #tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-    padding: 14px 16px; max-width: 360px; font-size: 0.84rem; line-height: 1.5;
+    padding: 12px 14px; max-width: 320px; font-size: 0.82rem; line-height: 1.4;
     z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none; pointer-events: auto; }
-  #tooltip h4 { color: var(--accent); margin-bottom: 8px; font-size: 0.92rem; font-weight: 600; }
-  #tooltip .meta { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
-  #tooltip .pill { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  #tooltip h4 { color: var(--accent); margin-bottom: 6px; font-size: 0.88rem; font-weight: 600; }
+  #tooltip .meta { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
+  #tooltip .pill { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: 0.65rem; font-weight: 600; }
   #tooltip .pill-img { background: #f97316; color: #000; }
   #tooltip .pill-vid { background: #22d3ee; color: #000; }
   #tooltip .pill-txt { background: #a78bfa; color: #000; }
   #tooltip .pill-yr { background: var(--border); color: var(--text); }
-  #tooltip .links { display: flex; gap: 8px; margin-top: 10px; }
-  #tooltip .links a { 
-    display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 6px; 
-    background: var(--bg); border: 1px solid var(--border); color: var(--accent); 
-    text-decoration: none; font-size: 0.78rem; pointer-events: auto; cursor: pointer;
-  }
-  #tooltip .links a:hover { background: var(--accent); color: #000; border-color: var(--accent); }
+  #tooltip .pill-method { background: #238636; color: #fff; }
+  #tooltip .links { display: flex; gap: 6px; margin-top: 8px; }
+  #tooltip .links a { display: inline-flex; align-items: center; gap: 3px; padding: 5px 10px; border-radius: 5px; 
+    background: var(--bg); border: 1px solid var(--border); color: var(--accent); text-decoration: none; font-size: 0.72rem; pointer-events: auto; }
+  #tooltip .links a:hover { background: var(--accent); color: #000; }
+  #tooltip mark { background: #ffd33d; color: #000; padding: 0 2px; border-radius: 2px; }
 
-  footer { text-align: center; padding: 10px; font-size: 0.74rem; color: var(--muted);
+  footer { text-align: center; padding: 8px; font-size: 0.7rem; color: var(--muted);
     border-top: 1px solid var(--border); flex-shrink: 0; background: var(--surface); }
   footer a { color: var(--accent); }
+  
+  @media (max-width: 600px) {
+    header h1 { font-size: 0.9rem; }
+    .stat-row { display: none; }
+    .btn { padding: 3px 8px; font-size: 0.65rem; }
+    #zoom-controls { bottom: 10px; right: 10px; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>📅 <span>Awesome AIGC Detection</span> — Timeline</h1>
+  <h1>📅 <span>AIGC Detection</span> Timeline</h1>
   <div class="stat-row">
-    <span>Total <b id="total-count">—</b></span>
-    <span>Image <b id="img-count">—</b></span>
-    <span>Video <b id="vid-count">—</b></span>
-    <span>Text <b id="txt-count">—</b></span>
-    <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank" style="color:var(--accent)">⭐ GitHub</a>
+    <span><b id="total-count">—</b> papers</span>
   </div>
 </header>
 
@@ -80,41 +80,49 @@
   <input id="search" type="text" placeholder="🔍 Search..." />
   <div class="sep"></div>
   <button class="btn" onclick="jumpYear(2020)">2020</button>
-  <button class="btn" onclick="jumpYear(2021)">2021</button>
-  <button class="btn" onclick="jumpYear(2022)">2022</button>
-  <button class="btn" onclick="jumpYear(2023)">2023</button>
-  <button class="btn" onclick="jumpYear(2024)">2024</button>
-  <button class="btn" onclick="jumpYear(2025)">2025</button>
-  <button class="btn" onclick="jumpYear(2026)">2026</button>
+  <button class="btn" onclick="jumpYear(2021)">21</button>
+  <button class="btn" onclick="jumpYear(2022)">22</button>
+  <button class="btn" onclick="jumpYear(2023)">23</button>
+  <button class="btn" onclick="jumpYear(2024)">24</button>
+  <button class="btn" onclick="jumpYear(2025)">25</button>
+  <button class="btn" onclick="jumpYear(2026)">26</button>
   <div class="sep"></div>
   <button class="btn cat-btn active" data-cat="all" onclick="filterCat('all')">All</button>
-  <button class="btn cat-btn" data-cat="Image" onclick="filterCat('Image')">Image</button>
-  <button class="btn cat-btn" data-cat="Video" onclick="filterCat('Video')">Video</button>
-  <button class="btn cat-btn" data-cat="Text" onclick="filterCat('Text')">Text</button>
+  <button class="btn cat-btn" data-cat="Image" onclick="filterCat('Image')">Img</button>
+  <button class="btn cat-btn" data-cat="Video" onclick="filterCat('Video')">Vid</button>
+  <button class="btn cat-btn" data-cat="Text" onclick="filterCat('Text')">Txt</button>
   <div class="sep"></div>
-  <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂ Reset</button>
-  <span id="vis-count" style="font-size:0.75rem;color:var(--muted);margin-left:8px;"></span>
+  <button class="btn method-btn" data-method="all" onclick="filterMethod('all')">All</button>
+  <button class="btn method-btn" data-method="MLLM" onclick="filterMethod('MLLM')">MLLM</button>
+  <button class="btn method-btn" data-method="Reconstruction" onclick="filterMethod('Reconstruction')">Recon</button>
+  <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂</button>
 </div>
 
 <div id="main-area">
   <svg id="main-svg"></svg>
-  <div id="zoom-controls"><button class="btn" onclick="zoomBy(1.5)">＋</button><button class="btn" onclick="zoomBy(0.65)">－</button></div>
+  <div id="zoom-controls">
+    <button class="btn" onclick="zoomBy(1.5)">＋</button>
+    <button class="btn" onclick="zoomBy(0.65)">－</button>
+  </div>
 </div>
 
 <div id="tooltip"></div>
 
-<footer>Data: <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank">Awesome-AIGC-Detection</a> · Built with <a href="https://d3js.org" target="_blank">D3.js</a></footer>
+<footer>
+  Data: <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank">Awesome-AIGC-Detection</a>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
 const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa'};
+const METHOD_COLORS = {'MLLM': '#238636', 'Reconstruction': '#1f6feb', 'CLIP': '#a371f7', 'Frequency': '#d29922', 'Transformer': '#f85149', 'GAN': '#db61a2', 'General': '#6e7681'};
 
 let svg, gMain, xScale, yScale;
 let currentTransform = d3.zoomIdentity;
 let allData = [], currentData = [];
-let currentCat = 'all', currentSearch = '';
+let currentCat = 'all', currentMethod = 'all', currentSearch = '';
 let width, height;
-const margin = {top: 40, right: 80, bottom: 40, left: 90};
+const margin = {top: 35, right: 60, bottom: 30, left: 80};
 
 async function init() {
   const resp = await fetch('timeline_data.json');
@@ -131,9 +139,6 @@ function updateStats() {
   const c = {'Image Detection': 0, 'Video Detection': 0, 'Text Detection': 0};
   allData.forEach(d => c[d.category]++);
   document.getElementById('total-count').textContent = allData.length;
-  document.getElementById('img-count').textContent = c['Image Detection'];
-  document.getElementById('vid-count').textContent = c['Video Detection'];
-  document.getElementById('txt-count').textContent = c['Text Detection'];
 }
 
 function setupSVG() {
@@ -148,7 +153,7 @@ function setupSVG() {
 }
 
 function setupZoom() {
-  svg.call(d3.zoom().scaleExtent([0.1, 10]).on('zoom', e => {
+  svg.call(d3.zoom().scaleExtent([0.1, 12]).on('zoom', e => {
     currentTransform = e.transform;
     gMain.attr('transform', `translate(${currentTransform.x},${currentTransform.y}) scale(${currentTransform.k})`);
     render();
@@ -171,46 +176,54 @@ function filterCat(cat) {
   applyFilters();
 }
 
+function filterMethod(method) {
+  currentMethod = method;
+  document.querySelectorAll('.method-btn').forEach(b => {
+    const isActive = (method === 'all' && b.dataset.method === 'all') || b.dataset.method === method;
+    b.classList.toggle('active', isActive);
+  });
+  applyFilters();
+}
+
 function applyFilters() {
   currentData = allData.filter(d => {
     const matchCat = currentCat === 'all' || d.category.includes(currentCat);
+    const matchMethod = currentMethod === 'all' || (d.methods || []).includes(currentMethod);
     const matchSearch = !currentSearch || d.name.toLowerCase().includes(currentSearch) || d.conference.toLowerCase().includes(currentSearch);
-    return matchCat && matchSearch;
+    return matchCat && matchMethod && matchSearch;
   });
   render();
-  document.getElementById('vis-count').textContent = currentData.length !== allData.length ? `(${currentData.length})` : '';
 }
 
-// Better collision detection - spread dots vertically
+function highlightText(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<mark>$1</mark>');
+}
+
 function computePositions(data) {
   const positions = [];
-  const bandHeight = yScale.bandwidth();
-  const minGap = 12; // minimum gap between dots
-  
-  // Group by year-month-category
   const groups = {};
+  const minGap = 14;
+  
   data.forEach(d => {
     const key = `${d.year}-${d.month}-${d.category}`;
     if (!groups[key]) groups[key] = [];
     groups[key].push(d);
   });
   
-  // Sort keys
   const keys = Object.keys(groups).sort();
-  
   keys.forEach(key => {
     const items = groups[key];
     const x = xScale(items[0].year + (items[0].month - 0.5) / 12);
-    
     items.forEach((item, i) => {
       const catY = yScale(item.category);
-      // Calculate Y based on index in group - spread vertically within category
+      const bandHeight = yScale.bandwidth();
       const yOffset = (i - (items.length - 1) / 2) * minGap;
       const y = catY + bandHeight / 2 + yOffset;
       positions.push({...item, x, y});
     });
   });
-  
   return positions;
 }
 
@@ -218,7 +231,6 @@ function render() {
   const k = currentTransform.k;
   gMain.selectAll('*').remove();
   
-  // Background strips
   const cats = ['Image Detection', 'Video Detection', 'Text Detection'];
   const bgC = {'Image Detection': 'var(--img-bg)', 'Video Detection': 'var(--vid-bg)', 'Text Detection': 'var(--txt-bg)'};
   const borderC = {'Image Detection': 'var(--img-border)', 'Video Detection': 'var(--vid-border)', 'Text Detection': 'var(--txt-border)'};
@@ -227,39 +239,45 @@ function render() {
     const y = yScale(cat), h = yScale.bandwidth();
     gMain.append('rect').attr('x', 0).attr('y', y).attr('width', 3000).attr('height', h).attr('fill', bgC[cat]);
     gMain.append('rect').attr('x', 0).attr('y', y).attr('width', 4).attr('height', h).attr('fill', borderC[cat]).attr('rx', 2);
-    gMain.append('text').attr('x', margin.left - 15).attr('y', y + h/2 + 4).attr('text-anchor', 'end')
-      .attr('fill', COLORS[cat]).attr('font-size', 11).attr('font-weight', '600').text(cat.replace(' Detection', ''));
+    gMain.append('text').attr('x', margin.left - 12).attr('y', y + h/2 + 3).attr('text-anchor', 'end')
+      .attr('fill', COLORS[cat]).attr('font-size', 10).attr('font-weight', '600').text(cat.replace(' Detection', ''));
   });
   
-  // Year grid
   for (let y = 2020; y <= 2026; y++) {
     gMain.append('line').attr('x1', xScale(y)).attr('y1', 20).attr('x2', xScale(y)).attr('y2', height)
-      .attr('stroke', '#30363d').attr('stroke-dasharray', '3,3').attr('stroke-width', 0.8/k);
+      .attr('stroke', '#30363d').attr('stroke-dasharray', '3,3').attr('stroke-width', 0.6/k);
     gMain.append('text').attr('x', xScale(y)).attr('y', 15).attr('text-anchor', 'middle')
-      .attr('fill', '#8b949e').attr('font-size', 10/k + 'px').text(y);
+      .attr('fill', '#8b949e').attr('font-size', 9/k + 'px').text(y);
   }
   
-  // Compute positions with collision avoidance
   const positioned = computePositions(currentData);
   
-  // Render dots
   positioned.forEach(d => {
-    const r = Math.max(3, 5 - k * 0.5);
+    const r = Math.max(2.5, 4.5 - k * 0.4);
+    const isLandmark = d.landmark;
+    
+    // Glow for landmark papers
+    if (isLandmark) {
+      gMain.append('circle')
+        .attr('cx', d.x).attr('cy', d.y).attr('r', r + 3)
+        .attr('fill', 'none').attr('stroke', COLORS[d.category]).attr('stroke-width', 1.5)
+        .attr('opacity', 0.5);
+    }
+    
     gMain.append('circle')
       .attr('cx', d.x).attr('cy', d.y).attr('r', r)
-      .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', 1.2)
+      .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', isLandmark ? 1.5 : 1)
       .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.5))')
       .on('mouseenter', e => showTooltip(e, d))
       .on('mouseleave', () => document.getElementById('tooltip').style.display = 'none');
     
-    // Labels when zoomed
-    if (k > 0.7) {
+    if (k > 0.8) {
+      const label = d.short || d.name.split(':')[0].split(' ')[0].slice(0, 10);
       gMain.append('text')
-        .attr('x', d.x + 8).attr('y', d.y + 3)
-        .attr('fill', '#c9d1d9').attr('font-size', 9/k + 'px')
-        .attr('opacity', Math.min(1, (k - 0.6) * 2))
-        .text(d.short || d.name.split(':')[0].split(' ')[0].slice(0, 12))
-        .attr('pointer-events', 'none');
+        .attr('x', d.x + 7).attr('y', d.y + 2.5)
+        .attr('fill', '#c9d1d9').attr('font-size', 8/k + 'px')
+        .attr('opacity', Math.min(1, (k - 0.7) * 3))
+        .text(label).attr('pointer-events', 'none');
     }
   });
 }
@@ -269,37 +287,44 @@ function showTooltip(event, d) {
   const catPill = d.category.includes('Image') ? 'pill-img' : d.category.includes('Video') ? 'pill-vid' : 'pill-txt';
   const catName = d.category.replace(' Detection', '');
   const quarter = d.quarter || `Q${Math.ceil(d.month/3)}`;
+  const name = highlightText(d.name, currentSearch);
+  const methods = d.methods || ['General'];
+  
+  let methodPills = methods.map(m => `<span class="pill pill-method">${m}</span>`).join('');
   
   let links = '<div class="links">';
-  if (d.arxiv) links += `<a href="https://arxiv.org/abs/${d.arxiv}" target="_blank" onclick="event.stopPropagation()">📄 Paper</a>`;
-  if (d.code) links += `<a href="https://github.com/${d.code}" target="_blank" onclick="event.stopPropagation()">💻 Code</a>`;
+  if (d.arxiv) links += `<a href="https://arxiv.org/abs/${d.arxiv}" target="_blank">📄</a>`;
+  if (d.code) links += `<a href="https://github.com/${d.code}" target="_blank">💻</a>`;
   links += '</div>';
   
-  tip.innerHTML = `<h4>${d.name}</h4>
+  tip.innerHTML = `<h4>${name}</h4>
     <div class="meta">
       <span class="pill ${catPill}">${catName}</span>
       <span class="pill pill-yr">${d.year} ${quarter}</span>
       <span class="pill pill-yr">${d.conference}</span>
-    </div>${links}`;
+    </div>
+    <div class="meta">${methodPills}</div>
+    ${links}`;
   
   tip.style.display = 'block';
-  tip.style.left = Math.min(event.pageX + 15, window.innerWidth - 380) + 'px';
-  tip.style.top = Math.min(event.pageY + 15, window.innerHeight - 200) + 'px';
+  tip.style.left = Math.min(event.pageX + 15, window.innerWidth - 340) + 'px';
+  tip.style.top = Math.min(event.pageY + 15, window.innerHeight - 220) + 'px';
 }
 
 function jumpYear(year) {
-  svg.transition().duration(500).call(d3.zoom.transform,
+  svg.transition().duration(400).call(d3.zoom.transform,
     d3.zoomIdentity.translate(width/2 - xScale(year) * currentTransform.k, 0).scale(currentTransform.k));
 }
 
-function zoomBy(factor) { svg.transition().duration(300).call(d3.zoom.scaleBy, factor); }
+function zoomBy(factor) { svg.transition().duration(250).call(d3.zoom.scaleBy, factor); }
 
 function resetView() {
-  svg.transition().duration(500).call(d3.zoom.transform, d3.zoomIdentity);
+  svg.transition().duration(400).call(d3.zoom.transform, d3.zoomIdentity);
   document.getElementById('search').value = '';
   currentSearch = '';
   currentCat = 'all';
-  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
+  currentMethod = 'all';
+  document.querySelectorAll('.cat-btn, .method-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all'));
   currentData = [...allData];
   render();
 }
