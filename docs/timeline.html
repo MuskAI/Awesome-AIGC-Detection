@@ -123,13 +123,14 @@
 <div class="toolbar">
   <input id="search" type="text" placeholder="🔍 Search title/author..." />
   <div class="sep"></div>
-  <button class="btn" onclick="jumpYear(2020)">20</button>
-  <button class="btn" onclick="jumpYear(2021)">21</button>
-  <button class="btn" onclick="jumpYear(2022)">22</button>
-  <button class="btn" onclick="jumpYear(2023)">23</button>
-  <button class="btn" onclick="jumpYear(2024)">24</button>
-  <button class="btn" onclick="jumpYear(2025)">25</button>
-  <button class="btn" onclick="jumpYear(2026)">26</button>
+  <button class="btn year-btn" data-year="all" onclick="filterYear('all')">All</button>
+  <button class="btn year-btn" data-year="2020" onclick="filterYear(2020)">20</button>
+  <button class="btn year-btn" data-year="2021" onclick="filterYear(2021)">21</button>
+  <button class="btn year-btn" data-year="2022" onclick="filterYear(2022)">22</button>
+  <button class="btn year-btn" data-year="2023" onclick="filterYear(2023)">23</button>
+  <button class="btn year-btn" data-year="2024" onclick="filterYear(2024)">24</button>
+  <button class="btn year-btn" data-year="2025" onclick="filterYear(2025)">25</button>
+  <button class="btn year-btn" data-year="2026" onclick="filterYear(2026)">26</button>
   <div class="sep"></div>
   <button class="btn cat-btn active" data-cat="all" onclick="filterCat('all')">All</button>
   <button class="btn cat-btn" data-cat="Image" onclick="filterCat('Image')">Img</button>
@@ -177,7 +178,7 @@ const CONF_COLORS = {'CVPR': '#2ea043', 'ICCV': '#1f6feb', 'ECCV': '#d29922', 'N
 
 let svg, container;
 let allData = [], currentData = [], filteredData = [];
-let currentCat = 'all', currentMethod = 'all', currentConf = 'all', currentCode = 'all', currentSearch = '';
+let currentCat = 'all', currentMethod = 'all', currentConf = 'all', currentCode = 'all', currentSearch = '', currentYear = 'all';
 let positions = [];
 let transform = { x: 0, y: 0, k: 1 };
 let isDragging = false, dragStart = { x: 0, y: 0 };
@@ -207,7 +208,7 @@ function updateStats() {
 }
 
 function hasActiveFilters() {
-  return currentCat !== 'all' || currentMethod !== 'all' || currentConf !== 'all' || currentCode !== 'all' || currentSearch !== '';
+  return currentYear !== 'all' || currentCat !== 'all' || currentMethod !== 'all' || currentConf !== 'all' || currentCode !== 'all' || currentSearch !== '';
 }
 
 function updateResetButton() {
@@ -565,6 +566,7 @@ function filterCode(code) {
 
 function applyFilters() {
   filteredData = allData.filter(d => {
+    const matchYear = currentYear === 'all' || d.year === currentYear;
     const matchCat = currentCat === 'all' || d.category.includes(currentCat);
     const matchMethod = currentMethod === 'all' || (d.methods || []).includes(currentMethod);
     const matchConf = currentConf === 'all' || (d.conference || '').includes(currentConf);
@@ -573,21 +575,20 @@ function applyFilters() {
       d.name.toLowerCase().includes(currentSearch) || 
       (d.conference || '').toLowerCase().includes(currentSearch) ||
       (d.code || '').toLowerCase().includes(currentSearch);
-    return matchCat && matchMethod && matchConf && matchCode && matchSearch;
+    return matchYear && matchCat && matchMethod && matchConf && matchCode && matchSearch;
   });
   render();
   updateStats();
   updateResetButton();
 }
 
-function jumpYear(year) {
-  const { monthPositions } = calculateXPositions(filteredData);
-  const targetKey = `${year}-01`;
-  if (monthPositions[targetKey]) {
-    const x = monthPositions[targetKey].x * transform.k + transform.x - window.innerWidth / 2;
-    transform.x = -x + window.innerWidth / 2;
-    updateTransform();
-  }
+function filterYear(year) { 
+  currentYear = year; 
+  document.querySelectorAll('.year-btn').forEach(b => {
+    const isActive = (year === 'all' && b.dataset.year === 'all') || parseInt(b.dataset.year) === year;
+    b.classList.toggle('active', isActive);
+  });
+  applyFilters(); 
 }
 
 function zoomBy(factor, cx, cy) {
@@ -607,13 +608,14 @@ function resetView() {
   updateTransform();
   document.getElementById('search').value = '';
   currentSearch = '';
+  currentYear = 'all';
   currentCat = 'all';
   currentMethod = 'all';
   currentConf = 'all';
   currentCode = 'all';
   
-  document.querySelectorAll('.cat-btn, .method-btn, .conf-btn, .code-btn').forEach(b => 
-    b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all' || b.dataset.conf === 'all' || b.dataset.code === 'all')
+  document.querySelectorAll('.cat-btn, .method-btn, .conf-btn, .code-btn, .year-btn').forEach(b => 
+    b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all' || b.dataset.conf === 'all' || b.dataset.code === 'all' || b.dataset.year === 'all')
   );
   
   filteredData = [...allData];
