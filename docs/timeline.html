@@ -147,7 +147,7 @@ function setupSVG() {
   height = area.clientHeight;
   svg = d3.select('#main-svg').attr('width', width).attr('height', height);
   gMain = svg.append('g');
-  xScale = d3.scaleLinear().domain([2020, 2026.7]).range([margin.left, width - margin.right]);
+  xScale = d3.scaleLinear().domain([2019.5, 2026.8]).range([margin.left, width - margin.right]);
   yScale = d3.scaleBand().domain(['Image Detection', 'Video Detection', 'Text Detection'])
     .range([margin.top, height - margin.bottom]).padding(0.15);
 }
