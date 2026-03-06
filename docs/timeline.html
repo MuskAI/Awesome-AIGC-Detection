@@ -383,8 +383,8 @@ function render(animate = true) {
     const dotGroup = g.append('g')
       .attr('class', 'dot-group')
       .attr('transform', `translate(${d.x}, ${d.y})`)
-      .style('opacity', 0)
-      .style('cursor', 'pointer');
+      .style('cursor', 'pointer')
+      .style('opacity', animate ? 0 : 1);
     
     // Landmark glow
     if (isLandmark) {
@@ -399,16 +399,18 @@ function render(animate = true) {
     }
     
     // Main dot
-    dotGroup.append('circle')
-      .attr('r', 0)
+    const mainDot = dotGroup.append('circle')
+      .attr('r', r)
       .attr('fill', COLORS[d.category])
       .attr('stroke', confColor)
       .attr('stroke-width', 2)
-      .style('filter', 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))')
-      .transition()
-      .duration(400)
-      .delay(animate ? 50 + i * 15 : 0)
-      .attr('r', r);
+      .style('filter', 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))');
+    
+    if (animate) {
+      dotGroup.style('opacity', 0)
+        .transition().duration(300).delay(50 + i * 10)
+        .style('opacity', 1);
+    }
     
     // Hover glow effect
     dotGroup.append('circle')
