@@ -4,6 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Awesome AIGC Detection — Timeline</title>
+<meta property="og:title" content="AIGC Detection Timeline" />
+<meta property="og:description" content="A curated collection of AI-generated content detection papers" />
 <style>
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
@@ -11,6 +13,7 @@
     --img-bg: rgba(249, 115, 22, 0.08); --img-border: rgba(249, 115, 22, 0.3);
     --vid-bg: rgba(34, 211, 238, 0.08); --vid-border: rgba(34, 211, 238, 0.3);
     --txt-bg: rgba(167, 139, 250, 0.08); --txt-border: rgba(167, 139, 250, 0.3);
+    --cvpr: #2ea043; --iccv: #1f6feb; --eccv: #d29922; --neurips: #8957e5; --icml: #e34d26; --iclr: #007a33; --arxiv: #6e7681;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -33,6 +36,7 @@
     border: 1px solid var(--border); background: var(--bg); color: var(--text); transition: all 0.15s; }
   .btn:hover { border-color: var(--accent); color: var(--accent); }
   .btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+  .btn-conf { font-size: 0.65rem; padding: 3px 7px; }
 
   #main-area { flex: 1; overflow: auto; position: relative; background: var(--bg); }
   #timeline-container { min-width: 100%; min-height: 100%; position: relative; }
@@ -41,9 +45,10 @@
   #zoom-controls { position: fixed; bottom: 16px; right: 16px; display: flex; gap: 6px; z-index: 100; }
 
   #tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-    padding: 12px 14px; max-width: 320px; font-size: 0.82rem; line-height: 1.4;
+    padding: 14px 16px; max-width: 360px; font-size: 0.82rem; line-height: 1.4;
     z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none; pointer-events: auto; }
-  #tooltip h4 { color: var(--accent); margin-bottom: 6px; font-size: 0.88rem; font-weight: 600; word-break: break-word; }
+  #tooltip h4 { color: var(--accent); margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; word-break: break-word; }
+  #tooltip .abstract { color: var(--muted); font-size: 0.76rem; line-height: 1.4; margin-bottom: 10px; max-height: 60px; overflow: hidden; }
   #tooltip .meta { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
   #tooltip .pill { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: 0.65rem; font-weight: 600; }
   #tooltip .pill-img { background: #f97316; color: #000; }
@@ -51,11 +56,26 @@
   #tooltip .pill-txt { background: #a78bfa; color: #000; }
   #tooltip .pill-yr { background: var(--border); color: var(--text); }
   #tooltip .pill-method { background: #238636; color: #fff; }
-  #tooltip .links { display: flex; gap: 6px; margin-top: 8px; }
-  #tooltip .links a { display: inline-flex; align-items: center; gap: 3px; padding: 5px 10px; border-radius: 5px; 
+  #tooltip .pill-conf { color: #fff; }
+  #tooltip .pill-conf-CVPR { background: var(--cvpr); }
+  #tooltip .pill-conf-ICCV { background: var(--iccv); }
+  #tooltip .pill-conf-ECCV { background: var(--eccv); }
+  #tooltip .pill-conf-NeurIPS { background: var(--neurips); }
+  #tooltip .pill-conf-ICML { background: var(--icml); }
+  #tooltip .pill-conf-ICLR { background: var(--iclr); }
+  #tooltip .pill-conf-arXiv { background: var(--arxiv); }
+  #tooltip .pill-code { background: #238636; color: #fff; }
+  #tooltip .pill-nocode { background: #6e7681; color: #fff; }
+  #tooltip .links { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  #tooltip .links a { display: inline-flex; align-items: center; gap: 3px; padding: 6px 12px; border-radius: 5px; 
     background: var(--bg); border: 1px solid var(--border); color: var(--accent); text-decoration: none; font-size: 0.72rem; pointer-events: auto; }
   #tooltip .links a:hover { background: var(--accent); color: #000; }
   #tooltip mark { background: #ffd33d; color: #000; padding: 0 2px; border-radius: 2px; }
+
+  #hover-preview { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 0.78rem; z-index: 9998; pointer-events: none; display: none; white-space: nowrap; }
+  #hover-preview .title { color: var(--accent); font-weight: 500; }
+  #hover-preview .conf { color: var(--muted); font-size: 0.7rem; }
 
   footer { text-align: center; padding: 8px; font-size: 0.7rem; color: var(--muted);
     border-top: 1px solid var(--border); flex-shrink: 0; background: var(--surface); }
@@ -74,13 +94,15 @@
   <h1>📅 <span>AIGC Detection</span> Timeline</h1>
   <div class="stat-row">
     <span><b id="total-count">—</b> papers</span>
+    <span>|<</span>
+    <span><b id="conf-count">—</b> with code</span>
   </div>
 </header>
 
 <div class="toolbar">
-  <input id="search" type="text" placeholder="🔍 Search..." />
+  <input id="search" type="text" placeholder="🔍 Search title/author..." />
   <div class="sep"></div>
-  <button class="btn" onclick="jumpYear(2020)">2020</button>
+  <button class="btn" onclick="jumpYear(2020)">20</button>
   <button class="btn" onclick="jumpYear(2021)">21</button>
   <button class="btn" onclick="jumpYear(2022)">22</button>
   <button class="btn" onclick="jumpYear(2023)">23</button>
@@ -96,6 +118,17 @@
   <button class="btn method-btn" data-method="all" onclick="filterMethod('all')">All</button>
   <button class="btn method-btn" data-method="MLLM" onclick="filterMethod('MLLM')">MLLM</button>
   <button class="btn method-btn" data-method="Reconstruction" onclick="filterMethod('Reconstruction')">Recon</button>
+  <div class="sep"></div>
+  <button class="btn conf-btn" data-conf="all" onclick="filterConf('all')">Conf</button>
+  <button class="btn conf-btn" data-conf="CVPR" onclick="filterConf('CVPR')">CVPR</button>
+  <button class="btn conf-btn" data-conf="ICCV" onclick="filterConf('ICCV')">ICCV</button>
+  <button class="btn conf-btn" data-conf="NeurIPS" onclick="filterConf('NeurIPS')">NeurIPS</button>
+  <button class="btn conf-btn" data-conf="ICLR" onclick="filterConf('ICLR')">ICLR</button>
+  <div class="sep"></div>
+  <button class="btn code-btn" data-code="all" onclick="filterCode('all')">Code</button>
+  <button class="btn code-btn" data-code="yes" onclick="filterCode('yes')">✓</button>
+  <button class="btn code-btn" data-code="no" onclick="filterCode('no')">✗</button>
+  <div class="sep"></div>
   <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂</button>
 </div>
 
@@ -109,26 +142,25 @@
   </div>
 </div>
 
+<div id="hover-preview"><span class="title"></span><br><span class="conf"></span></div>
 <div id="tooltip"></div>
 
 <footer>
   Data: <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank">Awesome-AIGC-Detection</a>
+  · <a href="https://github.com/MuskAI/Awesome-AIGC-Detection/issues" target="_blank">Add Paper</a>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
 const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa'};
-const METHOD_COLORS = {'MLLM': '#238636', 'Reconstruction': '#1f6feb', 'CLIP': '#a371f7', 'Frequency': '#d29922', 'Transformer': '#f85149', 'GAN': '#db61a2', 'General': '#6e7681'};
+const CONF_COLORS = {'CVPR': '#2ea043', 'ICCV': '#1f6feb', 'ECCV': '#d29922', 'NeurIPS': '#8957e5', 'ICML': '#e34d26', 'ICLR': '#007a33', 'arXiv': '#6e7681'};
 
-let svg, gMain, gDots, gLabels;
+let svg;
 let allData = [], currentData = [];
-let currentCat = 'all', currentMethod = 'all', currentSearch = '';
+let currentCat = 'all', currentMethod = 'all', currentConf = 'all', currentCode = 'all', currentSearch = '';
 let scaleX, scaleY;
 let currentScale = 1;
-let positions = [];
 
-// Dynamic layout parameters
-const BASE_WIDTH = 1200;
 const BASE_HEIGHT = 600;
 const DOT_RADIUS = 5;
 const MIN_DOT_SPACING = 18;
@@ -147,12 +179,12 @@ async function init() {
 }
 
 function updateStats() {
+  const withCode = allData.filter(d => d.code).length;
   document.getElementById('total-count').textContent = allData.length;
+  document.getElementById('conf-count').textContent = withCode;
 }
 
-// Calculate density-based X positions
 function calculateXPositions(data) {
-  // Group by year-month
   const groups = {};
   data.forEach(d => {
     const key = `${d.year}-${String(d.month).padStart(2, '0')}`;
@@ -161,27 +193,21 @@ function calculateXPositions(data) {
     groups[key].count++;
   });
   
-  // Sort keys
   const sortedKeys = Object.keys(groups).sort();
-  
-  // Calculate width based on density (more papers = more space)
   let x = 60;
   const monthPositions = {};
   
   sortedKeys.forEach(key => {
     const count = groups[key].count;
-    // Logarithmic scaling: more papers don't need exponentially more space
     const width = MONTH_WIDTH_MIN + Math.log(count + 1) * 25;
     monthPositions[key] = { x, width, papers: groups[key].papers };
-    x += width + 5; // 5px gap between months
+    x += width + 5;
   });
   
   return { monthPositions, totalWidth: x + 60 };
 }
 
-// Y position with collision avoidance
 function calculateYPositions(data, monthPositions, totalHeight) {
-  // Categories
   const categories = ['Image Detection', 'Video Detection', 'Text Detection'];
   const bandHeight = (totalHeight - 80) / categories.length;
   
@@ -194,7 +220,6 @@ function calculateYPositions(data, monthPositions, totalHeight) {
     };
   });
   
-  // Assign Y positions with collision avoidance
   const positions = [];
   
   data.forEach(d => {
@@ -205,35 +230,22 @@ function calculateYPositions(data, monthPositions, totalHeight) {
     
     if (!band || !monthData) return;
     
-    // Find papers in same month-category
     const sameMonthCat = monthData.papers.filter(p => p.category === cat);
     const idx = sameMonthCat.indexOf(d);
-    
-    // Calculate Y with stagger
     const stagger = (idx - (sameMonthCat.length - 1) / 2) * MIN_DOT_SPACING;
     const y = band.center + stagger;
     
-    positions.push({
-      ...d,
-      x: monthData.x + monthData.width / 2,
-      y: y,
-      monthKey: key
-    });
+    positions.push({ ...d, x: monthData.x + monthData.width / 2, y, monthKey: key });
   });
   
   return { positions, yPositions, categories, bandHeight };
 }
 
 function setupLayout() {
-  const { monthPositions, totalWidth } = calculateXPositions(allData);
+  const { monthPositions, totalWidth } = calculateXPositions(currentData);
   const totalHeight = BASE_HEIGHT + (currentData.length > 50 ? 200 : 0);
+  const { positions: pos, yPositions, categories, bandHeight } = calculateYPositions(currentData, monthPositions, totalHeight);
   
-  const { positions: pos, yPositions, categories, bandHeight } = calculateYPositions(
-    currentData, monthPositions, totalHeight
-  );
-  positions = pos;
-  
-  // Set SVG size
   const svgEl = document.getElementById('main-svg');
   svgEl.setAttribute('width', Math.max(totalWidth, window.innerWidth));
   svgEl.setAttribute('height', Math.max(totalHeight, window.innerHeight - 200));
@@ -241,7 +253,6 @@ function setupLayout() {
   svg = d3.select('#main-svg');
   svg.selectAll('*').remove();
   
-  // Backgrounds for each category
   categories.forEach(cat => {
     const band = yPositions[cat];
     svg.append('rect')
@@ -260,13 +271,10 @@ function setupLayout() {
       .text(cat.replace(' Detection', ''));
   });
   
-  // Month/year labels
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   Object.entries(monthPositions).forEach(([key, data]) => {
     const [year, month] = key.split('-').map(Number);
     const labelX = data.x + data.width / 2;
     
-    // Year label (first month of year)
     if (month === 1) {
       svg.append('text')
         .attr('x', labelX).attr('y', 20)
@@ -275,7 +283,6 @@ function setupLayout() {
         .text(year);
     }
     
-    // Quarter markers
     if (month === 1 || month === 4 || month === 7 || month === 10) {
       svg.append('line')
         .attr('x1', labelX).attr('y1', 25)
@@ -284,79 +291,81 @@ function setupLayout() {
     }
   });
   
-  // Store layout info
   scaleX = (x) => x;
   scaleY = yPositions;
+  
+  // Store positions globally for render
+  window.positions = pos;
 }
 
 function setupInteractions() {
-  const mainArea = document.getElementById('main-area');
-  
   document.getElementById('search').addEventListener('input', e => {
     currentSearch = e.target.value.toLowerCase();
     applyFilters();
   });
 }
 
-function filterCat(cat) {
-  currentCat = cat;
-  document.querySelectorAll('.cat-btn').forEach(b => {
-    const isActive = (cat === 'all' && b.dataset.cat === 'all') || b.dataset.cat === cat;
-    b.classList.toggle('active', isActive);
-  });
-  applyFilters();
-}
+function filterCat(cat) { currentCat = cat; updateFilterBtns('.cat-btn', cat, 'all'); applyFilters(); }
+function filterMethod(method) { currentMethod = method; updateFilterBtns('.method-btn', method, 'all'); applyFilters(); }
+function filterConf(conf) { currentConf = conf; updateFilterBtns('.conf-btn', conf, 'all'); applyFilters(); }
+function filterCode(code) { currentCode = code; updateFilterBtns('.code-btn', code, 'all'); applyFilters(); }
 
-function filterMethod(method) {
-  currentMethod = method;
-  document.querySelectorAll('.method-btn').forEach(b => {
-    const isActive = (method === 'all' && b.dataset.method === 'all') || b.dataset.method === method;
+function updateFilterBtns(selector, value, defaultValue) {
+  document.querySelectorAll(selector).forEach(b => {
+    const v = b.dataset[selector.replace('.', '')] || b.dataset.code;
+    const isActive = (value === 'all' && v === 'all') || v === value;
     b.classList.toggle('active', isActive);
   });
-  applyFilters();
 }
 
 function applyFilters() {
   currentData = allData.filter(d => {
     const matchCat = currentCat === 'all' || d.category.includes(currentCat);
     const matchMethod = currentMethod === 'all' || (d.methods || []).includes(currentMethod);
-    const matchSearch = !currentSearch || d.name.toLowerCase().includes(currentSearch) || d.conference.toLowerCase().includes(currentSearch);
-    return matchCat && matchMethod && matchSearch;
+    const matchConf = currentConf === 'all' || (d.conference || '').includes(currentConf);
+    const matchCode = currentCode === 'all' || (currentCode === 'yes' && d.code) || (currentCode === 'no' && !d.code);
+    const matchSearch = !currentSearch || 
+      d.name.toLowerCase().includes(currentSearch) || 
+      (d.conference || '').toLowerCase().includes(currentSearch) ||
+      (d.code || '').toLowerCase().includes(currentSearch);
+    return matchCat && matchMethod && matchConf && matchCode && matchSearch;
   });
   setupLayout();
   render();
+  document.getElementById('total-count').textContent = currentData.length;
 }
 
 function highlightText(text, query) {
   if (!query) return text;
-  const regex = new RegExp(`(${query})`, 'gi');
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   return text.replace(regex, '<mark>$1</mark>');
 }
 
 function render() {
   svg.selectAll('.dot-group').remove();
-  
   const g = svg.append('g').attr('class', 'dot-group');
+  const pos = window.positions || [];
   
-  positions.forEach(d => {
+  pos.forEach(d => {
     const isLandmark = d.landmark;
     const r = DOT_RADIUS;
+    const conf = d.conference || 'arXiv';
+    const confColor = CONF_COLORS[conf] || CONF_COLORS['arXiv'];
     
-    // Glow for landmark
     if (isLandmark) {
       g.append('circle')
         .attr('cx', d.x).attr('cy', d.y).attr('r', r + 3)
         .attr('fill', 'none').attr('stroke', COLORS[d.category]).attr('stroke-width', 1.5).attr('opacity', 0.5);
     }
     
-    // Dot
     g.append('circle')
       .attr('cx', d.x).attr('cy', d.y).attr('r', r)
-      .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', isLandmark ? 1.5 : 1)
+      .attr('fill', COLORS[d.category]).attr('stroke', confColor).attr('stroke-width', 2)
       .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))')
+      .on('mouseenter', e => showHoverPreview(e, d))
+      .on('mouseleave', () => hideHoverPreview())
       .on('click', e => { e.stopPropagation(); showTooltip(e, d); });
     
-    // Label (show when not crowded)
     if (currentScale > 0.8) {
       const label = d.short || d.name.split(':')[0].split(' ')[0].slice(0, 12);
       g.append('text')
@@ -367,8 +376,20 @@ function render() {
     }
   });
   
-  // Click outside to close tooltip
   svg.on('click', () => hideTooltip());
+}
+
+function showHoverPreview(event, d) {
+  const preview = document.getElementById('hover-preview');
+  preview.querySelector('.title').textContent = d.name.slice(0, 50) + (d.name.length > 50 ? '...' : '');
+  preview.querySelector('.conf').textContent = `${d.year} · ${d.conference || 'arXiv'}`;
+  preview.style.display = 'block';
+  preview.style.left = (event.pageX + 15) + 'px';
+  preview.style.top = (event.pageY + 15) + 'px';
+}
+
+function hideHoverPreview() {
+  document.getElementById('hover-preview').style.display = 'none';
 }
 
 function showTooltip(event, d) {
@@ -377,9 +398,12 @@ function showTooltip(event, d) {
   const catName = d.category.replace(' Detection', '');
   const quarter = d.quarter || `Q${Math.ceil(d.month/3)}`;
   const name = highlightText(d.name, currentSearch);
+  const conf = d.conference || 'arXiv';
   const methods = d.methods || ['General'];
+  const hasCode = !!d.code;
   
   let methodPills = methods.map(m => `<span class="pill pill-method">${m}</span>`).join('');
+  const confClass = `pill-conf-${conf.replace('NeurIPS', 'NeurIPS').replace('arXiv', 'arXiv')}`;
   
   let links = '<div class="links">';
   if (d.arxiv) links += `<a href="https://arxiv.org/abs/${d.arxiv}" target="_blank">📄 Paper</a>`;
@@ -387,17 +411,19 @@ function showTooltip(event, d) {
   links += '</div>';
   
   tip.innerHTML = `<h4>${name}</h4>
+    <div class="abstract">${d.name.split('.').slice(0, 2).join('.')}</div>
     <div class="meta">
       <span class="pill ${catPill}">${catName}</span>
+      <span class="pill ${confClass}">${conf}</span>
       <span class="pill pill-yr">${d.year} ${quarter}</span>
-      <span class="pill pill-yr">${d.conference}</span>
+      <span class="pill ${hasCode ? 'pill-code' : 'pill-nocode'}">${hasCode ? '✓ Code' : '✗ Code'}</span>
     </div>
     <div class="meta">${methodPills}</div>
     ${links}`;
   
   tip.style.display = 'block';
-  tip.style.left = Math.min(event.pageX + 15, window.innerWidth - 340) + 'px';
-  tip.style.top = Math.min(event.pageY + 15, window.innerHeight - 220) + 'px';
+  tip.style.left = Math.min(event.pageX + 15, window.innerWidth - 380) + 'px';
+  tip.style.top = Math.min(event.pageY + 15, window.innerHeight - 280) + 'px';
 }
 
 function hideTooltip() {
@@ -409,8 +435,7 @@ function jumpYear(year) {
   const targetKey = `${year}-01`;
   if (monthPositions[targetKey]) {
     const x = monthPositions[targetKey].x;
-    const mainArea = document.getElementById('main-area');
-    mainArea.scrollTo({ left: x - 100, behavior: 'smooth' });
+    document.getElementById('main-area').scrollTo({ left: x - 100, behavior: 'smooth' });
   }
 }
 
@@ -428,13 +453,16 @@ function resetView() {
   currentSearch = '';
   currentCat = 'all';
   currentMethod = 'all';
-  document.querySelectorAll('.cat-btn, .method-btn').forEach(b => 
-    b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all')
+  currentConf = 'all';
+  currentCode = 'all';
+  document.querySelectorAll('.cat-btn, .method-btn, .conf-btn, .code-btn').forEach(b => 
+    b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all' || b.dataset.conf === 'all' || b.dataset.code === 'all')
   );
   document.getElementById('main-area').scrollTo({ left: 0, top: 0, behavior: 'smooth' });
   currentData = [...allData];
   setupLayout();
   render();
+  updateStats();
 }
 
 init();
