@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Awesome AIGC Detection — Timeline</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
+    --img-color: #f97316; --vid-color: #22d3ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
+         display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+  header {
+    padding: 14px 28px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 700; }
+  header h1 span { color: var(--accent); }
+  .stat-row { display: flex; gap: 18px; font-size: 0.8rem; color: var(--muted); }
+  .stat-row b { color: var(--text); }
+
+  .toolbar {
+    padding: 8px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center; flex-shrink: 0;
+  }
+  .toolbar input {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); padding: 5px 10px; font-size: 0.82rem; outline: none; min-width: 180px;
+  }
+  .toolbar input:focus { border-color: var(--accent); }
+  .sep { width: 1px; height: 22px; background: var(--border); margin: 0 4px; }
+  .btn {
+    padding: 4px 12px; border-radius: 5px; font-size: 0.78rem; cursor: pointer;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    transition: all 0.15s;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  #main-area { flex: 1; overflow: hidden; position: relative; }
+  #main-svg { width: 100%; height: 100%; }
+
+  #minimap-wrap {
+    position: absolute; bottom: 56px; right: 16px;
+    background: #1c2128; border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px; z-index: 100;
+  }
+  #minimap-title { font-size: 0.65rem; color: var(--muted); text-align: center; margin-bottom: 4px; }
+  #mini-svg { display: block; }
+
+  #zoom-controls {
+    position: absolute; bottom: 16px; right: 16px;
+    display: flex; gap: 4px; z-index: 100;
+  }
+
+  #tooltip {
+    position: fixed; background: #1c2128; border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 16px; pointer-events: none; max-width: 320px; font-size: 0.82rem; line-height: 1.6;
+    z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.6); display: none;
+  }
+  #tooltip h4 { color: var(--accent); margin-bottom: 4px; font-size: 0.9rem; }
+  #tooltip .conf { display: inline-block; padding: 1px 8px; border-radius: 12px;
+                  font-size: 0.7rem; margin: 2px 4px 0 0; font-weight: 600; }
+  #tooltip .conf-img { background: var(--img-color); color: #000; }
+  #tooltip .conf-vid { background: var(--vid-color); color: #000; }
+  #tooltip a { color: var(--link); text-decoration: none; }
+
+  footer {
+    text-align: center; padding: 8px; font-size: 0.72rem(--muted);
+; color: var    border-top: 1px solid var(--border); flex-shrink: 0;
+  }
+  footer a { color: var(--link); }
+  
+  .legend { display: flex; gap: 12px; margin-left: 12px; }
+  .legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.75rem; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .legend-dot.img { background: var(--img-color); }
+  .legend-dot.vid { background: var(--vid-color); }
+</style>
+</head>
+<body>
+<header>
+  <h1>📅 <span>Awesome AIGC Detection</span> — Paper Timeline</h1>
+  <div class="stat-row">
+    <span>Total <b id="total-count">—</b></span>
+    <span>Image <b id="img-count">—</b></span>
+    <span>Video <b id="vid-count">—</b></span>
+    <span>Span <b>2020 – 2026</b></span>
+    <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank" style="color:var(--link)">⭐ GitHub</a>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input id="search" type="text" placeholder="🔍  Search papers..." />
+  <div class="sep"></div>
+  <button class="btn" onclick="jumpYear(2020)">2020</button>
+  <button class="btn" onclick="jumpYear(2021)">2021</button>
+  <button class="btn" onclick="jumpYear(2022)">2022</button>
+  <button class="btn" onclick="jumpYear(2023)">2023</button>
+  <button class="btn" onclick="jumpYear(2024)">2024</button>
+  <button class="btn" onclick="jumpYear(2025)">2025</button>
+  <button class="btn" onclick="jumpYear(2026)">2026</button>
+  <div class="sep"></div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot img"></div>Image</div>
+    <div class="legend-item"><div class="legend-dot vid"></div>Video</div>
+  </div>
+  <div class="sep"></div>
+  <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂ Reset</button>
+  <span id="vis-count" style="font-size:0.75rem;color:var(--muted);margin-left:4px;"></span>
+</div>
+
+<div id="main-area">
+  <svg id="main-svg"></svg>
+  <div id="minimap-wrap">
+    <div id="minimap-title">Overview</div>
+    <svg id="mini-svg" width="220" height="70"></svg>
+  </div>
+  <div id="zoom-controls">
+    <button class="btn" onclick="zoomBy(1.3)">＋</button>
+    <button class="btn" onclick="zoomBy(0.77)">－</button>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<footer>
+  Auto-generated from Awesome-AIGC-Detection ·
+  Visualized with <a href="https://d3js.org" target="_blank">D3.js v7</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script>
+const DATA = [];
+fetch('timeline_data.json').then(r => r.json()).then(d => { DATA.push(...d); initTimeline(); });
+
+const COLORS = { 'Image Detection': '#f97316', 'Video Detection': '#22d3ee' };
+let svg, gMain, gDots, gLabels, gAxis, xScale, yScale, currentTransform = d3.zoomIdentity, currentData = [];
+
+function initTimeline() {
+  const imgCount = DATA.filter(d => d.category === 'Image Detection').length;
+  const vidCount = DATA.filter(d => d.category === 'Video Detection').length;
+  document.getElementById('total-count').textContent = DATA.length;
+  document.getElementById('img-count').textContent = imgCount;
+  document.getElementById('vid-count').textContent = vidCount;
+
+  const container = document.getElementById('main-area');
+  const width = container.clientWidth, height = container.clientHeight;
+  svg = d3.select('#main-svg').attr('width', width).attr('height', height);
+  gMain = svg.append('g');
+  xScale = d3.scaleLinear().domain([2020, 2026.5]).range([60, width - 40]);
+  yScale = d3.scaleLinear().domain([0, 12]).range([40, height - 40]);
+  gAxis = gMain.append('g').attr('class', 'axis');
+  gDots = gMain.append('g').attr('class', 'dots');
+  gLabels = gMain.append('g').attr('class', 'labels');
+  currentData = [...DATA];
+  render(currentData);
+
+  svg.call(d3.zoom().scaleExtent([0.5, 10]).on('zoom', e => {
+    currentTransform = e.transform;
+    gMain.attr('transform', currentTransform);
+    drawAxis();
+    render(currentData.filter(d => isVisible(d)));
+  }));
+
+  document.getElementById('search').addEventListener('input', e => {
+    const q = e.target.value.toLowerCase();
+    currentData = q ? DATA.filter(d => d.name.toLowerCase().includes(q) || d.conference.toLowerCase().includes(q)) : [...DATA];
+    render(currentData);
+  });
+  initMinimap();
+}
+
+function render(data) {
+  const grouped = {};
+  data.forEach(d => { const key = `${d.year}-${d.month}`; if (!grouped[key]) grouped[key] = []; grouped[key].push(d); });
+  const positioned = [];
+  Object.keys(grouped).sort().forEach(key => { grouped[key].forEach((d, i) => { positioned.push({...d, row: i % 6, col: (d.year - 2020) * 12 + d.month}); }); });
+
+  const dots = gDots.selectAll('.dot').data(positioned, d => d.name + d.year);
+  dots.exit().remove();
+  dots.enter().append('circle').attr('class', 'dot').attr('r', 6).attr('fill', d => COLORS[d.category] || '#888').attr('stroke', '#fff').attr('stroke-width', 1.5).attr('cursor', 'pointer').on('mouseenter', showTooltip).on('mouseleave', hideTooltip).merge(dots).attr('cx', d => xScale(d.year + (d.month - 0.5) / 12)).attr('cy', d => yScale(d.row));
+
+  const labels = gLabels.selectAll('.label').data(positioned, d => d.name + d.year);
+  labels.exit().remove();
+  labels.enter().append('text').attr('class', 'label').attr('font-size', '10px').attr('fill', '#8b949e').attr('cursor', 'pointer').on('mouseenter', showTooltip).on('mouseleave', hideTooltip).merge(labels).attr('x', d => xScale(d.year + (d.month - 0.5) / 12) + 10).attr('y', d => yScale(d.row) + 3).text(d => d.name.length > 30 ? d.name.slice(0, 28) + '...' : d.name);
+  document.getElementById('vis-count').textContent = data.length !== DATA.length ? `(${data.length} / ${DATA.length})` : '';
+}
+
+function isVisible(d) {
+  const x = xScale(d.year + (d.month - 0.5) / 12), y = yScale(d.row);
+  return x * currentTransform.k + currentTransform.x > -100 && x * currentTransform.k + currentTransform.x < 1500 && y * currentTransform.k + currentTransform.y > -100 && y * currentTransform.k + currentTransform.y < 1000;
+}
+
+function drawAxis() {
+  gAxis.selectAll('*').remove();
+  [2020,2021,2022,2023,2024,2025,2026].forEach(y => {
+    gAxis.append('line').attr('x1', xScale(y)).attr('y1', 20).attr('x2', xScale(y)).attr('y2', 800).attr('stroke', '#30363d').attr('stroke-dasharray', '2,2');
+    gAxis.append('text').attr('x', xScale(y)).attr('y', 15).attr('text-anchor', 'middle').attr('fill', '#8b949e').attr('font-size', '12px').text(y);
+  });
+}
+
+function showTooltip(event, d) {
+  const tip = document.getElementById('tooltip');
+  const confClass = d.category === 'Image Detection' ? 'conf-img' : 'conf-vid';
+  tip.innerHTML = `<h4>${d.name}</h4><div><span class="conf ${confClass}">${d.conference}</span><span class="conf" style="background:#30363d;color:#fff">${d.year}</span></div><div style="margin-top:6px;color:#8b949e;font-size:0.75rem">${d.category}</div>`;
+  tip.style.display = 'block';
+  tip.style.left = (event.pageX + 15) + 'px';
+  tip.style.top = (event.pageY + 15) + 'px';
+}
+function hideTooltip() { document.getElementById('tooltip').style.display = 'none'; }
+
+function jumpYear(year) { const x = xScale(year), width = svg.node().clientWidth; svg.transition().duration(500).call(d3.zoom.transform, d3.zoomIdentity.translate(width/2 - x, 0).scale(1.5)); }
+function zoomBy(k) { svg.transition().duration(300).call(d3.zoom.scaleBy, k); }
+function resetView() { svg.transition().duration(500).call(d3.zoom.transform, d3.zoomIdentity); document.getElementById('search').value = ''; currentData = [...DATA]; render(currentData); }
+
+function initMinimap() {
+  const miniW = 220, miniH = 70, miniX = d3.scaleLinear().domain([2020, 2026.5]).range([10, miniW - 10]);
+  const miniSvg = d3.select('#mini-svg');
+  miniSvg.append('rect').attr('width', miniW).attr('height', miniH).attr('fill', '#0d1117');
+  DATA.forEach(d => { miniSvg.append('circle').attr('cx', miniX(d.year + (d.month - 0.5) / 12)).attr('cy', miniH / 2).attr('r', 2).attr('fill', COLORS[d.category] || '#888'); });
+  miniSvg.append('rect').attr('class', 'viewport').attr('x', miniX(2020)).attr('y', 5).attr('width', 40).attr('height', miniH - 10).attr('fill', 'none').attr('stroke', '#58a6ff').attr('stroke-width', 1);
+}
+</script>
+</body>
+</html>

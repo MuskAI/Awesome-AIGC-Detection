@@ -38,6 +38,20 @@ git clone https://github.com/MuskAI/Awesome-AIGC-Detection.git
 
 ---
 
+## 📊 Statistics
+
+| Category | Count |
+|----------|-------|
+| Total Papers | 105 |
+| Image Detection | 80 |
+| Video Detection | 25 |
+| Datasets | 6 |
+| Timespan | 2020 - 2026 |
+
+**[🕐 View Timeline →](./docs/timeline.html)**
+
+---
+
 ## 📋 Table of Contents
 - [Datasets](#Datasets)
 - [Papers](#Papers)
