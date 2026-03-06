@@ -34,15 +34,16 @@
   .btn:hover { border-color: var(--accent); color: var(--accent); }
   .btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
 
-  #main-area { flex: 1; overflow: hidden; position: relative; background: var(--bg); touch-action: pan-x pan-y; }
-  #main-svg { width: 100%; height: 100%; touch-action: none; }
+  #main-area { flex: 1; overflow: auto; position: relative; background: var(--bg); }
+  #timeline-container { min-width: 100%; min-height: 100%; position: relative; }
+  #main-svg { display: block; }
 
-  #zoom-controls { position: absolute; bottom: 16px; right: 16px; display: flex; gap: 6px; z-index: 100; }
+  #zoom-controls { position: fixed; bottom: 16px; right: 16px; display: flex; gap: 6px; z-index: 100; }
 
   #tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
     padding: 12px 14px; max-width: 320px; font-size: 0.82rem; line-height: 1.4;
     z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none; pointer-events: auto; }
-  #tooltip h4 { color: var(--accent); margin-bottom: 6px; font-size: 0.88rem; font-weight: 600; }
+  #tooltip h4 { color: var(--accent); margin-bottom: 6px; font-size: 0.88rem; font-weight: 600; word-break: break-word; }
   #tooltip .meta { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
   #tooltip .pill { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: 0.65rem; font-weight: 600; }
   #tooltip .pill-img { background: #f97316; color: #000; }
@@ -99,10 +100,12 @@
 </div>
 
 <div id="main-area">
-  <svg id="main-svg"></svg>
+  <div id="timeline-container">
+    <svg id="main-svg"></svg>
+  </div>
   <div id="zoom-controls">
-    <button class="btn" onclick="zoomBy(1.5)">＋</button>
-    <button class="btn" onclick="zoomBy(0.65)">－</button>
+    <button class="btn" onclick="zoomBy(1.3)">＋</button>
+    <button class="btn" onclick="zoomBy(0.7)">－</button>
   </div>
 </div>
 
@@ -117,56 +120,178 @@
 const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa'};
 const METHOD_COLORS = {'MLLM': '#238636', 'Reconstruction': '#1f6feb', 'CLIP': '#a371f7', 'Frequency': '#d29922', 'Transformer': '#f85149', 'GAN': '#db61a2', 'General': '#6e7681'};
 
-let svg, gMain, xScale, yScale;
-let currentTransform = d3.zoomIdentity;
+let svg, gMain, gDots, gLabels;
 let allData = [], currentData = [];
 let currentCat = 'all', currentMethod = 'all', currentSearch = '';
-let width, height;
-const margin = {top: 35, right: 60, bottom: 30, left: 80};
+let scaleX, scaleY;
+let currentScale = 1;
+let positions = [];
+
+// Dynamic layout parameters
+const BASE_WIDTH = 1200;
+const BASE_HEIGHT = 600;
+const DOT_RADIUS = 5;
+const MIN_DOT_SPACING = 18;
+const CATEGORY_PADDING = 40;
+const MONTH_WIDTH_MIN = 15;
+const MONTH_WIDTH_MAX = 120;
 
 async function init() {
   const resp = await fetch('timeline_data.json');
   allData = await resp.json();
   currentData = [...allData];
-  
-  // Auto-calculate time range from data
-  const years = allData.map(d => d.year + (d.month - 0.5) / 12);
-  const minYear = Math.min(...years) - 0.3;
-  const maxYear = Math.max(...years) + 0.3;
-  
   updateStats();
-  setupSVG(minYear, maxYear);
-  setupZoom();
-  setupSearch();
+  setupLayout();
+  setupInteractions();
   render();
 }
 
 function updateStats() {
-  const c = {'Image Detection': 0, 'Video Detection': 0, 'Text Detection': 0};
-  allData.forEach(d => c[d.category]++);
   document.getElementById('total-count').textContent = allData.length;
 }
 
-function setupSVG(minYear, maxYear) {
-  const area = document.getElementById('main-area');
-  width = area.clientWidth;
-  height = area.clientHeight;
-  svg = d3.select('#main-svg').attr('width', width).attr('height', height);
-  gMain = svg.append('g');
-  xScale = d3.scaleLinear().domain([minYear, maxYear]).range([margin.left, width - margin.right]);
-  yScale = d3.scaleBand().domain(['Image Detection', 'Video Detection', 'Text Detection'])
-    .range([margin.top, height - margin.bottom]).padding(0.15);
+// Calculate density-based X positions
+function calculateXPositions(data) {
+  // Group by year-month
+  const groups = {};
+  data.forEach(d => {
+    const key = `${d.year}-${String(d.month).padStart(2, '0')}`;
+    if (!groups[key]) groups[key] = { year: d.year, month: d.month, papers: [], count: 0 };
+    groups[key].papers.push(d);
+    groups[key].count++;
+  });
+  
+  // Sort keys
+  const sortedKeys = Object.keys(groups).sort();
+  
+  // Calculate width based on density (more papers = more space)
+  let x = 60;
+  const monthPositions = {};
+  
+  sortedKeys.forEach(key => {
+    const count = groups[key].count;
+    // Logarithmic scaling: more papers don't need exponentially more space
+    const width = MONTH_WIDTH_MIN + Math.log(count + 1) * 25;
+    monthPositions[key] = { x, width, papers: groups[key].papers };
+    x += width + 5; // 5px gap between months
+  });
+  
+  return { monthPositions, totalWidth: x + 60 };
 }
 
-function setupZoom() {
-  svg.call(d3.zoom().scaleExtent([0.1, 12]).on('zoom', e => {
-    currentTransform = e.transform;
-    gMain.attr('transform', `translate(${currentTransform.x},${currentTransform.y}) scale(${currentTransform.k})`);
-    render();
-  }));
+// Y position with collision avoidance
+function calculateYPositions(data, monthPositions, totalHeight) {
+  // Categories
+  const categories = ['Image Detection', 'Video Detection', 'Text Detection'];
+  const bandHeight = (totalHeight - 80) / categories.length;
+  
+  const yPositions = {};
+  categories.forEach((cat, i) => {
+    yPositions[cat] = {
+      y: 40 + i * bandHeight + CATEGORY_PADDING,
+      height: bandHeight - CATEGORY_PADDING * 2,
+      center: 40 + i * bandHeight + bandHeight / 2
+    };
+  });
+  
+  // Assign Y positions with collision avoidance
+  const positions = [];
+  
+  data.forEach(d => {
+    const cat = d.category;
+    const band = yPositions[cat];
+    const key = `${d.year}-${String(d.month).padStart(2, '0')}`;
+    const monthData = monthPositions[key];
+    
+    if (!band || !monthData) return;
+    
+    // Find papers in same month-category
+    const sameMonthCat = monthData.papers.filter(p => p.category === cat);
+    const idx = sameMonthCat.indexOf(d);
+    
+    // Calculate Y with stagger
+    const stagger = (idx - (sameMonthCat.length - 1) / 2) * MIN_DOT_SPACING;
+    const y = band.center + stagger;
+    
+    positions.push({
+      ...d,
+      x: monthData.x + monthData.width / 2,
+      y: y,
+      monthKey: key
+    });
+  });
+  
+  return { positions, yPositions, categories, bandHeight };
 }
 
-function setupSearch() {
+function setupLayout() {
+  const { monthPositions, totalWidth } = calculateXPositions(allData);
+  const totalHeight = BASE_HEIGHT + (currentData.length > 50 ? 200 : 0);
+  
+  const { positions: pos, yPositions, categories, bandHeight } = calculateYPositions(
+    currentData, monthPositions, totalHeight
+  );
+  positions = pos;
+  
+  // Set SVG size
+  const svgEl = document.getElementById('main-svg');
+  svgEl.setAttribute('width', Math.max(totalWidth, window.innerWidth));
+  svgEl.setAttribute('height', Math.max(totalHeight, window.innerHeight - 200));
+  
+  svg = d3.select('#main-svg');
+  svg.selectAll('*').remove();
+  
+  // Backgrounds for each category
+  categories.forEach(cat => {
+    const band = yPositions[cat];
+    svg.append('rect')
+      .attr('x', 0).attr('y', band.y)
+      .attr('width', totalWidth).attr('height', band.height)
+      .attr('fill', cat.includes('Image') ? 'var(--img-bg)' : cat.includes('Video') ? 'var(--vid-bg)' : 'var(--txt-bg)');
+    
+    svg.append('rect')
+      .attr('x', 0).attr('y', band.y).attr('width', 4).attr('height', band.height)
+      .attr('fill', COLORS[cat]).attr('rx', 2);
+    
+    svg.append('text')
+      .attr('x', 50).attr('y', band.center + 4)
+      .attr('text-anchor', 'middle')
+      .attr('fill', COLORS[cat]).attr('font-size', 13).attr('font-weight', '600')
+      .text(cat.replace(' Detection', ''));
+  });
+  
+  // Month/year labels
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  Object.entries(monthPositions).forEach(([key, data]) => {
+    const [year, month] = key.split('-').map(Number);
+    const labelX = data.x + data.width / 2;
+    
+    // Year label (first month of year)
+    if (month === 1) {
+      svg.append('text')
+        .attr('x', labelX).attr('y', 20)
+        .attr('text-anchor', 'middle')
+        .attr('fill', '#8b949e').attr('font-size', 11).attr('font-weight', '600')
+        .text(year);
+    }
+    
+    // Quarter markers
+    if (month === 1 || month === 4 || month === 7 || month === 10) {
+      svg.append('line')
+        .attr('x1', labelX).attr('y1', 25)
+        .attr('x2', labelX).attr('y2', totalHeight)
+        .attr('stroke', '#30363d').attr('stroke-dasharray', '2,4').attr('stroke-width', 0.5);
+    }
+  });
+  
+  // Store layout info
+  scaleX = (x) => x;
+  scaleY = yPositions;
+}
+
+function setupInteractions() {
+  const mainArea = document.getElementById('main-area');
+  
   document.getElementById('search').addEventListener('input', e => {
     currentSearch = e.target.value.toLowerCase();
     applyFilters();
@@ -198,6 +323,7 @@ function applyFilters() {
     const matchSearch = !currentSearch || d.name.toLowerCase().includes(currentSearch) || d.conference.toLowerCase().includes(currentSearch);
     return matchCat && matchMethod && matchSearch;
   });
+  setupLayout();
   render();
 }
 
@@ -207,89 +333,42 @@ function highlightText(text, query) {
   return text.replace(regex, '<mark>$1</mark>');
 }
 
-function computePositions(data) {
-  const positions = [];
-  const groups = {};
-  const minGap = 14;
-  
-  data.forEach(d => {
-    const key = `${d.year}-${d.month}-${d.category}`;
-    if (!groups[key]) groups[key] = [];
-    groups[key].push(d);
-  });
-  
-  const keys = Object.keys(groups).sort();
-  keys.forEach(key => {
-    const items = groups[key];
-    const x = xScale(items[0].year + (items[0].month - 0.5) / 12);
-    items.forEach((item, i) => {
-      const catY = yScale(item.category);
-      const bandHeight = yScale.bandwidth();
-      const yOffset = (i - (items.length - 1) / 2) * minGap;
-      const y = catY + bandHeight / 2 + yOffset;
-      positions.push({...item, x, y});
-    });
-  });
-  return positions;
-}
-
 function render() {
-  const k = currentTransform.k;
-  gMain.selectAll('*').remove();
+  svg.selectAll('.dot-group').remove();
   
-  const cats = ['Image Detection', 'Video Detection', 'Text Detection'];
-  const bgC = {'Image Detection': 'var(--img-bg)', 'Video Detection': 'var(--vid-bg)', 'Text Detection': 'var(--txt-bg)'};
-  const borderC = {'Image Detection': 'var(--img-border)', 'Video Detection': 'var(--vid-border)', 'Text Detection': 'var(--txt-border)'};
+  const g = svg.append('g').attr('class', 'dot-group');
   
-  cats.forEach(cat => {
-    const y = yScale(cat), h = yScale.bandwidth();
-    gMain.append('rect').attr('x', 0).attr('y', y).attr('width', 3000).attr('height', h).attr('fill', bgC[cat]);
-    gMain.append('rect').attr('x', 0).attr('y', y).attr('width', 4).attr('height', h).attr('fill', borderC[cat]).attr('rx', 2);
-    gMain.append('text').attr('x', margin.left - 12).attr('y', y + h/2 + 3).attr('text-anchor', 'end')
-      .attr('fill', COLORS[cat]).attr('font-size', 10).attr('font-weight', '600').text(cat.replace(' Detection', ''));
-  });
-  
-  const startYear = Math.floor(xScale.domain()[0]);
-  const endYear = Math.ceil(xScale.domain()[1]);
-  for (let y = startYear; y <= endYear; y++) {
-    gMain.append('line').attr('x1', xScale(y)).attr('y1', 20).attr('x2', xScale(y)).attr('y2', height)
-      .attr('stroke', '#30363d').attr('stroke-dasharray', '3,3').attr('stroke-width', 0.6/k);
-    gMain.append('text').attr('x', xScale(y)).attr('y', 15).attr('text-anchor', 'middle')
-      .attr('fill', '#8b949e').attr('font-size', 9/k + 'px').text(y);
-  }
-  
-  const positioned = computePositions(currentData);
-  
-  positioned.forEach(d => {
-    const r = Math.max(2.5, 4.5 - k * 0.4);
+  positions.forEach(d => {
     const isLandmark = d.landmark;
+    const r = DOT_RADIUS;
     
-    // Glow for landmark papers
+    // Glow for landmark
     if (isLandmark) {
-      gMain.append('circle')
+      g.append('circle')
         .attr('cx', d.x).attr('cy', d.y).attr('r', r + 3)
-        .attr('fill', 'none').attr('stroke', COLORS[d.category]).attr('stroke-width', 1.5)
-        .attr('opacity', 0.5);
+        .attr('fill', 'none').attr('stroke', COLORS[d.category]).attr('stroke-width', 1.5).attr('opacity', 0.5);
     }
     
-    gMain.append('circle')
+    // Dot
+    g.append('circle')
       .attr('cx', d.x).attr('cy', d.y).attr('r', r)
       .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', isLandmark ? 1.5 : 1)
-      .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.5))')
-      .on('mouseenter', e => showTooltip(e, d))
+      .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))')
       .on('click', e => { e.stopPropagation(); showTooltip(e, d); });
     
-    svg.on('click', () => hideTooltip());
-    
-    if (k > 0.8) {
-      const label = d.short || d.name.split(':')[0].split(' ')[0].slice(0, 10);
-      gMain.append('text')
-        .attr('x', d.x + 7).attr('y', d.y + 2.5)
-        .attr('fill', '#c9d1d9').attr('font-size', 8/k + 'px')
-        .attr('opacity', Math.min(1, (k - 0.7) * 3))
+    // Label (show when not crowded)
+    if (currentScale > 0.8) {
+      const label = d.short || d.name.split(':')[0].split(' ')[0].slice(0, 12);
+      g.append('text')
+        .attr('x', d.x + 8).attr('y', d.y + 3)
+        .attr('fill', '#c9d1d9').attr('font-size', 9)
+        .attr('opacity', currentScale > 0.8 ? 1 : 0)
         .text(label).attr('pointer-events', 'none');
     }
   });
+  
+  // Click outside to close tooltip
+  svg.on('click', () => hideTooltip());
 }
 
 function showTooltip(event, d) {
@@ -303,8 +382,8 @@ function showTooltip(event, d) {
   let methodPills = methods.map(m => `<span class="pill pill-method">${m}</span>`).join('');
   
   let links = '<div class="links">';
-  if (d.arxiv) links += `<a href="https://arxiv.org/abs/${d.arxiv}" target="_blank">📄</a>`;
-  if (d.code) links += `<a href="https://github.com/${d.code}" target="_blank">💻</a>`;
+  if (d.arxiv) links += `<a href="https://arxiv.org/abs/${d.arxiv}" target="_blank">📄 Paper</a>`;
+  if (d.code) links += `<a href="https://github.com/${d.code}" target="_blank">💻 Code</a>`;
   links += '</div>';
   
   tip.innerHTML = `<h4>${name}</h4>
@@ -321,21 +400,40 @@ function showTooltip(event, d) {
   tip.style.top = Math.min(event.pageY + 15, window.innerHeight - 220) + 'px';
 }
 
-function jumpYear(year) {
-  svg.transition().duration(400).call(d3.zoom.transform,
-    d3.zoomIdentity.translate(width/2 - xScale(year) * currentTransform.k, 0).scale(currentTransform.k));
+function hideTooltip() {
+  document.getElementById('tooltip').style.display = 'none';
 }
 
-function zoomBy(factor) { svg.transition().duration(250).call(d3.zoom.scaleBy, factor); }
+function jumpYear(year) {
+  const { monthPositions } = calculateXPositions(currentData);
+  const targetKey = `${year}-01`;
+  if (monthPositions[targetKey]) {
+    const x = monthPositions[targetKey].x;
+    const mainArea = document.getElementById('main-area');
+    mainArea.scrollTo({ left: x - 100, behavior: 'smooth' });
+  }
+}
+
+function zoomBy(factor) {
+  currentScale = Math.max(0.5, Math.min(2, currentScale * factor));
+  document.getElementById('main-svg').style.transform = `scale(${currentScale})`;
+  document.getElementById('main-svg').style.transformOrigin = 'top left';
+  render();
+}
 
 function resetView() {
-  svg.transition().duration(400).call(d3.zoom.transform, d3.zoomIdentity);
+  currentScale = 1;
+  document.getElementById('main-svg').style.transform = '';
   document.getElementById('search').value = '';
   currentSearch = '';
   currentCat = 'all';
   currentMethod = 'all';
-  document.querySelectorAll('.cat-btn, .method-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all'));
+  document.querySelectorAll('.cat-btn, .method-btn').forEach(b => 
+    b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all')
+  );
+  document.getElementById('main-area').scrollTo({ left: 0, top: 0, behavior: 'smooth' });
   currentData = [...allData];
+  setupLayout();
   render();
 }
 
