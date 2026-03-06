@@ -269,7 +269,9 @@ function render() {
       .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', isLandmark ? 1.5 : 1)
       .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.5))')
       .on('mouseenter', e => showTooltip(e, d))
-      .on('mouseleave', () => document.getElementById('tooltip').style.display = 'none');
+      .on('click', e => { e.stopPropagation(); showTooltip(e, d); });
+    
+    svg.on('click', () => hideTooltip());
     
     if (k > 0.8) {
       const label = d.short || d.name.split(':')[0].split(' ')[0].slice(0, 10);
