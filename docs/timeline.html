@@ -8,30 +8,39 @@
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
     --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
-    --img-bg: rgba(249, 115, 22, 0.1); --img-border: rgba(249, 115, 22, 0.4);
-    --vid-bg: rgba(34, 211, 238, 0.1); --vid-border: rgba(34, 211, 238, 0.4);
-    --txt-bg: rgba(167, 139, 250, 0.1); --txt-border: rgba(167, 139, 250, 0.4);
+    --img-bg: rgba(249, 115, 22, 0.08); --img-border: rgba(249, 115, 22, 0.3);
+    --vid-bg: rgba(34, 211, 238, 0.08); --vid-border: rgba(34, 211, 238, 0.3);
+    --txt-bg: rgba(167, 139, 250, 0.08); --txt-border: rgba(167, 139, 250, 0.3);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, sans-serif;
          display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
 
-  header { padding: 14px 24px; border-bottom: 1px solid var(--border); flex-shrink: 0;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; background: var(--surface); }
+  header {
+    padding: 14px 24px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    background: var(--surface);
+  }
   header h1 { font-size: 1.15rem; font-weight: 600; }
   header h1 span { color: var(--accent); }
   .stat-row { display: flex; gap: 14px; font-size: 0.8rem; color: var(--muted); }
   .stat-row b { color: var(--text); }
 
-  .toolbar { padding: 10px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
-    display: flex; gap: 6px; flex-wrap: wrap; align-items: center; flex-shrink: 0; }
-  .toolbar input { background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
-    color: var(--text); padding: 6px 12px; font-size: 0.82rem; outline: none; min-width: 160px; }
+  .toolbar {
+    padding: 10px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; gap: 6px; flex-wrap: wrap; align-items: center; flex-shrink: 0;
+  }
+  .toolbar input {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); padding: 6px 12px; font-size: 0.82rem; outline: none; min-width: 160px;
+  }
   .toolbar input:focus { border-color: var(--accent); }
   .sep { width: 1px; height: 22px; background: var(--border); margin: 0 6px; }
-  .btn { padding: 5px 12px; border-radius: 5px; font-size: 0.78rem; cursor: pointer;
+  .btn {
+    padding: 5px 12px; border-radius: 5px; font-size: 0.78rem; cursor: pointer;
     border: 1px solid var(--border); background: var(--bg); color: var(--text);
-    transition: all 0.15s; }
+    transition: all 0.15s;
+  }
   .btn:hover { border-color: var(--accent); color: var(--accent); }
   .btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
 
@@ -39,11 +48,16 @@
   #main-svg { width: 100%; height: 100%; cursor: grab; }
   #main-svg:active { cursor: grabbing; }
 
+  #minimap-wrap { position: absolute; bottom: 60px; right: 16px; background: var(--surface); 
+    border: 1px solid var(--border); border-radius: 8px; padding: 8px; z-index: 100; }
+  #minimap-title { font-size: 0.7rem; color: var(--muted); text-align: center; margin-bottom: 6px; }
   #zoom-controls { position: absolute; bottom: 16px; right: 16px; display: flex; gap: 6px; z-index: 100; }
 
-  #tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  #tooltip {
+    position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
     padding: 14px 16px; max-width: 360px; font-size: 0.84rem; line-height: 1.5;
-    z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none; }
+    z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none;
+  }
   #tooltip h4 { color: var(--accent); margin-bottom: 8px; font-size: 0.92rem; font-weight: 600; }
   #tooltip .meta { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
   #tooltip .pill { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
@@ -52,14 +66,21 @@
   #tooltip .pill-txt { background: #a78bfa; color: #000; }
   #tooltip .pill-yr { background: var(--border); color: var(--text); }
   #tooltip .links { display: flex; gap: 8px; }
-  #tooltip .links a { display: inline-flex; align-items: center; gap: 4px; padding: 5px 10px; border-radius: 6px; 
+  #tooltip .links a { 
+    display: inline-flex; align-items: center; gap: 4px; padding: 5px 10px; border-radius: 6px; 
     background: var(--bg); border: 1px solid var(--border); color: var(--accent); 
-    text-decoration: none; font-size: 0.78rem; }
+    text-decoration: none; font-size: 0.78rem;
+  }
   #tooltip .links a:hover { background: var(--surface); border-color: var(--accent); }
 
   footer { text-align: center; padding: 10px; font-size: 0.74rem; color: var(--muted);
     border-top: 1px solid var(--border); flex-shrink: 0; background: var(--surface); }
   footer a { color: var(--accent); }
+  
+  .cat-strip { opacity: 0.6; }
+  .cat-label { font-size: 12px; fill: var(--text); font-weight: 500; }
+  .year-line { stroke: var(--border); stroke-dasharray: 3,3; }
+  .year-label { font-size: 11px; fill: var(--muted); }
 </style>
 </head>
 <body>
@@ -96,6 +117,7 @@
 
 <div id="main-area">
   <svg id="main-svg"></svg>
+  <div id="minimap-wrap"><div id="minimap-title">Overview</div><svg id="mini-svg" width="180" height="45"></svg></div>
   <div id="zoom-controls"><button class="btn" onclick="zoomBy(1.4)">＋</button><button class="btn" onclick="zoomBy(0.7)">－</button></div>
 </div>
 
@@ -106,12 +128,12 @@
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
 const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa'};
+const CAT_ORDER = {'Image Detection': 0, 'Video Detection': 1, 'Text Detection': 2};
 
 let svg, gMain, xScale, yScale;
 let currentTransform = d3.zoomIdentity;
 let allData = [], currentData = [];
 let currentCat = 'all';
-let currentSearch = '';
 const margin = {top: 35, right: 60, bottom: 30, left: 90};
 
 async function init() {
@@ -141,7 +163,7 @@ function setupSVG() {
   gMain = svg.append('g');
   xScale = d3.scaleLinear().domain([2020, 2026.6]).range([margin.left, w - margin.right]);
   yScale = d3.scaleBand().domain(['Image Detection', 'Video Detection', 'Text Detection'])
-    .range([margin.top, h - margin.bottom]).padding(0.12);
+    .range([margin.top, h - margin.bottom]).padding(0.15);
 }
 
 function setupZoom() {
@@ -153,25 +175,19 @@ function setupZoom() {
 }
 
 function setupSearch() {
-  document.getElementById('search').addEventListener('input', e => {
-    currentSearch = e.target.value.toLowerCase();
-    applyFilters();
-  });
+  document.getElementById('search').addEventListener('input', e => applyFilters(e.target.value.toLowerCase()));
 }
 
 function filterCat(cat) {
   currentCat = cat;
-  document.querySelectorAll('.cat-btn').forEach(b => {
-    const isActive = (cat === 'all' && b.dataset.cat === 'all') || b.dataset.cat === cat;
-    b.classList.toggle('active', isActive);
-  });
-  applyFilters();
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat || (cat === 'all' && b.dataset.cat === 'all')));
+  applyFilters(document.getElementById('search').value.toLowerCase());
 }
 
-function applyFilters() {
+function applyFilters(q) {
   currentData = allData.filter(d => {
     const matchCat = currentCat === 'all' || d.category.includes(currentCat);
-    const matchSearch = !currentSearch || d.name.toLowerCase().includes(currentSearch) || d.conference.toLowerCase().includes(currentSearch);
+    const matchSearch = !q || d.name.toLowerCase().includes(q) || d.conference.toLowerCase().includes(q);
     return matchCat && matchSearch;
   });
   render();
@@ -180,27 +196,22 @@ function applyFilters() {
 
 function render() {
   const k = currentTransform.k;
-  const w = document.getElementById('main-area').clientWidth;
   gMain.selectAll('*').remove();
   
-  // Full-width background strips for each category
-  const cats = ['Image Detection', 'Video Detection', 'Text Detection'];
-  const bgColors = {'Image Detection': 'var(--img-bg)', 'Video Detection': 'var(--vid-bg)', 'Text Detection': 'var(--txt-bg)'};
-  const borderColors = {'Image Detection': 'var(--img-border)', 'Video Detection': 'var(--vid-border)', 'Text Detection': 'var(--txt-border)'};
+  const areaH = document.getElementById('main-area').clientHeight;
   
+  // Full-width background strips
+  const cats = ['Image Detection', 'Video Detection', 'Text Detection'];
   cats.forEach(cat => {
     const y = yScale(cat), h = yScale.bandwidth();
-    // Full width background
     gMain.append('rect')
-      .attr('x', 0).attr('y', y)
-      .attr('width', w).attr('height', h)
-      .attr('fill', bgColors[cat])
-      .attr('rx', 0);
-    // Left border
+      .attr('x', margin.left - 10).attr('y', y)
+      .attr('width', 2000).attr('height', h)
+      .attr('fill', cat === 'Image Detection' ? 'var(--img-bg)' : cat === 'Video Detection' ? 'var(--vid-bg)' : 'var(--txt-bg)')
+      .attr('rx', 6);
     gMain.append('rect')
-      .attr('x', 0).attr('y', y).attr('width', 4).attr('height', h)
-      .attr('fill', borderColors[cat]).attr('rx', 2);
-    // Label
+      .attr('x', margin.left - 10).attr('y', y).attr('height', h).attr('width', 3)
+      .attr('fill', COLORS[cat]).attr('rx', 2);
     gMain.append('text')
       .attr('x', margin.left - 18).attr('y', y + h/2 + 4)
       .attr('text-anchor', 'end').attr('fill', COLORS[cat])
@@ -210,13 +221,13 @@ function render() {
   
   // Year lines
   for (let y = 2020; y <= 2026; y++) {
-    gMain.append('line').attr('x1', xScale(y)).attr('y1', 20).attr('x2', xScale(y)).attr('y2', h)
+    gMain.append('line').attr('x1', xScale(y)).attr('y1', 20).attr('x2', xScale(y)).attr('y2', areaH)
       .attr('stroke', '#30363d').attr('stroke-dasharray', '3,3').attr('stroke-width', 1/k);
     gMain.append('text').attr('x', xScale(y)).attr('y', 15)
       .attr('text-anchor', 'middle').attr('fill', '#8b949e').attr('font-size', 10/k + 'px').text(y);
   }
   
-  // Group by year-month to avoid overlap
+  // Group by year-month to avoid overlap, assign rows within each group
   const grouped = {};
   currentData.forEach(d => {
     const key = `${d.year}-${d.month}`;
@@ -227,33 +238,33 @@ function render() {
   const positioned = [];
   Object.keys(grouped).sort().forEach(key => {
     grouped[key].forEach((d, i) => {
-      const maxRows = 6;
+      const maxRows = 5; // max dots per column
       const row = i % maxRows;
       positioned.push({...d, row, key});
     });
   });
   
-  // Render dots - smaller size
+  // Render dots
   positioned.forEach(d => {
-    const yPos = yScale(d.category) + yScale.bandwidth() / 2 + (d.row - 2.5) * (yScale.bandwidth() / 7);
+    const yPos = yScale(d.category) + yScale.bandwidth() / 2 + (d.row - 3.5) * (yScale.bandwidth() / 9);
     const xPos = xScale(d.year + (d.month - 0.5) / 12);
     
-    gMain.append('circle')
+    const dot = gMain.append('circle')
       .attr('cx', xPos).attr('cy', yPos)
-      .attr('r', 4/k + 2.5)
-      .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', 1.2/k + 0.3)
-      .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 1px 2px rgba(0,0,0,0.5))')
+      .attr('r', 3.5/k + 2)
+      .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', 1.5/k + 0.5)
+      .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 2px 3px rgba(0,0,0,0.4))')
       .on('mouseenter', e => showTooltip(e, d))
       .on('mouseleave', () => document.getElementById('tooltip').style.display = 'none')
       .on('click', e => { e.stopPropagation(); showTooltip(e, d); });
     
-    // Labels when zoomed in
-    if (k > 0.6) {
+    // Show label when zoomed in
+    if (k > 0.5) {
       gMain.append('text')
-        .attr('x', xPos + 7/k).attr('y', yPos + 2.5/k)
-        .attr('fill', '#c9d1d9').attr('font-size', 8/k + 'px')
-        .attr('opacity', Math.min(1, (k - 0.5) * 2))
-        .text(d.short || d.name.split(':')[0].split(' ')[0].slice(0, 12))
+        .attr('x', xPos + 8/k).attr('y', yPos + 3/k)
+        .attr('fill', '#c9d1d9').attr('font-size', 9/k + 'px')
+        .attr('opacity', Math.min(1, (k - 0.4) * 2))
+        .text(d.short || d.name.split(':')[0].split(' ')[0].slice(0, 14))
         .attr('pointer-events', 'none');
     }
   });
