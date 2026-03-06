@@ -128,8 +128,14 @@ async function init() {
   const resp = await fetch('timeline_data.json');
   allData = await resp.json();
   currentData = [...allData];
+  
+  // Auto-calculate time range from data
+  const years = allData.map(d => d.year + (d.month - 0.5) / 12);
+  const minYear = Math.min(...years) - 0.3;
+  const maxYear = Math.max(...years) + 0.3;
+  
   updateStats();
-  setupSVG();
+  setupSVG(minYear, maxYear);
   setupZoom();
   setupSearch();
   render();
@@ -141,13 +147,13 @@ function updateStats() {
   document.getElementById('total-count').textContent = allData.length;
 }
 
-function setupSVG() {
+function setupSVG(minYear, maxYear) {
   const area = document.getElementById('main-area');
   width = area.clientWidth;
   height = area.clientHeight;
   svg = d3.select('#main-svg').attr('width', width).attr('height', height);
   gMain = svg.append('g');
-  xScale = d3.scaleLinear().domain([2019.5, 2026.8]).range([margin.left, width - margin.right]);
+  xScale = d3.scaleLinear().domain([minYear, maxYear]).range([margin.left, width - margin.right]);
   yScale = d3.scaleBand().domain(['Image Detection', 'Video Detection', 'Text Detection'])
     .range([margin.top, height - margin.bottom]).padding(0.15);
 }
@@ -243,7 +249,9 @@ function render() {
       .attr('fill', COLORS[cat]).attr('font-size', 10).attr('font-weight', '600').text(cat.replace(' Detection', ''));
   });
   
-  for (let y = 2020; y <= 2026; y++) {
+  const startYear = Math.floor(xScale.domain()[0]);
+  const endYear = Math.ceil(xScale.domain()[1]);
+  for (let y = startYear; y <= endYear; y++) {
     gMain.append('line').attr('x1', xScale(y)).attr('y1', 20).attr('x2', xScale(y)).attr('y2', height)
       .attr('stroke', '#30363d').attr('stroke-dasharray', '3,3').attr('stroke-width', 0.6/k);
     gMain.append('text').attr('x', xScale(y)).attr('y', 15).attr('text-anchor', 'middle')
