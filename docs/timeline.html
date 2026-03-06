@@ -431,6 +431,11 @@ function render(animate = true) {
           .transition().duration(150)
           .attr('r', r * 1.3);
         showTooltip(e, d);
+        // Keep tooltip visible when moving to tooltip
+        document.getElementById('tooltip').onmouseenter = function() {
+          this.style.display = 'block';
+          this.classList.add('visible');
+        };
       })
       .on('mouseleave', function() {
         d3.select(this).select('.hover-glow')
@@ -439,7 +444,7 @@ function render(animate = true) {
         d3.select(this).select('circle:not(.hover-glow)')
           .transition().duration(150)
           .attr('r', r);
-        hideTooltip();
+        // Don't hide tooltip - let user move to it
       })
       .on('click', function(e) {
         e.stopPropagation();
@@ -462,6 +467,13 @@ function render(animate = true) {
 
 function showTooltip(event, d) {
   const tip = document.getElementById('tooltip');
+  
+  // Add mouse leave handler to hide when leaving both dot and tooltip
+  tip.onmouseleave = function() {
+    hideTooltip();
+  };
+  
+  // ... rest of the function
   const catPill = d.category.includes('Image') ? 'pill-img' : d.category.includes('Video') ? 'pill-vid' : 'pill-txt';
   const catName = d.category.replace(' Detection', '');
   const quarter = d.quarter || `Q${Math.ceil(d.month/3)}`;
