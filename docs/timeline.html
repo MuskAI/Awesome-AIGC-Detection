@@ -33,20 +33,36 @@
   .toolbar input:focus { border-color: var(--accent); }
   .sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
   .btn { padding: 4px 10px; border-radius: 5px; font-size: 0.72rem; cursor: pointer; white-space: nowrap;
-    border: 1px solid var(--border); background: var(--bg); color: var(--text); transition: all 0.15s; }
-  .btn:hover { border-color: var(--accent); color: var(--accent); }
+    border: 1px solid var(--border); background: var(--bg); color: var(--text); transition: all 0.2s ease; }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: var(--accent); color: var(--accent); }
   .btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
   .btn-conf { font-size: 0.65rem; padding: 3px 7px; }
+  
+  .btn-reset { 
+    background: linear-gradient(135deg, #238636, #2ea043); color: #fff; border: none;
+    font-weight: 600; padding: 5px 12px;
+  }
+  .btn-reset:hover { background: linear-gradient(135deg, #2ea043, #3fb950); color: #fff; }
+  .btn-reset.has-filters { 
+    animation: pulse 1.5s infinite; 
+    background: linear-gradient(135deg, #f85149, #da3633);
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(248, 81, 73, 0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(248, 81, 73, 0); }
+  }
 
-  #main-area { flex: 1; overflow: auto; position: relative; background: var(--bg); }
-  #timeline-container { min-width: 100%; min-height: 100%; position: relative; }
+  #main-area { flex: 1; overflow: hidden; position: relative; background: var(--bg); cursor: grab; }
+  #main-area:active { cursor: grabbing; }
+  #timeline-container { min-width: 100%; min-height: 100%; position: absolute; transform-origin: 0 0; }
   #main-svg { display: block; }
 
   #zoom-controls { position: fixed; bottom: 16px; right: 16px; display: flex; gap: 6px; z-index: 100; }
 
   #tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
     padding: 14px 16px; max-width: 360px; font-size: 0.82rem; line-height: 1.4;
-    z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none; pointer-events: auto; }
+    z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none; pointer-events: auto; opacity: 0; transition: opacity 0.15s; }
+  #tooltip.visible { opacity: 1; }
   #tooltip h4 { color: var(--accent); margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; word-break: break-word; }
   #tooltip .abstract { color: var(--muted); font-size: 0.76rem; line-height: 1.4; margin-bottom: 10px; max-height: 60px; overflow: hidden; }
   #tooltip .meta { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
@@ -72,11 +88,6 @@
   #tooltip .links a:hover { background: var(--accent); color: #000; }
   #tooltip mark { background: #ffd33d; color: #000; padding: 0 2px; border-radius: 2px; }
 
-  #hover-preview { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-    padding: 8px 12px; font-size: 0.78rem; z-index: 9998; pointer-events: none; display: none; white-space: nowrap; }
-  #hover-preview .title { color: var(--accent); font-weight: 500; }
-  #hover-preview .conf { color: var(--muted); font-size: 0.7rem; }
-
   footer { text-align: center; padding: 8px; font-size: 0.7rem; color: var(--muted);
     border-top: 1px solid var(--border); flex-shrink: 0; background: var(--surface); }
   footer a { color: var(--accent); }
@@ -86,6 +97,16 @@
     .stat-row { display: none; }
     .btn { padding: 3px 8px; font-size: 0.65rem; }
     #zoom-controls { bottom: 10px; right: 10px; }
+  }
+  
+  /* Animation keyframes */
+  @keyframes dotEnter {
+    from { opacity: 0; transform: scale(0); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes lineDraw {
+    from { stroke-dashoffset: 2000; }
+    to { stroke-dashoffset: 0; }
   }
 </style>
 </head>
@@ -129,7 +150,7 @@
   <button class="btn code-btn" data-code="yes" onclick="filterCode('yes')">✓</button>
   <button class="btn code-btn" data-code="no" onclick="filterCode('no')">✗</button>
   <div class="sep"></div>
-  <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂</button>
+  <button id="reset-btn" class="btn btn-reset" onclick="resetView()">⌂ Reset</button>
 </div>
 
 <div id="main-area">
@@ -142,7 +163,6 @@
   </div>
 </div>
 
-<div id="hover-preview"><span class="title"></span><br><span class="conf"></span></div>
 <div id="tooltip"></div>
 
 <footer>
@@ -155,33 +175,48 @@
 const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa'};
 const CONF_COLORS = {'CVPR': '#2ea043', 'ICCV': '#1f6feb', 'ECCV': '#d29922', 'NeurIPS': '#8957e5', 'ICML': '#e34d26', 'ICLR': '#007a33', 'arXiv': '#6e7681'};
 
-let svg;
-let allData = [], currentData = [];
+let svg, container;
+let allData = [], currentData = [], filteredData = [];
 let currentCat = 'all', currentMethod = 'all', currentConf = 'all', currentCode = 'all', currentSearch = '';
-let scaleX, scaleY;
-let currentScale = 1;
+let positions = [];
+let transform = { x: 0, y: 0, k: 1 };
+let isDragging = false, dragStart = { x: 0, y: 0 };
 
 const BASE_HEIGHT = 600;
 const DOT_RADIUS = 5;
 const MIN_DOT_SPACING = 18;
 const CATEGORY_PADDING = 40;
 const MONTH_WIDTH_MIN = 15;
-const MONTH_WIDTH_MAX = 120;
 
 async function init() {
   const resp = await fetch('timeline_data.json');
   allData = await resp.json();
   currentData = [...allData];
+  filteredData = [...allData];
   updateStats();
-  setupLayout();
+  setupDrag();
   setupInteractions();
   render();
+  updateResetButton();
 }
 
 function updateStats() {
   const withCode = allData.filter(d => d.code).length;
-  document.getElementById('total-count').textContent = allData.length;
+  document.getElementById('total-count').textContent = filteredData.length;
   document.getElementById('conf-count').textContent = withCode;
+}
+
+function hasActiveFilters() {
+  return currentCat !== 'all' || currentMethod !== 'all' || currentConf !== 'all' || currentCode !== 'all' || currentSearch !== '';
+}
+
+function updateResetButton() {
+  const btn = document.getElementById('reset-btn');
+  if (hasActiveFilters()) {
+    btn.classList.add('has-filters');
+  } else {
+    btn.classList.remove('has-filters');
+  }
 }
 
 function calculateXPositions(data) {
@@ -241,18 +276,54 @@ function calculateYPositions(data, monthPositions, totalHeight) {
   return { positions, yPositions, categories, bandHeight };
 }
 
-function setupLayout() {
-  const { monthPositions, totalWidth } = calculateXPositions(currentData);
-  const totalHeight = BASE_HEIGHT + (currentData.length > 50 ? 200 : 0);
-  const { positions: pos, yPositions, categories, bandHeight } = calculateYPositions(currentData, monthPositions, totalHeight);
+function setupDrag() {
+  const mainArea = document.getElementById('main-area');
+  container = document.getElementById('timeline-container');
+  
+  mainArea.addEventListener('mousedown', e => {
+    if (e.target.closest('#tooltip') || e.target.closest('.btn') || e.target.closest('input')) return;
+    isDragging = true;
+    dragStart = { x: e.clientX - transform.x, y: e.clientY - transform.y };
+    mainArea.style.cursor = 'grabbing';
+  });
+  
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    transform.x = e.clientX - dragStart.x;
+    transform.y = e.clientY - dragStart.y;
+    updateTransform();
+  });
+  
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    mainArea.style.cursor = 'grab';
+  });
+  
+  mainArea.addEventListener('wheel', e => {
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? 0.9 : 1.1;
+    zoomBy(delta, e.clientX, e.clientY);
+  }, { passive: false });
+}
+
+function updateTransform() {
+  container.style.transform = `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`;
+}
+
+function render(animate = true) {
+  const { monthPositions, totalWidth } = calculateXPositions(filteredData);
+  const totalHeight = BASE_HEIGHT + (filteredData.length > 50 ? 200 : 0);
+  const { positions: pos, yPositions, categories, bandHeight } = calculateYPositions(filteredData, monthPositions, totalHeight);
+  positions = pos;
   
   const svgEl = document.getElementById('main-svg');
-  svgEl.setAttribute('width', Math.max(totalWidth, window.innerWidth));
-  svgEl.setAttribute('height', Math.max(totalHeight, window.innerHeight - 200));
+  svgEl.setAttribute('width', Math.max(totalWidth, window.innerWidth / transform.k));
+  svgEl.setAttribute('height', Math.max(totalHeight, (window.innerHeight - 150) / transform.k));
   
   svg = d3.select('#main-svg');
   svg.selectAll('*').remove();
   
+  // Category backgrounds
   categories.forEach(cat => {
     const band = yPositions[cat];
     svg.append('rect')
@@ -271,125 +342,120 @@ function setupLayout() {
       .text(cat.replace(' Detection', ''));
   });
   
+  // Timeline axis with animation
+  const timelineGroup = svg.append('g').attr('class', 'timeline-axis');
+  
   Object.entries(monthPositions).forEach(([key, data]) => {
     const [year, month] = key.split('-').map(Number);
     const labelX = data.x + data.width / 2;
     
     if (month === 1) {
-      svg.append('text')
+      timelineGroup.append('text')
         .attr('x', labelX).attr('y', 20)
         .attr('text-anchor', 'middle')
         .attr('fill', '#8b949e').attr('font-size', 11).attr('font-weight', '600')
+        .attr('opacity', 0)
+        .transition().duration(500).delay(300)
+        .attr('opacity', 1)
         .text(year);
     }
     
     if (month === 1 || month === 4 || month === 7 || month === 10) {
-      svg.append('line')
+      timelineGroup.append('line')
         .attr('x1', labelX).attr('y1', 25)
         .attr('x2', labelX).attr('y2', totalHeight)
-        .attr('stroke', '#30363d').attr('stroke-dasharray', '2,4').attr('stroke-width', 0.5);
+        .attr('stroke', '#30363d').attr('stroke-dasharray', '2,4').attr('stroke-width', 0.5)
+        .attr('opacity', 0)
+        .transition().duration(500).delay(500)
+        .attr('opacity', 1);
     }
   });
   
-  scaleX = (x) => x;
-  scaleY = yPositions;
+  // Draw dots with staggered animation
+  const g = svg.append('g').attr('class', 'dots');
   
-  // Store positions globally for render
-  window.positions = pos;
-}
-
-function setupInteractions() {
-  document.getElementById('search').addEventListener('input', e => {
-    currentSearch = e.target.value.toLowerCase();
-    applyFilters();
-  });
-}
-
-function filterCat(cat) { currentCat = cat; updateFilterBtns('.cat-btn', cat, 'all'); applyFilters(); }
-function filterMethod(method) { currentMethod = method; updateFilterBtns('.method-btn', method, 'all'); applyFilters(); }
-function filterConf(conf) { currentConf = conf; updateFilterBtns('.conf-btn', conf, 'all'); applyFilters(); }
-function filterCode(code) { currentCode = code; updateFilterBtns('.code-btn', code, 'all'); applyFilters(); }
-
-function updateFilterBtns(selector, value, defaultValue) {
-  document.querySelectorAll(selector).forEach(b => {
-    const v = b.dataset[selector.replace('.', '')] || b.dataset.code;
-    const isActive = (value === 'all' && v === 'all') || v === value;
-    b.classList.toggle('active', isActive);
-  });
-}
-
-function applyFilters() {
-  currentData = allData.filter(d => {
-    const matchCat = currentCat === 'all' || d.category.includes(currentCat);
-    const matchMethod = currentMethod === 'all' || (d.methods || []).includes(currentMethod);
-    const matchConf = currentConf === 'all' || (d.conference || '').includes(currentConf);
-    const matchCode = currentCode === 'all' || (currentCode === 'yes' && d.code) || (currentCode === 'no' && !d.code);
-    const matchSearch = !currentSearch || 
-      d.name.toLowerCase().includes(currentSearch) || 
-      (d.conference || '').toLowerCase().includes(currentSearch) ||
-      (d.code || '').toLowerCase().includes(currentSearch);
-    return matchCat && matchMethod && matchConf && matchCode && matchSearch;
-  });
-  setupLayout();
-  render();
-  document.getElementById('total-count').textContent = currentData.length;
-}
-
-function highlightText(text, query) {
-  if (!query) return text;
-  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-  return text.replace(regex, '<mark>$1</mark>');
-}
-
-function render() {
-  svg.selectAll('.dot-group').remove();
-  const g = svg.append('g').attr('class', 'dot-group');
-  const pos = window.positions || [];
-  
-  pos.forEach(d => {
+  pos.forEach((d, i) => {
     const isLandmark = d.landmark;
     const r = DOT_RADIUS;
     const conf = d.conference || 'arXiv';
     const confColor = CONF_COLORS[conf] || CONF_COLORS['arXiv'];
     
+    const dotGroup = g.append('g')
+      .attr('class', 'dot-group')
+      .attr('transform', `translate(${d.x}, ${d.y})`)
+      .style('opacity', 0)
+      .style('cursor', 'pointer');
+    
+    // Landmark glow
     if (isLandmark) {
-      g.append('circle')
-        .attr('cx', d.x).attr('cy', d.y).attr('r', r + 3)
-        .attr('fill', 'none').attr('stroke', COLORS[d.category]).attr('stroke-width', 1.5).attr('opacity', 0.5);
+      dotGroup.append('circle')
+        .attr('r', r + 4)
+        .attr('fill', 'none')
+        .attr('stroke', COLORS[d.category])
+        .attr('stroke-width', 1.5)
+        .attr('opacity', 0)
+        .transition().duration(300).delay(100 + i * 20)
+        .attr('opacity', 0.5);
     }
     
-    g.append('circle')
-      .attr('cx', d.x).attr('cy', d.y).attr('r', r)
-      .attr('fill', COLORS[d.category]).attr('stroke', confColor).attr('stroke-width', 2)
-      .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))')
-      .on('mouseenter', e => showHoverPreview(e, d))
-      .on('mouseleave', () => hideHoverPreview())
-      .on('click', e => { e.stopPropagation(); showTooltip(e, d); });
+    // Main dot
+    dotGroup.append('circle')
+      .attr('r', 0)
+      .attr('fill', COLORS[d.category])
+      .attr('stroke', confColor)
+      .attr('stroke-width', 2)
+      .style('filter', 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))')
+      .transition()
+      .duration(400)
+      .delay(animate ? 50 + i * 15 : 0)
+      .attr('r', r);
     
-    if (currentScale > 0.8) {
+    // Hover glow effect
+    dotGroup.append('circle')
+      .attr('class', 'hover-glow')
+      .attr('r', r + 6)
+      .attr('fill', COLORS[d.category])
+      .attr('opacity', 0)
+      .style('filter', `drop-shadow(0 0 8px ${COLORS[d.category]})`)
+      .style('pointer-events', 'none');
+    
+    // Events
+    dotGroup
+      .on('mouseenter', function(e) {
+        d3.select(this).select('.hover-glow')
+          .transition().duration(150)
+          .attr('opacity', 0.3);
+        d3.select(this).select('circle:not(.hover-glow)')
+          .transition().duration(150)
+          .attr('r', r * 1.3);
+        showTooltip(e, d);
+      })
+      .on('mouseleave', function() {
+        d3.select(this).select('.hover-glow')
+          .transition().duration(150)
+          .attr('opacity', 0);
+        d3.select(this).select('circle:not(.hover-glow)')
+          .transition().duration(150)
+          .attr('r', r);
+        hideTooltip();
+      })
+      .on('click', function(e) {
+        e.stopPropagation();
+        showTooltip(e, d);
+      });
+    
+    // Labels
+    if (transform.k > 0.8) {
       const label = d.short || d.name.split(':')[0].split(' ')[0].slice(0, 12);
-      g.append('text')
-        .attr('x', d.x + 8).attr('y', d.y + 3)
+      dotGroup.append('text')
+        .attr('x', 10).attr('y', 3)
         .attr('fill', '#c9d1d9').attr('font-size', 9)
-        .attr('opacity', currentScale > 0.8 ? 1 : 0)
-        .text(label).attr('pointer-events', 'none');
+        .attr('opacity', 0)
+        .text(label)
+        .transition().duration(300).delay(400 + i * 15)
+        .attr('opacity', 1);
     }
   });
-  
-  svg.on('click', () => hideTooltip());
-}
-
-function showHoverPreview(event, d) {
-  const preview = document.getElementById('hover-preview');
-  preview.querySelector('.title').textContent = d.name.slice(0, 50) + (d.name.length > 50 ? '...' : '');
-  preview.querySelector('.conf').textContent = `${d.year} · ${d.conference || 'arXiv'}`;
-  preview.style.display = 'block';
-  preview.style.left = (event.pageX + 15) + 'px';
-  preview.style.top = (event.pageY + 15) + 'px';
-}
-
-function hideHoverPreview() {
-  document.getElementById('hover-preview').style.display = 'none';
 }
 
 function showTooltip(event, d) {
@@ -403,7 +469,6 @@ function showTooltip(event, d) {
   const hasCode = !!d.code;
   
   let methodPills = methods.map(m => `<span class="pill pill-method">${m}</span>`).join('');
-  const confClass = `pill-conf-${conf.replace('NeurIPS', 'NeurIPS').replace('arXiv', 'arXiv')}`;
   
   let links = '<div class="links">';
   if (d.arxiv) links += `<a href="https://arxiv.org/abs/${d.arxiv}" target="_blank">📄 Paper</a>`;
@@ -414,7 +479,7 @@ function showTooltip(event, d) {
     <div class="abstract">${d.name.split('.').slice(0, 2).join('.')}</div>
     <div class="meta">
       <span class="pill ${catPill}">${catName}</span>
-      <span class="pill ${confClass}">${conf}</span>
+      <span class="pill pill-conf-${conf}">${conf}</span>
       <span class="pill pill-yr">${d.year} ${quarter}</span>
       <span class="pill ${hasCode ? 'pill-code' : 'pill-nocode'}">${hasCode ? '✓ Code' : '✗ Code'}</span>
     </div>
@@ -422,47 +487,125 @@ function showTooltip(event, d) {
     ${links}`;
   
   tip.style.display = 'block';
+  // Force reflow for transition
+  void tip.offsetWidth;
   tip.style.left = Math.min(event.pageX + 15, window.innerWidth - 380) + 'px';
   tip.style.top = Math.min(event.pageY + 15, window.innerHeight - 280) + 'px';
+  requestAnimationFrame(() => tip.classList.add('visible'));
 }
 
 function hideTooltip() {
-  document.getElementById('tooltip').style.display = 'none';
+  const tip = document.getElementById('tooltip');
+  tip.classList.remove('visible');
+  setTimeout(() => { tip.style.display = 'none'; }, 150);
+}
+
+function highlightText(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  return text.replace(regex, '<mark>$1</mark>');
+}
+
+function setupInteractions() {
+  document.getElementById('search').addEventListener('input', e => {
+    currentSearch = e.target.value.toLowerCase();
+    applyFilters();
+  });
+}
+
+function filterCat(cat) { 
+  currentCat = cat; 
+  document.querySelectorAll('.cat-btn').forEach(b => {
+    const isActive = (cat === 'all' && b.dataset.cat === 'all') || b.dataset.cat === cat;
+    b.classList.toggle('active', isActive);
+  });
+  applyFilters(); 
+}
+
+function filterMethod(method) { 
+  currentMethod = method; 
+  document.querySelectorAll('.method-btn').forEach(b => {
+    const isActive = (method === 'all' && b.dataset.method === 'all') || b.dataset.method === method;
+    b.classList.toggle('active', isActive);
+  });
+  applyFilters(); 
+}
+
+function filterConf(conf) { 
+  currentConf = conf; 
+  document.querySelectorAll('.conf-btn').forEach(b => {
+    const isActive = (conf === 'all' && b.dataset.conf === 'all') || b.dataset.conf === conf;
+    b.classList.toggle('active', isActive);
+  });
+  applyFilters(); 
+}
+
+function filterCode(code) { 
+  currentCode = code; 
+  document.querySelectorAll('.code-btn').forEach(b => {
+    const isActive = (code === 'all' && b.dataset.code === 'all') || b.dataset.code === code;
+    b.classList.toggle('active', isActive);
+  });
+  applyFilters(); 
+}
+
+function applyFilters() {
+  filteredData = allData.filter(d => {
+    const matchCat = currentCat === 'all' || d.category.includes(currentCat);
+    const matchMethod = currentMethod === 'all' || (d.methods || []).includes(currentMethod);
+    const matchConf = currentConf === 'all' || (d.conference || '').includes(currentConf);
+    const matchCode = currentCode === 'all' || (currentCode === 'yes' && d.code) || (currentCode === 'no' && !d.code);
+    const matchSearch = !currentSearch || 
+      d.name.toLowerCase().includes(currentSearch) || 
+      (d.conference || '').toLowerCase().includes(currentSearch) ||
+      (d.code || '').toLowerCase().includes(currentSearch);
+    return matchCat && matchMethod && matchConf && matchCode && matchSearch;
+  });
+  render();
+  updateStats();
+  updateResetButton();
 }
 
 function jumpYear(year) {
-  const { monthPositions } = calculateXPositions(currentData);
+  const { monthPositions } = calculateXPositions(filteredData);
   const targetKey = `${year}-01`;
   if (monthPositions[targetKey]) {
-    const x = monthPositions[targetKey].x;
-    document.getElementById('main-area').scrollTo({ left: x - 100, behavior: 'smooth' });
+    const x = monthPositions[targetKey].x * transform.k + transform.x - window.innerWidth / 2;
+    transform.x = -x + window.innerWidth / 2;
+    updateTransform();
   }
 }
 
-function zoomBy(factor) {
-  currentScale = Math.max(0.5, Math.min(2, currentScale * factor));
-  document.getElementById('main-svg').style.transform = `scale(${currentScale})`;
-  document.getElementById('main-svg').style.transformOrigin = 'top left';
-  render();
+function zoomBy(factor, cx, cy) {
+  const newK = Math.max(0.3, Math.min(3, transform.k * factor));
+  if (cx !== undefined && cy !== undefined) {
+    const scale = newK / transform.k;
+    transform.x = cx - (cx - transform.x) * scale;
+    transform.y = cy - (cy - transform.y) * scale;
+  }
+  transform.k = newK;
+  updateTransform();
+  render(false);
 }
 
 function resetView() {
-  currentScale = 1;
-  document.getElementById('main-svg').style.transform = '';
+  transform = { x: 0, y: 0, k: 1 };
+  updateTransform();
   document.getElementById('search').value = '';
   currentSearch = '';
   currentCat = 'all';
   currentMethod = 'all';
   currentConf = 'all';
   currentCode = 'all';
+  
   document.querySelectorAll('.cat-btn, .method-btn, .conf-btn, .code-btn').forEach(b => 
     b.classList.toggle('active', b.dataset.cat === 'all' || b.dataset.method === 'all' || b.dataset.conf === 'all' || b.dataset.code === 'all')
   );
-  document.getElementById('main-area').scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-  currentData = [...allData];
-  setupLayout();
+  
+  filteredData = [...allData];
   render();
   updateStats();
+  updateResetButton();
 }
 
 init();
