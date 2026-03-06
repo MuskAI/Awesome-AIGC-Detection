@@ -8,7 +8,7 @@
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
     --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
-    --img-color: #f97316; --vid-color: #22d3ee;
+    --img-color: #f97316; --vid-color: #22d3ee; --txt-color: #a78bfa;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
@@ -58,7 +58,7 @@
 
   #tooltip {
     position: fixed; background: #1c2128; border: 1px solid var(--border); border-radius: 10px;
-    padding: 12px 16px; pointer-events: none; max-width: 320px; font-size: 0.82rem; line-height: 1.6;
+    padding: 12px 16px; pointer-events: none; max-width: 350px; font-size: 0.82rem; line-height: 1.6;
     z-index: 9999; box-shadow: 0 8px 24px rgba(0,0,0,.6); display: none;
   }
   #tooltip h4 { color: var(--accent); margin-bottom: 4px; font-size: 0.9rem; }
@@ -66,11 +66,12 @@
                   font-size: 0.7rem; margin: 2px 4px 0 0; font-weight: 600; }
   #tooltip .conf-img { background: var(--img-color); color: #000; }
   #tooltip .conf-vid { background: var(--vid-color); color: #000; }
+  #tooltip .conf-txt { background: var(--txt-color); color: #000; }
   #tooltip a { color: var(--link); text-decoration: none; }
 
   footer {
-    text-align: center; padding: 8px; font-size: 0.72rem(--muted);
-; color: var    border-top: 1px solid var(--border); flex-shrink: 0;
+    text-align: center; padding: 8px; font-size: 0.72rem; color: var(--muted);
+    border-top: 1px solid var(--border); flex-shrink: 0;
   }
   footer a { color: var(--link); }
   
@@ -79,6 +80,7 @@
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
   .legend-dot.img { background: var(--img-color); }
   .legend-dot.vid { background: var(--vid-color); }
+  .legend-dot.txt { background: var(--txt-color); }
 </style>
 </head>
 <body>
@@ -88,6 +90,7 @@
     <span>Total <b id="total-count">—</b></span>
     <span>Image <b id="img-count">—</b></span>
     <span>Video <b id="vid-count">—</b></span>
+    <span>Text <b id="txt-count">—</b></span>
     <span>Span <b>2020 – 2026</b></span>
     <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank" style="color:var(--link)">⭐ GitHub</a>
   </div>
@@ -107,6 +110,7 @@
   <div class="legend">
     <div class="legend-item"><div class="legend-dot img"></div>Image</div>
     <div class="legend-item"><div class="legend-dot vid"></div>Video</div>
+    <div class="legend-item"><div class="legend-dot txt"></div>Text</div>
   </div>
   <div class="sep"></div>
   <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂ Reset</button>
@@ -137,15 +141,21 @@
 const DATA = [];
 fetch('timeline_data.json').then(r => r.json()).then(d => { DATA.push(...d); initTimeline(); });
 
-const COLORS = { 'Image Detection': '#f97316', 'Video Detection': '#22d3ee' };
+const COLORS = { 
+  'Image Detection': '#f97316', 
+  'Video Detection': '#22d3ee',
+  'Text Detection': '#a78bfa'
+};
 let svg, gMain, gDots, gLabels, gAxis, xScale, yScale, currentTransform = d3.zoomIdentity, currentData = [];
 
 function initTimeline() {
   const imgCount = DATA.filter(d => d.category === 'Image Detection').length;
   const vidCount = DATA.filter(d => d.category === 'Video Detection').length;
+  const txtCount = DATA.filter(d => d.category === 'Text Detection').length;
   document.getElementById('total-count').textContent = DATA.length;
   document.getElementById('img-count').textContent = imgCount;
   document.getElementById('vid-count').textContent = vidCount;
+  document.getElementById('txt-count').textContent = txtCount;
 
   const container = document.getElementById('main-area');
   const width = container.clientWidth, height = container.clientHeight;
@@ -178,15 +188,24 @@ function render(data) {
   const grouped = {};
   data.forEach(d => { const key = `${d.year}-${d.month}`; if (!grouped[key]) grouped[key] = []; grouped[key].push(d); });
   const positioned = [];
-  Object.keys(grouped).sort().forEach(key => { grouped[key].forEach((d, i) => { positioned.push({...d, row: i % 6, col: (d.year - 2020) * 12 + d.month}); }); });
+  Object.keys(grouped).sort().forEach(key => { 
+    grouped[key].forEach((d, i) => { 
+      positioned.push({...d, row: i % 6, col: (d.year - 2020) * 12 + d.month}); 
+    }); 
+  });
 
   const dots = gDots.selectAll('.dot').data(positioned, d => d.name + d.year);
   dots.exit().remove();
   dots.enter().append('circle').attr('class', 'dot').attr('r', 6).attr('fill', d => COLORS[d.category] || '#888').attr('stroke', '#fff').attr('stroke-width', 1.5).attr('cursor', 'pointer').on('mouseenter', showTooltip).on('mouseleave', hideTooltip).merge(dots).attr('cx', d => xScale(d.year + (d.month - 0.5) / 12)).attr('cy', d => yScale(d.row));
 
+  // Show short names
   const labels = gLabels.selectAll('.label').data(positioned, d => d.name + d.year);
   labels.exit().remove();
-  labels.enter().append('text').attr('class', 'label').attr('font-size', '10px').attr('fill', '#8b949e').attr('cursor', 'pointer').on('mouseenter', showTooltip).on('mouseleave', hideTooltip).merge(labels).attr('x', d => xScale(d.year + (d.month - 0.5) / 12) + 10).attr('y', d => yScale(d.row) + 3).text(d => d.name.length > 30 ? d.name.slice(0, 28) + '...' : d.name);
+  labels.enter().append('text').attr('class', 'label').attr('font-size', '10px').attr('fill', '#8b949e').attr('cursor', 'pointer').on('mouseenter', showTooltip).on('mouseleave', hideTooltip).merge(labels)
+    .attr('x', d => xScale(d.year + (d.month - 0.5) / 12) + 10)
+    .attr('y', d => yScale(d.row) + 3)
+    .text(d => d.short || d.name.split(':')[0].split(' ')[0].slice(0, 15));
+    
   document.getElementById('vis-count').textContent = data.length !== DATA.length ? `(${data.length} / ${DATA.length})` : '';
 }
 
@@ -205,8 +224,8 @@ function drawAxis() {
 
 function showTooltip(event, d) {
   const tip = document.getElementById('tooltip');
-  const confClass = d.category === 'Image Detection' ? 'conf-img' : 'conf-vid';
-  tip.innerHTML = `<h4>${d.name}</h4><div><span class="conf ${confClass}">${d.conference}</span><span class="conf" style="background:#30363d;color:#fff">${d.year}</span></div><div style="margin-top:6px;color:#8b949e;font-size:0.75rem">${d.category}</div>`;
+  const confClass = d.category === 'Image Detection' ? 'conf-img' : d.category === 'Video Detection' ? 'conf-vid' : 'conf-txt';
+  tip.innerHTML = `<h4>${d.name}</h4><div><span class="conf ${confClass}">${d.conference}</span><span class="conf" style="background:#30363d;color:#fff">${d.year}</span><span class="conf" style="background:#30363d;color:#fff">${d.category.split(' ')[0]}</span></div>`;
   tip.style.display = 'block';
   tip.style.left = (event.pageX + 15) + 'px';
   tip.style.top = (event.pageY + 15) + 'px';
