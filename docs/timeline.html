@@ -7,10 +7,13 @@
 <style>
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
-    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --link: #79c0ff;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --img-bg: rgba(249, 115, 22, 0.08); --img-border: rgba(249, 115, 22, 0.3);
+    --vid-bg: rgba(34, 211, 238, 0.08); --vid-border: rgba(34, 211, 238, 0.3);
+    --txt-bg: rgba(167, 139, 250, 0.08); --txt-border: rgba(167, 139, 250, 0.3);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, sans-serif;
          display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
 
   header {
@@ -18,79 +21,66 @@
     display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
     background: var(--surface);
   }
-  header h1 { font-size: 1.2rem; font-weight: 600; }
+  header h1 { font-size: 1.15rem; font-weight: 600; }
   header h1 span { color: var(--accent); }
-  .stat-row { display: flex; gap: 16px; font-size: 0.8rem; color: var(--muted); }
+  .stat-row { display: flex; gap: 14px; font-size: 0.8rem; color: var(--muted); }
   .stat-row b { color: var(--text); }
 
   .toolbar {
     padding: 10px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
-    display: flex; gap: 8px; flex-wrap: wrap; align-items: center; flex-shrink: 0;
+    display: flex; gap: 6px; flex-wrap: wrap; align-items: center; flex-shrink: 0;
   }
   .toolbar input {
     background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
-    color: var(--text); padding: 6px 12px; font-size: 0.85rem; outline: none; min-width: 180px;
+    color: var(--text); padding: 6px 12px; font-size: 0.82rem; outline: none; min-width: 160px;
   }
   .toolbar input:focus { border-color: var(--accent); }
-  .sep { width: 1px; height: 24px; background: var(--border); margin: 0 6px; }
+  .sep { width: 1px; height: 22px; background: var(--border); margin: 0 6px; }
   .btn {
-    padding: 5px 14px; border-radius: 6px; font-size: 0.8rem; cursor: pointer;
+    padding: 5px 12px; border-radius: 5px; font-size: 0.78rem; cursor: pointer;
     border: 1px solid var(--border); background: var(--bg); color: var(--text);
     transition: all 0.15s;
   }
   .btn:hover { border-color: var(--accent); color: var(--accent); }
   .btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
-  .btn-year { min-width: 44px; }
 
   #main-area { flex: 1; overflow: hidden; position: relative; background: var(--bg); }
   #main-svg { width: 100%; height: 100%; cursor: grab; }
   #main-svg:active { cursor: grabbing; }
 
-  #minimap-wrap {
-    position: absolute; bottom: 60px; right: 16px;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-    padding: 8px; z-index: 100;
-  }
+  #minimap-wrap { position: absolute; bottom: 60px; right: 16px; background: var(--surface); 
+    border: 1px solid var(--border); border-radius: 8px; padding: 8px; z-index: 100; }
   #minimap-title { font-size: 0.7rem; color: var(--muted); text-align: center; margin-bottom: 6px; }
-  #mini-svg { display: block; }
-
-  #zoom-controls {
-    position: absolute; bottom: 16px; right: 16px;
-    display: flex; gap: 6px; z-index: 100;
-  }
+  #zoom-controls { position: absolute; bottom: 16px; right: 16px; display: flex; gap: 6px; z-index: 100; }
 
   #tooltip {
     position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-    padding: 14px 18px; max-width: 380px; font-size: 0.85rem; line-height: 1.5;
+    padding: 14px 16px; max-width: 360px; font-size: 0.84rem; line-height: 1.5;
     z-index: 9999; box-shadow: 0 12px 32px rgba(0,0,0,0.5); display: none;
-    color: var(--text);
   }
-  #tooltip h4 { color: var(--accent); margin-bottom: 8px; font-size: 0.95rem; font-weight: 600; }
-  #tooltip .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
-  #tooltip .pill { display: inline-block; padding: 2px 10px; border-radius: 12px;
-           font-size: 0.7rem; font-weight: 600; }
+  #tooltip h4 { color: var(--accent); margin-bottom: 8px; font-size: 0.92rem; font-weight: 600; }
+  #tooltip .meta { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
+  #tooltip .pill { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
   #tooltip .pill-img { background: #f97316; color: #000; }
   #tooltip .pill-vid { background: #22d3ee; color: #000; }
   #tooltip .pill-txt { background: #a78bfa; color: #000; }
-  #tooltip .pill-year { background: var(--border); color: var(--text); }
-  #tooltip .links { display: flex; gap: 10px; }
+  #tooltip .pill-yr { background: var(--border); color: var(--text); }
+  #tooltip .links { display: flex; gap: 8px; }
   #tooltip .links a { 
-    display: inline-flex; align-items: center; gap: 4px;
-    padding: 4px 10px; border-radius: 6px; 
-    background: var(--bg); border: 1px solid var(--border);
-    color: var(--link); text-decoration: none; font-size: 0.8rem;
+    display: inline-flex; align-items: center; gap: 4px; padding: 5px 10px; border-radius: 6px; 
+    background: var(--bg); border: 1px solid var(--border); color: var(--accent); 
+    text-decoration: none; font-size: 0.78rem;
   }
-  #tooltip .links a:hover { border-color: var(--accent); background: var(--surface); }
+  #tooltip .links a:hover { background: var(--surface); border-color: var(--accent); }
 
-  footer {
-    text-align: center; padding: 10px; font-size: 0.75rem; color: var(--muted);
-    border-top: 1px solid var(--border); flex-shrink: 0; background: var(--surface);
-  }
-  footer a { color: var(--link); }
+  footer { text-align: center; padding: 10px; font-size: 0.74rem; color: var(--muted);
+    border-top: 1px solid var(--border); flex-shrink: 0; background: var(--surface); }
+  footer a { color: var(--accent); }
   
-  .year-label { font-size: 11px; fill: var(--muted); }
-  .quarter-label { font-size: 9px; fill: var(--muted); }
+  .cat-strip { opacity: 0.6; }
   .cat-label { font-size: 12px; fill: var(--text); font-weight: 500; }
+  .year-line { stroke: var(--border); stroke-dasharray: 3,3; }
+  .year-label { font-size: 11px; fill: var(--muted); }
 </style>
 </head>
 <body>
@@ -101,25 +91,25 @@
     <span>Image <b id="img-count">—</b></span>
     <span>Video <b id="vid-count">—</b></span>
     <span>Text <b id="txt-count">—</b></span>
-    <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank" style="color:var(--link)">⭐ GitHub</a>
+    <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank" style="color:var(--accent)">⭐ GitHub</a>
   </div>
 </header>
 
 <div class="toolbar">
-  <input id="search" type="text" placeholder="🔍 Search papers..." />
+  <input id="search" type="text" placeholder="🔍 Search..." />
   <div class="sep"></div>
-  <button class="btn btn-year" onclick="jumpYear(2020)">2020</button>
-  <button class="btn btn-year" onclick="jumpYear(2021)">2021</button>
-  <button class="btn btn-year" onclick="jumpYear(2022)">2022</button>
-  <button class="btn btn-year" onclick="jumpYear(2023)">2023</button>
-  <button class="btn btn-year" onclick="jumpYear(2024)">2024</button>
-  <button class="btn btn-year" onclick="jumpYear(2025)">2025</button>
-  <button class="btn btn-year" onclick="jumpYear(2026)">2026</button>
+  <button class="btn" onclick="jumpYear(2020)">2020</button>
+  <button class="btn" onclick="jumpYear(2021)">2021</button>
+  <button class="btn" onclick="jumpYear(2022)">2022</button>
+  <button class="btn" onclick="jumpYear(2023)">2023</button>
+  <button class="btn" onclick="jumpYear(2024)">2024</button>
+  <button class="btn" onclick="jumpYear(2025)">2025</button>
+  <button class="btn" onclick="jumpYear(2026)">2026</button>
   <div class="sep"></div>
-  <button class="btn cat-btn active" onclick="filterCat('all')" data-cat="all">All</button>
-  <button class="btn cat-btn" onclick="filterCat('Image')" data-cat="Image">Image</button>
-  <button class="btn cat-btn" onclick="filterCat('Video')" data-cat="Video">Video</button>
-  <button class="btn cat-btn" onclick="filterCat('Text')" data-cat="Text">Text</button>
+  <button class="btn cat-btn active" data-cat="all" onclick="filterCat('all')">All</button>
+  <button class="btn cat-btn" data-cat="Image" onclick="filterCat('Image')">Image</button>
+  <button class="btn cat-btn" data-cat="Video" onclick="filterCat('Video')">Video</button>
+  <button class="btn cat-btn" data-cat="Text" onclick="filterCat('Text')">Text</button>
   <div class="sep"></div>
   <button class="btn" onclick="resetView()" style="color:var(--accent)">⌂ Reset</button>
   <span id="vis-count" style="font-size:0.75rem;color:var(--muted);margin-left:8px;"></span>
@@ -127,45 +117,29 @@
 
 <div id="main-area">
   <svg id="main-svg"></svg>
-  <div id="minimap-wrap">
-    <div id="minimap-title">Overview</div>
-    <svg id="mini-svg" width="200" height="50"></svg>
-  </div>
-  <div id="zoom-controls">
-    <button class="btn" onclick="zoomBy(1.4)">＋</button>
-    <button class="btn" onclick="zoomBy(0.7)">－</button>
-  </div>
+  <div id="minimap-wrap"><div id="minimap-title">Overview</div><svg id="mini-svg" width="180" height="45"></svg></div>
+  <div id="zoom-controls"><button class="btn" onclick="zoomBy(1.4)">＋</button><button class="btn" onclick="zoomBy(0.7)">－</button></div>
 </div>
 
 <div id="tooltip"></div>
 
-<footer>
-  Data: <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank">Awesome-AIGC-Detection</a> ·
-  Built with <a href="https://d3js.org" target="_blank">D3.js v7</a>
-</footer>
+<footer>Data: <a href="https://github.com/MuskAI/Awesome-AIGC-Detection" target="_blank">Awesome-AIGC-Detection</a> · Built with <a href="https://d3js.org" target="_blank">D3.js</a></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
-const COLORS = {
-  'Image Detection': '#f97316',
-  'Video Detection': '#22d3ee',
-  'Text Detection': '#a78bfa'
-};
-
+const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa'};
 const CAT_ORDER = {'Image Detection': 0, 'Video Detection': 1, 'Text Detection': 2};
 
 let svg, gMain, xScale, yScale;
 let currentTransform = d3.zoomIdentity;
 let allData = [], currentData = [];
 let currentCat = 'all';
-
-const margin = {top: 40, right: 80, bottom: 40, left: 100};
+const margin = {top: 35, right: 60, bottom: 30, left: 90};
 
 async function init() {
-  const response = await fetch('timeline_data.json');
-  allData = await response.json();
+  const resp = await fetch('timeline_data.json');
+  allData = await resp.json();
   currentData = [...allData];
-  
   updateStats();
   setupSVG();
   setupZoom();
@@ -174,35 +148,30 @@ async function init() {
 }
 
 function updateStats() {
-  const counts = {'Image Detection': 0, 'Video Detection': 0, 'Text Detection': 0};
-  allData.forEach(d => counts[d.category]++);
+  const c = {'Image Detection': 0, 'Video Detection': 0, 'Text Detection': 0};
+  allData.forEach(d => c[d.category]++);
   document.getElementById('total-count').textContent = allData.length;
-  document.getElementById('img-count').textContent = counts['Image Detection'];
-  document.getElementById('vid-count').textContent = counts['Video Detection'];
-  document.getElementById('txt-count').textContent = counts['Text Detection'];
+  document.getElementById('img-count').textContent = c['Image Detection'];
+  document.getElementById('vid-count').textContent = c['Video Detection'];
+  document.getElementById('txt-count').textContent = c['Text Detection'];
 }
 
 function setupSVG() {
-  const container = document.getElementById('main-area');
-  const width = container.clientWidth;
-  const height = container.clientHeight;
-  
-  svg = d3.select('#main-svg').attr('width', width).attr('height', height);
+  const c = document.getElementById('main-area');
+  const w = c.clientWidth, h = c.clientHeight;
+  svg = d3.select('#main-svg').attr('width', w).attr('height', h);
   gMain = svg.append('g');
-  
-  // X: year + quarter, Y: category
-  xScale = d3.scaleLinear().domain([2020, 2026.9]).range([margin.left, width - margin.right]);
+  xScale = d3.scaleLinear().domain([2020, 2026.6]).range([margin.left, w - margin.right]);
   yScale = d3.scaleBand().domain(['Image Detection', 'Video Detection', 'Text Detection'])
-    .range([margin.top, height - margin.bottom]).padding(0.3);
+    .range([margin.top, h - margin.bottom]).padding(0.15);
 }
 
 function setupZoom() {
-  const zoom = d3.zoom().scaleExtent([0.2, 10]).on('zoom', (event) => {
-    currentTransform = event.transform;
+  svg.call(d3.zoom().scaleExtent([0.15, 8]).on('zoom', e => {
+    currentTransform = e.transform;
     gMain.attr('transform', `translate(${currentTransform.x},${currentTransform.y}) scale(${currentTransform.k})`);
     render();
-  });
-  svg.call(zoom);
+  }));
 }
 
 function setupSearch() {
@@ -211,102 +180,91 @@ function setupSearch() {
 
 function filterCat(cat) {
   currentCat = cat;
-  document.querySelectorAll('.cat-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.cat === cat || (cat === 'all' && btn.dataset.cat === 'all'));
-  });
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat || (cat === 'all' && b.dataset.cat === 'all')));
   applyFilters(document.getElementById('search').value.toLowerCase());
 }
 
-function applyFilters(searchQ) {
+function applyFilters(q) {
   currentData = allData.filter(d => {
     const matchCat = currentCat === 'all' || d.category.includes(currentCat);
-    const matchSearch = !searchQ || d.name.toLowerCase().includes(searchQ) || d.conference.toLowerCase().includes(searchQ);
+    const matchSearch = !q || d.name.toLowerCase().includes(q) || d.conference.toLowerCase().includes(q);
     return matchCat && matchSearch;
   });
   render();
-  document.getElementById('vis-count').textContent = currentData.length !== allData.length ? `(${currentData.length} / ${allData.length})` : '';
+  document.getElementById('vis-count').textContent = currentData.length !== allData.length ? `(${currentData.length})` : '';
 }
 
 function render() {
   const k = currentTransform.k;
   gMain.selectAll('*').remove();
   
-  // Grid lines - years
-  for (let y = 2020; y <= 2026; y++) {
-    gMain.append('line')
-      .attr('x1', xScale(y)).attr('y1', 20)
-      .attr('x2', xScale(y)).attr('y2', 800)
-      .attr('stroke', '#30363d').attr('stroke-dasharray', '3,3')
-      .attr('stroke-width', 1/k);
-    
+  // Background strips for each category
+  const cats = ['Image Detection', 'Video Detection', 'Text Detection'];
+  cats.forEach(cat => {
+    const y = yScale(cat), h = yScale.bandwidth();
+    gMain.append('rect')
+      .attr('x', margin.left - 10).attr('y', y)
+      .attr('width', 900).attr('height', h)
+      .attr('fill', cat === 'Image Detection' ? 'var(--img-bg)' : cat === 'Video Detection' ? 'var(--vid-bg)' : 'var(--txt-bg)')
+      .attr('rx', 6);
+    gMain.append('rect')
+      .attr('x', margin.left - 10).attr('y', y).attr('height', h).attr('width', 3)
+      .attr('fill', COLORS[cat]).attr('rx', 2);
     gMain.append('text')
-      .attr('x', xScale(y)).attr('y', 15)
-      .attr('text-anchor', 'middle').attr('fill', '#8b949e')
-      .attr('font-size', 11/k + 'px').text(y);
-  }
-  
-  // Quarter labels
-  for (let y = 2020; y <= 2026; y++) {
-    for (let q = 1; q <= 4; q++) {
-      gMain.append('text')
-        .attr('x', xScale(y + (q-1)*0.25)).attr('y', 30)
-        .attr('text-anchor', 'middle').attr('fill', '#6e7681')
-        .attr('font-size', 8/k + 'px').text(`Q${q}`);
-    }
-  }
-  
-  // Category labels
-  Object.keys(CAT_ORDER).forEach(cat => {
-    gMain.append('text')
-      .attr('x', margin.left - 10).attr('y', yScale(cat) + yScale.bandwidth()/2 + 4)
+      .attr('x', margin.left - 18).attr('y', y + h/2 + 4)
       .attr('text-anchor', 'end').attr('fill', COLORS[cat])
-      .attr('font-size', 12).attr('font-weight', '600')
+      .attr('font-size', 11).attr('font-weight', '600')
       .text(cat.replace(' Detection', ''));
   });
   
-  // Group by category
-  const catGroups = {};
+  // Year lines
+  for (let y = 2020; y <= 2026; y++) {
+    gMain.append('line').attr('x1', xScale(y)).attr('y1', 20).attr('x2', xScale(y)).attr('y2', 600)
+      .attr('stroke', '#30363d').attr('stroke-dasharray', '3,3').attr('stroke-width', 1/k);
+    gMain.append('text').attr('x', xScale(y)).attr('y', 15)
+      .attr('text-anchor', 'middle').attr('fill', '#8b949e').attr('font-size', 10/k + 'px').text(y);
+  }
+  
+  // Group by year-month to avoid overlap, assign rows within each group
+  const grouped = {};
   currentData.forEach(d => {
-    if (!catGroups[d.category]) catGroups[d.category] = [];
-    catGroups[d.category].push(d);
+    const key = `${d.year}-${d.month}`;
+    if (!grouped[key]) grouped[key] = [];
+    grouped[key].push(d);
   });
   
-  // Render dots per category
-  Object.keys(catGroups).forEach(cat => {
-    const items = catGroups[cat];
-    const y = yScale(cat) + yScale.bandwidth() / 2;
-    
-    items.forEach((d, i) => {
-      // Position: year + (month-1)/12, add small offset based on index to avoid overlap
-      const baseX = d.year + (d.month - 1) / 12;
-      const offset = (i % 10) * 0.008;
-      const x = xScale(baseX + offset);
-      
-      // Dot
-      const dot = gMain.append('circle')
-        .attr('cx', x).attr('cy', y)
-        .attr('r', 6/k + 3)
-        .attr('fill', COLORS[cat])
-        .attr('stroke', '#fff').attr('stroke-width', 1.5/k + 0.5)
-        .attr('cursor', 'pointer')
-        .style('filter', 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))')
-        .on('mouseenter', e => showTooltip(e, d))
-        .on('mouseleave', hideTooltip)
-        .on('click', e => {
-          e.stopPropagation();
-          showTooltip(e, d);
-        });
-      
-      // Label when zoomed in
-      if (k > 0.6) {
-        gMain.append('text')
-          .attr('x', x + 8/k).attr('y', y + 3/k)
-          .attr('fill', '#e6edf3').attr('font-size', 10/k + 'px')
-          .attr('opacity', Math.min(1, (k - 0.5) * 2))
-          .text(d.short || d.name.split(':')[0].split(' ')[0].slice(0, 12))
-          .attr('pointer-events', 'none');
-      }
+  const positioned = [];
+  Object.keys(grouped).sort().forEach(key => {
+    grouped[key].forEach((d, i) => {
+      const maxRows = 8; // max dots per column
+      const row = i % maxRows;
+      positioned.push({...d, row, key});
     });
+  });
+  
+  // Render dots
+  positioned.forEach(d => {
+    const yPos = yScale(d.category) + yScale.bandwidth() / 2 + (d.row - 3.5) * (yScale.bandwidth() / 9);
+    const xPos = xScale(d.year + (d.month - 0.5) / 12);
+    
+    const dot = gMain.append('circle')
+      .attr('cx', xPos).attr('cy', yPos)
+      .attr('r', 5/k + 3)
+      .attr('fill', COLORS[d.category]).attr('stroke', '#fff').attr('stroke-width', 1.5/k + 0.5)
+      .attr('cursor', 'pointer').style('filter', 'drop-shadow(0 2px 3px rgba(0,0,0,0.4))')
+      .on('mouseenter', e => showTooltip(e, d))
+      .on('mouseleave', () => document.getElementById('tooltip').style.display = 'none')
+      .on('click', e => { e.stopPropagation(); showTooltip(e, d); });
+    
+    // Show label when zoomed in
+    if (k > 0.5) {
+      gMain.append('text')
+        .attr('x', xPos + 8/k).attr('y', yPos + 3/k)
+        .attr('fill', '#e6edf3').attr('font-size', 9/k + 'px')
+        .attr('opacity', Math.min(1, (k - 0.4) * 2))
+        .text(d.short || d.name.split(':')[0].split(' ')[0].slice(0, 14))
+        .attr('pointer-events', 'none');
+    }
   });
 }
 
@@ -320,47 +278,31 @@ function showTooltip(event, d) {
   if (d.code) links += `<a href="https://github.com/${d.code}" target="_blank">💻 Code</a>`;
   links += '</div>';
   
-  tip.innerHTML = `
-    <h4>${d.name}</h4>
+  tip.innerHTML = `<h4>${d.name}</h4>
     <div class="meta">
       <span class="pill ${catPill}">${catName}</span>
-      <span class="pill pill-year">${d.year} ${d.quarter || 'Q1'}</span>
-      <span class="pill pill-year" style="background:#30363d">${d.conference}</span>
-    </div>
-    ${links}
-  `;
+      <span class="pill pill-yr">${d.year} Q${Math.ceil(d.month/3)}</span>
+      <span class="pill pill-yr">${d.conference}</span>
+    </div>${links}`;
   
   tip.style.display = 'block';
-  const x = Math.min(event.pageX + 15, window.innerWidth - 400);
-  const y = Math.min(event.pageY + 15, window.innerHeight - 200);
-  tip.style.left = x + 'px';
-  tip.style.top = y + 'px';
-}
-
-function hideTooltip() {
-  // Don't hide immediately - let user click links
+  tip.style.left = Math.min(event.pageX + 15, window.innerWidth - 380) + 'px';
+  tip.style.top = Math.min(event.pageY + 15, window.innerHeight - 180) + 'px';
 }
 
 function jumpYear(year) {
-  const container = document.getElementById('main-area');
-  const width = container.clientWidth;
-  const targetX = xScale(year);
-  
-  svg.transition().duration(500).call(
-    d3.zoom.transform,
-    d3.zoomIdentity.translate(width/2 - targetX * currentTransform.k, 0).scale(currentTransform.k)
-  );
+  const w = document.getElementById('main-area').clientWidth;
+  svg.transition().duration(500).call(d3.zoom.transform,
+    d3.zoomIdentity.translate(w/2 - xScale(year) * currentTransform.k, 0).scale(currentTransform.k));
 }
 
-function zoomBy(factor) {
-  svg.transition().duration(300).call(d3.zoom.scaleBy, factor);
-}
+function zoomBy(factor) { svg.transition().duration(300).call(d3.zoom.scaleBy, factor); }
 
 function resetView() {
   svg.transition().duration(500).call(d3.zoom.transform, d3.zoomIdentity);
   document.getElementById('search').value = '';
   currentCat = 'all';
-  document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.cat === 'all'));
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
   currentData = [...allData];
   render();
 }
