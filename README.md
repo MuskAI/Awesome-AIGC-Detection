@@ -482,6 +482,7 @@ Failing to Reproduce Spectral Distributions [[Paper](https://openaccess.thecvf.c
 | FakerLab | Python | AIGC detection benchmark |
 | DeepFake-Official | Python | Face swapping detection |
 | FaceForensics | Python | Face manipulation detection |
+| [humanize-chinese](https://github.com/voidborne-d/humanize-chinese) | Python | Chinese AIGC text detection (0-100 score, 20+ feature categories) and humanization (7 style transforms, academic-paper rewriting for CNKI/VIP/Wanfang). Pure Python, zero dependencies. |
 
 ## 🏙️Others
 
