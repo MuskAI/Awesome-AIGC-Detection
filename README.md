@@ -508,3 +508,7 @@ If you have any questions or suggestions, please feel free to open an issue!
 
 Last updated on 2026.03.01
 
+Chen, Happy Birthday to my best friend, forever. From DT 2026.3.21.
+Right things takes time. All for AI.
+We are the future. We can change the world. From WYEF 2017.
+From Shiji Tian to Haoran Chen.
