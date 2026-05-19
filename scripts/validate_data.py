@@ -36,6 +36,7 @@ DATASET_REQUIRED = {
     "url",
     "real_count",
     "fake_count",
+    "scale",
     "real_sources",
     "generation_methods",
     "notes",
@@ -158,7 +159,7 @@ def validate_datasets(datasets: list[dict[str, Any]]) -> list[str]:
         if not isinstance(item["name"], str) or not item["name"].strip():
             errors.append(f"{label}.name: must be non-empty")
         check_url(item["url"], f"{label}.url", errors)
-        for field in ("real_count", "fake_count", "real_sources", "generation_methods", "notes"):
+        for field in ("real_count", "fake_count", "scale", "real_sources", "generation_methods", "notes"):
             if not isinstance(item[field], str):
                 errors.append(f"{label}.{field}: expected string")
     for item_id, count in ids.items():

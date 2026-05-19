@@ -100,12 +100,13 @@ def render_datasets(datasets: list[dict[str, Any]]) -> str:
                 md_link(item["name"], item.get("url", "")),
                 item.get("real_count", "-"),
                 item.get("fake_count", "-"),
+                item.get("scale", "-"),
                 item.get("real_sources", "-"),
                 item.get("generation_methods", "-"),
             ]
         )
     return f"{GENERATED_NOTICE}\n\n" + render_table(
-        ["Year", "Dataset", "Real", "Fake", "Real Sources", "Generation Methods"],
+        ["Year", "Dataset", "Real", "Fake", "Scale", "Real Sources", "Generation Methods"],
         rows,
     )
 
@@ -222,6 +223,8 @@ def render_readme(papers: list[dict[str, Any]], datasets: list[dict[str, Any]], 
 > 🔍 A comprehensive collection of papers, datasets, and tools for AI-Generated Content (AIGC) detection research.
 
 This repository tracks research on detecting AI-generated content across image, video, text, audio, and multimodal settings. Paper, dataset, tool, README, and timeline metadata are generated from structured files under `data/`.
+
+Recent image/video entries are cross-referenced with [ant-research/Awesome-AIGC-Image-Video-Detection](https://github.com/ant-research/Awesome-AIGC-Image-Video-Detection).
 
 **[🕐 Interactive Timeline](https://muskai.github.io/Awesome-AIGC-Detection/timeline.html)** · **[Local HTML](./docs/timeline.html)** · **[📊 View as Table](#-papers)**
 

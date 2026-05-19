@@ -1891,5 +1891,922 @@
     "tags": [],
     "is_landmark": false,
     "notes": ""
+  },
+  {
+    "id": "2026-videoveritas-ai-generated-video-detection-via-perception-pretext-reinforcement-l",
+    "title": "VideoVeritas: AI-Generated Video Detection via Perception Pretext Reinforcement Learning",
+    "year": 2026,
+    "month": 1,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.08828",
+    "arxiv_id": "2602.08828",
+    "code_url": "https://github.com/EricTan7/VideoVeritas",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Perception Pretext RL",
+      "Fact-based Reasoning",
+      "MintVid Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-veritas-generalizable-deepfake-detection-via-pattern-aware-reasoning",
+    "title": "Veritas: Generalizable deepfake detection via pattern-aware reasoning",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2508.21048",
+    "arxiv_id": "2508.21048",
+    "code_url": "https://github.com/EricTan7/Veritas",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Pattern-aware Reasoning",
+      "HydraFake Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-df-llava-unlocking-mllms-for-synthetic-image-detection-via-knowledge-injection-a",
+    "title": "DF-LLaVA: Unlocking MLLMs for Synthetic Image Detection via Knowledge Injection and Conflict-Driven Self-Reflection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2509.14957",
+    "arxiv_id": "2509.14957",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Knowledge Injection",
+      "Self-Reflection"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-docshield-towards-ai-document-safety-via-evidence-grounded-agentic-reasoning",
+    "title": "DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning",
+    "year": 2026,
+    "month": 1,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2604.02694",
+    "arxiv_id": "2604.02694",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Agentic Framework",
+      "Document Safety"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-fakexplain-ai-generated-image-detection-via-human-aligned-grounded-reasoning",
+    "title": "FakeXplain: AI-Generated Image Detection via Human-Aligned Grounded Reasoning",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2506.07045",
+    "arxiv_id": "2506.07045",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Grounded Reasoning",
+      "Human-annotated Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-aligngemini-generalizable-ai-generated-image-detection-through-task-model-alignm",
+    "title": "AlignGemini: Generalizable AI-Generated Image Detection Through Task-Model Alignment",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2512.06746",
+    "arxiv_id": "2512.06746",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Decoupling (Semantic & Pixel)",
+      "AIGI-Now Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-zoom-in-to-sort-ai-generated-images-out",
+    "title": "Zoom-In to Sort AI-Generated Images Out",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2510.04225",
+    "arxiv_id": "2510.04225",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Thinking with Images",
+      "MagniFake Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-agentfox-llm-agent-guided-fusion-with-explainability-for-ai-generated-image-dete",
+    "title": "AgentFoX: LLM Agent-Guided Fusion with eXplainability for AI-Generated Image Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2603.23115",
+    "arxiv_id": "2603.23115",
+    "code_url": "https://github.com/suncore946/AgentFoX",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Agentic framework"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-evoguard-an-extensible-agentic-rl-based-framework-for-practical-and-evolving-ai",
+    "title": "EvoGuard: An Extensible Agentic RL-based Framework for Practical and Evolving AI-Generated Image Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2603.17343",
+    "arxiv_id": "2603.17343",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Agentic Framework",
+      "Method Ensembling"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-vigil-part-grounded-structured-reasoning-for-generalizable-deepfake-detection",
+    "title": "VIGIL: Part-Grounded Structured Reasoning for Generalizable Deepfake Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2603.21526",
+    "arxiv_id": "2603.21526",
+    "code_url": "",
+    "project_url": "https://vigil.best/",
+    "methods": [
+      "MLLM",
+      "Part-centric Forensic",
+      "OmniFake Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-genvideolens-where-lvlms-fall-short-in-ai-generated-video-detection",
+    "title": "GenVideoLens: Where LVLMs Fall Short in AI-Generated Video Detection?",
+    "year": 2026,
+    "month": 1,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2603.18625",
+    "arxiv_id": "2603.18625",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "GenVideoLens benchmark"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-semantic-visual-anomaly-detection-and-reasoning-in-ai-generated-images",
+    "title": "Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2510.10231",
+    "arxiv_id": "2510.10231",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Semantic Anomaly Reasoning",
+      "AnomReason Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-fake-hr1-rethinking-reasoning-of-vision-language-model-for-synthetic-image-detec",
+    "title": "FAKE-HR1: RETHINKING REASONING OF VISION LANGUAGE MODEL FOR SYNTHETIC IMAGE DETECTION",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.10042v1",
+    "arxiv_id": "2602.10042",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Hybrid-Reasoning",
+      "Dual-mode Dataset"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-mirage-towards-ai-generated-image-detection-in-the-wild",
+    "title": "MIRAGE: Towards AI-Generated Image Detection in the Wild",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2508.13223",
+    "arxiv_id": "2508.13223",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Human Curation Dataset",
+      "Heuristic-to-Analytic Reasoning"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-reveal-reasoning-enhanced-forensic-evidence-analysis-for-explainable-ai-generate",
+    "title": "REVEAL: Reasoning-enhanced Forensic Evidence Analysis for Explainable AI-generated Image Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2511.23158",
+    "arxiv_id": "2511.23158",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Chain-of-Evidence",
+      "Expert-grounded RL"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-spot-the-fake-large-multimodal-model-based-synthetic-image-detection-with-artifa",
+    "title": "Spot the Fake: Large Multimodal Model-Based Synthetic Image Detection with Artifact Explanation",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "NeurIPS",
+    "paper_url": "https://arxiv.org/abs/2503.14905",
+    "arxiv_id": "2503.14905",
+    "code_url": "https://github.com/opendatalab/FakeVLM",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "FakeClue Dataset",
+      "Fine-grained Artifact Clues",
+      "Artifact Explanation"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-aigi-holmes-towards-explainable-and-generalizable-ai-generated-image-detection-v",
+    "title": "AIGI-Holmes: Towards Explainable and Generalizable AI-Generated Image Detection via Multimodal Large Language Models",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICCV",
+    "paper_url": "https://arxiv.org/abs/2507.02664",
+    "arxiv_id": "2507.02664",
+    "code_url": "https://github.com/wyczzy/AIGI-Holmes",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Holmes-Set",
+      "Multi-Expert Jury",
+      "3-Stage Training Pipeline"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-legion-learning-to-ground-and-explain-for-synthetic-image-detection",
+    "title": "LEGION: Learning to Ground and Explain for Synthetic Image Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICCV",
+    "paper_url": "https://arxiv.org/abs/2503.15264",
+    "arxiv_id": "2503.15264",
+    "code_url": "https://github.com/opendatalab/LEGION",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "SynthScars Dataset",
+      "Defender & Controller",
+      "Image Refinement"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-seeing-before-reasoning-a-unified-framework-for-generalizable-and-explainable-fa",
+    "title": "Seeing Before Reasoning: A Unified Framework for Generalizable and Explainable Fake Image Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2509.25502",
+    "arxiv_id": "2509.25502",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Perception & Reasoning",
+      "ExplainFake-Bench"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-sida-social-media-image-deepfake-detection-localization-and-explanation",
+    "title": "SIDA: Social Media Image Deepfake Detection, Localization, and Explanation",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2412.04292",
+    "arxiv_id": "2412.04292",
+    "code_url": "https://github.com/hzlsaber/SIDA",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "SID-Set",
+      "Mask Prediction",
+      "Social Media Context"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-fakescope-large-multimodal-expert-model-for-transparent-ai-generated-image-foren",
+    "title": "FakeScope: Large Multimodal Expert Model for Transparent AI-Generated Image Forensics",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2503.24267",
+    "arxiv_id": "2503.24267",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "FakeChain Dataset",
+      "FakeInstruct",
+      "Trace Evidence"
+    ],
+    "tags": [
+      "MLLM"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-automated-in-the-wild-data-collection-for-continual-ai-generated-image-detection",
+    "title": "Automated In-the-Wild Data Collection for Continual AI Generated Image Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2605.02567",
+    "arxiv_id": "2605.02567",
+    "code_url": "",
+    "project_url": "https://mever-team.github.io/WildFC/",
+    "methods": [
+      "Classification",
+      "Continual Learning",
+      "Continual Data Collection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-increfa-breaking-the-static-wall-of-generative-model-attribution",
+    "title": "IncreFA: Breaking the Static Wall of Generative Model Attribution",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2604.17736",
+    "arxiv_id": "2604.17736",
+    "code_url": "https://github.com/Ant0ny44/IncreFA",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Incremental Learning",
+      "Generative Model Attribution"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-cmta-leveraging-cross-modal-temporal-artifacts-for-generalizable-ai-generated-vi",
+    "title": "CMTA: Leveraging Cross-Modal Temporal Artifacts for Generalizable AI-Generated Video Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2605.00630",
+    "arxiv_id": "2605.00630",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Cross-Modal Temporal Artifacts",
+      "Video Detection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-saido-generalizable-detection-of-ai-generated-images-via-scene-aware-and-importa",
+    "title": "SAIDO: Generalizable Detection of AI-Generated Images via Scene-Aware and Importance-Guided Dynamic Optimization in Continual Learning",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2512.00539",
+    "arxiv_id": "2512.00539",
+    "code_url": "https://github.com/edu-yinzhaoxia/SAIDO-CVPR2026",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Scene-aware optimization",
+      "Continual learning"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-preserving-forgery-artifacts-ai-generated-video-detection-at-native-scale",
+    "title": "Preserving Forgery Artifacts: AI-Generated Video Detection at Native Scale",
+    "year": 2026,
+    "month": 1,
+    "area": "Video",
+    "venue": "ICLR",
+    "paper_url": "https://openreview.net/pdf?id=XD43lfRCg6",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Native scale video processing",
+      "Massive realistic video dataset",
+      "Preserves subtle generation artifacts"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-generalizable-and-adaptive-continual-learning-framework-for-ai-generated-image-d",
+    "title": "Generalizable and Adaptive Continual Learning Framework for AI-generated Image Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "TMM",
+    "paper_url": "https://arxiv.org/abs/2601.05580",
+    "arxiv_id": "2601.05580",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Continual Learning",
+      "Kronecker-Factored Approximate Curvature"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-simplicity-prevails-the-emergence-of-generalizable-aigi-detection-in-visual-foun",
+    "title": "Simplicity Prevails: The Emergence of Generalizable AIGI Detection in Visual Foundation Models",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.01738",
+    "arxiv_id": "2602.01738",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Linear Probe",
+      "Vision Foundation Models",
+      "Emergent Forensic Capability"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-mirror-manifold-ideal-reference-reconstructor-for-generalizable-ai-generated-ima",
+    "title": "MIRROR: Manifold Ideal Reference ReconstructOR for Generalizable AI-Generated Image Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.02222",
+    "arxiv_id": "2602.02222",
+    "code_url": "https://github.com/349793927/MIRROR",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Manifold Reconstruction",
+      "Memory Bank",
+      "Human-AIGI Benchmark"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-no-pixel-left-behind-a-detail-preserving-architecture-for-robust-high-resolution",
+    "title": "No Pixel Left Behind: A Detail-Preserving Architecture for Robust High-Resolution AI-Generated Image Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2508.17346",
+    "arxiv_id": "2508.17346",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Detail-preserving dual-path architecture",
+      "Multi-task learning",
+      "HiRes-50K benchmark"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-all-patches-matter-more-patches-better-enhance-ai-generated-image-detection-via",
+    "title": "All Patches Matter, More Patches Better: Enhance AI-Generated Image Detection via Panoptic Patch Learning",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2504.01396",
+    "arxiv_id": "2504.01396",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Random Patch Replacement",
+      "Patch-wise Contrastive Learning"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-omniaid-decoupling-semantic-and-artifacts-for-universal-ai-generated-image-detec",
+    "title": "OmniAID: Decoupling Semantic and Artifacts for Universal AI-Generated Image Detection in the Wild",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2511.08423",
+    "arxiv_id": "2511.08423",
+    "code_url": "https://github.com/yunncheng/OmniAID",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Mixture-of-Experts",
+      "Semantic-Artifact Decoupling",
+      "Mirage Dataset"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-d3qe-learning-discrete-distribution-discrepancy-aware-quantization-error-for-aut",
+    "title": "D3QE: Learning Discrete Distribution Discrepancy-aware Quantization Error for Autoregressive-Generated Image Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICCV",
+    "paper_url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_D3QE_Learning_Discrete_Distribution_Discrepancy-aware_Quantization_Error_for_Autoregressive-Generated_Image_ICCV_2025_paper.pdf",
+    "arxiv_id": "",
+    "code_url": "https://github.com/Zhangyr2022/D3QE",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Vector Quantized Variational AutoEncoder"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-seeing-what-matters-generalizable-ai-generated-video-detection-with-forensic-ori",
+    "title": "Seeing What Matters: Generalizable AI-generated Video Detection with Forensic-Oriented Augmentation",
+    "year": 2025,
+    "month": 1,
+    "area": "Video",
+    "venue": "NeurIPS",
+    "paper_url": "https://arxiv.org/abs/2506.16802",
+    "arxiv_id": "2506.16802",
+    "code_url": "https://github.com/grip-unina/WaveRep-SyntheticVideoDetection",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Wavelet-band Augmentation",
+      "Forensic Frequency Artifacts",
+      "Single-generator Generalization"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-ai-generated-video-detection-via-perceptual-straightening",
+    "title": "AI-Generated Video Detection via Perceptual Straightening",
+    "year": 2025,
+    "month": 1,
+    "area": "Video",
+    "venue": "NeurIPS",
+    "paper_url": "https://arxiv.org/abs/2507.00583",
+    "arxiv_id": "2507.00583",
+    "code_url": "https://github.com/ChristianInterno/ReStraV",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Perceptual Straightening",
+      "DINOv2",
+      "Temporal Curvature"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-forensics-adapter-adapting-clip-for-generalizable-face-forgery-detection",
+    "title": "Forensics Adapter: Adapting CLIP for Generalizable Face Forgery Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2411.19715",
+    "arxiv_id": "2411.19715",
+    "code_url": "https://github.com/OUC-VAS/ForensicsAdapter",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "CLIP",
+      "Blending Boundaries",
+      "Forgery-aware Prompt Learning"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-exploring-unbiased-deepfake-detection-via-token-level-shuffling-and-mixing",
+    "title": "Exploring Unbiased Deepfake Detection via Token-Level Shuffling and Mixing",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "AAAI",
+    "paper_url": "https://arxiv.org/abs/2501.04376",
+    "arxiv_id": "2501.04376",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Token-Level Shuffling",
+      "Contrastive Loss",
+      "Bias Mitigation"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-dip-diffusion-learning-of-inconsistency-pattern-for-general-deepfake-detection",
+    "title": "DIP: Diffusion Learning of Inconsistency Pattern for General DeepFake Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Video",
+    "venue": "TMM",
+    "paper_url": "https://arxiv.org/abs/2410.23663",
+    "arxiv_id": "2410.23663",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Direction-aware Attention",
+      "SpatioTemporal Invariant Loss"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2024-frequency-aware-deepfake-detection-improving-generalizability-through-frequency",
+    "title": "Frequency-Aware Deepfake Detection: Improving Generalizability through Frequency Space Domain Learning",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "AAAI",
+    "paper_url": "https://arxiv.org/abs/2403.07240",
+    "arxiv_id": "2403.07240",
+    "code_url": "https://github.com/chuangchuangtan/FreqNet-DeepfakeDetection",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Frequency Domain",
+      "FFT",
+      "Frequency Conv Layer (FCL)",
+      "Lightweight"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2024-rethinking-the-up-sampling-operations-in-cnn-based-generative-network",
+    "title": "Rethinking the Up-Sampling Operations in CNN-based Generative Network",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2312.10461",
+    "arxiv_id": "2312.10461",
+    "code_url": "https://github.com/chuangchuangtan/NPR-DeepfakeDetection",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Neighboring Pixel Relationships",
+      "Generalized Structural Artifacts"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2024-fakeformer-efficient-vulnerability-driven-transformers-for-generalisable-deepfak",
+    "title": "FakeFormer: Efficient Vulnerability-Driven Transformers for Generalisable Deepfake Detection",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2410.21964",
+    "arxiv_id": "2410.21964",
+    "code_url": "https://github.com/10Ring/FakeFormer",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Vulnerability-driven",
+      "Local Attention (L2-Att)",
+      "Vision Transformer"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
   }
 ]
