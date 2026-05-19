@@ -1177,29 +1177,6 @@
     "notes": ""
   },
   {
-    "id": "2025-exploring-modality-disruption-in-multimodal-fake-news-detection",
-    "name": "Exploring Modality Disruption in Multimodal Fake News Detection",
-    "short": "Exploring Modality",
-    "year": 2025,
-    "month": 4,
-    "area": "Image",
-    "category": "Image Detection",
-    "venue": "arxiv",
-    "conference": "arxiv",
-    "paper_url": "https://arxiv.org/abs/2504.09154",
-    "arxiv": "2504.09154",
-    "code_url": "",
-    "project_url": "",
-    "code": "",
-    "quarter": "Q2",
-    "methods": [
-      "MLLM"
-    ],
-    "tags": [],
-    "landmark": true,
-    "notes": ""
-  },
-  {
     "id": "2025-exploring-the-collaborative-advantage-of-low-level-information-on-generalizable",
     "name": "Exploring the Collaborative Advantage of Low-level Information on Generalizable AI-Generated Image Detection",
     "short": "Exploring the",
@@ -1959,29 +1936,6 @@
     "notes": ""
   },
   {
-    "id": "2025-zero-shot-detection-of-llm-generated-text-via-implicit-reward-model",
-    "name": "Zero-Shot Detection of LLM-Generated Text via Implicit Reward Model",
-    "short": "Zero-Shot Detection",
-    "year": 2025,
-    "month": 1,
-    "area": "Text",
-    "category": "Text Detection",
-    "venue": "NIPS",
-    "conference": "NIPS",
-    "paper_url": "",
-    "arxiv": "",
-    "code_url": "",
-    "project_url": "",
-    "code": "",
-    "quarter": "Q1",
-    "methods": [
-      "MLLM"
-    ],
-    "tags": [],
-    "landmark": true,
-    "notes": ""
-  },
-  {
     "id": "2024-videofact-detecting-video-forgeries-using-attention-scene-context-and-forensic-t",
     "name": "VideoFACT: Detecting Video Forgeries Using Attention, Scene Context, and Forensic Traces",
     "short": "VideoFACT",
@@ -2631,29 +2585,6 @@
     ],
     "landmark": false,
     "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
-  },
-  {
-    "id": "2024-miragenews-multimodal-realistic-ai-generated-news-detection",
-    "name": "MiRAGeNews: Multimodal Realistic AI-Generated News Detection",
-    "short": "MiRAGeNews",
-    "year": 2024,
-    "month": 1,
-    "area": "Image",
-    "category": "Image Detection",
-    "venue": "ACL",
-    "conference": "ACL",
-    "paper_url": "",
-    "arxiv": "",
-    "code_url": "https://github.com/nosna/miragenews",
-    "project_url": "",
-    "code": "https://github.com/nosna/miragenews",
-    "quarter": "Q1",
-    "methods": [
-      "MLLM"
-    ],
-    "tags": [],
-    "landmark": true,
-    "notes": ""
   },
   {
     "id": "2024-fakeformer-efficient-vulnerability-driven-transformers-for-generalisable-deepfak",

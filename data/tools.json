@@ -20,11 +20,11 @@
   {
     "id": "content-credentials",
     "name": "Content Credentials",
-    "category": "Online Detection Tools",
+    "category": "Provenance & Authentication",
     "url": "https://contentcredentials.org",
     "language": "-",
     "platform": "Web",
-    "description": "Adobe C2PA verification"
+    "description": "C2PA provenance and content credential verification"
   },
   {
     "id": "illuminet",
@@ -81,22 +81,13 @@
     "description": "Face manipulation detection dataset and tooling"
   },
   {
-    "id": "humanize-chinese",
-    "name": "humanize-chinese",
-    "category": "Libraries & SDKs",
-    "url": "https://github.com/voidborne-d/humanize-chinese",
-    "language": "Python",
-    "platform": "-",
-    "description": "Chinese AIGC text detection and humanization toolkit"
-  },
-  {
     "id": "siliconsignature",
     "name": "SiliconSignature",
-    "category": "Online Detection Tools",
+    "category": "Provenance & Authentication",
     "url": "https://github.com/Agnuxo1/Secure_image_generation_with_ASIC_signature",
     "language": "-",
     "platform": "GitHub",
-    "description": "Hardware-bound image authentication using ASIC PoW nonces for unforgeable provenance certification"
+    "description": "Hardware-bound image authentication and provenance certification using ASIC PoW nonces"
   },
   {
     "id": "eyesift",

@@ -87,3 +87,12 @@ Before moving a paper into the main data source:
   - Date seen: 2026-02-02
   - Notes: Expert perceptions of GenAI disinformation.
   - Metadata needed: canonical paper URL.
+
+## 2025 Candidates
+
+### Text AIGC Detection
+
+- [ ] Zero-Shot Detection of LLM-Generated Text via Implicit Reward Model
+  - Date seen: 2025-01
+  - Notes: Removed from `data/papers.json` until canonical paper metadata is complete.
+  - Metadata needed: canonical paper URL, venue confirmation, optional arXiv/code URL.

@@ -124,6 +124,32 @@ def render_stats(papers: list[dict[str, Any]], datasets: list[dict[str, Any]], n
     )
 
 
+def render_adjacent(adjacent: list[dict[str, Any]]) -> str:
+    if not adjacent:
+        return f"{GENERATED_NOTICE}\n\n_No adjacent resources yet._\n"
+
+    lines = [
+        GENERATED_NOTICE,
+        "",
+        "Resources here are useful context for authenticity, misinformation, and provenance work, but they are intentionally kept out of the core AIGC detection paper list.",
+        "",
+    ]
+    for item in sorted(adjacent, key=lambda x: (-int(x["year"]), -int(x["month"]), x["title"].lower())):
+        links = [md_link("Resource", item["url"])]
+        if item.get("code_url") and item["code_url"] != item["url"]:
+            links.append(md_link("Code", item["code_url"]))
+        lines.extend(
+            [
+                f"- **{item['year']}.{int(item['month']):02d} · {clean_cell(item['topic'])}**",
+                f"  {md_link(item['title'], item['url'])} ({clean_cell(item['venue'])})",
+                f"  Why adjacent: {clean_cell(item['reason'])}",
+                f"  Links: {' / '.join(links)}",
+                "",
+            ]
+        )
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def paper_text(paper: dict[str, Any]) -> str:
     fields = [
         paper.get("title", ""),
@@ -412,6 +438,7 @@ def render_readme(
     datasets: list[dict[str, Any]],
     tools: list[dict[str, Any]],
     news: list[dict[str, Any]],
+    adjacent: list[dict[str, Any]],
 ) -> str:
     return f"""# Awesome-AIGC-Detection
 
@@ -468,6 +495,7 @@ python3 scripts/generate_readme.py --check
 - [Research Navigator](#-research-navigator)
 - [Papers](#-papers)
 - [Tools](#-tools)
+- [Adjacent Resources](#-adjacent-resources)
 - [Contributing](#-contributing)
 
 ## 📰 News
@@ -500,10 +528,17 @@ python3 scripts/generate_readme.py --check
 {render_tools(tools).rstrip()}
 <!-- END GENERATED TOOLS -->
 
+## 🧩 Adjacent Resources
+
+<!-- BEGIN GENERATED ADJACENT -->
+{render_adjacent(adjacent).rstrip()}
+<!-- END GENERATED ADJACENT -->
+
 ## 🏙️ Others
 
 - Paper backlog: [PAPERS_TO_ADD.md](./PAPERS_TO_ADD.md)
 - Timeline source: [docs/timeline_data.json](./docs/timeline_data.json), generated from [data/papers.json](./data/papers.json)
+- Boundary resources: [data/adjacent.json](./data/adjacent.json), generated into [Adjacent Resources](#-adjacent-resources)
 
 ---
 
@@ -539,8 +574,9 @@ def main() -> int:
     datasets = load_json(ROOT / "data" / "datasets.json")
     tools = load_json(ROOT / "data" / "tools.json")
     news = load_json(ROOT / "data" / "news.json")
+    adjacent = load_json(ROOT / "data" / "adjacent.json")
 
-    expected_readme = render_readme(papers, datasets, tools, news)
+    expected_readme = render_readme(papers, datasets, tools, news, adjacent)
     expected_timeline = build_timeline_data(papers)
     readme_path = ROOT / "README.md"
     timeline_path = ROOT / "docs" / "timeline_data.json"

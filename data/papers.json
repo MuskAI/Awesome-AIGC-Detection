@@ -1064,24 +1064,6 @@
     "notes": ""
   },
   {
-    "id": "2024-miragenews-multimodal-realistic-ai-generated-news-detection",
-    "title": "MiRAGeNews: Multimodal Realistic AI-Generated News Detection",
-    "year": 2024,
-    "month": 1,
-    "area": "Image",
-    "venue": "ACL",
-    "paper_url": "",
-    "arxiv_id": "",
-    "code_url": "https://github.com/nosna/miragenews",
-    "project_url": "",
-    "methods": [
-      "MLLM"
-    ],
-    "tags": [],
-    "is_landmark": true,
-    "notes": ""
-  },
-  {
     "id": "2024-zero-shot-detection-of-ai-generated-images",
     "title": "Zero-Shot Detection of AI-Generated Images",
     "year": 2024,
@@ -1262,24 +1244,6 @@
     "notes": ""
   },
   {
-    "id": "2025-exploring-modality-disruption-in-multimodal-fake-news-detection",
-    "title": "Exploring Modality Disruption in Multimodal Fake News Detection",
-    "year": 2025,
-    "month": 4,
-    "area": "Image",
-    "venue": "arxiv",
-    "paper_url": "https://arxiv.org/abs/2504.09154",
-    "arxiv_id": "2504.09154",
-    "code_url": "",
-    "project_url": "",
-    "methods": [
-      "MLLM"
-    ],
-    "tags": [],
-    "is_landmark": true,
-    "notes": ""
-  },
-  {
     "id": "2025-nsg-vd",
     "title": "NSG-VD: Physics-Driven Spatiotemporal Modeling for AI-Generated Video Detection",
     "year": 2025,
@@ -1421,24 +1385,6 @@
     ],
     "tags": [],
     "is_landmark": false,
-    "notes": ""
-  },
-  {
-    "id": "2025-zero-shot-detection-of-llm-generated-text-via-implicit-reward-model",
-    "title": "Zero-Shot Detection of LLM-Generated Text via Implicit Reward Model",
-    "year": 2025,
-    "month": 1,
-    "area": "Text",
-    "venue": "NIPS",
-    "paper_url": "",
-    "arxiv_id": "",
-    "code_url": "",
-    "project_url": "",
-    "methods": [
-      "MLLM"
-    ],
-    "tags": [],
-    "is_landmark": true,
     "notes": ""
   },
   {

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2025-exploring-modality-disruption-in-multimodal-fake-news-detection",
+    "title": "Exploring Modality Disruption in Multimodal Fake News Detection",
+    "year": 2025,
+    "month": 4,
+    "kind": "Adjacent paper",
+    "venue": "arxiv",
+    "url": "https://arxiv.org/abs/2504.09154",
+    "code_url": "",
+    "topic": "Multimodal fake news / misinformation detection",
+    "reason": "Related to authenticity and misinformation, but the primary task is not direct AIGC content detection."
+  },
+  {
+    "id": "2024-miragenews-multimodal-realistic-ai-generated-news-detection",
+    "title": "MiRAGeNews: Multimodal Realistic AI-Generated News Detection",
+    "year": 2024,
+    "month": 1,
+    "kind": "Adjacent paper",
+    "venue": "ACL",
+    "url": "https://github.com/nosna/miragenews",
+    "code_url": "https://github.com/nosna/miragenews",
+    "topic": "Multimodal fake news / misinformation detection",
+    "reason": "Related to authenticity and misinformation, but the primary task is not direct AIGC content detection."
+  }
+]

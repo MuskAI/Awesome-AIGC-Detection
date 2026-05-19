@@ -44,6 +44,7 @@ DATASET_REQUIRED = {
 }
 TOOL_REQUIRED = {"id", "name", "category", "url", "language", "platform", "description"}
 NEWS_REQUIRED = {"id", "date", "title", "source", "url", "category", "summary", "relevance"}
+ADJACENT_REQUIRED = {"id", "title", "year", "month", "kind", "venue", "url", "code_url", "topic", "reason"}
 URL_RE = re.compile(r"^https?://[^\s]+$", re.IGNORECASE)
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 ARXIV_RE = re.compile(r"^\d{4}\.\d{4,5}(v\d+)?$", re.IGNORECASE)
@@ -225,6 +226,32 @@ def validate_news(news: list[dict[str, Any]]) -> list[str]:
     return errors
 
 
+def validate_adjacent(adjacent: list[dict[str, Any]]) -> list[str]:
+    errors: list[str] = []
+    ids: Counter[str] = Counter()
+    for idx, item in enumerate(adjacent):
+        label = f"data/adjacent.json[{idx}]"
+        check_required(item, ADJACENT_REQUIRED, label, errors)
+        if not ADJACENT_REQUIRED.issubset(item):
+            continue
+        ids[item["id"]] += 1
+        if not isinstance(item["id"], str) or not ID_RE.match(item["id"]):
+            errors.append(f"{label}.id: expected kebab-case id")
+        if not isinstance(item["year"], int) or item["year"] < 1900 or item["year"] > 2100:
+            errors.append(f"{label}.year: expected reasonable integer year")
+        if not isinstance(item["month"], int) or not 1 <= item["month"] <= 12:
+            errors.append(f"{label}.month: expected integer 1-12")
+        for field in ("title", "kind", "venue", "topic", "reason"):
+            if not isinstance(item[field], str) or not item[field].strip():
+                errors.append(f"{label}.{field}: must be a non-empty string")
+        check_url(item["url"], f"{label}.url", errors, allow_empty=False)
+        check_url(item["code_url"], f"{label}.code_url", errors)
+    for item_id, count in ids.items():
+        if count > 1:
+            errors.append(f"data/adjacent.json: duplicate id {item_id!r}")
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     try:
@@ -232,6 +259,7 @@ def main() -> int:
         datasets = load_json(ROOT / "data" / "datasets.json")
         tools = load_json(ROOT / "data" / "tools.json")
         news = load_json(ROOT / "data" / "news.json")
+        adjacent = load_json(ROOT / "data" / "adjacent.json")
     except ValueError as exc:
         print(exc, file=sys.stderr)
         return 1
@@ -240,6 +268,7 @@ def main() -> int:
     errors.extend(validate_datasets(datasets))
     errors.extend(validate_tools(tools))
     errors.extend(validate_news(news))
+    errors.extend(validate_adjacent(adjacent))
 
     if errors:
         for error in errors:
@@ -249,7 +278,8 @@ def main() -> int:
     area_counts = Counter(p["area"] for p in papers)
     print(
         "Validated "
-        f"{len(papers)} papers, {len(datasets)} datasets, {len(tools)} tools, {len(news)} news items "
+        f"{len(papers)} papers, {len(datasets)} datasets, {len(tools)} tools, "
+        f"{len(news)} news items, {len(adjacent)} adjacent resources "
         f"({', '.join(f'{area}={area_counts.get(area, 0)}' for area in sorted(AREAS))})."
     )
     return 0
