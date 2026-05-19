@@ -224,22 +224,48 @@ def render_research_navigator(papers: list[dict[str, Any]], datasets: list[dict[
 
 
 def render_news(news: list[dict[str, Any]]) -> str:
-    rows = []
-    for item in sorted(news, key=lambda n: (n["date"], n["title"].lower()), reverse=True):
-        rows.append(
+    if not news:
+        return f"{GENERATED_NOTICE}\n\n_No news yet._\n"
+
+    ordered = sorted(news, key=lambda n: (n["date"], n["title"].lower()), reverse=True)
+    latest = ordered[0]
+    categories = Counter(item["category"].split(" / ")[0] for item in ordered)
+    category_summary = ", ".join(f"{name} x{count}" for name, count in categories.most_common())
+
+    lines = [
+        GENERATED_NOTICE,
+        "",
+        "Fresh signals from platforms, policy, provenance, and industry deployment. Each item is summarized as a short field note rather than another database table.",
+        "",
+        "### Latest Signal",
+        "",
+        f"**{latest['date']} · {latest['category']}**",
+        "",
+        f"{md_link(latest['title'], latest['url'])} — {clean_cell(latest['source'])}",
+        "",
+        f"Signal: {clean_cell(latest['summary'])}",
+        "",
+        f"Why it matters: {clean_cell(latest['relevance'])}",
+        "",
+        "### Reading The Trend",
+        "",
+        f"Coverage mix: {category_summary}. The current news flow is less about a single magic detector and more about layered authenticity: platform-scale likeness search, capture-time provenance, evaluation standards, and real-time fraud defense.",
+        "",
+        "### Field Notes",
+        "",
+    ]
+
+    for item in ordered[1:]:
+        lines.extend(
             [
-                item["date"],
-                item["category"],
-                md_link(item["title"], item["url"]),
-                item["source"],
-                item["summary"],
-                item["relevance"],
+                f"- **{item['date']} · {item['category']}**",
+                f"  {md_link(item['title'], item['url'])} — {clean_cell(item['source'])}",
+                f"  Signal: {clean_cell(item['summary'])}",
+                f"  Why it matters: {clean_cell(item['relevance'])}",
+                "",
             ]
         )
-    return f"{GENERATED_NOTICE}\n\n" + render_table(
-        ["Date", "Track", "News", "Source", "Signal", "Why It Matters"],
-        rows,
-    )
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def render_datasets(datasets: list[dict[str, Any]]) -> str:
