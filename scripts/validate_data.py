@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from datetime import date
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -42,7 +43,9 @@ DATASET_REQUIRED = {
     "notes",
 }
 TOOL_REQUIRED = {"id", "name", "category", "url", "language", "platform", "description"}
+NEWS_REQUIRED = {"id", "date", "title", "source", "url", "category", "summary", "relevance"}
 URL_RE = re.compile(r"^https?://[^\s]+$", re.IGNORECASE)
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 ARXIV_RE = re.compile(r"^\d{4}\.\d{4,5}(v\d+)?$", re.IGNORECASE)
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 PLACEHOLDERS = {"https://arxiv.org/abs/", "https://github.com/"}
@@ -189,12 +192,46 @@ def validate_tools(tools: list[dict[str, Any]]) -> list[str]:
     return errors
 
 
+def validate_news(news: list[dict[str, Any]]) -> list[str]:
+    errors: list[str] = []
+    ids: Counter[str] = Counter()
+    urls: Counter[str] = Counter()
+    for idx, item in enumerate(news):
+        label = f"data/news.json[{idx}]"
+        check_required(item, NEWS_REQUIRED, label, errors)
+        if not NEWS_REQUIRED.issubset(item):
+            continue
+        ids[item["id"]] += 1
+        urls[item["url"]] += 1
+        if not isinstance(item["id"], str) or not ID_RE.match(item["id"]):
+            errors.append(f"{label}.id: expected kebab-case id")
+        if not isinstance(item["date"], str) or not DATE_RE.match(item["date"]):
+            errors.append(f"{label}.date: expected YYYY-MM-DD")
+        else:
+            try:
+                date.fromisoformat(item["date"])
+            except ValueError:
+                errors.append(f"{label}.date: invalid calendar date {item['date']!r}")
+        for field in ("title", "source", "category", "summary", "relevance"):
+            if not isinstance(item[field], str) or not item[field].strip():
+                errors.append(f"{label}.{field}: must be a non-empty string")
+        check_url(item["url"], f"{label}.url", errors, allow_empty=False)
+    for item_id, count in ids.items():
+        if count > 1:
+            errors.append(f"data/news.json: duplicate id {item_id!r}")
+    for url, count in urls.items():
+        if count > 1:
+            errors.append(f"data/news.json: duplicate url {url!r}")
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     try:
         papers = load_json(ROOT / "data" / "papers.json")
         datasets = load_json(ROOT / "data" / "datasets.json")
         tools = load_json(ROOT / "data" / "tools.json")
+        news = load_json(ROOT / "data" / "news.json")
     except ValueError as exc:
         print(exc, file=sys.stderr)
         return 1
@@ -202,6 +239,7 @@ def main() -> int:
     errors.extend(validate_papers(papers))
     errors.extend(validate_datasets(datasets))
     errors.extend(validate_tools(tools))
+    errors.extend(validate_news(news))
 
     if errors:
         for error in errors:
@@ -211,7 +249,7 @@ def main() -> int:
     area_counts = Counter(p["area"] for p in papers)
     print(
         "Validated "
-        f"{len(papers)} papers, {len(datasets)} datasets, {len(tools)} tools "
+        f"{len(papers)} papers, {len(datasets)} datasets, {len(tools)} tools, {len(news)} news items "
         f"({', '.join(f'{area}={area_counts.get(area, 0)}' for area in sorted(AREAS))})."
     )
     return 0

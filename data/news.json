@@ -1,0 +1,92 @@
+[
+  {
+    "id": "2026-05-18-getreal-trust-authenticity-platform",
+    "date": "2026-05-18",
+    "title": "GetReal Security launches real-time identity verification and deepfake detection platform",
+    "source": "PR Newswire / GetReal Security",
+    "url": "https://www.prnewswire.com/news-releases/getreal-security-launches-first-trust-and-authenticity-platform-that-combines-real-time-continuous-identity-verification-and-deepfake-detection-302773987.html",
+    "category": "Industry / Identity",
+    "summary": "GetReal announced general availability of GetReal Protect, combining multimodal deepfake detection with continuous identity verification for voice and video workflows.",
+    "relevance": "AIGC detection is moving from offline forensic review into live enterprise authentication and incident response."
+  },
+  {
+    "id": "2026-05-11-canon-c2pa-authenticity-imaging-system",
+    "date": "2026-05-11",
+    "title": "Canon introduces C2PA-compliant Authenticity Imaging System for news organizations",
+    "source": "Canon Global",
+    "url": "https://global.canon/en/news/2026/20260511.html",
+    "category": "Provenance / Camera",
+    "summary": "Canon announced a C2PA-based system for supported cameras that preserves provenance from capture through newsroom workflows.",
+    "relevance": "Secure capture and provenance metadata are becoming a practical complement to detector-only pipelines."
+  },
+  {
+    "id": "2026-05-15-youtube-likeness-detection-all-adults",
+    "date": "2026-05-15",
+    "title": "YouTube expands AI likeness detection to all adult users",
+    "source": "The Verge",
+    "url": "https://www.theverge.com/news/931884/youtube-likeness-detection-ai-deepfake-expansion-all-adults",
+    "category": "Platform / Likeness",
+    "summary": "The Verge reported that YouTube is expanding its likeness detection program to users aged 18 or older with a YouTube account.",
+    "relevance": "Consumer-scale enrollment turns deepfake discovery into a mainstream safety feature and raises new questions about false matches and review workflows."
+  },
+  {
+    "id": "2026-04-30-sumsub-adaptive-deepfake-detector",
+    "date": "2026-04-30",
+    "title": "Sumsub launches Adaptive Deepfake Detector for fraud prevention",
+    "source": "PR Newswire / Sumsub",
+    "url": "https://www.prnewswire.com/news-releases/how-adaptive-deepfake-detection-revolutionizes-digital-fraud-prevention-approach-302758800.html",
+    "category": "Industry / Fraud",
+    "summary": "Sumsub released an upgraded deepfake detection system focused on fast model adaptation and multi-signal fraud analysis.",
+    "relevance": "The fraud setting emphasizes continual learning, liveness, device signals, and session context beyond media pixels alone."
+  },
+  {
+    "id": "2026-04-21-youtube-likeness-detection-entertainment",
+    "date": "2026-04-21",
+    "title": "YouTube expands likeness detection to the entertainment industry",
+    "source": "YouTube Official Blog",
+    "url": "https://blog.youtube/news-and-events/youtube-likeness-detection-ai-protection/",
+    "category": "Platform / Likeness",
+    "summary": "YouTube expanded its AI likeness detection access to talent agencies, management companies, and celebrities.",
+    "relevance": "Large platforms are operationalizing face-likeness detection as a rights and removal workflow, not only as a research benchmark."
+  },
+  {
+    "id": "2026-03-26-uk-deepfake-detection-market-report",
+    "date": "2026-03-26",
+    "title": "UK DSIT publishes analysis of the deepfake detection technology market",
+    "source": "GOV.UK",
+    "url": "https://www.gov.uk/government/publications/deepfake-detection-technology",
+    "category": "Policy / Market",
+    "summary": "The UK Department for Science, Innovation and Technology published a market and evidence review for deepfake detection technology.",
+    "relevance": "Policy interest is shifting toward supply, demand, barriers, and future growth of detection capabilities."
+  },
+  {
+    "id": "2026-03-10-youtube-likeness-detection-civic-leaders",
+    "date": "2026-03-10",
+    "title": "YouTube expands likeness detection to civic leaders and journalists",
+    "source": "YouTube Official Blog",
+    "url": "https://blog.youtube/news-and-events/expanding-likeness-detection-civic-leaders-journalists/",
+    "category": "Platform / Public Interest",
+    "summary": "YouTube began piloting likeness detection access for government officials, journalists, and political candidates.",
+    "relevance": "High-risk public figures are a key deployment target for deepfake discovery, identity verification, and takedown workflows."
+  },
+  {
+    "id": "2026-02-19-microsoft-media-integrity-authentication",
+    "date": "2026-02-19",
+    "title": "Microsoft publishes study on media integrity and authentication methods",
+    "source": "Microsoft Signal",
+    "url": "https://news.microsoft.com/signal/articles/a-new-study-explores-how-ai-shapes-what-you-can-trust-online/",
+    "category": "Research / Provenance",
+    "summary": "Microsoft discussed a media integrity report covering provenance, watermarking, fingerprinting, and their limitations.",
+    "relevance": "The field is converging on layered authenticity signals instead of relying on a single detector score."
+  },
+  {
+    "id": "2026-02-05-uk-deepfake-detection-evaluation-framework",
+    "date": "2026-02-05",
+    "title": "UK government announces deepfake detection evaluation framework",
+    "source": "GOV.UK",
+    "url": "https://www.gov.uk/government/news/government-leads-global-fight-against-deepfake-threats",
+    "category": "Policy / Evaluation",
+    "summary": "The UK government announced work with technology companies, academics, and experts to evaluate deepfake detection tools against real-world threats.",
+    "relevance": "Benchmarking is becoming a public-sector requirement, especially for fraud, abuse, impersonation, and safety use cases."
+  }
+]

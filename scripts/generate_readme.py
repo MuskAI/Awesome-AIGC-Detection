@@ -102,7 +102,7 @@ def render_table(headers: list[str], rows: list[list[Any]]) -> str:
     return "\n".join(out) + "\n"
 
 
-def render_stats(papers: list[dict[str, Any]], datasets: list[dict[str, Any]]) -> str:
+def render_stats(papers: list[dict[str, Any]], datasets: list[dict[str, Any]], news: list[dict[str, Any]]) -> str:
     years = [int(p["year"]) for p in papers]
     area_counts = Counter(p["area"] for p in papers)
     venue_counts = Counter(normalize_venue(str(p["venue"])) for p in papers)
@@ -110,6 +110,7 @@ def render_stats(papers: list[dict[str, Any]], datasets: list[dict[str, Any]]) -
     stats_rows: list[list[Any]] = [
         ["Total Papers", len(papers)],
         ["Datasets", len(datasets)],
+        ["News Items", len(news)],
         ["Timespan", f"{min(years)} - {max(years)}" if years else "-"],
     ]
     stats_rows.extend([f"{area} Detection", area_counts.get(area, 0)] for area in AREA_ORDER)
@@ -222,6 +223,25 @@ def render_research_navigator(papers: list[dict[str, Any]], datasets: list[dict[
     return "\n".join(lines) + "\n"
 
 
+def render_news(news: list[dict[str, Any]]) -> str:
+    rows = []
+    for item in sorted(news, key=lambda n: (n["date"], n["title"].lower()), reverse=True):
+        rows.append(
+            [
+                item["date"],
+                item["category"],
+                md_link(item["title"], item["url"]),
+                item["source"],
+                item["summary"],
+                item["relevance"],
+            ]
+        )
+    return f"{GENERATED_NOTICE}\n\n" + render_table(
+        ["Date", "Track", "News", "Source", "Signal", "Why It Matters"],
+        rows,
+    )
+
+
 def render_datasets(datasets: list[dict[str, Any]]) -> str:
     rows = []
     for item in sorted(datasets, key=lambda d: (int(d["year"]), d["name"].lower())):
@@ -332,7 +352,12 @@ def build_timeline_data(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return output
 
 
-def render_readme(papers: list[dict[str, Any]], datasets: list[dict[str, Any]], tools: list[dict[str, Any]]) -> str:
+def render_readme(
+    papers: list[dict[str, Any]],
+    datasets: list[dict[str, Any]],
+    tools: list[dict[str, Any]],
+    news: list[dict[str, Any]],
+) -> str:
     return f"""# Awesome-AIGC-Detection
 
 > 本仓库由 OpenClaw (🦞) 和人类共同维护
@@ -376,18 +401,25 @@ python3 scripts/generate_readme.py --check
 ## 📊 Statistics
 
 <!-- BEGIN GENERATED STATS -->
-{render_stats(papers, datasets).rstrip()}
+{render_stats(papers, datasets, news).rstrip()}
 <!-- END GENERATED STATS -->
 
 ---
 
 ## 📋 Table of Contents
 
+- [News](#-news)
 - [Datasets](#-datasets)
 - [Research Navigator](#-research-navigator)
 - [Papers](#-papers)
 - [Tools](#-tools)
 - [Contributing](#-contributing)
+
+## 📰 News
+
+<!-- BEGIN GENERATED NEWS -->
+{render_news(news).rstrip()}
+<!-- END GENERATED NEWS -->
 
 ## 🧭 Research Navigator
 
@@ -451,8 +483,9 @@ def main() -> int:
     papers = load_json(ROOT / "data" / "papers.json")
     datasets = load_json(ROOT / "data" / "datasets.json")
     tools = load_json(ROOT / "data" / "tools.json")
+    news = load_json(ROOT / "data" / "news.json")
 
-    expected_readme = render_readme(papers, datasets, tools)
+    expected_readme = render_readme(papers, datasets, tools, news)
     expected_timeline = build_timeline_data(papers)
     readme_path = ROOT / "README.md"
     timeline_path = ROOT / "docs" / "timeline_data.json"
