@@ -13,6 +13,8 @@
     --img-bg: rgba(249, 115, 22, 0.08); --img-border: rgba(249, 115, 22, 0.3);
     --vid-bg: rgba(34, 211, 238, 0.08); --vid-border: rgba(34, 211, 238, 0.3);
     --txt-bg: rgba(167, 139, 250, 0.08); --txt-border: rgba(167, 139, 250, 0.3);
+    --aud-bg: rgba(74, 222, 128, 0.08); --aud-border: rgba(74, 222, 128, 0.3);
+    --multi-bg: rgba(244, 114, 182, 0.08); --multi-border: rgba(244, 114, 182, 0.3);
     --cvpr: #2ea043; --iccv: #1f6feb; --eccv: #d29922; --neurips: #8957e5; --icml: #e34d26; --iclr: #007a33; --arxiv: #6e7681;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -70,6 +72,8 @@
   #tooltip .pill-img { background: #f97316; color: #000; }
   #tooltip .pill-vid { background: #22d3ee; color: #000; }
   #tooltip .pill-txt { background: #a78bfa; color: #000; }
+  #tooltip .pill-aud { background: #4ade80; color: #000; }
+  #tooltip .pill-multi { background: #f472b6; color: #000; }
   #tooltip .pill-yr { background: var(--border); color: var(--text); }
   #tooltip .pill-method { background: #238636; color: #fff; }
   #tooltip .pill-conf { color: #fff; }
@@ -136,6 +140,8 @@
   <button class="btn cat-btn" data-cat="Image" onclick="filterCat('Image')">Img</button>
   <button class="btn cat-btn" data-cat="Video" onclick="filterCat('Video')">Vid</button>
   <button class="btn cat-btn" data-cat="Text" onclick="filterCat('Text')">Txt</button>
+  <button class="btn cat-btn" data-cat="Audio" onclick="filterCat('Audio')">Aud</button>
+  <button class="btn cat-btn" data-cat="Multimodal" onclick="filterCat('Multimodal')">Multi</button>
   <div class="sep"></div>
   <button class="btn method-btn" data-method="all" onclick="filterMethod('all')">All</button>
   <button class="btn method-btn" data-method="MLLM" onclick="filterMethod('MLLM')">MLLM</button>
@@ -143,7 +149,9 @@
   <div class="sep"></div>
   <button class="btn conf-btn" data-conf="all" onclick="filterConf('all')">Conf</button>
   <button class="btn conf-btn" data-conf="CVPR" onclick="filterConf('CVPR')">CVPR</button>
+  <button class="btn conf-btn" data-conf="CVPRW" onclick="filterConf('CVPRW')">CVPRW</button>
   <button class="btn conf-btn" data-conf="ICCV" onclick="filterConf('ICCV')">ICCV</button>
+  <button class="btn conf-btn" data-conf="ICCVW" onclick="filterConf('ICCVW')">ICCVW</button>
   <button class="btn conf-btn" data-conf="NeurIPS" onclick="filterConf('NeurIPS')">NeurIPS</button>
   <button class="btn conf-btn" data-conf="ICLR" onclick="filterConf('ICLR')">ICLR</button>
   <div class="sep"></div>
@@ -173,8 +181,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
-const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa'};
-const CONF_COLORS = {'CVPR': '#2ea043', 'ICCV': '#1f6feb', 'ECCV': '#d29922', 'NeurIPS': '#8957e5', 'ICML': '#e34d26', 'ICLR': '#007a33', 'arXiv': '#6e7681'};
+const CATEGORIES = ['Image Detection', 'Video Detection', 'Text Detection', 'Audio Detection', 'Multimodal Detection'];
+const COLORS = {'Image Detection': '#f97316', 'Video Detection': '#22d3ee', 'Text Detection': '#a78bfa', 'Audio Detection': '#4ade80', 'Multimodal Detection': '#f472b6'};
+const CATEGORY_BACKGROUNDS = {'Image Detection': 'var(--img-bg)', 'Video Detection': 'var(--vid-bg)', 'Text Detection': 'var(--txt-bg)', 'Audio Detection': 'var(--aud-bg)', 'Multimodal Detection': 'var(--multi-bg)'};
+const CATEGORY_PILLS = {'Image': 'pill-img', 'Video': 'pill-vid', 'Text': 'pill-txt', 'Audio': 'pill-aud', 'Multimodal': 'pill-multi'};
+const CONF_COLORS = {'CVPR': '#2ea043', 'CVPRW': '#6c757d', 'ICCV': '#1f6feb', 'ICCVW': '#6c757d', 'ECCV': '#d29922', 'NeurIPS': '#8957e5', 'NIPS': '#8957e5', 'ICML': '#e34d26', 'ICLR': '#007a33', 'WACV': '#8b5cf6', 'KDD': '#005d8c', 'arxiv': '#6e7681', 'arXiv': '#6e7681'};
 
 let svg, container;
 let allData = [], currentData = [], filteredData = [];
@@ -183,7 +194,7 @@ let positions = [];
 let transform = { x: 0, y: 0, k: 1 };
 let isDragging = false, dragStart = { x: 0, y: 0 };
 
-const BASE_HEIGHT = 600;
+const BASE_HEIGHT = 1200;
 const DOT_RADIUS = 5;
 const MIN_DOT_SPACING = 18;
 const CATEGORY_PADDING = 40;
@@ -202,7 +213,7 @@ async function init() {
 }
 
 function updateStats() {
-  const withCode = allData.filter(d => d.code).length;
+  const withCode = filteredData.filter(d => d.code_url || d.code || d.project_url).length;
   document.getElementById('total-count').textContent = filteredData.length;
   document.getElementById('conf-count').textContent = withCode;
 }
@@ -244,7 +255,7 @@ function calculateXPositions(data) {
 }
 
 function calculateYPositions(data, monthPositions, totalHeight) {
-  const categories = ['Image Detection', 'Video Detection', 'Text Detection'];
+  const categories = CATEGORIES;
   const bandHeight = (totalHeight - 80) / categories.length;
   
   const yPositions = {};
@@ -330,7 +341,7 @@ function render(animate = true) {
     svg.append('rect')
       .attr('x', 0).attr('y', band.y)
       .attr('width', totalWidth).attr('height', band.height)
-      .attr('fill', cat.includes('Image') ? 'var(--img-bg)' : cat.includes('Video') ? 'var(--vid-bg)' : 'var(--txt-bg)');
+      .attr('fill', CATEGORY_BACKGROUNDS[cat] || 'var(--txt-bg)');
     
     svg.append('rect')
       .attr('x', 0).attr('y', band.y).attr('width', 4).attr('height', band.height)
@@ -392,7 +403,7 @@ function render(animate = true) {
       dotGroup.append('circle')
         .attr('r', r + 4)
         .attr('fill', 'none')
-        .attr('stroke', COLORS[d.category])
+        .attr('stroke', COLORS[d.category] || '#8b949e')
         .attr('stroke-width', 1.5)
         .attr('opacity', 0)
         .transition().duration(300).delay(100 + i * 20)
@@ -402,7 +413,7 @@ function render(animate = true) {
     // Main dot
     const mainDot = dotGroup.append('circle')
       .attr('r', r)
-      .attr('fill', COLORS[d.category])
+      .attr('fill', COLORS[d.category] || '#8b949e')
       .attr('stroke', confColor)
       .attr('stroke-width', 2)
       .style('filter', 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))');
@@ -417,9 +428,9 @@ function render(animate = true) {
     dotGroup.append('circle')
       .attr('class', 'hover-glow')
       .attr('r', r + 6)
-      .attr('fill', COLORS[d.category])
+      .attr('fill', COLORS[d.category] || '#8b949e')
       .attr('opacity', 0)
-      .style('filter', `drop-shadow(0 0 8px ${COLORS[d.category]})`)
+      .style('filter', `drop-shadow(0 0 8px ${COLORS[d.category] || '#8b949e'})`)
       .style('pointer-events', 'none');
     
     // Events
@@ -474,27 +485,35 @@ function showTooltip(event, d) {
     hideTooltip();
   };
   
-  // ... rest of the function
-  const catPill = d.category.includes('Image') ? 'pill-img' : d.category.includes('Video') ? 'pill-vid' : 'pill-txt';
-  const catName = d.category.replace(' Detection', '');
+  const catName = d.area || d.category.replace(' Detection', '');
+  const catPill = CATEGORY_PILLS[catName] || 'pill-txt';
   const quarter = d.quarter || `Q${Math.ceil(d.month/3)}`;
   const name = highlightText(d.name, currentSearch);
-  const conf = d.conference || 'arXiv';
+  const conf = d.venue || d.conference || 'arXiv';
   const methods = d.methods || ['General'];
-  const hasCode = !!d.code;
+  const tags = d.tags || [];
+  const codeUrl = d.code_url || d.code || '';
+  const projectUrl = d.project_url || '';
+  const paperUrl = d.paper_url || (d.arxiv ? `https://arxiv.org/abs/${d.arxiv}` : '');
+  const hasCode = !!codeUrl;
+  const confColor = CONF_COLORS[conf] || CONF_COLORS['arXiv'];
   
-  let methodPills = methods.map(m => `<span class="pill pill-method">${m}</span>`).join('');
+  let methodPills = methods.map(m => `<span class="pill pill-method">${escapeHtml(m)}</span>`).join('');
+  if (tags.length) {
+    methodPills += tags.map(t => `<span class="pill pill-method">${escapeHtml(t)}</span>`).join('');
+  }
   
   let links = '<div class="links">';
-  if (d.arxiv) links += `<a href="https://arxiv.org/abs/${d.arxiv}" target="_blank">📄 Paper</a>`;
-  if (d.code) links += `<a href="https://github.com/${d.code}" target="_blank">💻 Code</a>`;
+  if (isSafeHttpUrl(paperUrl)) links += `<a href="${escapeAttribute(paperUrl)}" target="_blank" rel="noopener noreferrer">📄 Paper</a>`;
+  if (isSafeHttpUrl(codeUrl)) links += `<a href="${escapeAttribute(codeUrl)}" target="_blank" rel="noopener noreferrer">💻 Code</a>`;
+  if (isSafeHttpUrl(projectUrl)) links += `<a href="${escapeAttribute(projectUrl)}" target="_blank" rel="noopener noreferrer">🔗 Project</a>`;
   links += '</div>';
   
   tip.innerHTML = `<h4>${name}</h4>
-    <div class="abstract">${d.name.split('.').slice(0, 2).join('.')}</div>
+    <div class="abstract">${escapeHtml(d.name.split('.').slice(0, 2).join('.'))}</div>
     <div class="meta">
-      <span class="pill ${catPill}">${catName}</span>
-      <span class="pill pill-conf-${conf}">${conf}</span>
+      <span class="pill ${catPill}">${escapeHtml(catName)}</span>
+      <span class="pill pill-conf" style="background: ${confColor}">${escapeHtml(conf)}</span>
       <span class="pill pill-yr">${d.year} ${quarter}</span>
       <span class="pill ${hasCode ? 'pill-code' : 'pill-nocode'}">${hasCode ? '✓ Code' : '✗ Code'}</span>
     </div>
@@ -516,9 +535,34 @@ function hideTooltip() {
 }
 
 function highlightText(text, query) {
-  if (!query) return text;
+  const escapedText = escapeHtml(text);
+  if (!query) return escapedText;
   const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-  return text.replace(regex, '<mark>$1</mark>');
+  return escapedText.replace(regex, '<mark>$1</mark>');
+}
+
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[ch]));
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value).replace(/`/g, '&#96;');
+}
+
+function isSafeHttpUrl(value) {
+  if (!value) return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
 }
 
 function setupInteractions() {
@@ -567,14 +611,24 @@ function filterCode(code) {
 function applyFilters() {
   filteredData = allData.filter(d => {
     const matchYear = currentYear === 'all' || d.year === currentYear;
-    const matchCat = currentCat === 'all' || d.category.includes(currentCat);
+    const area = d.area || d.category.replace(' Detection', '');
+    const venue = d.venue || d.conference || '';
+    const codeUrl = d.code_url || d.code || '';
+    const projectUrl = d.project_url || '';
+    const searchable = [
+      d.name,
+      venue,
+      codeUrl,
+      projectUrl,
+      d.paper_url,
+      ...(d.methods || []),
+      ...(d.tags || [])
+    ].join(' ').toLowerCase();
+    const matchCat = currentCat === 'all' || area === currentCat;
     const matchMethod = currentMethod === 'all' || (d.methods || []).includes(currentMethod);
-    const matchConf = currentConf === 'all' || (d.conference || '').includes(currentConf);
-    const matchCode = currentCode === 'all' || (currentCode === 'yes' && d.code) || (currentCode === 'no' && !d.code);
-    const matchSearch = !currentSearch || 
-      d.name.toLowerCase().includes(currentSearch) || 
-      (d.conference || '').toLowerCase().includes(currentSearch) ||
-      (d.code || '').toLowerCase().includes(currentSearch);
+    const matchConf = currentConf === 'all' || venue === currentConf;
+    const matchCode = currentCode === 'all' || (currentCode === 'yes' && (codeUrl || projectUrl)) || (currentCode === 'no' && !codeUrl && !projectUrl);
+    const matchSearch = !currentSearch || searchable.includes(currentSearch);
     return matchYear && matchCat && matchMethod && matchConf && matchCode && matchSearch;
   });
   render();

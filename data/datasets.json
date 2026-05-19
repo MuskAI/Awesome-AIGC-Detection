@@ -1,0 +1,68 @@
+[
+  {
+    "id": "cnnspot",
+    "year": 2020,
+    "name": "CNNSpot",
+    "url": "https://peterwang512.github.io/CNNDetection/",
+    "real_count": "362,000",
+    "fake_count": "362,000",
+    "real_sources": "LSUN, ImageNet, CelebA, COCO...",
+    "generation_methods": "ProGAN, StyleGAN, BigGAN, CRN, SITD...",
+    "notes": ""
+  },
+  {
+    "id": "genimage",
+    "year": 2023,
+    "name": "GenImage",
+    "url": "https://genimage-dataset.github.io/",
+    "real_count": "1,331,167",
+    "fake_count": "1,350,000",
+    "real_sources": "ImageNet",
+    "generation_methods": "SDMs, Midjourney, BigGAN",
+    "notes": ""
+  },
+  {
+    "id": "fake2m",
+    "year": 2023,
+    "name": "Fake2M",
+    "url": "https://github.com/Inf-imagine/Sentry",
+    "real_count": "-",
+    "fake_count": "2,300,000",
+    "real_sources": "CC3M",
+    "generation_methods": "SD-V1.5, IF, StyleGAN3",
+    "notes": ""
+  },
+  {
+    "id": "dmimage",
+    "year": 2023,
+    "name": "DMimage",
+    "url": "https://github.com/grip-unina/DMimageDetection",
+    "real_count": "200,000",
+    "fake_count": "200,000",
+    "real_sources": "COCO, LSUN",
+    "generation_methods": "LDM",
+    "notes": ""
+  },
+  {
+    "id": "diffusiondb",
+    "year": 2023,
+    "name": "DiffusionDB",
+    "url": "https://github.com/poloclub/diffusiondb",
+    "real_count": "3,300,000",
+    "fake_count": "16,000,000",
+    "real_sources": "DiscordChatExporter",
+    "generation_methods": "SD",
+    "notes": ""
+  },
+  {
+    "id": "wildfake",
+    "year": 2024,
+    "name": "WildFake",
+    "url": "",
+    "real_count": "2,557,278",
+    "fake_count": "1,013,446",
+    "real_sources": "ImageNet, LAION, Wukong, COCO...",
+    "generation_methods": "BigGAN, StyleGAN, StarGAN, Midjourney, DALL-E...",
+    "notes": "No canonical URL recorded yet."
+  }
+]

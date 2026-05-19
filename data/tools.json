@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ai-or-not",
+    "name": "AI or Not",
+    "category": "Online Detection Tools",
+    "url": "https://aiornot.com",
+    "language": "-",
+    "platform": "Web",
+    "description": "AI detection service"
+  },
+  {
+    "id": "hive-ai-detection",
+    "name": "Hive AI Detection",
+    "category": "Online Detection Tools",
+    "url": "https://hive.ai/detection",
+    "language": "-",
+    "platform": "Web/API",
+    "description": "Video and image detection"
+  },
+  {
+    "id": "content-credentials",
+    "name": "Content Credentials",
+    "category": "Online Detection Tools",
+    "url": "https://contentcredentials.org",
+    "language": "-",
+    "platform": "Web",
+    "description": "Adobe C2PA verification"
+  },
+  {
+    "id": "illuminet",
+    "name": "Illuminet",
+    "category": "Online Detection Tools",
+    "url": "https://illuminet.io",
+    "language": "-",
+    "platform": "Web",
+    "description": "AI image verification"
+  },
+  {
+    "id": "hive-ai-detector-extension",
+    "name": "Hive AI Detector",
+    "category": "Browser Extensions",
+    "url": "https://hive.ai/detection",
+    "language": "-",
+    "platform": "Chrome",
+    "description": "Browser extension for AI content detection"
+  },
+  {
+    "id": "fake-image-detector",
+    "name": "Fake Image Detector",
+    "category": "Browser Extensions",
+    "url": "https://github.com/fake-image-detector/fake-image-detector",
+    "language": "-",
+    "platform": "Chrome/Firefox",
+    "description": "Browser extension for fake image detection"
+  },
+  {
+    "id": "fakerlab",
+    "name": "FakerLab",
+    "category": "Libraries & SDKs",
+    "url": "https://github.com/FakerLab",
+    "language": "Python",
+    "platform": "-",
+    "description": "AIGC detection benchmark"
+  },
+  {
+    "id": "deepfake-official",
+    "name": "DeepFake-Official",
+    "category": "Libraries & SDKs",
+    "url": "https://github.com/ondyari/FaceForensics",
+    "language": "Python",
+    "platform": "-",
+    "description": "Face swapping detection resources"
+  },
+  {
+    "id": "faceforensics",
+    "name": "FaceForensics",
+    "category": "Libraries & SDKs",
+    "url": "https://github.com/ondyari/FaceForensics",
+    "language": "Python",
+    "platform": "-",
+    "description": "Face manipulation detection dataset and tooling"
+  },
+  {
+    "id": "humanize-chinese",
+    "name": "humanize-chinese",
+    "category": "Libraries & SDKs",
+    "url": "https://github.com/voidborne-d/humanize-chinese",
+    "language": "Python",
+    "platform": "-",
+    "description": "Chinese AIGC text detection and humanization toolkit"
+  }
+]

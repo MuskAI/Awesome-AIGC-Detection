@@ -1,0 +1,1895 @@
+[
+  {
+    "id": "2020-cnn-generated-images-are-surprisingly-easy-to-spot-for-now",
+    "title": "CNN-generated images are surprisingly easy to spot... for now",
+    "year": 2020,
+    "month": 12,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/1912.11035",
+    "arxiv_id": "1912.11035",
+    "code_url": "https://github.com/peterwang512/CNNDetection",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2020-global-texture-enhancement-for-fake-face-detection-in-the-wild",
+    "title": "Global Texture Enhancement for Fake Face Detection In the Wild",
+    "year": 2020,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/liuzhengzhe/Global_Texture_Enhancement_for_Fake_Face_Detection_in_the-Wild",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2020-what-makes-fake-images-detectable-understanding-properties-that-generalize",
+    "title": "What makes fake images detectable? Understanding properties that generalize",
+    "year": 2020,
+    "month": 1,
+    "area": "Image",
+    "venue": "ECCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/chail/patch-forensics",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2020-fingerprintnet-synthesized-fingerprints-for-generated-image-detection",
+    "title": "FingerprintNet: Synthesized Fingerprints for Generated Image Detection",
+    "year": 2020,
+    "month": 1,
+    "area": "Image",
+    "venue": "ECCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/prip-lab/fingerprint-synthesis",
+    "project_url": "",
+    "methods": [
+      "GAN"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2021-are-gan-generated-images-easy-to-detect-a-critical-analysis-of-the-state-of-the",
+    "title": "Are GAN generated images easy to detect? A critical analysis of the state-of-the-art",
+    "year": 2021,
+    "month": 4,
+    "area": "Image",
+    "venue": "ICME",
+    "paper_url": "https://arxiv.org/abs/2104.02617",
+    "arxiv_id": "2104.02617",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "GAN"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2021-spatiotemporal-inconsistency-learning-for-deepfake-video-detection",
+    "title": "Spatiotemporal Inconsistency Learning for DeepFake Video Detection",
+    "year": 2021,
+    "month": 9,
+    "area": "Video",
+    "venue": "ACMMM",
+    "paper_url": "https://arxiv.org/abs/2109.01860",
+    "arxiv_id": "2109.01860",
+    "code_url": "https://github.com/Tencent/TFace",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2022-detecting-generated-images-by-real-images",
+    "title": "Detecting Generated Images by Real Images",
+    "year": 2022,
+    "month": 1,
+    "area": "Image",
+    "venue": "ECCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/Tangsenghenshou/Detecting-Generated-Images-by-Real-Images",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2022-fingerprintnet-synthesized-fingerprints-for-generated-image-detection",
+    "title": "FingerprintNet: Synthesized Fingerprints for Generated Image Detection",
+    "year": 2022,
+    "month": 1,
+    "area": "Image",
+    "venue": "ECCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "GAN"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2022-hierarchical-contrastive-inconsistency-learning-for-deepfake-video-detection",
+    "title": "Hierarchical Contrastive Inconsistency Learning for Deepfake Video Detection",
+    "year": 2022,
+    "month": 1,
+    "area": "Video",
+    "venue": "ECCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-online-detection-of-ai-generated-images",
+    "title": "Online Detection of AI-Generated Images",
+    "year": 2023,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICCVW",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-detecting-images-generated-by-deep-diffusion-models-using-their-local-intrinsic",
+    "title": "Detecting Images Generated by Deep Diffusion Models using their Local Intrinsic Dimensionality",
+    "year": 2023,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICCVW",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2023-patchcraft-exploring-texture-patch-for-efficient-ai-generated-image-detection",
+    "title": "PatchCraft: Exploring Texture Patch for Efficient AI-generated Image Detection",
+    "year": 2023,
+    "month": 11,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2311.12397",
+    "arxiv_id": "2311.12397",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-generalizable-synthetic-image-detection-via-language-guided-contrastive-learning",
+    "title": "Generalizable Synthetic Image Detection via Language-guided Contrastive Learning",
+    "year": 2023,
+    "month": 5,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2305.13800",
+    "arxiv_id": "2305.13800",
+    "code_url": "https://github.com/HighwayWu/LASTED",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-raising-the-bar-of-ai-generated-image-detection-with-clip",
+    "title": "Raising the Bar of AI-generated Image Detection with CLIP",
+    "year": 2023,
+    "month": 12,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2312.00195",
+    "arxiv_id": "2312.00195",
+    "code_url": "https://github.com/grip-unina/ClipBased-SyntheticImageDetection/",
+    "project_url": "",
+    "methods": [
+      "CLIP"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-gendet-towards-good-generalizations-for-ai-generated-image-detection",
+    "title": "GenDet: Towards Good Generalizations for AI-Generated Image Detection",
+    "year": 2023,
+    "month": 12,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2312.08880",
+    "arxiv_id": "2312.08880",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-antifakeprompt-prompt-tuned-vision-language-models-are-fake-image-detectors",
+    "title": "AntifakePrompt: Prompt-Tuned Vision-Language Models are Fake Image Detectors",
+    "year": 2023,
+    "month": 10,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2310.17419",
+    "arxiv_id": "2310.17419",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2023-synthbuster-towards-detection-of-diffusion-model-generated-images",
+    "title": "Synthbuster: Towards Detection of Diffusion Model Generated Images",
+    "year": 2023,
+    "month": 1,
+    "area": "Image",
+    "venue": "OJSP",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-on-the-detection-of-synthetic-images-generated-by-diffusion-models",
+    "title": "On The Detection of Synthetic Images Generated by Diffusion Models",
+    "year": 2023,
+    "month": 11,
+    "area": "Image",
+    "venue": "ICASSP",
+    "paper_url": "https://arxiv.org/abs/2211.00680",
+    "arxiv_id": "2211.00680",
+    "code_url": "https://github.com/grip-unina/DMimageDetection",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-towards-universal-fake-image-detectors-that-generalize-across-generative-models",
+    "title": "Towards Universal Fake Image Detectors that Generalize Across Generative Models",
+    "year": 2023,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/WisconsinAIVision/UniversalFakeDetect",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-learning-on-gradients-generalized-artifacts-representation-for-gan-generated-ima",
+    "title": "Learning on Gradients: Generalized Artifacts Representation for GAN-Generated Images Detection",
+    "year": 2023,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/chuangchuangtan/LGrad",
+    "project_url": "",
+    "methods": [
+      "GAN"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-dire-for-diffusion-generated-image-detection",
+    "title": "DIRE for Diffusion-Generated Image Detection",
+    "year": 2023,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/ZhendongWang6/DIRE",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-tall",
+    "title": "TALL",
+    "year": 2023,
+    "month": 1,
+    "area": "Video",
+    "venue": "ICCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/rainy-xu/TALL4Deepfake",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2023-de-fake-detection-and-attribution-of-fake-images-generated-by-text-to-image-gene",
+    "title": "DE-FAKE: Detection and Attribution of Fake Images Generated by Text-to-Image Generation Models",
+    "year": 2023,
+    "month": 10,
+    "area": "Image",
+    "venue": "CCS",
+    "paper_url": "https://arxiv.org/abs/2210.06998",
+    "arxiv_id": "2210.06998",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2023-seeing-is-not-always-believing-benchmarking-human-and-model-perception-of-ai-gen",
+    "title": "Seeing is not always believing: Benchmarking Human and Model Perception of AI-Generated Images",
+    "year": 2023,
+    "month": 4,
+    "area": "Image",
+    "venue": "NeurIPS",
+    "paper_url": "https://arxiv.org/abs/2304.13023",
+    "arxiv_id": "2304.13023",
+    "code_url": "https://github.com/Inf-imagine/Sentry",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2023-istvt",
+    "title": "ISTVT",
+    "year": 2023,
+    "month": 1,
+    "area": "Video",
+    "venue": "TIFS",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2023-exploiting-complementary-dynamic-incoherence-for-deepfake-video-detection",
+    "title": "Exploiting Complementary Dynamic Incoherence for DeepFake Video Detection",
+    "year": 2023,
+    "month": 1,
+    "area": "Video",
+    "venue": "TCSVT",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-raising-the-bar-of-ai-generated-image-detection-with-clip",
+    "title": "Raising the Bar of AI-generated Image Detection with CLIP",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPRW",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/grip-unina/ClipBased-SyntheticImageDetection/",
+    "project_url": "",
+    "methods": [
+      "CLIP"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-faster-than-lies-real-time-deepfake-detection-using-binary-neural-networks",
+    "title": "Faster Than Lies: Real-time Deepfake Detection using Binary Neural Networks",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPRW",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/fedeloper/binary_deepfake_detection",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-breaking-semantic-artifacts-for-generalized-ai-generated-image-detection",
+    "title": "Breaking Semantic Artifacts for Generalized AI-generated Image Detection",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "NIPS",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/Zig-HS/FakeImageDetection",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-mixture-of-low-rank-experts-for-transferable-ai-generated-image-detection",
+    "title": "Mixture of Low-rank Experts for Transferable AI-Generated Image Detection",
+    "year": 2024,
+    "month": 4,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2404.04883",
+    "arxiv_id": "2404.04883",
+    "code_url": "https://github.com/zhliuworks/CLIPMoLE",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-guided-and-fused-efficient-frozen-clip-vit-with-feature-guidance-and-multi-stage",
+    "title": "Guided and Fused: Efficient Frozen CLIP-ViT with Feature Guidance and Multi-Stage Feature Fusion for Generalizable Deepfake Detection",
+    "year": 2024,
+    "month": 8,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2408.13697",
+    "arxiv_id": "2408.13697",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "CLIP",
+      "Transformer"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-a-single-simple-patch-is-all-you-need-for-ai-generated-image-detection",
+    "title": "A Single Simple Patch is All You Need for AI-generated Image Detection",
+    "year": 2024,
+    "month": 2,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2402.01123",
+    "arxiv_id": "2402.01123",
+    "code_url": "https://github.com/bcmi/SSP-AI-Generated-Image-Detection",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-rigid-a-training-free-and-model-agnostic-framework-for-robust-ai-generated-image",
+    "title": "RIGID: A Training-Free and Model-Agnostic Framework for Robust AI-Generated Image Detection",
+    "year": 2024,
+    "month": 5,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2405.20112",
+    "arxiv_id": "2405.20112",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-improving-interpretability-and-robustness-for-the-detection-of-ai-generated-imag",
+    "title": "Improving Interpretability and Robustness for the Detection of AI-Generated Images",
+    "year": 2024,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2406.15035",
+    "arxiv_id": "2406.15035",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-continuous-fake-media-detection-adapting-deepfake-detectors-to-new-generative-te",
+    "title": "Continuous fake media detection: adapting deepfake detectors to new generative techniques",
+    "year": 2024,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2406.08171",
+    "arxiv_id": "2406.08171",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-organic-or-diffused-can-we-distinguish-human-art-from-ai-generated-images",
+    "title": "Organic or Diffused: Can We Distinguish Human Art from AI-generated Images?",
+    "year": 2024,
+    "month": 2,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2402.03214",
+    "arxiv_id": "2402.03214",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "GAN"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-let-real-images-be-as-a-judger-spotting-fake-images-synthesized-with-generative",
+    "title": "Let Real Images be as a Judger, Spotting Fake Images Synthesized with Generative Models",
+    "year": 2024,
+    "month": 3,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2403.16513",
+    "arxiv_id": "2403.16513",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-detecting-image-attribution-for-text-to-image-diffusion-models-in-rgb-and-beyond",
+    "title": "Detecting Image Attribution for Text-to-Image Diffusion Models in RGB and Beyond",
+    "year": 2024,
+    "month": 3,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2403.19653",
+    "arxiv_id": "2403.19653",
+    "code_url": "https://github.com/k8xu/ImageAttribution",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-mlep-multi-granularity-local-entropy-patterns-for-generalized-ai-generated-image",
+    "title": "MLEP: Multi-granularity Local Entropy Patterns for Generalized AI-generated Image Detection",
+    "year": 2024,
+    "month": 4,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2504.13726",
+    "arxiv_id": "2504.13726",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-ffaa-multimodal-large-language-model-based-explainable-open-world-face-forgery-a",
+    "title": "FFAA: Multimodal Large Language Model based Explainable Open-World Face Forgery Analysis Assistant",
+    "year": 2024,
+    "month": 8,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2408.10072",
+    "arxiv_id": "2408.10072",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-beyond-deepfake-images-detecting-ai-generated-videos",
+    "title": "Beyond Deepfake Images: Detecting AI-Generated Videos",
+    "year": 2024,
+    "month": 1,
+    "area": "Video",
+    "venue": "CVPRW",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-what-matters-in-detecting-ai-generated-videos-like-sora",
+    "title": "What Matters in Detecting AI-Generated Videos like Sora?",
+    "year": 2024,
+    "month": 6,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2406.19568",
+    "arxiv_id": "2406.19568",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-turns-out-i-m-not-real-towards-robust-detection-of-ai-generated-videos",
+    "title": "Turns Out I'm Not Real: Towards Robust Detection of AI-Generated Videos",
+    "year": 2024,
+    "month": 6,
+    "area": "Video",
+    "venue": "CVPRW",
+    "paper_url": "https://arxiv.org/abs/2406.09601",
+    "arxiv_id": "2406.09601",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-demamba",
+    "title": "DeMamba: Effective Video Forgery Detection via State-Space Model",
+    "year": 2024,
+    "month": 5,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2405.19707",
+    "arxiv_id": "2405.19707",
+    "code_url": "https://github.com/chenhaoxing/DeMamba",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-exposing-ai-generated-videos-a-benchmark-dataset-and-a-local-and-global-temporal",
+    "title": "Exposing AI-generated Videos: A Benchmark Dataset and a Local-and-Global Temporal Defect Based Detection Method",
+    "year": 2024,
+    "month": 5,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2405.04133",
+    "arxiv_id": "2405.04133",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-distinguish-any-fake-videos-unleashing-the-power-of-large-scale-data-and-motion",
+    "title": "Distinguish Any Fake Videos: Unleashing the Power of Large-scale Data and Motion Features",
+    "year": 2024,
+    "month": 5,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2405.15343",
+    "arxiv_id": "2405.15343",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-ai-generated-video-detection-via-spatio-temporal-anomaly-learning",
+    "title": "AI-Generated Video Detection via Spatio-Temporal Anomaly Learning",
+    "year": 2024,
+    "month": 3,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2403.16638",
+    "arxiv_id": "2403.16638",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-decof",
+    "title": "DeCoF: Detecting and Concealing Fake Faces in Videos",
+    "year": 2024,
+    "month": 2,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2402.02085",
+    "arxiv_id": "2402.02085",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-videofact-detecting-video-forgeries-using-attention-scene-context-and-forensic-t",
+    "title": "VideoFACT: Detecting Video Forgeries Using Attention, Scene Context, and Forensic Traces",
+    "year": 2024,
+    "month": 11,
+    "area": "Video",
+    "venue": "WACV",
+    "paper_url": "https://arxiv.org/abs/2211.15775",
+    "arxiv_id": "2211.15775",
+    "code_url": "https://github.com/ductai199x/videofact-wacv-2024",
+    "project_url": "",
+    "methods": [
+      "Transformer"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-harnessing-the-power-of-large-vision-language-models-for-synthetic-image-detecti",
+    "title": "Harnessing the Power of Large Vision Language Models for Synthetic Image Detection",
+    "year": 2024,
+    "month": 4,
+    "area": "Image",
+    "venue": "ICASSP",
+    "paper_url": "https://arxiv.org/abs/2404.02726",
+    "arxiv_id": "2404.02726",
+    "code_url": "https://github.com/Mamadou-Keita/VLM-DETECT?tab=readme-ov-file",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-fakeinversion-learning-to-detect-images-from-unseen-text-to-image-models-by-inve",
+    "title": "FakeInversion: Learning to Detect Images from Unseen Text-to-Image Models by Inverting Stable Diffusion",
+    "year": 2024,
+    "month": 6,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2406.08603",
+    "arxiv_id": "2406.08603",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-forgery-aware-adaptive-transformer-for-generalizable-synthetic",
+    "title": "Forgery-aware Adaptive Transformer for Generalizable Synthetic",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/Michel-liu/FatFormer?tab=readme-ov-file",
+    "project_url": "",
+    "methods": [
+      "Transformer"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-rethinking-the-up-sampling-operations-in-cnn-based-generative-network-for-genera",
+    "title": "Rethinking the Up-Sampling Operations in CNN-based Generative Network for Generalizable Deepfake Detection",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/chuangchuangtan/NPR-DeepfakeDetection",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-lare2-latent-reconstruction-error-based-method-for-diffusion-generated-image-det",
+    "title": "LaRE²: Latent Reconstruction Error Based Method for Diffusion-Generated Image Detection",
+    "year": 2024,
+    "month": 3,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2403.17465",
+    "arxiv_id": "2403.17465",
+    "code_url": "https://github.com/luo3300612/LaRE",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-aeroblade-training-free-detection-of-latent-diffusion-images-using-autoencoder-r",
+    "title": "AEROBLADE: Training-Free Detection of Latent Diffusion Images Using Autoencoder Reconstruction Error",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2401.17879",
+    "arxiv_id": "2401.17879",
+    "code_url": "https://github.com/jonasricker/aeroblade",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-clipping-the-deception-adapting-vision-language-models-for-universal-deepfake-de",
+    "title": "CLIPping the Deception: Adapting Vision-Language Models for Universal Deepfake Detection",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICMR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/sfimediafutures/CLIPping-the-Deception",
+    "project_url": "",
+    "methods": [
+      "CLIP",
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-drct-diffusion-reconstruction-contrastive-training-towards-universal-detection-o",
+    "title": "DRCT: Diffusion Reconstruction Contrastive Training towards Universal Detection of Diffusion Generated Images",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICML",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/beibuwandeluori/DRCT",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-exposing-the-fake-effective-diffusion-generated-images-detection",
+    "title": "Exposing the Fake: Effective Diffusion-Generated Images Detection",
+    "year": 2024,
+    "month": 7,
+    "area": "Image",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2307.06272",
+    "arxiv_id": "2307.06272",
+    "code_url": "https://github.com/grip-unina/DMimageDetection",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-how-to-trace-latent-generative-model-generated-images-without-artificial-waterma",
+    "title": "How to Trace Latent Generative Model Generated Images without Artificial Watermark?",
+    "year": 2024,
+    "month": 5,
+    "area": "Image",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2405.13360",
+    "arxiv_id": "2405.13360",
+    "code_url": "https://github.com/ZhentingWang/LatentTracer",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-miragenews-multimodal-realistic-ai-generated-news-detection",
+    "title": "MiRAGeNews: Multimodal Realistic AI-Generated News Detection",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "ACL",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/nosna/miragenews",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-zero-shot-detection-of-ai-generated-images",
+    "title": "Zero-Shot Detection of AI-Generated Images",
+    "year": 2024,
+    "month": 1,
+    "area": "Image",
+    "venue": "ECCV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/grip-unina/ZED/",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-leveraging-representations-from-intermediate-encoder-blocks-for-synthetic-image",
+    "title": "Leveraging Representations from Intermediate Encoder-blocks for Synthetic Image Detection",
+    "year": 2024,
+    "month": 2,
+    "area": "Image",
+    "venue": "ECCV",
+    "paper_url": "https://arxiv.org/abs/2402.19091",
+    "arxiv_id": "2402.19091",
+    "code_url": "https://github.com/mever-team/rine/tree/main?tab=readme-ov-file",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2024-contrasting-deepfakes-diffusion-via-contrastive-learning-and-global-local-simila",
+    "title": "Contrasting Deepfakes Diffusion via Contrastive Learning and Global-Local Similarities",
+    "year": 2024,
+    "month": 7,
+    "area": "Image",
+    "venue": "ECCV",
+    "paper_url": "https://arxiv.org/abs/2407.20337",
+    "arxiv_id": "2407.20337",
+    "code_url": "https://github.com/aimagelab/CoDE",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2024-de-fake-detection-and-attribution-of-fake-images-generated-by-text-to-image-gene",
+    "title": "DE-FAKE: Detection and Attribution of Fake Images Generated by Text-to-Image Generation Models",
+    "year": 2024,
+    "month": 10,
+    "area": "Image",
+    "venue": "ACM_CSS",
+    "paper_url": "https://arxiv.org/abs/2210.06998",
+    "arxiv_id": "2210.06998",
+    "code_url": "https://github.com/zeyangsha/De-Fake",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-sfld-reducing-the-content-bias-for-ai-generated-image-detection",
+    "title": "SFLD: Reducing the content bias for AI-generated Image Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "WACV",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-exploring-the-collaborative-advantage-of-low-level-information-on-generalizable",
+    "title": "Exploring the Collaborative Advantage of Low-level Information on Generalizable AI-Generated Image Detection",
+    "year": 2025,
+    "month": 4,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2504.00463",
+    "arxiv_id": "2504.00463",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-hyperdet-generalizable-detection-of-synthesized-images-by-generating-and-merging",
+    "title": "HYPERDET: GENERALIZABLE DETECTION OF SYNTHESIZED IMAGES BY GENERATING AND MERGING A MIXTURE OF HYPER LORAS",
+    "year": 2025,
+    "month": 10,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2410.06044",
+    "arxiv_id": "2410.06044",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-zooming-in-on-fakes-a-novel-dataset-for-localized-ai-generated-image-detection-w",
+    "title": "Zooming In on Fakes: A Novel Dataset for Localized AI-Generated Image Detection with Forgery Amplification Approach",
+    "year": 2025,
+    "month": 4,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2504.11922",
+    "arxiv_id": "2504.11922",
+    "code_url": "https://github.com/clpbc/BR-Gen",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-antifakeprompt-prompt-tuned-vision-language-models-are-fake-image-detectors",
+    "title": "AntifakePrompt: Prompt-Tuned Vision-Language Models are Fake Image Detectors",
+    "year": 2025,
+    "month": 10,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2310.17419",
+    "arxiv_id": "2310.17419",
+    "code_url": "https://github.com/nctu-eva-lab/AntifakePrompt",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-can-gpt-tell-us-why-these-images-are-synthesized-empowering-multimodal-large-lan",
+    "title": "Can GPT tell us why these images are synthesized? Empowering Multimodal Large Language Models for Forensics",
+    "year": 2025,
+    "month": 4,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2504.11686",
+    "arxiv_id": "2504.11686",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-exploring-modality-disruption-in-multimodal-fake-news-detection",
+    "title": "Exploring Modality Disruption in Multimodal Fake News Detection",
+    "year": 2025,
+    "month": 4,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2504.09154",
+    "arxiv_id": "2504.09154",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-nsg-vd",
+    "title": "NSG-VD: Physics-Driven Spatiotemporal Modeling for AI-Generated Video Detection",
+    "year": 2025,
+    "month": 10,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2510.08073",
+    "arxiv_id": "2510.08073",
+    "code_url": "https://github.com/ZSHsh98/NSG-VD",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-vidguard-r1",
+    "title": "VIDGUARD-R1: AI-Generated Video Detection and Explanation via Reasoning MLLMs and RL",
+    "year": 2025,
+    "month": 10,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2510.02282",
+    "arxiv_id": "2510.02282",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-video-forgery-detection-with-optical-flow-residuals-and-spatial-temporal-consist",
+    "title": "Video Forgery Detection with Optical Flow Residuals and Spatial-Temporal Consistency",
+    "year": 2025,
+    "month": 8,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2508.00397",
+    "arxiv_id": "2508.00397",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-d3",
+    "title": "D3: Training-Free AI-Generated Video Detection Using Second-Order Features",
+    "year": 2025,
+    "month": 8,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2508.00701",
+    "arxiv_id": "2508.00701",
+    "code_url": "https://github.com/Zig-HS/D3",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-busterx",
+    "title": "BusterX++: Towards Unified Cross-Modal AI-Generated Content Detection and Explanation with MLLM",
+    "year": 2025,
+    "month": 7,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2507.14632",
+    "arxiv_id": "2507.14632",
+    "code_url": "https://github.com/l8cv/BusterX",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-ivy-fake",
+    "title": "IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection",
+    "year": 2025,
+    "month": 6,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2506.00979",
+    "arxiv_id": "2506.00979",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-busterx-2",
+    "title": "BusterX: MLLM-Powered AI-Generated Video Forgery Detection and Explanation",
+    "year": 2025,
+    "month": 5,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2505.12620",
+    "arxiv_id": "2505.12620",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-genvidbench",
+    "title": "GenVidBench: A Challenging Benchmark for Detecting AI-Generated Video",
+    "year": 2025,
+    "month": 1,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2501.11340",
+    "arxiv_id": "2501.11340",
+    "code_url": "https://github.com/genvidbench/GenVidBench",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-zero-shot-detection-of-llm-generated-text-via-implicit-reward-model",
+    "title": "Zero-Shot Detection of LLM-Generated Text via Implicit Reward Model",
+    "year": 2025,
+    "month": 1,
+    "area": "Text",
+    "venue": "NIPS",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-a-sanity-check-for-ai-generated-image-detection",
+    "title": "A SANITY CHECK FOR AI-GENERATED IMAGE DETECTION",
+    "year": 2025,
+    "month": 6,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2406.19435",
+    "arxiv_id": "2406.19435",
+    "code_url": "https://github.com/shilinyan99/AIDE",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-fakeshield-explainable-image-forgery-detection-and-localization-via-multi-modal",
+    "title": "FAKESHIELD: EXPLAINABLE IMAGE FORGERY DETECTION AND LOCALIZATION VIA MULTI-MODAL LARGE LANGUAGE MODELS",
+    "year": 2025,
+    "month": 10,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://arxiv.org/abs/2410.02761",
+    "arxiv_id": "2410.02761",
+    "code_url": "https://github.com/zhipeixu/FakeShield",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-training-free-llm-generated-text-detection-by-mining-token-probability-sequences",
+    "title": "Training-free LLM-generated Text Detection by Mining Token Probability Sequences",
+    "year": 2025,
+    "month": 1,
+    "area": "Text",
+    "venue": "ICLR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/TrustMedia-zju/Lastde_Detector",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-forensic-self-descriptions-are-all-you-need-for-zero-shot-detection-open-set-sou",
+    "title": "Forensic Self-Descriptions Are All You Need for Zero-Shot Detection, Open-Set Source Attribution, and Clustering of AI-generated Images",
+    "year": 2025,
+    "month": 3,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2503.21003",
+    "arxiv_id": "2503.21003",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-beyond-generation-a-diffusion-based-low-level-feature-extractor-for-detecting-ai",
+    "title": "Beyond Generation: A Diffusion-based Low-level Feature Extractor for Detecting AI-generated Images",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-secret-lies-in-color-enhancing-ai-generated-images-detection-with-color-distribu",
+    "title": "Secret Lies in Color: Enhancing AI-Generated Images Detection with Color Distribution Analysis",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-towards-universal-ai-generated-image-detection-by-variational-information-bottle",
+    "title": "Towards Universal AI-Generated Image Detection by Variational Information Bottleneck Network",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-where-s-the-liability-in-the-generative-era-recovery-based-black-box-detection-o",
+    "title": "Where's the Liability in the Generative Era? Recovery-based Black-Box Detection of AI-Generated Content",
+    "year": 2025,
+    "month": 5,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2505.01008",
+    "arxiv_id": "2505.01008",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-fire-robust-detection-of-diffusion-generated-images-via-frequency-guided-reconst",
+    "title": "FIRE: Robust Detection of Diffusion-Generated Images via Frequency-Guided Reconstruction Error",
+    "year": 2025,
+    "month": 12,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2412.07140",
+    "arxiv_id": "2412.07140",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Frequency",
+      "Reconstruction"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-d3-scaling-up-deepfake-detection-by-learning",
+    "title": "D³ Scaling Up Deepfake Detection by Learning",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/BigAandSmallq/D3",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-sida-social-media-image-deepfake-detection-localization-and-explanation-with-lar",
+    "title": "SIDA: Social Media Image Deepfake Detection, Localization and Explanation with Large Multimodal Model",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/hzlsaber/SIDA",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-a-bias-free-training-paradigm-for-more-general-ai-generated-image-detection",
+    "title": "A Bias-Free Training Paradigm for More General AI-generated Image Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/grip-unina/B-Free",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-any-resolution-ai-generated-image-detection-by-spectral-learning",
+    "title": "Any-Resolution AI-Generated Image Detection by Spectral Learning",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/mever-team/spai",
+    "project_url": "",
+    "methods": [
+      "Frequency"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-texturecrop-enhancing-synthetic-image-detection-through-texture-based-cropping",
+    "title": "TextureCrop: Enhancing Synthetic Image Detection through Texture-based Cropping",
+    "year": 2025,
+    "month": 7,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2407.15500",
+    "arxiv_id": "2407.15500",
+    "code_url": "https://github.com/mever-team/texture-crop",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-heie-mllm-based-hierarchical-explainable-aigc-image-implausibility-evaluator",
+    "title": "HEIE: MLLM-Based Hierarchical Explainable AIGC Image Implausibility Evaluator",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "CVPR",
+    "paper_url": "",
+    "arxiv_id": "",
+    "code_url": "https://github.com/yfthu/HEIE/tree/main/Expl-AIGI-Eval%20Dataset",
+    "project_url": "",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-towards-a-universal-synthetic-video-detector-from-face-or-background-manipulatio",
+    "title": "Towards a Universal Synthetic Video Detector: From Face or Background Manipulations to Fully AI-Generated Content",
+    "year": 2025,
+    "month": 12,
+    "area": "Video",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2412.12278",
+    "arxiv_id": "2412.12278",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-few-shot-learner-generalizes-across-ai-generated-image-detection",
+    "title": "Few-Shot Learner Generalizes Across AI-Generated Image Detection",
+    "year": 2025,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2501.08763",
+    "arxiv_id": "2501.08763",
+    "code_url": "https://github.com/teheperinko541/Few-Shot-AIGI-Detector",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-orthogonal-subspace-decomposition-for-generalizable-ai-generated-image-detection",
+    "title": "Orthogonal Subspace Decomposition for Generalizable AI-Generated Image Detection",
+    "year": 2025,
+    "month": 11,
+    "area": "Image",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2411.15633",
+    "arxiv_id": "2411.15633",
+    "code_url": "https://github.com/YZY-stack/Effort-AIGI-Detection",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2025-improving-synthetic-image-detection-towards-generalization-an-image-transformati",
+    "title": "Improving Synthetic Image Detection Towards Generalization: An Image Transformation Perspective",
+    "year": 2025,
+    "month": 8,
+    "area": "Image",
+    "venue": "KDD",
+    "paper_url": "https://arxiv.org/abs/2408.06741",
+    "arxiv_id": "2408.06741",
+    "code_url": "https://github.com/Ouxiang-Li/SAFE",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": true,
+    "notes": ""
+  },
+  {
+    "id": "2026-artifactlens",
+    "title": "ArtifactLens: Hundreds of Labels Are Enough for Artifact Detection with VLMs",
+    "year": 2026,
+    "month": 2,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.09475",
+    "arxiv_id": "2602.09475",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-r-2bd",
+    "title": "R²BD: A Reconstruction-Based Method for Generalizable and Efficient Detection of Fake Images",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2601.08867",
+    "arxiv_id": "2601.08867",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-forensichub",
+    "title": "ForensicHub: A Unified Benchmark & Codebase for All-Domain Fake Image Detection",
+    "year": 2026,
+    "month": 5,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2505.11003",
+    "arxiv_id": "2505.11003",
+    "code_url": "https://github.com/scu-zjz/ForensicHub",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ivy-fake",
+    "title": "IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2506.00979",
+    "arxiv_id": "2506.00979",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-dino-detect",
+    "title": "DINO-Detect: A Simple yet Effective Framework for Blur-Robust AI-Generated Image Detection",
+    "year": 2026,
+    "month": 11,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2511.12511",
+    "arxiv_id": "2511.12511",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-diffseg30k",
+    "title": "DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for Localized AIGC Detection",
+    "year": 2026,
+    "month": 11,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2511.19111",
+    "arxiv_id": "2511.19111",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "is_landmark": false,
+    "notes": ""
+  }
+]
