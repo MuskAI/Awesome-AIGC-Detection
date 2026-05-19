@@ -40,6 +40,36 @@
     "relevance": "The fraud setting emphasizes continual learning, liveness, device signals, and session context beyond media pixels alone."
   },
   {
+    "id": "2026-04-30-cac-qinglang-ai-application-governance",
+    "date": "2026-04-30",
+    "title": "中央网信办部署开展“清朗·整治AI应用乱象”专项行动",
+    "source": "中国网信网",
+    "url": "https://www.cac.gov.cn/2026-04/30/c_1779289298718765.htm",
+    "category": "China Policy / AI Governance",
+    "summary": "中央网信办启动为期4个月的专项行动，重点整治生成合成内容标识落实不到位、AI数据投毒、AI换脸拟声滥用等问题。",
+    "relevance": "国内治理重点已经从单点内容处置扩展到源头备案、安全审核、标识互认和检测能力建设。"
+  },
+  {
+    "id": "2026-04-08-nrta-ai-remix-video-governance-results",
+    "date": "2026-04-08",
+    "title": "国家广播电视总局通报“AI魔改”视频治理工作取得实效",
+    "source": "国家广播电视总局",
+    "url": "https://www.nrta.gov.cn/art/2026/4/8/art_114_73035.html",
+    "category": "China Policy / Video Governance",
+    "summary": "广电总局通报专项治理结果，清理大量基于经典电视剧作品进行AI魔改的违规视频，并推动平台建立常态化治理机制。",
+    "relevance": "AIGC视频检测在国内内容平台中正从研究问题变成审核、版权、文化安全和平台责任问题。"
+  },
+  {
+    "id": "2026-04-02-actors-committee-ai-face-voice-rights",
+    "date": "2026-04-02",
+    "title": "中广联演员委员会就AI换脸合成、声纹克隆、影视素材魔改发布声明",
+    "source": "澎湃新闻",
+    "url": "https://m.thepaper.cn/newsDetail_forward_32880368",
+    "category": "China Industry / Likeness Rights",
+    "summary": "中国广电联合会演员委员会针对AI换脸、声纹克隆、影视素材魔改和未经授权采集训练数据等侵权行为发布声明。",
+    "relevance": "国内演艺行业把检测和溯源需求推向肖像权、声音权、训练数据授权和二创边界。"
+  },
+  {
     "id": "2026-04-21-youtube-likeness-detection-entertainment",
     "date": "2026-04-21",
     "title": "YouTube expands likeness detection to the entertainment industry",
@@ -50,6 +80,16 @@
     "relevance": "Large platforms are operationalizing face-likeness detection as a rights and removal workflow, not only as a research benchmark."
   },
   {
+    "id": "2026-02-12-xiaohongshu-ai-content-labeling",
+    "date": "2026-02-12",
+    "title": "小红书要求AI生成合成内容主动标识，未标识内容将限制推荐",
+    "source": "新浪科技",
+    "url": "https://finance.sina.com.cn/tech/2026-02-12/doc-inhmqffz9646093.shtml",
+    "category": "China Platform / Labeling",
+    "summary": "小红书公告称将持续加强AI生成合成内容识别检测能力，未主动标识的AI生成合成内容将由平台添加标识并限制分发。",
+    "relevance": "国内社区平台正在把检测结果直接接入分发、补标、申诉和举报机制。"
+  },
+  {
     "id": "2026-03-26-uk-deepfake-detection-market-report",
     "date": "2026-03-26",
     "title": "UK DSIT publishes analysis of the deepfake detection technology market",
@@ -58,6 +98,16 @@
     "category": "Policy / Market",
     "summary": "The UK Department for Science, Innovation and Technology published a market and evidence review for deepfake detection technology.",
     "relevance": "Policy interest is shifting toward supply, demand, barriers, and future growth of detection capabilities."
+  },
+  {
+    "id": "2025-09-01-china-ai-generated-content-labeling-effective",
+    "date": "2025-09-01",
+    "title": "《人工智能生成合成内容标识办法》正式施行",
+    "source": "央视网",
+    "url": "https://news.cctv.cn/2025/09/01/ARTI3ZlXK7MyM39Pm3PuZ5Hm250901.shtml",
+    "category": "China Policy / Labeling Standard",
+    "summary": "国家网信办等四部门发布的标识办法正式施行，要求AI生成的文字、图片、音频、视频和虚拟场景等内容明确标识。",
+    "relevance": "国内检测生态有了制度入口，显式标识、隐式标识、元数据和传播端风险提示会影响后续工具与评测。"
   },
   {
     "id": "2026-03-10-youtube-likeness-detection-civic-leaders",

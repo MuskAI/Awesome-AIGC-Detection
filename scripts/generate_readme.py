@@ -231,11 +231,23 @@ def render_news(news: list[dict[str, Any]]) -> str:
     latest = ordered[0]
     categories = Counter(item["category"].split(" / ")[0] for item in ordered)
     category_summary = ", ".join(f"{name} x{count}" for name, count in categories.most_common())
+    china_items = [item for item in ordered if item["category"].startswith("China ")]
+    china_ids = {item["id"] for item in china_items}
+    remaining_items = [item for item in ordered[1:] if item["id"] not in china_ids]
+
+    def note_lines(item: dict[str, Any]) -> list[str]:
+        return [
+            f"- **{item['date']} · {item['category']}**",
+            f"  {md_link(item['title'], item['url'])} — {clean_cell(item['source'])}",
+            f"  Signal: {clean_cell(item['summary'])}",
+            f"  Why it matters: {clean_cell(item['relevance'])}",
+            "",
+        ]
 
     lines = [
         GENERATED_NOTICE,
         "",
-        "Fresh signals from platforms, policy, provenance, and industry deployment. Each item is summarized as a short field note rather than another database table.",
+        "Fresh signals from platforms, policy, provenance, and industry deployment, with China-specific updates pulled into a dedicated watch lane.",
         "",
         "### Latest Signal",
         "",
@@ -249,19 +261,36 @@ def render_news(news: list[dict[str, Any]]) -> str:
         "",
         "### Reading The Trend",
         "",
-        f"Coverage mix: {category_summary}. The current news flow is less about a single magic detector and more about layered authenticity: platform-scale likeness search, capture-time provenance, evaluation standards, and real-time fraud defense.",
-        "",
-        "### Field Notes",
+        f"Coverage mix: {category_summary}. The current flow spans domestic governance and global deployment: platform-scale likeness search, capture-time provenance, labeling standards, review workflows, and real-time fraud defense.",
         "",
     ]
 
-    for item in ordered[1:]:
+    if china_items:
         lines.extend(
             [
-                f"- **{item['date']} · {item['category']}**",
-                f"  {md_link(item['title'], item['url'])} — {clean_cell(item['source'])}",
-                f"  Signal: {clean_cell(item['summary'])}",
-                f"  Why it matters: {clean_cell(item['relevance'])}",
+                "### China Watch",
+                "",
+                "Domestic updates are especially useful for tracking how AIGC detection becomes platform policy, labeling infrastructure, rights protection, and video governance.",
+                "",
+            ]
+        )
+        for item in china_items:
+            lines.extend(note_lines(item))
+
+    lines.extend(
+        [
+            "### Global Field Notes",
+            "",
+        ]
+    )
+
+    for item in remaining_items:
+        lines.extend(note_lines(item))
+
+    if not remaining_items:
+        lines.extend(
+            [
+                "_No additional global notes yet._",
                 "",
             ]
         )
