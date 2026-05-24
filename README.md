@@ -485,6 +485,11 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 
 Resources here are useful context for authenticity, misinformation, and provenance work, but they are intentionally kept out of the core AIGC detection paper list.
 
+- **2026.05 · Multimodal fake news / misinformation detection**
+  [The AI Slop Intelligence Dashboard Problem](https://labs.jamessawyer.co.uk/ai-slop-intelligence-dashboards/) (James Sawyer Field Notes)
+  Why adjacent: Related to authenticity and misinformation, but the primary task is critical analysis of AI-generated intelligence dashboard claims rather than direct AIGC content detection.
+  Links: [Resource](https://labs.jamessawyer.co.uk/ai-slop-intelligence-dashboards/)
+
 - **2025.04 · Multimodal fake news / misinformation detection**
   [Exploring Modality Disruption in Multimodal Fake News Detection](https://arxiv.org/abs/2504.09154) (arxiv)
   Why adjacent: Related to authenticity and misinformation, but the primary task is not direct AIGC content detection.

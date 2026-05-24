@@ -22,5 +22,17 @@
     "code_url": "https://github.com/nosna/miragenews",
     "topic": "Multimodal fake news / misinformation detection",
     "reason": "Related to authenticity and misinformation, but the primary task is not direct AIGC content detection."
+  },
+  {
+    "id": "2026-ai-slop-intelligence-dashboard-problem",
+    "title": "The AI Slop Intelligence Dashboard Problem",
+    "year": 2026,
+    "month": 5,
+    "kind": "Adjacent article",
+    "venue": "James Sawyer Field Notes",
+    "url": "https://labs.jamessawyer.co.uk/ai-slop-intelligence-dashboards/",
+    "code_url": "",
+    "topic": "Multimodal fake news / misinformation detection",
+    "reason": "Related to authenticity and misinformation, but the primary task is critical analysis of AI-generated intelligence dashboard claims rather than direct AIGC content detection."
   }
 ]
