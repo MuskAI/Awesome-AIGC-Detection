@@ -34,10 +34,6 @@ Before moving a paper into the main data source:
   - Date seen: 2026-02-06
   - Notes: Uses specular reflection inconsistency for generalizable face forgery detection.
   - Metadata needed: canonical paper URL.
-- [ ] How well are open sourced AI-generated image detection models out-of-the-box
-  - Date seen: 2026-02-07
-  - Notes: Benchmarking existing open-source AIGC detection models.
-  - Metadata needed: canonical paper URL.
 
 ### Audio Deepfake Detection
 

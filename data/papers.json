@@ -2754,5 +2754,247 @@
     ],
     "is_landmark": false,
     "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-ssafe-simple-and-strong-ai-generated-image-detection-via-frozen-vision-encoders",
+    "title": "SSAFE: Simple and Strong AI-Generated Image Detection via Frozen Vision Encoders",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.08634",
+    "arxiv_id": "2606.08634",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Frozen Vision Encoders",
+      "RealWorldBench"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-drift-from-robustness-gaps-to-invariance-manifolds-for-ai-generated-image-detection",
+    "title": "DRIFT: From Robustness Gaps to Invariance Manifolds for AI-Generated Image Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.06918",
+    "arxiv_id": "2606.06918",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Invariance Manifold",
+      "Open-world Generalization"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-findings-of-the-counter-turing-test-ai-generated-image-detection",
+    "title": "Findings of the Counter Turing Test: AI-Generated Image Detection",
+    "year": 2026,
+    "month": 5,
+    "area": "Image",
+    "venue": "AAAI Workshop",
+    "paper_url": "https://arxiv.org/abs/2605.20787",
+    "arxiv_id": "2605.20787",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Model Attribution",
+      "MS COCOAI Dataset"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detecting-ai-generated-videos-with-spiking-neural-networks",
+    "title": "Detecting AI-Generated Videos with Spiking Neural Networks",
+    "year": 2026,
+    "month": 5,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2605.05895",
+    "arxiv_id": "2605.05895",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Spiking Neural Networks",
+      "Temporal Residuals"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-radar-challenge-2026-robust-audio-deepfake-recognition-under-media-transformations",
+    "title": "RADAR Challenge 2026: Robust Audio Deepfake Recognition under Media Transformations",
+    "year": 2026,
+    "month": 5,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2605.09568",
+    "arxiv_id": "2605.09568",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "RADAR Challenge",
+      "Media Transformations"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-deepfake-audio-detection-using-self-supervised-fusion-representations",
+    "title": "Deepfake Audio Detection Using Self-supervised Fusion Representations",
+    "year": 2026,
+    "month": 5,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2605.03420",
+    "arxiv_id": "2605.03420",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Self-supervised Fusion",
+      "Cross-Attention"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ntire-2026-challenge-on-robust-ai-generated-image-detection-in-the-wild",
+    "title": "NTIRE 2026 Challenge on Robust AI-Generated Image Detection in the Wild",
+    "year": 2026,
+    "month": 4,
+    "area": "Image",
+    "venue": "CVPRW",
+    "paper_url": "https://arxiv.org/abs/2604.11487",
+    "arxiv_id": "2604.11487",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "NTIRE Challenge",
+      "Robustness Benchmark"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-efficient-zero-shot-ai-generated-image-detection",
+    "title": "Efficient Zero-Shot AI-Generated Image Detection",
+    "year": 2026,
+    "month": 3,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2603.21619",
+    "arxiv_id": "2603.21619",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Zero-Shot",
+      "Frequency Perturbation"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-how-well-are-open-sourced-ai-generated-image-detection-models-out-of-the-box",
+    "title": "How well are open sourced AI-generated image detection models out-of-the-box: A comprehensive benchmark study",
+    "year": 2026,
+    "month": 2,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.07814",
+    "arxiv_id": "2602.07814",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Benchmark",
+      "Zero-Shot Evaluation"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-audio-deepfake-detection-in-the-age-of-advanced-text-to-speech-models",
+    "title": "Audio Deepfake Detection in the Age of Advanced Text-to-Speech models",
+    "year": 2026,
+    "month": 1,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2601.20510",
+    "arxiv_id": "2601.20510",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Text-to-Speech",
+      "Multi-view Detection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-context-and-transcripts-improve-detection-of-deepfake-audios-of-public-figures",
+    "title": "Context and Transcripts Improve Detection of Deepfake Audios of Public Figures",
+    "year": 2026,
+    "month": 1,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2601.13464",
+    "arxiv_id": "2601.13464",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Context-based Detection",
+      "Transcript Cues"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
   }
 ]
