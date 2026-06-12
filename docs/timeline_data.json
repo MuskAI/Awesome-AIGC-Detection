@@ -69,6 +69,33 @@
     "notes": ""
   },
   {
+    "id": "2026-on-improving-robustness-of-deepfake-image-detectors",
+    "name": "On Improving Robustness of Deepfake Image Detectors",
+    "short": "On Improving",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "USENIX Security",
+    "conference": "USENIX Security",
+    "paper_url": "https://arxiv.org/abs/2606.02797",
+    "arxiv": "2606.02797",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness",
+      "Frequency Domain",
+      "Adversarial Attacks"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-forensichub",
     "name": "ForensicHub: A Unified Benchmark & Codebase for All-Domain Fake Image Detection",
     "short": "ForensicHub",
@@ -88,6 +115,61 @@
       "General"
     ],
     "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-intermediate-representations-are-strong-ai-generated-image-detectors",
+    "name": "Intermediate Representations are Strong AI-Generated Image Detectors",
+    "short": "Intermediate Representations",
+    "year": 2026,
+    "month": 5,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2605.04358",
+    "arxiv": "2605.04358",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Embedding Sensitivity",
+      "Training-Free",
+      "Intermediate Features"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-reasoning-aware-aigc-detection-via-alignment-and-reinforcement",
+    "name": "Reasoning-Aware AIGC Detection via Alignment and Reinforcement",
+    "short": "Reasoning-Aware AIGC",
+    "year": 2026,
+    "month": 4,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2604.19172",
+    "arxiv": "2604.19172",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Reasoning",
+      "Reinforcement Learning",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
     "landmark": false,
     "notes": ""
   },
@@ -193,6 +275,33 @@
     ],
     "landmark": false,
     "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-detecting-ai-generated-images-via-distributional-deviations-from-real-images",
+    "name": "Detecting AI-Generated Images via Distributional Deviations from Real Images",
+    "short": "Detecting AI-Generated",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2601.03586",
+    "arxiv": "2601.03586",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q1",
+    "methods": [
+      "Distributional Deviations",
+      "CLIP",
+      "Texture-Aware Masking"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
   },
   {
     "id": "2026-df-llava-unlocking-mllms-for-synthetic-image-detection-via-knowledge-injection-a",
@@ -735,6 +844,34 @@
     "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
   },
   {
+    "id": "2026-detecting-ai-generated-content-in-academic-peer-reviews",
+    "name": "Detecting AI-Generated Content in Academic Peer Reviews",
+    "short": "Detecting AI-Generated",
+    "year": 2026,
+    "month": 1,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.00319",
+    "arxiv": "2602.00319",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q1",
+    "methods": [
+      "LLM Detection",
+      "Peer Review Analysis",
+      "Temporal Study"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-docshield-towards-ai-document-safety-via-evidence-grounded-agentic-reasoning",
     "name": "DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning",
     "short": "DocShield",
@@ -760,6 +897,34 @@
     ],
     "landmark": false,
     "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2025-detecting-localized-deepfakes-how-well-do-synthetic-image-detectors-handle-inpainting",
+    "name": "Detecting Localized Deepfakes: How Well Do Synthetic Image Detectors Handle Inpainting?",
+    "short": "Detecting Localized",
+    "year": 2025,
+    "month": 12,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2512.16688",
+    "arxiv": "2512.16688",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q4",
+    "methods": [
+      "Localized Detection",
+      "Inpainting",
+      "Benchmark"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
   },
   {
     "id": "2025-fire-robust-detection-of-diffusion-generated-images-via-frequency-guided-reconst",
@@ -1039,6 +1204,34 @@
     "notes": ""
   },
   {
+    "id": "2025-evaluating-deepfake-detectors-in-the-wild",
+    "name": "Evaluating Deepfake Detectors in the Wild",
+    "short": "Evaluating Deepfake",
+    "year": 2025,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "ICML Workshop",
+    "conference": "ICML Workshop",
+    "paper_url": "https://arxiv.org/abs/2507.21905",
+    "arxiv": "2507.21905",
+    "code_url": "https://github.com/messlav/Deepfake-Detectors-in-the-Wild",
+    "project_url": "",
+    "code": "https://github.com/messlav/Deepfake-Detectors-in-the-Wild",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "In-the-Wild",
+      "Robustness"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2025-busterx",
     "name": "BusterX++: Towards Unified Cross-Modal AI-Generated Content Detection and Explanation with MLLM",
     "short": "BusterX++",
@@ -1104,6 +1297,33 @@
       "General"
     ],
     "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-a-data-driven-diffusion-based-approach-for-audio-deepfake-explanations",
+    "name": "A Data-Driven Diffusion-based Approach for Audio Deepfake Explanations",
+    "short": "A Data-Driven",
+    "year": 2025,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "Interspeech",
+    "conference": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2506.03425",
+    "arxiv": "2506.03425",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Explanation",
+      "Diffusion",
+      "Artifact Localization"
+    ],
+    "tags": [
+      "Explanation"
+    ],
     "landmark": false,
     "notes": ""
   },

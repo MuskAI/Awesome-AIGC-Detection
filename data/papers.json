@@ -2754,5 +2754,185 @@
     ],
     "is_landmark": false,
     "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-on-improving-robustness-of-deepfake-image-detectors",
+    "title": "On Improving Robustness of Deepfake Image Detectors",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "USENIX Security",
+    "paper_url": "https://arxiv.org/abs/2606.02797",
+    "arxiv_id": "2606.02797",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Robustness",
+      "Frequency Domain",
+      "Adversarial Attacks"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-intermediate-representations-are-strong-ai-generated-image-detectors",
+    "title": "Intermediate Representations are Strong AI-Generated Image Detectors",
+    "year": 2026,
+    "month": 5,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2605.04358",
+    "arxiv_id": "2605.04358",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Embedding Sensitivity",
+      "Training-Free",
+      "Intermediate Features"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-reasoning-aware-aigc-detection-via-alignment-and-reinforcement",
+    "title": "Reasoning-Aware AIGC Detection via Alignment and Reinforcement",
+    "year": 2026,
+    "month": 4,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2604.19172",
+    "arxiv_id": "2604.19172",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Reasoning",
+      "Reinforcement Learning",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detecting-ai-generated-content-in-academic-peer-reviews",
+    "title": "Detecting AI-Generated Content in Academic Peer Reviews",
+    "year": 2026,
+    "month": 1,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.00319",
+    "arxiv_id": "2602.00319",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "LLM Detection",
+      "Peer Review Analysis",
+      "Temporal Study"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detecting-ai-generated-images-via-distributional-deviations-from-real-images",
+    "title": "Detecting AI-Generated Images via Distributional Deviations from Real Images",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2601.03586",
+    "arxiv_id": "2601.03586",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Distributional Deviations",
+      "CLIP",
+      "Texture-Aware Masking"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-detecting-localized-deepfakes-how-well-do-synthetic-image-detectors-handle-inpainting",
+    "title": "Detecting Localized Deepfakes: How Well Do Synthetic Image Detectors Handle Inpainting?",
+    "year": 2025,
+    "month": 12,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2512.16688",
+    "arxiv_id": "2512.16688",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Localized Detection",
+      "Inpainting",
+      "Benchmark"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-evaluating-deepfake-detectors-in-the-wild",
+    "title": "Evaluating Deepfake Detectors in the Wild",
+    "year": 2025,
+    "month": 7,
+    "area": "Image",
+    "venue": "ICML Workshop",
+    "paper_url": "https://arxiv.org/abs/2507.21905",
+    "arxiv_id": "2507.21905",
+    "code_url": "https://github.com/messlav/Deepfake-Detectors-in-the-Wild",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "In-the-Wild",
+      "Robustness"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2025-a-data-driven-diffusion-based-approach-for-audio-deepfake-explanations",
+    "title": "A Data-Driven Diffusion-based Approach for Audio Deepfake Explanations",
+    "year": 2025,
+    "month": 6,
+    "area": "Audio",
+    "venue": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2506.03425",
+    "arxiv_id": "2506.03425",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Explanation",
+      "Diffusion",
+      "Artifact Localization"
+    ],
+    "tags": [
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
   }
 ]
