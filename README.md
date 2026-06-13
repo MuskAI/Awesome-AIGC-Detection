@@ -45,32 +45,32 @@ python3 scripts/generate_readme.py --check
 
 | Category | Count |
 | --- | --- |
-| Total Papers | 151 |
+| Total Papers | 172 |
 | Datasets | 44 |
 | News Items | 14 |
 | Timespan | 2020 - 2026 |
-| Image Detection | 116 |
-| Video Detection | 30 |
+| Image Detection | 126 |
+| Video Detection | 31 |
 | Text Detection | 3 |
-| Audio Detection | 1 |
+| Audio Detection | 11 |
 | Multimodal Detection | 1 |
 
 ### By Venue
 
 | Venue | Papers |
 | --- | --- |
-| arXiv | 66 |
+| arXiv | 78 |
 | CVPR | 26 |
 | ICLR | 10 |
 | ECCV | 8 |
+| ICML | 7 |
+| CVPRW | 6 |
 | ICCV | 5 |
-| ICML | 5 |
 | NeurIPS | 4 |
-| CVPRW | 4 |
+| ICME | 2 |
 | ICCVW | 2 |
 | ICASSP | 2 |
 | WACV | 2 |
-| TMM | 2 |
 <!-- END GENERATED STATS -->
 
 ---
@@ -189,29 +189,29 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 
 | Lane | Signal | Representative Entries |
 | --- | --- | --- |
-| Latest frontier | 34 papers in 2026 | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for…](https://arxiv.org/abs/2511.19111); [DINO-Detect: A Simple yet Effective Framework for Blur-Ro…](https://arxiv.org/abs/2511.12511); [IVY-FAKE: A Unified Explainable Framework and Benchmark f…](https://arxiv.org/abs/2506.00979) |
-| Reproducible work | 75 papers with code/project links | [ForensicHub: A Unified Benchmark & Codebase for All-Domai…](https://arxiv.org/abs/2505.11003); [AgentFoX: LLM Agent-Guided Fusion with eXplainability for…](https://arxiv.org/abs/2603.23115); [Automated In-the-Wild Data Collection for Continual AI Ge…](https://arxiv.org/abs/2605.02567) |
+| Latest frontier | 55 papers in 2026 | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for…](https://arxiv.org/abs/2511.19111); [DINO-Detect: A Simple yet Effective Framework for Blur-Ro…](https://arxiv.org/abs/2511.12511); [DRIFT: From Robustness Gaps to Invariance Manifolds for A…](https://arxiv.org/abs/2606.06918) |
+| Reproducible work | 78 papers with code/project links | [Dissect and Prune: Enhancing Robustness in AI-Generated I…](https://arxiv.org/abs/2606.10309); [ForensicHub: A Unified Benchmark & Codebase for All-Domai…](https://arxiv.org/abs/2505.11003); [MixFake: Benchmarking and Enhancing Audio Deepfake Detect…](https://arxiv.org/abs/2605.23201) |
 | Benchmark-first reading | 44 datasets and benchmarks | [ActivityForensics](https://activityforensics.github.io/); [AIGI-Now](https://huggingface.co/datasets/Gaffeyzz/AIGI-Now); [AIGVDBench](https://huggingface.co/datasets/AIGVDBench/AIGVDBench) |
 
 ### Research Tracks
 
 | Track | Papers | Use It When | Recent Starting Points |
 | --- | --- | --- | --- |
-| MLLM / reasoning | 36 | For explainable detectors that can say why a sample looks synthetic. | [Reasoning-Aware AIGC Detection via Alignment and Reinforc…](https://arxiv.org/abs/2604.19172); [ArtifactLens: Hundreds of Labels Are Enough for Artifact…](https://arxiv.org/abs/2602.09475); [AgentFoX: LLM Agent-Guided Fusion with eXplainability for…](https://arxiv.org/abs/2603.23115) |
-| Robust generalization | 37 | For methods that survive new generators, compression, blur, or open-world drift. | [DINO-Detect: A Simple yet Effective Framework for Blur-Ro…](https://arxiv.org/abs/2511.12511); [On Improving Robustness of Deepfake Image Detectors](https://arxiv.org/abs/2606.02797); [ForensicHub: A Unified Benchmark & Codebase for All-Domai…](https://arxiv.org/abs/2505.11003) |
-| Localization & explanation | 34 | For work that goes beyond binary labels and points to suspicious regions or clues. | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for…](https://arxiv.org/abs/2511.19111); [IVY-FAKE: A Unified Explainable Framework and Benchmark f…](https://arxiv.org/abs/2506.00979); [ArtifactLens: Hundreds of Labels Are Enough for Artifact…](https://arxiv.org/abs/2602.09475) |
-| Video temporal signals | 32 | For generated-video detection and temporal artifact modeling. | [IVY-FAKE: A Unified Explainable Framework and Benchmark f…](https://arxiv.org/abs/2506.00979); [CMTA: Leveraging Cross-Modal Temporal Artifacts for Gener…](https://arxiv.org/abs/2605.00630); [GenVideoLens: Where LVLMs Fall Short in AI-Generated Vide…](https://arxiv.org/abs/2603.18625) |
-| Frequency / reconstruction | 20 | For low-level forensic traces, reconstruction error, and spectrum-based detectors. | [On Improving Robustness of Deepfake Image Detectors](https://arxiv.org/abs/2606.02797); [MIRROR: Manifold Ideal Reference ReconstructOR for Genera…](https://arxiv.org/abs/2602.02222); [R²BD: A Reconstruction-Based Method for Generalizable and…](https://arxiv.org/abs/2601.08867) |
-| Benchmarks & datasets | 30 | For evaluation suites, datasets, and stress tests. | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for…](https://arxiv.org/abs/2511.19111); [IVY-FAKE: A Unified Explainable Framework and Benchmark f…](https://arxiv.org/abs/2506.00979); [ForensicHub: A Unified Benchmark & Codebase for All-Domai…](https://arxiv.org/abs/2505.11003) |
+| MLLM / reasoning | 37 | For explainable detectors that can say why a sample looks synthetic. | [SalArt-VQA: Diagnosing Whether VLMs Understand Salient Ar…](https://arxiv.org/abs/2606.12671); [Reasoning-Aware AIGC Detection via Alignment and Reinforc…](https://arxiv.org/abs/2604.19172); [ArtifactLens: Hundreds of Labels Are Enough for Artifact…](https://arxiv.org/abs/2602.09475) |
+| Robust generalization | 44 | For methods that survive new generators, compression, blur, or open-world drift. | [DINO-Detect: A Simple yet Effective Framework for Blur-Ro…](https://arxiv.org/abs/2511.12511); [DRIFT: From Robustness Gaps to Invariance Manifolds for A…](https://arxiv.org/abs/2606.06918); [Dissect and Prune: Enhancing Robustness in AI-Generated I…](https://arxiv.org/abs/2606.10309) |
+| Localization & explanation | 36 | For work that goes beyond binary labels and points to suspicious regions or clues. | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for…](https://arxiv.org/abs/2511.19111); [IVY-FAKE: A Unified Explainable Framework and Benchmark f…](https://arxiv.org/abs/2506.00979); [SalArt-VQA: Diagnosing Whether VLMs Understand Salient Ar…](https://arxiv.org/abs/2606.12671) |
+| Video temporal signals | 33 | For generated-video detection and temporal artifact modeling. | [IVY-FAKE: A Unified Explainable Framework and Benchmark f…](https://arxiv.org/abs/2506.00979); [Detecting AI-Generated Videos with Spiking Neural Networks](https://arxiv.org/abs/2605.05895); [CMTA: Leveraging Cross-Modal Temporal Artifacts for Gener…](https://arxiv.org/abs/2605.00630) |
+| Frequency / reconstruction | 21 | For low-level forensic traces, reconstruction error, and spectrum-based detectors. | [On Improving Robustness of Deepfake Image Detectors](https://arxiv.org/abs/2606.02797); [Efficient Zero-Shot AI-Generated Image Detection](https://arxiv.org/abs/2603.21619); [MIRROR: Manifold Ideal Reference ReconstructOR for Genera…](https://arxiv.org/abs/2602.02222) |
+| Benchmarks & datasets | 40 | For evaluation suites, datasets, and stress tests. | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for…](https://arxiv.org/abs/2511.19111); [IVY-FAKE: A Unified Explainable Framework and Benchmark f…](https://arxiv.org/abs/2506.00979); [SalArt-VQA: Diagnosing Whether VLMs Understand Salient Ar…](https://arxiv.org/abs/2606.12671) |
 
 ### Modality-Year Heatmap
 
 | Area | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Image | 4 | 1 | 2 | 14 | 31 | 37 | 27 |
-| Video | - | 1 | 1 | 3 | 9 | 12 | 4 |
+| Image | 4 | 1 | 2 | 14 | 31 | 37 | 37 |
+| Video | - | 1 | 1 | 3 | 9 | 12 | 5 |
 | Text | - | - | - | - | - | 1 | 2 |
-| Audio | - | - | - | - | - | 1 | - |
+| Audio | - | - | - | - | - | 1 | 10 |
 | Multimodal | - | - | - | - | - | - | 1 |
 
 ### 2026 Watchlist
@@ -220,14 +220,14 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 | --- | --- | --- | --- | --- | --- |
 | 11 | Image | arXiv | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for Localized AIGC Detection](https://arxiv.org/abs/2511.19111) | General | - |
 | 11 | Image | arXiv | [DINO-Detect: A Simple yet Effective Framework for Blur-Robust AI-Generated Image Detection](https://arxiv.org/abs/2511.12511) | General | - |
+| 6 | Image | arXiv | [DRIFT: From Robustness Gaps to Invariance Manifolds for AI-Generated Image Detection](https://arxiv.org/abs/2606.06918) | Classification, Invariance Manifold, Open-world Generalization | - |
 | 6 | Image | arXiv | [IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection](https://arxiv.org/abs/2506.00979) | General | - |
+| 6 | Image | arXiv | [SalArt-VQA: Diagnosing Whether VLMs Understand Salient Artifacts in Generated Images](https://arxiv.org/abs/2606.12671) | VLM, Artifact Understanding, Benchmark | - |
+| 6 | Image | arXiv | [SSAFE: Simple and Strong AI-Generated Image Detection via Frozen Vision Encoders](https://arxiv.org/abs/2606.08634) | Classification, Frozen Vision Encoders, RealWorldBench | - |
+| 6 | Image | ICML | [Dissect and Prune: Enhancing Robustness in AI-Generated Image Detection](https://arxiv.org/abs/2606.10309) | Robustness, Feature Pruning, Post-Processing | [Code](https://github.com/dahyedahye/dear) |
 | 6 | Image | USENIX Security | [On Improving Robustness of Deepfake Image Detectors](https://arxiv.org/abs/2606.02797) | Robustness, Frequency Domain, Adversarial Attacks | - |
-| 5 | Image | arXiv | [ForensicHub: A Unified Benchmark & Codebase for All-Domain Fake Image Detection](https://arxiv.org/abs/2505.11003) | General | [Code](https://github.com/scu-zjz/ForensicHub) |
-| 5 | Image | arXiv | [Intermediate Representations are Strong AI-Generated Image Detectors](https://arxiv.org/abs/2605.04358) | Embedding Sensitivity, Training-Free, Intermediate Features | - |
-| 4 | Text | arXiv | [Reasoning-Aware AIGC Detection via Alignment and Reinforcement](https://arxiv.org/abs/2604.19172) | Reasoning, Reinforcement Learning, LLM Detection | - |
-| 2 | Image | arXiv | [ArtifactLens: Hundreds of Labels Are Enough for Artifact Detection with VLMs](https://arxiv.org/abs/2602.09475) | General | - |
-| 1 | Image | arXiv | [AgentFoX: LLM Agent-Guided Fusion with eXplainability for AI-Generated Image Detection](https://arxiv.org/abs/2603.23115) | MLLM, Agentic framework | [Code](https://github.com/suncore946/AgentFoX) |
-| 1 | Image | arXiv | [AlignGemini: Generalizable AI-Generated Image Detection Through Task-Model Alignment](https://arxiv.org/abs/2512.06746) | MLLM, Decoupling (Semantic & Pixel), AIGI-Now Dataset | - |
+| 6 | Audio | EUSIPCO | [Anchoring the Unknown: Open-Set Model Attribution via Proxy-Anchor Learning](https://arxiv.org/abs/2606.10758) | Model Attribution, Open-Set Detection, Proxy-Anchor Learning | - |
+| 6 | Audio | ICME Workshop | [Overview of ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge](https://arxiv.org/abs/2606.10791) | Classification, Challenge, Environment-Aware Spoofing | - |
 <!-- END GENERATED NAVIGATOR -->
 
 ## 📚 Datasets
@@ -292,12 +292,31 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026 | 11 | Image | arXiv | [DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for Localized AIGC Detection](https://arxiv.org/abs/2511.19111) | [Paper](https://arxiv.org/abs/2511.19111) | General | - |
 | 2026 | 11 | Image | arXiv | [DINO-Detect: A Simple yet Effective Framework for Blur-Robust AI-Generated Image Detection](https://arxiv.org/abs/2511.12511) | [Paper](https://arxiv.org/abs/2511.12511) | General | - |
+| 2026 | 6 | Image | arXiv | [DRIFT: From Robustness Gaps to Invariance Manifolds for AI-Generated Image Detection](https://arxiv.org/abs/2606.06918) | [Paper](https://arxiv.org/abs/2606.06918) | Classification, Invariance Manifold, Open-world Generalization | Classification |
 | 2026 | 6 | Image | arXiv | [IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection](https://arxiv.org/abs/2506.00979) | [Paper](https://arxiv.org/abs/2506.00979) | General | - |
+| 2026 | 6 | Image | arXiv | [SalArt-VQA: Diagnosing Whether VLMs Understand Salient Artifacts in Generated Images](https://arxiv.org/abs/2606.12671) | [Paper](https://arxiv.org/abs/2606.12671) | VLM, Artifact Understanding, Benchmark | Benchmark |
+| 2026 | 6 | Image | arXiv | [SSAFE: Simple and Strong AI-Generated Image Detection via Frozen Vision Encoders](https://arxiv.org/abs/2606.08634) | [Paper](https://arxiv.org/abs/2606.08634) | Classification, Frozen Vision Encoders, RealWorldBench | Classification |
+| 2026 | 6 | Image | ICML | [Dissect and Prune: Enhancing Robustness in AI-Generated Image Detection](https://arxiv.org/abs/2606.10309) | [Paper](https://arxiv.org/abs/2606.10309) / [Code](https://github.com/dahyedahye/dear) | Robustness, Feature Pruning, Post-Processing | Classification |
 | 2026 | 6 | Image | USENIX Security | [On Improving Robustness of Deepfake Image Detectors](https://arxiv.org/abs/2606.02797) | [Paper](https://arxiv.org/abs/2606.02797) | Robustness, Frequency Domain, Adversarial Attacks | Classification |
+| 2026 | 6 | Audio | EUSIPCO | [Anchoring the Unknown: Open-Set Model Attribution via Proxy-Anchor Learning](https://arxiv.org/abs/2606.10758) | [Paper](https://arxiv.org/abs/2606.10758) | Model Attribution, Open-Set Detection, Proxy-Anchor Learning | Classification |
+| 2026 | 6 | Audio | ICME Workshop | [Overview of ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge](https://arxiv.org/abs/2606.10791) | [Paper](https://arxiv.org/abs/2606.10791) | Classification, Challenge, Environment-Aware Spoofing | Classification, Benchmark |
+| 2026 | 6 | Audio | ICML | [FoeGlass: Simple In-Context Learning Is Enough for Red Teaming Audio Deepfake Detectors](https://arxiv.org/abs/2606.05101) | [Paper](https://arxiv.org/abs/2606.05101) | Red Teaming, In-Context Learning, Robustness | Benchmark |
+| 2026 | 6 | Audio | Interspeech | [RAT: Reference-Augmented Training for ASV Anti-Spoofing](https://arxiv.org/abs/2606.10908) | [Paper](https://arxiv.org/abs/2606.10908) | Classification, Reference-Augmented Training, ASVspoof | Classification |
+| 2026 | 5 | Image | AAAI Workshop | [Findings of the Counter Turing Test: AI-Generated Image Detection](https://arxiv.org/abs/2605.20787) | [Paper](https://arxiv.org/abs/2605.20787) | Classification, Model Attribution, MS COCOAI Dataset | Classification |
 | 2026 | 5 | Image | arXiv | [ForensicHub: A Unified Benchmark & Codebase for All-Domain Fake Image Detection](https://arxiv.org/abs/2505.11003) | [Paper](https://arxiv.org/abs/2505.11003) / [Code](https://github.com/scu-zjz/ForensicHub) | General | - |
 | 2026 | 5 | Image | arXiv | [Intermediate Representations are Strong AI-Generated Image Detectors](https://arxiv.org/abs/2605.04358) | [Paper](https://arxiv.org/abs/2605.04358) | Embedding Sensitivity, Training-Free, Intermediate Features | Classification |
+| 2026 | 5 | Image | arXiv | [TextFake: Benchmarking AI-Generated Image Detection on Text-Rich Images](https://arxiv.org/abs/2606.01050) | [Paper](https://arxiv.org/abs/2606.01050) | Benchmark, Text-Rich Images, Robustness | Classification, Benchmark |
+| 2026 | 5 | Video | arXiv | [Detecting AI-Generated Videos with Spiking Neural Networks](https://arxiv.org/abs/2605.05895) | [Paper](https://arxiv.org/abs/2605.05895) | Classification, Spiking Neural Networks, Temporal Residuals | Classification |
+| 2026 | 5 | Audio | arXiv | [Audio Deepfake Detection with Half-Truth Localisation Using Cross-Attentive Feature Fusion](https://arxiv.org/abs/2605.29531) | [Paper](https://arxiv.org/abs/2605.29531) | Localization, Cross-Attention, Partial Deepfake | Classification, Explanation |
+| 2026 | 5 | Audio | arXiv | [Deepfake Audio Detection Using Self-supervised Fusion Representations](https://arxiv.org/abs/2605.03420) | [Paper](https://arxiv.org/abs/2605.03420) | Classification, Self-supervised Fusion, Cross-Attention | Classification |
+| 2026 | 5 | Audio | arXiv | [RADAR Challenge 2026: Robust Audio Deepfake Recognition under Media Transformations](https://arxiv.org/abs/2605.09568) | [Paper](https://arxiv.org/abs/2605.09568) | Classification, RADAR Challenge, Media Transformations | Classification |
+| 2026 | 5 | Audio | ICME | [MixFake: Benchmarking and Enhancing Audio Deepfake Detection in Diverse Real-world Mixed Audio](https://arxiv.org/abs/2605.23201) | [Paper](https://arxiv.org/abs/2605.23201) / [Code](https://github.com/saltfish233/MixFake) | Benchmark, Prompt Tuning, Mixed Audio | Classification, Benchmark |
+| 2026 | 4 | Image | CVPRW | [NTIRE 2026 Challenge on Robust AI-Generated Image Detection in the Wild](https://arxiv.org/abs/2604.11487) | [Paper](https://arxiv.org/abs/2604.11487) | Classification, NTIRE Challenge, Robustness Benchmark | Classification |
+| 2026 | 4 | Image | CVPRW | [Robust Deepfake Detection: Mitigating Spatial Attention Drift via Calibrated Complementary Ensembles](https://arxiv.org/abs/2604.25889) | [Paper](https://arxiv.org/abs/2604.25889) / [Code](https://github.com/khoalephanminh/ntire26-deepfake-challenge) | Robustness, Attention Drift, Ensemble | Classification |
 | 2026 | 4 | Text | arXiv | [Reasoning-Aware AIGC Detection via Alignment and Reinforcement](https://arxiv.org/abs/2604.19172) | [Paper](https://arxiv.org/abs/2604.19172) | Reasoning, Reinforcement Learning, LLM Detection | Classification, Benchmark |
+| 2026 | 3 | Image | arXiv | [Efficient Zero-Shot AI-Generated Image Detection](https://arxiv.org/abs/2603.21619) | [Paper](https://arxiv.org/abs/2603.21619) | Classification, Zero-Shot, Frequency Perturbation | Classification |
 | 2026 | 2 | Image | arXiv | [ArtifactLens: Hundreds of Labels Are Enough for Artifact Detection with VLMs](https://arxiv.org/abs/2602.09475) | [Paper](https://arxiv.org/abs/2602.09475) | General | - |
+| 2026 | 2 | Image | arXiv | [How well are open sourced AI-generated image detection models out-of-the-box: A comprehensive benchmark study](https://arxiv.org/abs/2602.07814) | [Paper](https://arxiv.org/abs/2602.07814) | Classification, Benchmark, Zero-Shot Evaluation | Classification |
 | 2026 | 1 | Image | arXiv | [AgentFoX: LLM Agent-Guided Fusion with eXplainability for AI-Generated Image Detection](https://arxiv.org/abs/2603.23115) | [Paper](https://arxiv.org/abs/2603.23115) / [Code](https://github.com/suncore946/AgentFoX) | MLLM, Agentic framework | MLLM |
 | 2026 | 1 | Image | arXiv | [AlignGemini: Generalizable AI-Generated Image Detection Through Task-Model Alignment](https://arxiv.org/abs/2512.06746) | [Paper](https://arxiv.org/abs/2512.06746) | MLLM, Decoupling (Semantic & Pixel), AIGI-Now Dataset | MLLM |
 | 2026 | 1 | Image | arXiv | [Automated In-the-Wild Data Collection for Continual AI Generated Image Detection](https://arxiv.org/abs/2605.02567) | [Paper](https://arxiv.org/abs/2605.02567) / [Project](https://mever-team.github.io/WildFC/) | Classification, Continual Learning, Continual Data Collection | Classification |
@@ -323,6 +342,8 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 | 2026 | 1 | Video | arXiv | [VideoVeritas: AI-Generated Video Detection via Perception Pretext Reinforcement Learning](https://arxiv.org/abs/2602.08828) | [Paper](https://arxiv.org/abs/2602.08828) / [Code](https://github.com/EricTan7/VideoVeritas) | MLLM, Perception Pretext RL, Fact-based Reasoning, MintVid Dataset | MLLM |
 | 2026 | 1 | Video | ICLR | [Preserving Forgery Artifacts: AI-Generated Video Detection at Native Scale](https://openreview.net/pdf?id=XD43lfRCg6) | [Paper](https://openreview.net/pdf?id=XD43lfRCg6) | Classification, Native scale video processing, Massive realistic video dataset, Preserves subtle generation artifacts | Classification |
 | 2026 | 1 | Text | arXiv | [Detecting AI-Generated Content in Academic Peer Reviews](https://arxiv.org/abs/2602.00319) | [Paper](https://arxiv.org/abs/2602.00319) | LLM Detection, Peer Review Analysis, Temporal Study | Classification, Benchmark |
+| 2026 | 1 | Audio | arXiv | [Audio Deepfake Detection in the Age of Advanced Text-to-Speech models](https://arxiv.org/abs/2601.20510) | [Paper](https://arxiv.org/abs/2601.20510) | Classification, Text-to-Speech, Multi-view Detection | Classification |
+| 2026 | 1 | Audio | arXiv | [Context and Transcripts Improve Detection of Deepfake Audios of Public Figures](https://arxiv.org/abs/2601.13464) | [Paper](https://arxiv.org/abs/2601.13464) | Classification, Context-based Detection, Transcript Cues | Classification |
 | 2026 | 1 | Multimodal | arXiv | [DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning](https://arxiv.org/abs/2604.02694) | [Paper](https://arxiv.org/abs/2604.02694) | MLLM, Agentic Framework, Document Safety | MLLM |
 | 2025 | 12 | Image | arXiv | [Detecting Localized Deepfakes: How Well Do Synthetic Image Detectors Handle Inpainting?](https://arxiv.org/abs/2512.16688) | [Paper](https://arxiv.org/abs/2512.16688) | Localized Detection, Inpainting, Benchmark | Classification, Benchmark |
 | 2025 | 12 | Image | CVPR | [FIRE: Robust Detection of Diffusion-Generated Images via Frequency-Guided Reconstruction Error](https://arxiv.org/abs/2412.07140) | [Paper](https://arxiv.org/abs/2412.07140) | Frequency, Reconstruction | - |
