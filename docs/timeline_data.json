@@ -46,6 +46,115 @@
     "notes": ""
   },
   {
+    "id": "2026-a-multi-domain-feature-fusion-framework-for-generalizable-deepfake-detection-across-different-generators",
+    "name": "A Multi-Domain Feature Fusion Framework for Generalizable Deepfake Detection Across Different Generators",
+    "short": "A Multi-Domain",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.14230",
+    "arxiv": "2606.14230",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Spatial-Gradient-Frequency Fusion",
+      "Wavelet",
+      "Cross-Generator"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-divide-and-conquer-reliable-multi-view-evidential-learning-for-deepfake-detection",
+    "name": "Divide and Conquer: Reliable Multi-View Evidential Learning for Deepfake Detection",
+    "short": "Divide and Conquer",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.01885",
+    "arxiv": "2606.01885",
+    "code_url": "https://github.com/kxl0825/DiCoME",
+    "project_url": "",
+    "code": "https://github.com/kxl0825/DiCoME",
+    "quarter": "Q2",
+    "methods": [
+      "Multi-View",
+      "Evidential Learning",
+      "Uncertainty"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-impostor-an-agent-curated-benchmark-for-realistic-aigc-manipulation-localization",
+    "name": "Impostor: An Agent-Curated Benchmark for Realistic AIGC Manipulation Localization",
+    "short": "Impostor",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04545",
+    "arxiv": "2606.04545",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Manipulation Localization",
+      "Agent-Curated",
+      "Benchmark"
+    ],
+    "tags": [
+      "Localization",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-iris-gan-staged-specialist-detection-of-deepfake-faces",
+    "name": "IRIS-GAN: Staged Specialist Detection of Deepfake Faces",
+    "short": "IRIS-GAN",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04863",
+    "arxiv": "2606.04863",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "GAN",
+      "Staged Training",
+      "Face Forensics"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-ivy-fake",
     "name": "IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection",
     "short": "IVY-FAKE",
@@ -88,6 +197,198 @@
       "Robustness",
       "Frequency Domain",
       "Adversarial Attacks"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cocovideo-the-high-quality-commercial-model-based-contrastive-benchmark-for-ai-generated-video-detection",
+    "name": "CoCoVideo: The High-Quality Commercial-Model-Based Contrastive Benchmark for AI-Generated Video Detection",
+    "short": "CoCoVideo",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.00101",
+    "arxiv": "2606.00101",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Video Benchmark",
+      "Commercial Generators",
+      "Contrastive Learning"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-overview-of-esdd2-environment-aware-speech-and-sound-deepfake-detection-challenge",
+    "name": "Overview of ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge",
+    "short": "Overview of ESDD2",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.10791",
+    "arxiv": "2606.10791",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Challenge",
+      "Environment-Aware",
+      "Benchmark"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-phonetically-explainable-speech-deepfake-detection",
+    "name": "Phonetically Explainable Speech Deepfake Detection",
+    "short": "Phonetically Explainable",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.15454",
+    "arxiv": "2606.15454",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Phoneme-Guided",
+      "Cross-Attention",
+      "Explainable"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-xai-grounded-explanation-generation-for-speech-deepfake-detection-with-training-free-multimodal-large-language-models",
+    "name": "XAI-Grounded Explanation Generation for Speech Deepfake Detection with Training-Free Multimodal Large Language Models",
+    "short": "XAI-Grounded Explanation",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.16137",
+    "arxiv": "2606.16137",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Explanation",
+      "XAI",
+      "Multimodal LLM"
+    ],
+    "tags": [
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-probing-token-spaces-under-generator-shift-in-ai-generated-music-detection",
+    "name": "Probing Token Spaces under Generator Shift in AI-Generated Music Detection",
+    "short": "Probing Token",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "ICML Workshop",
+    "conference": "ICML Workshop",
+    "paper_url": "https://arxiv.org/abs/2606.08663",
+    "arxiv": "2606.08663",
+    "code_url": "https://github.com/MAAP-LAB/CoMoE",
+    "project_url": "",
+    "code": "https://github.com/MAAP-LAB/CoMoE",
+    "quarter": "Q2",
+    "methods": [
+      "Music Detection",
+      "Generator Shift",
+      "Token Spaces"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detectzoo-a-unified-toolkit-for-ai-generated-content-detection-across-text-audio-and-image-modalities",
+    "name": "DetectZoo: A Unified Toolkit for AI-Generated Content Detection Across Text, Audio, and Image Modalities",
+    "short": "DetectZoo",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04205",
+    "arxiv": "2606.04205",
+    "code_url": "https://github.com/sadjadeb/DetectZoo",
+    "project_url": "",
+    "code": "https://github.com/sadjadeb/DetectZoo",
+    "quarter": "Q2",
+    "methods": [
+      "Toolkit",
+      "Benchmark",
+      "Cross-Modal"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-teacher-student-structure-for-domain-adaptation-in-ensemble-audio-visual-video-deepfake-detection",
+    "name": "Teacher-Student Structure for Domain Adaptation in Ensemble Audio-Visual Video Deepfake Detection",
+    "short": "Teacher-Student Structure",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.15117",
+    "arxiv": "2606.15117",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Audio-Visual",
+      "Domain Adaptation",
+      "Teacher-Student"
     ],
     "tags": [
       "Classification"

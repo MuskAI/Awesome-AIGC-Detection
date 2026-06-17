@@ -68,6 +68,10 @@ Before moving a paper into the main data source:
 
 ### Multimodal & Hybrid Detection
 
+- [ ] Detecting AI-Generated Content on Social Media with Multi-modal Language Models
+  - Date seen: 2026-06-17
+  - Notes: Multimodal social-media AIGC detection and explanation pipeline; arXiv search result surfaced `2606.11200`, but displayed submission timing was inconsistent with the arXiv identifier.
+  - Metadata needed: confirm exact submission month/date, canonical paper URL, venue, and code/project URL if available.
 - [ ] Divide and Conquer: Multimodal Video Deepfake Detection via Cross-Modal Fusion and Localization
   - Date seen: 2026-02
   - Notes: Cross-modal fusion and localization for multimodal video deepfake detection.
