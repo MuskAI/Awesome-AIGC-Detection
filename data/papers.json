@@ -2934,5 +2934,366 @@
     ],
     "is_landmark": false,
     "notes": ""
+  },
+  {
+    "id": "2026-cocovideo-the-high-quality-commercial-model-based-contrastive-benchmark-for-ai-generated-video-detection",
+    "title": "CoCoVideo: The High-Quality Commercial-Model-Based Contrastive Benchmark for AI-Generated Video Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "venue": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2606.00101",
+    "arxiv_id": "2606.00101",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Commercial Generators",
+      "Contrastive Learning"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detectzoo-a-unified-toolkit-for-ai-generated-content-detection-across-text-audio-and-image-modalities",
+    "title": "DetectZoo: A Unified Toolkit for AI-Generated Content Detection Across Text, Audio, and Image Modalities",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04205",
+    "arxiv_id": "2606.04205",
+    "code_url": "https://github.com/sadjadeb/DetectZoo",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Toolkit",
+      "Multimodal Evaluation"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-your-ai-text-is-not-mine-redefining-and-evaluating-ai-generated-text-detection",
+    "title": "'Your AI Text is not Mine': Redefining and Evaluating AI-generated Text Detection under Realistic Assumptions",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04906",
+    "arxiv_id": "2606.04906",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "LLM Detection",
+      "Benchmark",
+      "Human-AI Co-creation"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-adversarial-creation-and-detection-of-ai-generated-social-bot-content",
+    "title": "Adversarial Creation and Detection of AI-Generated Social Bot Content",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.07219",
+    "arxiv_id": "2606.07219",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "LLM Detection",
+      "Adversarial Dataset",
+      "Social Media"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-the-cifar-synthetic-evidence-corpus-for-detecting-ai-generated-evidence",
+    "title": "The CIFAR Synthetic Evidence Corpus for Detecting AI-Generated Evidence",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.07916",
+    "arxiv_id": "2606.07916",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Document Safety",
+      "Evidence Verification"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detecting-ai-generated-content-on-social-media-with-multi-modal-language-models",
+    "title": "Detecting AI-Generated Content on Social Media with Multi-modal Language Models",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.11200",
+    "arxiv_id": "2606.11200",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Social Media",
+      "Explanation"
+    ],
+    "tags": [
+      "MLLM",
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detecting-undisclosed-llm-generated-content-in-parliamentary-texts",
+    "title": "Detecting undisclosed LLM-generated content in parliamentary texts",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.14209",
+    "arxiv_id": "2606.14209",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "LLM Detection",
+      "Political Texts",
+      "Corpus Analysis"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-multi-domain-feature-fusion-framework-for-generalizable-deepfake-detection-across-different-generators",
+    "title": "A Multi-Domain Feature Fusion Framework for Generalizable Deepfake Detection Across Different Generators",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.14230",
+    "arxiv_id": "2606.14230",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Feature Fusion",
+      "Frequency Domain"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-teacher-student-structure-for-domain-adaptation-in-ensemble-audio-visual-video-deepfake-detection",
+    "title": "Teacher-Student Structure for Domain Adaptation in Ensemble Audio-Visual Video Deepfake Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.15117",
+    "arxiv_id": "2606.15117",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Audio-Visual Fusion",
+      "Domain Adaptation"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-voxwatermark-a-large-scale-benchmark-for-audio-watermark-detection-under-perturbations",
+    "title": "VoxWatermark: A Large-Scale Benchmark for Audio Watermark Detection under Perturbations",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.15187",
+    "arxiv_id": "2606.15187",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Watermark Detection",
+      "Robustness"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-phonetically-explainable-speech-deepfake-detection",
+    "title": "Phonetically Explainable Speech Deepfake Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.15454",
+    "arxiv_id": "2606.15454",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Explanation",
+      "Phoneme-guided Attention",
+      "Classification"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-bridging-the-sea-gap-an-initial-benchmark-for-neural-audio-codec-synthesized-speech-deepfakes",
+    "title": "Bridging the SEA Gap: An Initial Benchmark for Neural Audio Codec-Synthesized Speech Deepfakes in South-East Asian Languages",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "IJCAI-ECAI",
+    "paper_url": "https://arxiv.org/abs/2606.15968",
+    "arxiv_id": "2606.15968",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Codec Deepfakes",
+      "Low-resource Languages"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-xai-grounded-explanation-generation-for-speech-deepfake-detection-with-training-free-multimodal-large-language-models",
+    "title": "XAI-Grounded Explanation Generation for Speech Deepfake Detection with Training-Free Multimodal Large Language Models",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.16137",
+    "arxiv_id": "2606.16137",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "MLLM",
+      "Explanation",
+      "Training-Free"
+    ],
+    "tags": [
+      "MLLM",
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-dual-granularity-orthogonal-disentanglement-for-generalizable-audio-deepfake-detection",
+    "title": "Dual-Granularity Orthogonal Disentanglement for Generalizable Audio Deepfake Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.16532",
+    "arxiv_id": "2606.16532",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Disentanglement",
+      "Generalization"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-beyond-artifacts-towards-generalizable-synthetic-song-detection-via-music-intrinsic-features",
+    "title": "Beyond Artifacts: Towards Generalizable Synthetic Song Detection via Music-Intrinsic Features",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.16612",
+    "arxiv_id": "2606.16612",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Mixture-of-Experts",
+      "Music Features"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-revealing-artifacts-via-noise-amplification-a-novel-perspective-for-ai-generated-video-detection",
+    "title": "Revealing Artifacts via Noise Amplification: A Novel Perspective for AI-Generated Video Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.16742",
+    "arxiv_id": "2606.16742",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Classification",
+      "Noise Amplification",
+      "Artifacts"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
   }
 ]
