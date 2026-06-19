@@ -2934,5 +2934,454 @@
     ],
     "is_landmark": false,
     "notes": ""
+  },
+  {
+    "id": "2026-a-multi-domain-benchmark-for-detecting-ai-generated-text-rich-images-from-gpt-image-2",
+    "title": "A Multi-Domain Benchmark for Detecting AI-Generated Text-Rich Images from GPT-Image-2",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.19259",
+    "arxiv_id": "2606.19259",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Text-Rich Images",
+      "Robustness"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-singfox-a-multi-lingual-singfake-detection-corpus",
+    "title": "SingFox: A Multi-Lingual Singfake Detection Corpus",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.18985",
+    "arxiv_id": "2606.18985",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Dataset",
+      "Singing Deepfake",
+      "Source Verification"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-beyond-artifacts-towards-generalizable-synthetic-song-detection-via-music-intrinsic-features",
+    "title": "Beyond Artifacts: Towards Generalizable Synthetic Song Detection via Music-Intrinsic Features",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.16612",
+    "arxiv_id": "2606.16612",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Synthetic Song Detection",
+      "Mixture-of-Experts",
+      "Benchmark"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-phonetically-explainable-speech-deepfake-detection",
+    "title": "Phonetically Explainable Speech Deepfake Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.15454",
+    "arxiv_id": "2606.15454",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Phoneme-Guided Attention",
+      "Explanation",
+      "Speech Deepfake"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-dissect-and-prune-enhancing-robustness-in-ai-generated-image-detection",
+    "title": "Dissect and Prune: Enhancing Robustness in AI-Generated Image Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2606.10309",
+    "arxiv_id": "2606.10309",
+    "code_url": "https://github.com/dahyedahye/dear",
+    "project_url": "",
+    "methods": [
+      "Robustness",
+      "Inpainting",
+      "Feature Pruning"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-divide-and-conquer-reliable-multi-view-evidential-learning-for-deepfake-detection",
+    "title": "Divide and Conquer: Reliable Multi-View Evidential Learning for Deepfake Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2606.01885",
+    "arxiv_id": "2606.01885",
+    "code_url": "https://github.com/kxl0825/DiCoME",
+    "project_url": "",
+    "methods": [
+      "Evidential Learning",
+      "Multi-View",
+      "Uncertainty"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detectzoo-a-unified-toolkit-for-ai-generated-content-detection-across-text-audio-and-image",
+    "title": "DetectZoo: A Unified Toolkit for AI-Generated Content Detection Across Text, Audio, and Image Modalities",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04205",
+    "arxiv_id": "2606.04205",
+    "code_url": "https://github.com/sadjadeb/DetectZoo",
+    "project_url": "",
+    "methods": [
+      "Toolkit",
+      "Benchmark",
+      "Cross-Modal"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ssafe-simple-and-strong-ai-generated-image-detection-via-frozen-vision-encoders",
+    "title": "SSAFE: Simple and Strong AI-Generated Image Detection via Frozen Vision Encoders",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.08634",
+    "arxiv_id": "2606.08634",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Frozen Encoders",
+      "Data Curation",
+      "Benchmark"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-impostor-an-agent-curated-benchmark-for-realistic-aigc-manipulation-localization",
+    "title": "Impostor: An Agent-Curated Benchmark for Realistic AIGC Manipulation Localization",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04545",
+    "arxiv_id": "2606.04545",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Localization",
+      "Agent-Curated",
+      "Benchmark"
+    ],
+    "tags": [
+      "Localization",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-forensicconcept-transferable-forensic-concepts-for-aigi-detection",
+    "title": "ForensicConcept: Transferable Forensic Concepts for AIGI Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.07034",
+    "arxiv_id": "2606.07034",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Forensic Concepts",
+      "Attribution",
+      "Localization"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-drift-from-robustness-gaps-to-invariance-manifolds-for-ai-generated-image-detection",
+    "title": "DRIFT: From Robustness Gaps to Invariance Manifolds for AI-Generated Image Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.06918",
+    "arxiv_id": "2606.06918",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Invariance Manifold",
+      "One-Class",
+      "Localization"
+    ],
+    "tags": [
+      "Classification",
+      "Localization"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-suppressing-forgery-specific-shortcuts-for-generalizable-deepfake-detection",
+    "title": "Suppressing Forgery-Specific Shortcuts for Generalizable Deepfake Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.01843",
+    "arxiv_id": "2606.01843",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Shortcut Suppression",
+      "Generalization",
+      "Subspace Modeling"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cocovideo-the-high-quality-commercial-model-based-contrastive-benchmark-for-ai-generated-video-detection",
+    "title": "CoCoVideo: The High-Quality Commercial-Model-Based Contrastive Benchmark for AI-Generated Video Detection",
+    "year": 2026,
+    "month": 5,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.00101",
+    "arxiv_id": "2606.00101",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Commercial Generators",
+      "Contrastive Learning"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-reconfuse-reconstruction-error-guided-semantic-fusion-for-ai-generated-video-detection",
+    "title": "ReConFuse: Reconstruction-Error Guided Semantic Fusion for AI-Generated Video Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04706",
+    "arxiv_id": "2606.04706",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Reconstruction Error",
+      "Semantic Fusion",
+      "Temporal Modeling"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-images-as-tables-in-context-learning-with-tabpfn-for-low-data-detection-of-ai-generated-images",
+    "title": "Images as Tables: In-Context Learning with TabPFN for Low-Data Detection of AI-Generated Images",
+    "year": 2026,
+    "month": 5,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.00872",
+    "arxiv_id": "2606.00872",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Low-Data",
+      "TabPFN",
+      "Frozen Features"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-overview-of-esdd2-environment-aware-speech-and-sound-deepfake-detection-challenge",
+    "title": "Overview of ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.10791",
+    "arxiv_id": "2606.10791",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Challenge",
+      "Environment-Aware",
+      "Component-Level Spoofing"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-omnivl-guard-towards-unified-vision-language-forgery-detection-and-grounding-via-balanced-rl",
+    "title": "OmniVL-Guard: Towards Unified Vision-Language Forgery Detection and Grounding via Balanced RL",
+    "year": 2026,
+    "month": 2,
+    "area": "Multimodal",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2602.10687",
+    "arxiv_id": "2602.10687",
+    "code_url": "https://github.com/shen8424/OmniVL-Guard",
+    "project_url": "",
+    "methods": [
+      "Vision-Language",
+      "Balanced RL",
+      "Grounding"
+    ],
+    "tags": [
+      "Classification",
+      "Localization"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-synthforensics-a-multi-generator-benchmark-for-detecting-synthetic-video-deepfakes",
+    "title": "SynthForensics: A Multi-Generator Benchmark for Detecting Synthetic Video Deepfakes",
+    "year": 2026,
+    "month": 2,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.04939",
+    "arxiv_id": "2602.04939",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Synthetic Video",
+      "Multi-Generator"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-conditional-uncertainty-aware-political-deepfake-detection-with-stochastic-convolutional-neural-networks",
+    "title": "Conditional Uncertainty-Aware Political Deepfake Detection with Stochastic Convolutional Neural Networks",
+    "year": 2026,
+    "month": 2,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.10343",
+    "arxiv_id": "2602.10343",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Uncertainty",
+      "Calibration",
+      "Political Deepfake"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-divide-and-conquer-multimodal-video-deepfake-detection-via-cross-modal-fusion-and-localization",
+    "title": "Divide and Conquer: Multimodal Video Deepfake Detection via Cross-Modal Fusion and Localization",
+    "year": 2026,
+    "month": 1,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.00209",
+    "arxiv_id": "2602.00209",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Cross-Modal Fusion",
+      "Localization",
+      "Challenge System"
+    ],
+    "tags": [
+      "Classification",
+      "Localization"
+    ],
+    "is_landmark": false,
+    "notes": ""
   }
 ]

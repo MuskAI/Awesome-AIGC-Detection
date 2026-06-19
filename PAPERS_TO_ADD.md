@@ -14,18 +14,6 @@ Before moving a paper into the main data source:
 
 ### Deepfake Detection (Image / Video)
 
-- [ ] SynthForensics: A Multi-Generator Benchmark for Detecting Synthetic Video Deepfakes
-  - Date seen: 2026-02-04
-  - Notes: Synthetic video deepfake benchmark with 6,815 videos from five generator architectures.
-  - Metadata needed: canonical paper URL, code URL if available.
-- [ ] OmniVL-Guard: Towards Unified Vision-Language Forgery Detection and Grounding via Balanced RL
-  - Date seen: 2026-02-12
-  - Notes: Unified vision-language forgery detection framework for interleaved text, image, and video.
-  - Metadata needed: canonical paper URL.
-- [ ] Conditional Uncertainty-Aware Political Deepfake Detection
-  - Date seen: 2026-02-10
-  - Notes: Uncertainty estimation for political deepfake detection.
-  - Metadata needed: canonical paper URL.
 - [ ] Deepfake Synthesis vs. Detection: An Uneven Contest
   - Date seen: 2026-02-08
   - Notes: Analysis of the imbalance between deepfake synthesis and detection.
@@ -68,10 +56,6 @@ Before moving a paper into the main data source:
 
 ### Multimodal & Hybrid Detection
 
-- [ ] Divide and Conquer: Multimodal Video Deepfake Detection via Cross-Modal Fusion and Localization
-  - Date seen: 2026-02
-  - Notes: Cross-modal fusion and localization for multimodal video deepfake detection.
-  - Metadata needed: exact date and canonical paper URL.
 - [ ] Fact or Fake? Assessing the Role of Deepfake Detectors in Multimodal Misinformation Detection
   - Date seen: 2026-02-02
   - Notes: Studies the role of deepfake detectors in multimodal misinformation detection.
