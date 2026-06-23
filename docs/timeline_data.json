@@ -46,6 +46,118 @@
     "notes": ""
   },
   {
+    "id": "2026-a-multi-domain-feature-fusion-framework-for-generalizable-deepfake-detection-a",
+    "name": "A Multi-Domain Feature Fusion Framework for Generalizable Deepfake Detection Across Different Generators",
+    "short": "A Multi-Domain",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.14230",
+    "arxiv": "2606.14230",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Feature Fusion",
+      "Frequency",
+      "Generalization"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-architecture-adaptive-uncertainty-fusion-for-deepfake-detection",
+    "name": "Architecture-Adaptive Uncertainty Fusion for Deepfake Detection",
+    "short": "Architecture-Adaptive Uncertainty",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.06666",
+    "arxiv": "2606.06666",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Uncertainty",
+      "Feature Fusion",
+      "Architecture-Aware"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cupid-reconstructing-uv-texture-maps-for-interpretable-person-of-interest-deep",
+    "name": "CUPID: Reconstructing UV Texture Maps for Interpretable Person-of-Interest Deepfake Detection",
+    "short": "CUPID",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.20302",
+    "arxiv": "2606.20302",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Person-of-Interest",
+      "Interpretability",
+      "Reconstruction"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-drift-from-robustness-gaps-to-invariance-manifolds-for-ai-generated-image-dete",
+    "name": "DRIFT: From Robustness Gaps to Invariance Manifolds for AI-Generated Image Detection",
+    "short": "DRIFT",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.06918",
+    "arxiv": "2606.06918",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Invariant Learning",
+      "Localization",
+      "Robustness"
+    ],
+    "tags": [
+      "Classification",
+      "Localization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-ivy-fake",
     "name": "IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection",
     "short": "IVY-FAKE",
@@ -65,6 +177,202 @@
       "General"
     ],
     "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ssafe-simple-and-strong-ai-generated-image-detection-via-frozen-vision-encoder",
+    "name": "SSAFE: Simple and Strong AI-Generated Image Detection via Frozen Vision Encoders",
+    "short": "SSAFE",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.08634",
+    "arxiv": "2606.08634",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Frozen Encoder",
+      "Data Curation",
+      "Benchmark"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-suppressing-forgery-specific-shortcuts-for-generalizable-deepfake-detection",
+    "name": "Suppressing Forgery-Specific Shortcuts for Generalizable Deepfake Detection",
+    "short": "Suppressing Forgery-Specific",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.01843",
+    "arxiv": "2606.01843",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Shortcut Suppression",
+      "Generalization",
+      "Subspace"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-textfake-benchmarking-ai-generated-image-detection-on-text-rich-images",
+    "name": "TextFake: Benchmarking AI-Generated Image Detection on Text-Rich Images",
+    "short": "TextFake",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.01050",
+    "arxiv": "2606.01050",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark",
+      "Text-Rich Images",
+      "VLM"
+    ],
+    "tags": [
+      "Benchmark",
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-toward-calibrated-fair-and-accurate-deepfake-detection",
+    "name": "Toward Calibrated, Fair, and accurate Deepfake Detection",
+    "short": "Toward Calibrated,",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.09881",
+    "arxiv": "2606.09881",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Calibration",
+      "Fairness",
+      "Domain Shift"
+    ],
+    "tags": [
+      "Classification",
+      "Fairness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-when-auc-misleads-polarization-aware-evaluation-of-deepfake-detectors-under-do",
+    "name": "When AUC Misleads: Polarization-Aware Evaluation of Deepfake Detectors under Domain Shift",
+    "short": "When AUC Misleads",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.19184",
+    "arxiv": "2606.19184",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Evaluation",
+      "Domain Shift",
+      "Fairness"
+    ],
+    "tags": [
+      "Benchmark",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-dissect-and-prune-enhancing-robustness-in-ai-generated-image-detection",
+    "name": "Dissect and Prune: Enhancing Robustness in AI-Generated Image Detection",
+    "short": "Dissect and Prune",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "ICML",
+    "conference": "ICML",
+    "paper_url": "https://arxiv.org/abs/2606.10309",
+    "arxiv": "2606.10309",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Pruning",
+      "Robustness",
+      "Inpainting"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-divide-and-conquer-reliable-multi-view-evidential-learning-for-deepfake-detect",
+    "name": "Divide and Conquer: Reliable Multi-View Evidential Learning for Deepfake Detection",
+    "short": "Divide and Conquer",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "ICML",
+    "conference": "ICML",
+    "paper_url": "https://arxiv.org/abs/2606.01885",
+    "arxiv": "2606.01885",
+    "code_url": "https://github.com/kxl0825/DiCoME",
+    "project_url": "",
+    "code": "https://github.com/kxl0825/DiCoME",
+    "quarter": "Q2",
+    "methods": [
+      "Evidential Learning",
+      "Multi-View",
+      "Uncertainty"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
     "landmark": false,
     "notes": ""
   },
@@ -91,6 +399,202 @@
     ],
     "tags": [
       "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-reconfuse-reconstruction-error-guided-semantic-fusion-for-ai-generated-video-d",
+    "name": "ReConFuse: Reconstruction-Error Guided Semantic Fusion for AI-Generated Video Detection",
+    "short": "ReConFuse",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04706",
+    "arxiv": "2606.04706",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Reconstruction Error",
+      "Semantic Fusion",
+      "Temporal Modeling"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-systematic-analysis-of-linguistic-features-in-ai-generated-text-detection-ac",
+    "name": "A Systematic Analysis of Linguistic Features in AI-Generated Text Detection Across Domains and Models",
+    "short": "A Systematic",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04177",
+    "arxiv": "2606.04177",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Linguistic Features",
+      "Cross-Domain",
+      "Interpretability"
+    ],
+    "tags": [
+      "Classification",
+      "Analysis"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-on-the-salience-of-low-probability-tokens-for-ai-generated-text-detection-a-mu",
+    "name": "On the Salience of Low-Probability Tokens for AI-Generated Text Detection: A Multiscale Uncertainty Perspective",
+    "short": "On the",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "ICML",
+    "conference": "ICML",
+    "paper_url": "https://arxiv.org/abs/2606.02158",
+    "arxiv": "2606.02158",
+    "code_url": "https://github.com/guoyikai2000/Uncertainty-AIGT",
+    "project_url": "",
+    "code": "https://github.com/guoyikai2000/Uncertainty-AIGT",
+    "quarter": "Q2",
+    "methods": [
+      "Uncertainty",
+      "Token Probability",
+      "Robustness"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-foeglass-simple-in-context-learning-is-enough-for-red-teaming-audio-deepfake-d",
+    "name": "FoeGlass: Simple In-Context Learning Is Enough for Red Teaming Audio Deepfake Detectors",
+    "short": "FoeGlass",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.05101",
+    "arxiv": "2606.05101",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Red Teaming",
+      "In-Context Learning",
+      "Robustness"
+    ],
+    "tags": [
+      "Benchmark",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-phonetically-explainable-speech-deepfake-detection",
+    "name": "Phonetically Explainable Speech Deepfake Detection",
+    "short": "Phonetically Explainable",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.15454",
+    "arxiv": "2606.15454",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Phoneme-Guided",
+      "Explainability",
+      "Cross-Attention"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-flowfake-liquid-networks-for-audio-deepfake-detection",
+    "name": "FlowFake: Liquid Networks for Audio Deepfake Detection",
+    "short": "FlowFake",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "ICML Workshop",
+    "conference": "ICML Workshop",
+    "paper_url": "https://arxiv.org/abs/2606.19579",
+    "arxiv": "2606.19579",
+    "code_url": "https://github.com/GhostRider2023/FlowFake",
+    "project_url": "",
+    "code": "https://github.com/GhostRider2023/FlowFake",
+    "quarter": "Q2",
+    "methods": [
+      "Liquid Networks",
+      "Robustness",
+      "Cross-Dataset"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-duramark-duration-embedded-watermarking-in-llm-based-tts",
+    "name": "DuraMark: Duration-Embedded Watermarking in LLM-based TTS",
+    "short": "DuraMark",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "Interspeech",
+    "conference": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.15264",
+    "arxiv": "2606.15264",
+    "code_url": "",
+    "project_url": "https://muzw.github.io/duramark_demo/",
+    "code": "https://muzw.github.io/duramark_demo/",
+    "quarter": "Q2",
+    "methods": [
+      "Watermarking",
+      "TTS",
+      "Robustness"
+    ],
+    "tags": [
+      "Watermarking",
+      "Attribution"
     ],
     "landmark": false,
     "notes": ""
@@ -146,6 +650,90 @@
     "notes": ""
   },
   {
+    "id": "2026-images-as-tables-in-context-learning-with-tabpfn-for-low-data-detection-of-ai",
+    "name": "Images as Tables: In-Context Learning with TabPFN for Low-Data Detection of AI-Generated Images",
+    "short": "Images as Tables",
+    "year": 2026,
+    "month": 5,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "ICML Workshop",
+    "conference": "ICML Workshop",
+    "paper_url": "https://arxiv.org/abs/2606.00872",
+    "arxiv": "2606.00872",
+    "code_url": "https://github.com/jpwalter30/Towards-Generalizable-Detection-of-AI-Generated-Images",
+    "project_url": "",
+    "code": "https://github.com/jpwalter30/Towards-Generalizable-Detection-of-AI-Generated-Images",
+    "quarter": "Q2",
+    "methods": [
+      "In-Context Learning",
+      "Low-Data",
+      "Foundation Model"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cocovideo-the-high-quality-commercial-model-based-contrastive-benchmark-for-ai",
+    "name": "CoCoVideo: The High-Quality Commercial-Model-Based Contrastive Benchmark for AI-Generated Video Detection",
+    "short": "CoCoVideo",
+    "year": 2026,
+    "month": 5,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2606.00101",
+    "arxiv": "2606.00101",
+    "code_url": "https://github.com/DonoToT/CoCoVideo",
+    "project_url": "",
+    "code": "https://github.com/DonoToT/CoCoVideo",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark",
+      "Contrastive Learning",
+      "MLLM"
+    ],
+    "tags": [
+      "Benchmark",
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-distribution-free-framework-for-rewrite-based-human-text-detection-via-knock",
+    "name": "A Distribution-Free Framework for Rewrite-Based Human-text Detection via Knockoff Filtering",
+    "short": "A Distribution-Free",
+    "year": 2026,
+    "month": 5,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.00402",
+    "arxiv": "2606.00402",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Rewrite Detection",
+      "Knockoff Filtering",
+      "FDR Control"
+    ],
+    "tags": [
+      "Classification",
+      "Statistical"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-reasoning-aware-aigc-detection-via-alignment-and-reinforcement",
     "name": "Reasoning-Aware AIGC Detection via Alignment and Reinforcement",
     "short": "Reasoning-Aware AIGC",
@@ -193,6 +781,34 @@
       "General"
     ],
     "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-difference-in-difference-approach-to-detecting-ai-generated-images",
+    "name": "A Difference-in-Difference Approach to Detecting AI-Generated Images",
+    "short": "A Difference-in-Difference",
+    "year": 2026,
+    "month": 2,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://arxiv.org/abs/2602.23732",
+    "arxiv": "2602.23732",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q1",
+    "methods": [
+      "Reconstruction Error",
+      "Second-Order Difference",
+      "Generalization"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
     "landmark": false,
     "notes": ""
   },
