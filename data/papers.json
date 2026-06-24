@@ -2934,5 +2934,51 @@
     ],
     "is_landmark": false,
     "notes": ""
+  },
+  {
+    "id": "2026-the-watermark-shortcut-how-provenance-marking-sabotages-audio-deepfake-detection",
+    "title": "The Watermark Shortcut: How Provenance Marking Sabotages Audio Deepfake Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.23335",
+    "arxiv_id": "2606.23335",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Watermark Shortcut",
+      "Robustness",
+      "Audio Forensics"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-wavedetect-robust-framework-for-machine-generated-text-detection-via-wavelet-transform",
+    "title": "WaveDetect: Robust Framework for Machine-Generated Text Detection via Wavelet Transform",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.23336",
+    "arxiv_id": "2606.23336",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Wavelet Transform",
+      "Spectral Analysis",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "is_landmark": false,
+    "notes": ""
   }
 ]

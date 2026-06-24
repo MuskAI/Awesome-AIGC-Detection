@@ -96,6 +96,62 @@
     "notes": ""
   },
   {
+    "id": "2026-wavedetect-robust-framework-for-machine-generated-text-detection-via-wavelet-transform",
+    "name": "WaveDetect: Robust Framework for Machine-Generated Text Detection via Wavelet Transform",
+    "short": "WaveDetect",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.23336",
+    "arxiv": "2606.23336",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Wavelet Transform",
+      "Spectral Analysis",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-the-watermark-shortcut-how-provenance-marking-sabotages-audio-deepfake-detection",
+    "name": "The Watermark Shortcut: How Provenance Marking Sabotages Audio Deepfake Detection",
+    "short": "The Watermark Shortcut",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.23335",
+    "arxiv": "2606.23335",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Watermark Shortcut",
+      "Robustness",
+      "Audio Forensics"
+    ],
+    "tags": [
+      "Classification",
+      "Robustness"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-forensichub",
     "name": "ForensicHub: A Unified Benchmark & Codebase for All-Domain Fake Image Detection",
     "short": "ForensicHub",
