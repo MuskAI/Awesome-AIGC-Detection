@@ -3335,5 +3335,184 @@
     ],
     "is_landmark": false,
     "notes": ""
+  },
+  {
+    "id": "2026-iris-gan-staged-specialist-detection-of-deepfake-faces",
+    "title": "IRIS-GAN: Staged Specialist Detection of Deepfake Faces",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04863",
+    "arxiv_id": "2606.04863",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "GAN",
+      "Face Forensics",
+      "Cross-generator Generalization"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-rich-knowledge-space-for-scalable-deepfake-detection",
+    "title": "A Rich Knowledge Space for Scalable Deepfake Detection",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "venue": "ICLR",
+    "paper_url": "https://openreview.net/forum?id=hNd5L7WnjC",
+    "arxiv_id": "",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "CLIP",
+      "VLM",
+      "Large-scale Dataset"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-systematic-analysis-of-linguistic-features-in-ai-generated-text-detection-across-domains-and-models",
+    "title": "A Systematic Analysis of Linguistic Features in AI-Generated Text Detection Across Domains and Models",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04177",
+    "arxiv_id": "2606.04177",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Linguistic Features",
+      "Cross-domain Generalization",
+      "Interpretable Detection"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cross-prompt-generalization-in-detecting-ai-generated-fake-news-using-interpretable-linguistic-features",
+    "title": "Cross-Prompt Generalization in Detecting AI-Generated Fake News Using Interpretable Linguistic Features",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04199",
+    "arxiv_id": "2606.04199",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Linguistic Features",
+      "Cross-prompt Generalization",
+      "Fake News Detection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-foeglass-simple-in-context-learning-is-enough-for-red-teaming-audio-deepfake-detectors",
+    "title": "FoeGlass: Simple In-Context Learning Is Enough for Red Teaming Audio Deepfake Detectors",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2606.05101",
+    "arxiv_id": "2606.05101",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Red Teaming",
+      "In-context Learning",
+      "Robustness"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-what-do-deepfake-speech-detectors-actually-hear",
+    "title": "What Do Deepfake Speech Detectors Actually Hear?",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.10912",
+    "arxiv_id": "2606.10912",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Explanation",
+      "Integrated Gradients",
+      "Speech Detection"
+    ],
+    "tags": [
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-duramark-duration-embedded-watermarking-in-llm-based-tts",
+    "title": "DuraMark: Duration-Embedded Watermarking in LLM-based TTS",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.15264",
+    "arxiv_id": "2606.15264",
+    "code_url": "",
+    "project_url": "https://muzw.github.io/duramark_demo/",
+    "methods": [
+      "Watermarking",
+      "TTS Detection",
+      "Robustness"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-singfox-a-multi-lingual-singfake-detection-corpus",
+    "title": "SingFox: A Multi-Lingual Singfake Detection Corpus",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "venue": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.18985",
+    "arxiv_id": "2606.18985",
+    "code_url": "https://github.com/Arth-Shah/SingFox",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Singing Voice Detection",
+      "Source Tracing"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
   }
 ]

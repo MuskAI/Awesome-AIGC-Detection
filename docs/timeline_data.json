@@ -155,6 +155,33 @@
     "notes": ""
   },
   {
+    "id": "2026-iris-gan-staged-specialist-detection-of-deepfake-faces",
+    "name": "IRIS-GAN: Staged Specialist Detection of Deepfake Faces",
+    "short": "IRIS-GAN",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04863",
+    "arxiv": "2606.04863",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "GAN",
+      "Face Forensics",
+      "Cross-generator Generalization"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-ivy-fake",
     "name": "IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection",
     "short": "IVY-FAKE",
@@ -368,6 +395,61 @@
     "notes": ""
   },
   {
+    "id": "2026-a-systematic-analysis-of-linguistic-features-in-ai-generated-text-detection-across-domains-and-models",
+    "name": "A Systematic Analysis of Linguistic Features in AI-Generated Text Detection Across Domains and Models",
+    "short": "A Systematic",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04177",
+    "arxiv": "2606.04177",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Linguistic Features",
+      "Cross-domain Generalization",
+      "Interpretable Detection"
+    ],
+    "tags": [
+      "Classification",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cross-prompt-generalization-in-detecting-ai-generated-fake-news-using-interpretable-linguistic-features",
+    "name": "Cross-Prompt Generalization in Detecting AI-Generated Fake News Using Interpretable Linguistic Features",
+    "short": "Cross-Prompt Generalization",
+    "year": 2026,
+    "month": 6,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.04199",
+    "arxiv": "2606.04199",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Linguistic Features",
+      "Cross-prompt Generalization",
+      "Fake News Detection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-phonetically-explainable-speech-deepfake-detection",
     "name": "Phonetically Explainable Speech Deepfake Detection",
     "short": "Phonetically Explainable",
@@ -395,6 +477,33 @@
     "notes": ""
   },
   {
+    "id": "2026-foeglass-simple-in-context-learning-is-enough-for-red-teaming-audio-deepfake-detectors",
+    "name": "FoeGlass: Simple In-Context Learning Is Enough for Red Teaming Audio Deepfake Detectors",
+    "short": "FoeGlass",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "ICML",
+    "conference": "ICML",
+    "paper_url": "https://arxiv.org/abs/2606.05101",
+    "arxiv": "2606.05101",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Red Teaming",
+      "In-context Learning",
+      "Robustness"
+    ],
+    "tags": [
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-flowfake-liquid-networks-for-audio-deepfake-detection",
     "name": "FlowFake: Liquid Networks for Audio Deepfake Detection",
     "short": "FlowFake",
@@ -417,6 +526,88 @@
     ],
     "tags": [
       "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-duramark-duration-embedded-watermarking-in-llm-based-tts",
+    "name": "DuraMark: Duration-Embedded Watermarking in LLM-based TTS",
+    "short": "DuraMark",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "Interspeech",
+    "conference": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.15264",
+    "arxiv": "2606.15264",
+    "code_url": "",
+    "project_url": "https://muzw.github.io/duramark_demo/",
+    "code": "https://muzw.github.io/duramark_demo/",
+    "quarter": "Q2",
+    "methods": [
+      "Watermarking",
+      "TTS Detection",
+      "Robustness"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-singfox-a-multi-lingual-singfake-detection-corpus",
+    "name": "SingFox: A Multi-Lingual Singfake Detection Corpus",
+    "short": "SingFox",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "Interspeech",
+    "conference": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.18985",
+    "arxiv": "2606.18985",
+    "code_url": "https://github.com/Arth-Shah/SingFox",
+    "project_url": "",
+    "code": "https://github.com/Arth-Shah/SingFox",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark",
+      "Singing Voice Detection",
+      "Source Tracing"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-what-do-deepfake-speech-detectors-actually-hear",
+    "name": "What Do Deepfake Speech Detectors Actually Hear?",
+    "short": "What Do",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "Interspeech",
+    "conference": "Interspeech",
+    "paper_url": "https://arxiv.org/abs/2606.10912",
+    "arxiv": "2606.10912",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Explanation",
+      "Integrated Gradients",
+      "Speech Detection"
+    ],
+    "tags": [
+      "Explanation"
     ],
     "landmark": false,
     "notes": ""
@@ -1034,6 +1225,34 @@
     ],
     "landmark": false,
     "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-a-rich-knowledge-space-for-scalable-deepfake-detection",
+    "name": "A Rich Knowledge Space for Scalable Deepfake Detection",
+    "short": "A Rich",
+    "year": 2026,
+    "month": 1,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "ICLR",
+    "conference": "ICLR",
+    "paper_url": "https://openreview.net/forum?id=hNd5L7WnjC",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q1",
+    "methods": [
+      "CLIP",
+      "VLM",
+      "Large-scale Dataset"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "landmark": false,
+    "notes": ""
   },
   {
     "id": "2026-all-patches-matter-more-patches-better-enhance-ai-generated-image-detection-via",

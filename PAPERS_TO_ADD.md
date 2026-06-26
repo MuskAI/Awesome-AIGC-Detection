@@ -83,6 +83,10 @@ Before moving a paper into the main data source:
 
 ### Surveys & Benchmarks
 
+- [ ] OpenFake: An Open Dataset and Platform Toward Real-World Deepfake Detection
+  - Date seen: 2026-06-26
+  - Notes: OpenReview page has title, URL, and dataset details, but currently says "Submitted to ICLR 2026" rather than accepted/published.
+  - Metadata needed: venue/status confirmation before adding to `data/papers.json`.
 - [ ] The Verification Crisis: Expert Perceptions of GenAI Disinformation
   - Date seen: 2026-02-02
   - Notes: Expert perceptions of GenAI disinformation.
