@@ -46,6 +46,527 @@
     "notes": ""
   },
   {
+    "id": "2026-do-transformations-reveal-the-truth-generative-residual-learning-for-generalized-ai-generated-image-detection",
+    "name": "Do Transformations Reveal the Truth? Generative Residual Learning for Generalized AI-Generated Image Detection",
+    "short": "Do Transformations",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08674",
+    "arxiv": "2607.08674",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Generative Residual Learning",
+      "Robustness",
+      "Transformations"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-generalized-synthetic-image-detection-with-enhanced-rgb-noise-representation-learning",
+    "name": "Generalized Synthetic Image Detection with Enhanced RGB-Noise Representation Learning",
+    "short": "Generalized Synthetic",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06354",
+    "arxiv": "2607.06354",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "RGB-Noise",
+      "Contrastive Learning",
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ghosts-beneath-textures-texture-relation-cues-for-cross-paradigm-ai-generated",
+    "name": "Ghosts Beneath Textures: Texture-Relation Cues for Cross-Paradigm AI-Generated Image Detection",
+    "short": "Ghosts Beneath Textures",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03862",
+    "arxiv": "2607.03862",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-vendorbench-100-a-unified-cross-paradigm-benchmark-for-deepfake-image-detection",
+    "name": "VendorBench-100: A Unified Cross-Paradigm Benchmark for Deepfake Image Detection",
+    "short": "VendorBench-100",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06254",
+    "arxiv": "2607.06254",
+    "code_url": "https://github.com/sharayu-20/vendorbench-100",
+    "project_url": "",
+    "code": "https://github.com/sharayu-20/vendorbench-100",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "Commercial APIs",
+      "VLM"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-xplainverse-a-million-scale-benchmark-for-explainable-deepfake-detection",
+    "name": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+    "short": "XPlainVerse",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03562",
+    "arxiv": "2607.03562",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "Explanation",
+      "Localization"
+    ],
+    "tags": [
+      "Benchmark",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-why-fake-unveiling-the-semantic-vocabulary-of-deepfake-detectors",
+    "name": "Why Fake? Unveiling the Semantic Vocabulary of Deepfake Detectors",
+    "short": "Why Fake?",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPRW",
+    "conference": "CVPRW",
+    "paper_url": "https://arxiv.org/abs/2607.07216",
+    "arxiv": "2607.07216",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Explanation",
+      "Semantic Vocabulary",
+      "Post-hoc XAI"
+    ],
+    "tags": [
+      "Explanation",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-dataset-biases-and-shortcut-learning-in-motion-based-ai-generated-video-detect",
+    "name": "Dataset Biases and Shortcut Learning in Motion-Based AI-Generated Video Detection",
+    "short": "Dataset Biases",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.00948",
+    "arxiv": "2607.00948",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "Robustness"
+    ],
+    "tags": [
+      "Benchmark",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-g2vd-generalizable-ai-generated-video-detection-via-counterfactual-interventio",
+    "name": "G2VD: Generalizable AI-Generated Video Detection via Counterfactual Intervention and Causal Disentanglement",
+    "short": "G2VD",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04607",
+    "arxiv": "2607.04607",
+    "code_url": "https://github.com/dumeng98/G2VD",
+    "project_url": "",
+    "code": "https://github.com/dumeng98/G2VD",
+    "quarter": "Q3",
+    "methods": [
+      "Robustness",
+      "Causal"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-humanforge-a-human-centric-deepfake-video-benchmark-with-multi-agent-forgery-rationales",
+    "name": "HumanForge: A Human-Centric Deepfake Video Benchmark with Multi-Agent Forgery Rationales",
+    "short": "HumanForge",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08705",
+    "arxiv": "2607.08705",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "Localization",
+      "Rationales"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-safeguard-a-multi-agent-perception-reasoning-framework-for-social-risk-ai-generated-video-detection",
+    "name": "SafeGuard: A Multi-Agent Perception-Reasoning Framework for Social-Risk AI-Generated Video Detection",
+    "short": "SafeGuard",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "ECCV",
+    "conference": "ECCV",
+    "paper_url": "https://arxiv.org/abs/2607.03069",
+    "arxiv": "2607.03069",
+    "code_url": "https://github.com/williamw99/SafeGuard",
+    "project_url": "",
+    "code": "https://github.com/williamw99/SafeGuard",
+    "quarter": "Q3",
+    "methods": [
+      "MLLM",
+      "Reasoning",
+      "Multi-Agent"
+    ],
+    "tags": [
+      "AIGC",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-split-training-free-ai-generated-and-partially-edited-video-detection-via-spatial-patch-level-incoherence",
+    "name": "SPLIT: Training-Free AI-Generated and Partially Edited Video Detection via Spatial Patch-Level Incoherence and Temporal Roughness",
+    "short": "SPLIT",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "ECCV",
+    "conference": "ECCV",
+    "paper_url": "https://arxiv.org/abs/2607.02886",
+    "arxiv": "2607.02886",
+    "code_url": "https://github.com/mldljyh/SPLIT",
+    "project_url": "",
+    "code": "https://github.com/mldljyh/SPLIT",
+    "quarter": "Q3",
+    "methods": [
+      "Training-Free",
+      "Patch Incoherence",
+      "Temporal Roughness"
+    ],
+    "tags": [
+      "AIGC",
+      "Localization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-rethinking-ai-generated-text-detection-a-strong-baseline-and-the-distribution-shift-problem-that-remains",
+    "name": "Rethinking AI-Generated Text Detection: A Strong Baseline and the Distribution-Shift Problem That Remains",
+    "short": "Rethinking AI-Generated",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03680",
+    "arxiv": "2607.03680",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Robustness",
+      "Domain Adaptation",
+      "Baseline"
+    ],
+    "tags": [
+      "Classification",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-telescope-improving-zero-shot-detection-of-llm-generated-content-by-measuring-token-repetition-probability",
+    "name": "Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability",
+    "short": "Telescope",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "ICML",
+    "conference": "ICML",
+    "paper_url": "https://arxiv.org/abs/2607.04061",
+    "arxiv": "2607.04061",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Zero-Shot",
+      "Token Repetition",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-synsfx-multi-model-sound-effects-synthesis-dataset-for-deepfake-detection-and-evaluation",
+    "name": "SynSFX: Multi-Model Sound Effects Synthesis Dataset for Deepfake Detection and Evaluation",
+    "short": "SynSFX",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04848",
+    "arxiv": "2607.04848",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Dataset",
+      "Benchmark",
+      "Sound Effects"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-why-do-you-say-it-like-that-a-phoneme-level-framework-for-explainable-speech-deepfake-detection",
+    "name": "Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection",
+    "short": "Why Do",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08586",
+    "arxiv": "2607.08586",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Explanation",
+      "Phoneme-Level",
+      "Grad-CAM"
+    ],
+    "tags": [
+      "Explanation",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-abductive-corroboration-of-probabilistic-ai-models-for-forensic-synthetic-media-detection",
+    "name": "Abductive Corroboration of Probabilistic AI Models for Forensic Synthetic Media Detection",
+    "short": "Abductive Corroboration",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.05434",
+    "arxiv": "2607.05434",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Evidence Fusion",
+      "Watermarking",
+      "Forensics"
+    ],
+    "tags": [
+      "Provenance",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ensemble-deep-learning-approaches-for-ai-altered-video-detection",
+    "name": "Ensemble Deep Learning Approaches for AI-Altered Video Detection",
+    "short": "Ensemble Deep",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06872",
+    "arxiv": "2607.06872",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "General"
+    ],
+    "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-evas-efficient-multimodal-temporal-forgery-localization-via-audio-visual-synergy-and-steered-boundary-calibration",
+    "name": "EVAS: Efficient Multimodal Temporal Forgery Localization via Audio-Visual Synergy and Steered Boundary Calibration",
+    "short": "EVAS",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04472",
+    "arxiv": "2607.04472",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Temporal Localization",
+      "Audio-Visual",
+      "Boundary Calibration"
+    ],
+    "tags": [
+      "Localization",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-uniskip-mamba-a-frequency-aware-state-space-model-for-audio-visual-temporal-forgery-localization",
+    "name": "UniSkip-Mamba: A Frequency-Aware State Space Model for Audio-Visual Temporal Forgery Localization",
+    "short": "UniSkip-Mamba",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04498",
+    "arxiv": "2607.04498",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Temporal Localization",
+      "Mamba",
+      "Frequency Domain"
+    ],
+    "tags": [
+      "Localization",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-ivy-fake",
     "name": "IVY-FAKE: A Unified Explainable Framework and Benchmark for Image and Video AIGC Detection",
     "short": "IVY-FAKE",
@@ -65,6 +586,708 @@
       "General"
     ],
     "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-debiased-reconstruction-based-framework-for-training-free-detection-of-ai-ge",
+    "name": "A Debiased Reconstruction-based Framework for Training-Free Detection of AI-Generated Images",
+    "short": "A Debiased",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Choi_A_Debiased_Reconstruction-based_Framework_for_Training-Free_Detection_of_AI-Generated_Images_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Reconstruction",
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-difference-in-difference-approach-to-detecting-ai-generated-images",
+    "name": "A Difference-in-Difference Approach to Detecting AI-Generated Images",
+    "short": "A Difference-in-Difference",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qi_A_Difference-in-Difference_Approach_to_Detecting_AI-Generated_Images_CVPR_2026_paper.html",
+    "arxiv": "2602.23732",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-sanity-check-for-multi-in-domain-face-forgery-detection-in-the-real-world",
+    "name": "A Sanity Check for Multi-In-Domain Face Forgery Detection in the Real World",
+    "short": "A Sanity",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Cheng_A_Sanity_Check_for_Multi-In-Domain_Face_Forgery_Detection_in_the_CVPR_2026_paper.html",
+    "arxiv": "2512.04837",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-agent4faceforgery-multi-agent-llm-framework-for-realistic-face-forgery-detecti",
+    "name": "Agent4FaceForgery: Multi-Agent LLM Framework for Realistic Face Forgery Detection",
+    "short": "Agent4FaceForgery",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lai_Agent4FaceForgery_Multi-Agent_LLM_Framework_for_Realistic_Face_Forgery_Detection_CVPR_2026_paper.html",
+    "arxiv": "2509.12546",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-all-in-one-unifying-deepfake-detection-tampering-localization-and-source-traci",
+    "name": "All in One: Unifying Deepfake Detection, Tampering Localization, and Source Tracing with a Robust Landmark-Identity Watermark",
+    "short": "All in One",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_All_in_One_Unifying_Deepfake_Detection_Tampering_Localization_and_Source_CVPR_2026_paper.html",
+    "arxiv": "2602.23523",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Localization",
+      "Watermark",
+      "Attribution"
+    ],
+    "tags": [
+      "Deepfake",
+      "Generalization",
+      "Localization",
+      "Attribution"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-attribution-as-retrieval-model-agnostic-ai-generated-image-attribution",
+    "name": "Attribution as Retrieval: Model-Agnostic AI-Generated Image Attribution",
+    "short": "Attribution as Retrieval",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Attribution_as_Retrieval_Model-Agnostic_AI-Generated_Image_Attribution_CVPR_2026_paper.html",
+    "arxiv": "2603.10583",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Attribution"
+    ],
+    "tags": [
+      "AIGC",
+      "Attribution"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-beyond-cls-token-query-driven-token-level-forgery-purification-for-generalizab",
+    "name": "Beyond [CLS] Token: Query-Driven Token-Level Forgery Purification for Generalizable Deepfake Detection",
+    "short": "Beyond [CLS] Token",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Beyond_CLS_Token_Query-Driven_Token-Level_Forgery_Purification_for_Generalizable_Deepfake_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "Deepfake",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-decoupling-bias-aligning-distributions-synergistic-fairness-optimization-for-d",
+    "name": "Decoupling Bias, Aligning Distributions: Synergistic Fairness Optimization for Deepfake Detection",
+    "short": "Decoupling Bias,",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ding_Decoupling_Bias_Aligning_Distributions_Synergistic_Fairness_Optimization_for_Deepfake_Detection_CVPR_2026_paper.html",
+    "arxiv": "2511.10150",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-deepfakeimpact-a-two-stage-benchmark-with-real-world-impact-in-deepfake-detect",
+    "name": "DeepfakeImpact: A Two-Stage Benchmark with Real-World Impact in Deepfake Detection",
+    "short": "DeepfakeImpact",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Gong_DeepfakeImpact_A_Two-Stage_Benchmark_with_Real-World_Impact_in_Deepfake_Detection_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detect-any-ai-counterfeited-text-image",
+    "name": "Detect Any AI-Counterfeited Text Image",
+    "short": "Detect Any",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qu_Detect_Any_AI-Counterfeited_Text_Image_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detecting-ai-generated-forgeries-via-iterative-manifold-deviation-amplificatio",
+    "name": "Detecting AI-Generated Forgeries via Iterative Manifold Deviation Amplification",
+    "short": "Detecting AI-Generated",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Detecting_AI-Generated_Forgeries_via_Iterative_Manifold_Deviation_Amplification_CVPR_2026_paper.html",
+    "arxiv": "2602.18842",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [
+      "Deepfake",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detecting-compressed-ai-generated-images-via-phase-spectrum-robustness",
+    "name": "Detecting Compressed AI-Generated Images via Phase Spectrum Robustness",
+    "short": "Detecting Compressed",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Detecting_Compressed_AI-Generated_Images_via_Phase_Spectrum_Robustness_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Frequency",
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-dfd-hr-generalizable-deepfake-detection-via-hierarchical-routing-learning",
+    "name": "DFD-HR: Generalizable Deepfake Detection via Hierarchical Routing Learning",
+    "short": "DFD-HR",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sun_DFD-HR_Generalizable_Deepfake_Detection_via_Hierarchical_Routing_Learning_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "Deepfake",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-diffusionff-a-diffusion-based-framework-for-joint-face-forgery-detection-and-f",
+    "name": "DiffusionFF: A Diffusion-based Framework for Joint Face Forgery Detection and Fine-Grained Artifact Localization",
+    "short": "DiffusionFF",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Peng_DiffusionFF_A_Diffusion-based_Framework_for_Joint_Face_Forgery_Detection_and_CVPR_2026_paper.html",
+    "arxiv": "2508.01873",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Localization"
+    ],
+    "tags": [
+      "Deepfake",
+      "Localization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-diversity-over-uniformity-rethinking-representation-in-generated-image-detecti",
+    "name": "Diversity over Uniformity: Rethinking Representation in Generated Image Detection",
+    "short": "Diversity over",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/He_Diversity_over_Uniformity_Rethinking_Representation_in_Generated_Image_Detection_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-enabling-supervised-learning-of-generative-signatures-for-generalized-ai-gener",
+    "name": "Enabling Supervised Learning of Generative Signatures for Generalized AI-Generated Images Detection",
+    "short": "Enabling Supervised",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_Enabling_Supervised_Learning_of_Generative_Signatures_for_Generalized_AI-Generated_Images_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-inconsistency-aware-multimodal-schrodinger-bridge-for-deepfake-localization",
+    "name": "Inconsistency-aware Multimodal Schrodinger Bridge for Deepfake Localization",
+    "short": "Inconsistency-aware Multimodal",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xiong_Inconsistency-aware_Multimodal_Schrodinger_Bridge_for_Deepfake_Localization_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Localization",
+      "Multimodal"
+    ],
+    "tags": [
+      "Deepfake",
+      "Localization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-layer-consistency-matters-elegant-latent-transition-discrepancy-for-generaliza",
+    "name": "Layer Consistency Matters: Elegant Latent Transition Discrepancy for Generalizable Synthetic Image Detection",
+    "short": "Layer Consistency",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Layer_Consistency_Matters_Elegant_Latent_Transition_Discrepancy_for_Generalizable_Synthetic_CVPR_2026_paper.html",
+    "arxiv": "2603.10598",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-locate-then-examine-grounded-region-reasoning-improves-detection-of-ai",
+    "name": "Locate-Then-Examine: Grounded Region Reasoning Improves Detection of AI-Generated Images",
+    "short": "Locate-Then-Examine",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ji_Locate-Then-Examine_Grounded_Region_Reasoning_Improves_Detection_of_AI-Generated_Images_CVPR_2026_paper.html",
+    "arxiv": "2510.04225",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Localization",
+      "MLLM"
+    ],
+    "tags": [
+      "AIGC",
+      "Localization",
+      "MLLM"
+    ],
+    "landmark": false,
+    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
+  },
+  {
+    "id": "2026-pixels-don-t-lie-but-your-detector-might-bootstrapping-mllm-as-a-judge-for-tru",
+    "name": "Pixels Don't Lie (But Your Detector Might): Bootstrapping MLLM-as-a-Judge for Trustworthy Deepfake Detection and Reasoning Supervision",
+    "short": "Pixels Don't",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kuckreja_Pixels_Dont_Lie_But_Your_Detector_Might_Bootstrapping_MLLM-as-a-Judge_for_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [
+      "Deepfake",
+      "MLLM"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-realign-generalizable-image-forgery-detection-via-reasoning-aligned-representa",
+    "name": "ReAlign: Generalizable Image Forgery Detection via Reasoning-Aligned Representation",
+    "short": "ReAlign",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Huang_ReAlign_Generalizable_Image_Forgery_Detection_via_Reasoning-Aligned_Representation_CVPR_2026_paper.html",
+    "arxiv": "2605.16080",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "MLLM",
+      "Robustness"
+    ],
+    "tags": [
+      "Deepfake",
+      "Generalization",
+      "MLLM"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-scaling-up-ai-generated-image-detection-with-generator-aware-prototypes",
+    "name": "Scaling Up AI-Generated Image Detection with Generator-Aware Prototypes",
+    "short": "Scaling Up",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qin_Scaling_Up_AI-Generated_Image_Detection_with_Generator-Aware_Prototypes_CVPR_2026_paper.html",
+    "arxiv": "2512.12982",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-towards-generalizable-ai-generated-image-detection-via-image-adaptive-prompt-l",
+    "name": "Towards Generalizable AI-Generated Image Detection via Image-Adaptive Prompt Learning",
+    "short": "Towards Generalizable",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Towards_Generalizable_AI-Generated_Image_Detection_via_Image-Adaptive_Prompt_Learning_CVPR_2026_paper.html",
+    "arxiv": "2508.01603",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-tridf-evaluating-perception-detection-and-hallucination-for-interpretable-deep",
+    "name": "TriDF: Evaluating Perception, Detection, and Hallucination for Interpretable DeepFake Detection",
+    "short": "TriDF",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang-Lin_TriDF_Evaluating_Perception_Detection_and_Hallucination_for_Interpretable_DeepFake_Detection_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-tutor-student-reinforcement-learning-a-dynamic-curriculum-for-robust-deepfake",
+    "name": "Tutor-Student Reinforcement Learning: A Dynamic Curriculum for Robust Deepfake Detection",
+    "short": "Tutor-Student Reinforcement",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lei_Tutor-Student_Reinforcement_Learning_A_Dynamic_Curriculum_for_Robust_Deepfake_Detection_CVPR_2026_paper.html",
+    "arxiv": "2603.24139",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "Deepfake",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-unigendet-a-unified-generative-discriminative-framework-for-co-evolutionary-im",
+    "name": "UniGenDet: A Unified Generative-Discriminative Framework for Co-Evolutionary Image Generation and Generated Image Detection",
+    "short": "UniGenDet",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_UniGenDet_A_Unified_Generative-Discriminative_Framework_for_Co-Evolutionary_Image_Generation_and_CVPR_2026_paper.html",
+    "arxiv": "2604.21904",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-zero-shot-detection-of-ai-generated-image-via-raw-rgb-alignment",
+    "name": "Zero-shot Detection of AI-Generated Image via RAW-RGB Alignment",
+    "short": "Zero-shot Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Zero-shot_Detection_of_AI-Generated_Image_via_RAW-RGB_Alignment_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "AIGC"
+    ],
     "landmark": false,
     "notes": ""
   },
@@ -91,6 +1314,477 @@
     ],
     "tags": [
       "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-auditing-generalization-in-ai-generated-video-detection-a-six-control-protocol",
+    "name": "Auditing Generalization in AI-Generated Video Detection: A Six-Control Protocol and the VidAudit Toolkit",
+    "short": "Auditing Generalization",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.31004",
+    "arxiv": "2606.31004",
+    "code_url": "https://github.com/KurbanIntelligenceLab/vidaudit",
+    "project_url": "",
+    "code": "https://github.com/KurbanIntelligenceLab/vidaudit",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark"
+    ],
+    "tags": [
+      "Benchmark",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cocovideo-the-high-quality-commercial-model-based-contrastive-benchmark-for-ai",
+    "name": "CoCoVideo: The High-Quality Commercial-Model-Based Contrastive Benchmark for AI-Generated Video Detection",
+    "short": "CoCoVideo",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Feng_CoCoVideo_The_High-Quality_Commercial-Model-Based_Contrastive_Benchmark_for_AI-Generated_Video_Detection_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark"
+    ],
+    "tags": [
+      "Benchmark",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-fvbench-benchmarking-deepfake-video-detection-capability-of-large-multimodal-m",
+    "name": "FVBench: Benchmarking Deepfake Video Detection Capability of Large Multimodal Models",
+    "short": "FVBench",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_FVBench_Benchmarking_Deepfake_Video_Detection_Capability_of_Large_Multimodal_Models_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark",
+      "Multimodal"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-gem-tfl-bridging-weak-and-full-supervision-for-forgery-localization-through-em",
+    "name": "GEM-TFL: Bridging Weak and Full Supervision for Forgery Localization through EM-Guided Decomposition and Temporal Refinement",
+    "short": "GEM-TFL",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_GEM-TFL_Bridging_Weak_and_Full_Supervision_for_Forgery_Localization_through_CVPR_2026_paper.html",
+    "arxiv": "2603.05095",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Localization"
+    ],
+    "tags": [
+      "Deepfake",
+      "Localization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-learning-forgery-aware-lip-representations-without-forgery-priors",
+    "name": "Learning Forgery-Aware Lip Representations Without Forgery Priors",
+    "short": "Learning Forgery-Aware",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_Learning_Forgery-Aware_Lip_Representations_Without_Forgery_Priors_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ppm-clip-probabilistic-prompt-modeling-for-generalizable-ai-generated-image-de",
+    "name": "PPM-CLIP: Probabilistic Prompt Modeling for Generalizable AI-Generated Image Detection",
+    "short": "PPM-CLIP",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_PPM-CLIP_Probabilistic_Prompt_Modeling_for_Generalizable_AI-Generated_Image_Detection_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-skyra-ai-generated-video-detection-via-grounded-artifact-reasoning",
+    "name": "Skyra: AI-Generated Video Detection via Grounded Artifact Reasoning",
+    "short": "Skyra",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Skyra_AI-Generated_Video_Detection_via_Grounded_Artifact_Reasoning_CVPR_2026_paper.html",
+    "arxiv": "2512.15693",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Localization",
+      "MLLM"
+    ],
+    "tags": [
+      "AIGC",
+      "Localization",
+      "MLLM"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-swift-sliding-window-reconstruction-for-few-shot-training-free-generated-video",
+    "name": "SWIFT: Sliding Window Reconstruction for Few-Shot Training-Free Generated Video Attribution",
+    "short": "SWIFT",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_SWIFT_Sliding_Window_Reconstruction_for_Few-Shot_Training-Free_Generated_Video_Attribution_CVPR_2026_paper.html",
+    "arxiv": "2603.08536",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Reconstruction",
+      "Attribution"
+    ],
+    "tags": [
+      "AIGC",
+      "Attribution"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-training-free-detection-of-generated-videos-via-spatial-temporal-likelihoods",
+    "name": "Training-free Detection of Generated Videos via Spatial-Temporal Likelihoods",
+    "short": "Training-free Detection",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Hayun_Training-free_Detection_of_Generated_Videos_via_Spatial-Temporal_Likelihoods_CVPR_2026_paper.html",
+    "arxiv": "2603.15026",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Reconstruction"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-unleashing-vision-language-semantics-for-deepfake-video-detection",
+    "name": "Unleashing Vision-Language Semantics for Deepfake Video Detection",
+    "short": "Unleashing Vision-Language",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_Unleashing_Vision-Language_Semantics_for_Deepfake_Video_Detection_CVPR_2026_paper.html",
+    "arxiv": "2603.24454",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "MLLM"
+    ],
+    "tags": [
+      "Deepfake",
+      "MLLM"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-vmd-fact-a-new-video-dataset-and-mllm-based-method-for-detecting-realistic-ai",
+    "name": "VMD-FACT: A New Video Dataset and MLLM-based method for Detecting Realistic AI-Generated Video Misinformation",
+    "short": "VMD-FACT",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_VMD-FACT_A_New_Video_Dataset_and_MLLM-based_method_for_Detecting_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark",
+      "MLLM"
+    ],
+    "tags": [
+      "Benchmark",
+      "AIGC",
+      "MLLM"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-your-one-stop-solution-for-ai-generated-video-detection",
+    "name": "Your One-Stop Solution for AI-Generated Video Detection",
+    "short": "Your One-Stop",
+    "year": 2026,
+    "month": 6,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ma_Your_One-Stop_Solution_for_AI-Generated_Video_Detection_CVPR_2026_paper.html",
+    "arxiv": "2601.11035",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "General"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-proteus-automated-adversarial-robustness-testing-for-audio-deepfake-detectors",
+    "name": "Proteus: Automated Adversarial Robustness Testing for Audio Deepfake Detectors",
+    "short": "Proteus",
+    "year": 2026,
+    "month": 6,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2606.29544",
+    "arxiv": "2606.29544",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness"
+    ],
+    "tags": [
+      "Deepfake",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-avfakebench-a-comprehensive-audio-video-forgery-detection-benchmark-for-av-lmm",
+    "name": "AVFakeBench: A Comprehensive Audio-Video Forgery Detection Benchmark for AV-LMMs",
+    "short": "AVFakeBench",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xia_AVFakeBench_A_Comprehensive_Audio-Video_Forgery_Detection_Benchmark_for_AV-LMMs_CVPR_2026_paper.html",
+    "arxiv": "2511.21251",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-cross-modal-representation-learning-for-diffusion-generated-image-detection",
+    "name": "Cross-modal Representation Learning for Diffusion-generated Image Detection",
+    "short": "Cross-modal Representation",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Gong_Cross-modal_Representation_Learning_for_Diffusion-generated_Image_Detection_CVPR_2026_paper.html",
+    "arxiv": "",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Multimodal"
+    ],
+    "tags": [
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-investigating-self-supervised-representations-for-audio-visual-deepfake-detect",
+    "name": "Investigating Self-Supervised Representations for Audio-Visual Deepfake Detection",
+    "short": "Investigating Self-Supervised",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Boldisor_Investigating_Self-Supervised_Representations_for_Audio-Visual_Deepfake_Detection_CVPR_2026_paper.html",
+    "arxiv": "2511.17181",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Multimodal"
+    ],
+    "tags": [
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-omni-fake-benchmarking-unified-multimodal-social-media-deepfake-detection",
+    "name": "Omni-Fake: Benchmarking Unified Multimodal Social Media Deepfake Detection",
+    "short": "Omni-Fake",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Omni-Fake_Benchmarking_Unified_Multimodal_Social_Media_Deepfake_Detection_CVPR_2026_paper.html",
+    "arxiv": "2605.01638",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Benchmark",
+      "Multimodal"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-x-avdt-audio-visual-cross-attention-for-robust-deepfake-detection",
+    "name": "X-AVDT: Audio-Visual Cross-Attention for Robust Deepfake Detection",
+    "short": "X-AVDT",
+    "year": 2026,
+    "month": 6,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "CVPR",
+    "conference": "CVPR",
+    "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_X-AVDT_Audio-Visual_Cross-Attention_for_Robust_Deepfake_Detection_CVPR_2026_paper.html",
+    "arxiv": "2603.08483",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q2",
+    "methods": [
+      "Robustness",
+      "Multimodal"
+    ],
+    "tags": [
+      "Deepfake",
+      "Generalization"
     ],
     "landmark": false,
     "notes": ""
@@ -193,6 +1887,32 @@
       "General"
     ],
     "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-how-well-are-open-sourced-ai-generated-image-detection-models-out-of-the-box-a",
+    "name": "How well are open sourced AI-generated image detection models out-of-the-box: A comprehensive benchmark study",
+    "short": "How well",
+    "year": 2026,
+    "month": 2,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2602.07814",
+    "arxiv": "2602.07814",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q1",
+    "methods": [
+      "Benchmark"
+    ],
+    "tags": [
+      "Benchmark",
+      "AIGC"
+    ],
     "landmark": false,
     "notes": ""
   },
@@ -673,33 +2393,6 @@
       "MLLM",
       "Pattern-aware Reasoning",
       "HydraFake Dataset"
-    ],
-    "tags": [
-      "MLLM"
-    ],
-    "landmark": false,
-    "notes": "Imported from ant-research/Awesome-AIGC-Image-Video-Detection."
-  },
-  {
-    "id": "2026-zoom-in-to-sort-ai-generated-images-out",
-    "name": "Zoom-In to Sort AI-Generated Images Out",
-    "short": "Zoom-In to",
-    "year": 2026,
-    "month": 1,
-    "area": "Image",
-    "category": "Image Detection",
-    "venue": "ICLR",
-    "conference": "ICLR",
-    "paper_url": "https://arxiv.org/abs/2510.04225",
-    "arxiv": "2510.04225",
-    "code_url": "",
-    "project_url": "",
-    "code": "",
-    "quarter": "Q1",
-    "methods": [
-      "MLLM",
-      "Thinking with Images",
-      "MagniFake Dataset"
     ],
     "tags": [
       "MLLM"
