@@ -46,6 +46,62 @@
     "notes": ""
   },
   {
+    "id": "2026-do-transformations-reveal-the-truth-generative-residual-learning-for-generalized-ai-generated-image-detection",
+    "name": "Do Transformations Reveal the Truth? Generative Residual Learning for Generalized AI-Generated Image Detection",
+    "short": "Do Transformations",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08674",
+    "arxiv": "2607.08674",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Generative Residual Learning",
+      "Robustness",
+      "Transformations"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-generalized-synthetic-image-detection-with-enhanced-rgb-noise-representation-learning",
+    "name": "Generalized Synthetic Image Detection with Enhanced RGB-Noise Representation Learning",
+    "short": "Generalized Synthetic",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06354",
+    "arxiv": "2607.06354",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "RGB-Noise",
+      "Contrastive Learning",
+      "Robustness"
+    ],
+    "tags": [
+      "AIGC",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-ghosts-beneath-textures-texture-relation-cues-for-cross-paradigm-ai-generated",
     "name": "Ghosts Beneath Textures: Texture-Relation Cues for Cross-Paradigm AI-Generated Image Detection",
     "short": "Ghosts Beneath Textures",
@@ -66,6 +122,90 @@
     ],
     "tags": [
       "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-vendorbench-100-a-unified-cross-paradigm-benchmark-for-deepfake-image-detection",
+    "name": "VendorBench-100: A Unified Cross-Paradigm Benchmark for Deepfake Image Detection",
+    "short": "VendorBench-100",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06254",
+    "arxiv": "2607.06254",
+    "code_url": "https://github.com/sharayu-20/vendorbench-100",
+    "project_url": "",
+    "code": "https://github.com/sharayu-20/vendorbench-100",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "Commercial APIs",
+      "VLM"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-xplainverse-a-million-scale-benchmark-for-explainable-deepfake-detection",
+    "name": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+    "short": "XPlainVerse",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03562",
+    "arxiv": "2607.03562",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "Explanation",
+      "Localization"
+    ],
+    "tags": [
+      "Benchmark",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-why-fake-unveiling-the-semantic-vocabulary-of-deepfake-detectors",
+    "name": "Why Fake? Unveiling the Semantic Vocabulary of Deepfake Detectors",
+    "short": "Why Fake?",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "category": "Image Detection",
+    "venue": "CVPRW",
+    "conference": "CVPRW",
+    "paper_url": "https://arxiv.org/abs/2607.07216",
+    "arxiv": "2607.07216",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Explanation",
+      "Semantic Vocabulary",
+      "Post-hoc XAI"
+    ],
+    "tags": [
+      "Explanation",
+      "Deepfake"
     ],
     "landmark": false,
     "notes": ""
@@ -125,6 +265,229 @@
     "notes": ""
   },
   {
+    "id": "2026-humanforge-a-human-centric-deepfake-video-benchmark-with-multi-agent-forgery-rationales",
+    "name": "HumanForge: A Human-Centric Deepfake Video Benchmark with Multi-Agent Forgery Rationales",
+    "short": "HumanForge",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08705",
+    "arxiv": "2607.08705",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Benchmark",
+      "Localization",
+      "Rationales"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-safeguard-a-multi-agent-perception-reasoning-framework-for-social-risk-ai-generated-video-detection",
+    "name": "SafeGuard: A Multi-Agent Perception-Reasoning Framework for Social-Risk AI-Generated Video Detection",
+    "short": "SafeGuard",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "ECCV",
+    "conference": "ECCV",
+    "paper_url": "https://arxiv.org/abs/2607.03069",
+    "arxiv": "2607.03069",
+    "code_url": "https://github.com/williamw99/SafeGuard",
+    "project_url": "",
+    "code": "https://github.com/williamw99/SafeGuard",
+    "quarter": "Q3",
+    "methods": [
+      "MLLM",
+      "Reasoning",
+      "Multi-Agent"
+    ],
+    "tags": [
+      "AIGC",
+      "Explanation"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-split-training-free-ai-generated-and-partially-edited-video-detection-via-spatial-patch-level-incoherence",
+    "name": "SPLIT: Training-Free AI-Generated and Partially Edited Video Detection via Spatial Patch-Level Incoherence and Temporal Roughness",
+    "short": "SPLIT",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "category": "Video Detection",
+    "venue": "ECCV",
+    "conference": "ECCV",
+    "paper_url": "https://arxiv.org/abs/2607.02886",
+    "arxiv": "2607.02886",
+    "code_url": "https://github.com/mldljyh/SPLIT",
+    "project_url": "",
+    "code": "https://github.com/mldljyh/SPLIT",
+    "quarter": "Q3",
+    "methods": [
+      "Training-Free",
+      "Patch Incoherence",
+      "Temporal Roughness"
+    ],
+    "tags": [
+      "AIGC",
+      "Localization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-rethinking-ai-generated-text-detection-a-strong-baseline-and-the-distribution-shift-problem-that-remains",
+    "name": "Rethinking AI-Generated Text Detection: A Strong Baseline and the Distribution-Shift Problem That Remains",
+    "short": "Rethinking AI-Generated",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03680",
+    "arxiv": "2607.03680",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Robustness",
+      "Domain Adaptation",
+      "Baseline"
+    ],
+    "tags": [
+      "Classification",
+      "Generalization"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-telescope-improving-zero-shot-detection-of-llm-generated-content-by-measuring-token-repetition-probability",
+    "name": "Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability",
+    "short": "Telescope",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "category": "Text Detection",
+    "venue": "ICML",
+    "conference": "ICML",
+    "paper_url": "https://arxiv.org/abs/2607.04061",
+    "arxiv": "2607.04061",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Zero-Shot",
+      "Token Repetition",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-synsfx-multi-model-sound-effects-synthesis-dataset-for-deepfake-detection-and-evaluation",
+    "name": "SynSFX: Multi-Model Sound Effects Synthesis Dataset for Deepfake Detection and Evaluation",
+    "short": "SynSFX",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04848",
+    "arxiv": "2607.04848",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Dataset",
+      "Benchmark",
+      "Sound Effects"
+    ],
+    "tags": [
+      "Benchmark",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-why-do-you-say-it-like-that-a-phoneme-level-framework-for-explainable-speech-deepfake-detection",
+    "name": "Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection",
+    "short": "Why Do",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "category": "Audio Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08586",
+    "arxiv": "2607.08586",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Explanation",
+      "Phoneme-Level",
+      "Grad-CAM"
+    ],
+    "tags": [
+      "Explanation",
+      "Deepfake"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-abductive-corroboration-of-probabilistic-ai-models-for-forensic-synthetic-media-detection",
+    "name": "Abductive Corroboration of Probabilistic AI Models for Forensic Synthetic Media Detection",
+    "short": "Abductive Corroboration",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.05434",
+    "arxiv": "2607.05434",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Evidence Fusion",
+      "Watermarking",
+      "Forensics"
+    ],
+    "tags": [
+      "Provenance",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
     "id": "2026-ensemble-deep-learning-approaches-for-ai-altered-video-detection",
     "name": "Ensemble Deep Learning Approaches for AI-Altered Video Detection",
     "short": "Ensemble Deep",
@@ -144,6 +507,62 @@
       "General"
     ],
     "tags": [],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-evas-efficient-multimodal-temporal-forgery-localization-via-audio-visual-synergy-and-steered-boundary-calibration",
+    "name": "EVAS: Efficient Multimodal Temporal Forgery Localization via Audio-Visual Synergy and Steered Boundary Calibration",
+    "short": "EVAS",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04472",
+    "arxiv": "2607.04472",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Temporal Localization",
+      "Audio-Visual",
+      "Boundary Calibration"
+    ],
+    "tags": [
+      "Localization",
+      "AIGC"
+    ],
+    "landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-uniskip-mamba-a-frequency-aware-state-space-model-for-audio-visual-temporal-forgery-localization",
+    "name": "UniSkip-Mamba: A Frequency-Aware State Space Model for Audio-Visual Temporal Forgery Localization",
+    "short": "UniSkip-Mamba",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "category": "Multimodal Detection",
+    "venue": "arxiv",
+    "conference": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04498",
+    "arxiv": "2607.04498",
+    "code_url": "",
+    "project_url": "",
+    "code": "",
+    "quarter": "Q3",
+    "methods": [
+      "Temporal Localization",
+      "Mamba",
+      "Frequency Domain"
+    ],
+    "tags": [
+      "Localization",
+      "AIGC"
+    ],
     "landmark": false,
     "notes": ""
   },
