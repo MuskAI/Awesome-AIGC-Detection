@@ -2934,5 +2934,389 @@
     ],
     "is_landmark": false,
     "notes": ""
+  },
+  {
+    "id": "2026-dataset-biases-and-shortcut-learning-in-motion-based-ai-generated-video-detection",
+    "title": "Dataset Biases and Shortcut Learning in Motion-Based AI-Generated Video Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.00948",
+    "arxiv_id": "2607.00948",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Shortcut Learning",
+      "Motion Bias"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-rethinking-ai-generated-text-detection-a-strong-baseline-and-the-distribution-shift-problem-that-remains",
+    "title": "Rethinking AI-Generated Text Detection: A Strong Baseline and the Distribution-Shift Problem That Remains",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03680",
+    "arxiv_id": "2607.03680",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Baseline",
+      "Domain Adaptation",
+      "Distribution Shift"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ghosts-beneath-textures-texture-relation-cues-for-cross-paradigm-ai-generated-image-detection",
+    "title": "Ghosts Beneath Textures: Texture-Relation Cues for Cross-Paradigm AI-Generated Image Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03862",
+    "arxiv_id": "2607.03862",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Texture Relations",
+      "Cross-Paradigm",
+      "Benchmark"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-beyond-heuristic-tuning-power-calibrated-llm-watermarking",
+    "title": "Beyond Heuristic Tuning: Power-Calibrated LLM Watermarking",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2607.05694",
+    "arxiv_id": "2607.05694",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Watermarking",
+      "Power Calibration",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Watermarking"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-synsfx-multi-model-sound-effects-synthesis-dataset-for-deepfake-detection-and-evaluation",
+    "title": "SynSFX: Multi-Model Sound Effects Synthesis Dataset for Deepfake Detection and Evaluation",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04848",
+    "arxiv_id": "2607.04848",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Text-to-Audio",
+      "Generalization"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-why-do-you-say-it-like-that-a-phoneme-level-framework-for-explainable-speech-deepfake-detection",
+    "title": "Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08586",
+    "arxiv_id": "2607.08586",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Explanation",
+      "Phoneme-Level",
+      "Grad-CAM"
+    ],
+    "tags": [
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-telescope-improving-zero-shot-detection-of-llm-generated-content-by-measuring-token-repetition-probability",
+    "title": "Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.04061",
+    "arxiv_id": "2607.04061",
+    "code_url": "https://github.com/ChrisNassif/Telescope",
+    "project_url": "",
+    "methods": [
+      "Zero-Shot",
+      "Token Repetition",
+      "LLM Detection"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-generalized-synthetic-image-detection-with-enhanced-rgb-noise-representation-learning",
+    "title": "Generalized Synthetic Image Detection with Enhanced RGB-Noise Representation Learning",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06354",
+    "arxiv_id": "2607.06354",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "RGB-Noise",
+      "CLIP",
+      "Contrastive Learning"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-ensemble-deep-learning-approaches-for-ai-altered-video-detection",
+    "title": "Ensemble Deep Learning Approaches for AI-Altered Video Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Video",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06872",
+    "arxiv_id": "2607.06872",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Ensemble",
+      "Audio-Visual",
+      "Generalization"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-do-transformations-reveal-the-truth-generative-residual-learning-for-generalized-ai-generated-image-detection",
+    "title": "Do Transformations Reveal the Truth? Generative Residual Learning for Generalized AI-Generated Image Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.08674",
+    "arxiv_id": "2607.08674",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Generative Residual",
+      "Transformations",
+      "Neural Tensor Network"
+    ],
+    "tags": [
+      "Classification"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-an-intervention-based-framework-for-shortcut-diagnosis-in-spoofing-countermeasures",
+    "title": "An Intervention-Based Framework for Shortcut Diagnosis in Spoofing Countermeasures",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "venue": "Odyssey",
+    "paper_url": "https://arxiv.org/abs/2607.03150",
+    "arxiv_id": "2607.03150",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Shortcut Learning",
+      "Intervention",
+      "Spoofing Countermeasures"
+    ],
+    "tags": [
+      "Diagnosis"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-selective-disclosure-watermarking-for-large-language-models",
+    "title": "Selective Disclosure Watermarking for Large Language Models",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "venue": "ICML",
+    "paper_url": "https://arxiv.org/abs/2607.05353",
+    "arxiv_id": "2607.05353",
+    "code_url": "https://github.com/xuyangc03/hero-watermark",
+    "project_url": "",
+    "methods": [
+      "Watermarking",
+      "Selective Disclosure",
+      "Metadata Verification"
+    ],
+    "tags": [
+      "Watermarking"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-a-unified-detection-framework-for-ai-related-content-and-artifacts",
+    "title": "A Unified Detection Framework for AI-Related Content and Artifacts",
+    "year": 2026,
+    "month": 7,
+    "area": "Text",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.07527",
+    "arxiv_id": "2607.07527",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Mahalanobis Distance",
+      "Robust Covariance",
+      "Unified Detection"
+    ],
+    "tags": [
+      "Classification",
+      "Watermarking"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-xplainverse-a-million-scale-benchmark-for-explainable-deepfake-detection",
+    "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03562",
+    "arxiv_id": "2607.03562",
+    "code_url": "https://github.com/Abhijeet8901/XPlainVerse-ACMChallenge",
+    "project_url": "https://huggingface.co/datasets/Abhijeet8901/XPlainVerse",
+    "methods": [
+      "Benchmark",
+      "Explanation",
+      "Human-Aligned Evaluation"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark",
+      "Explanation"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-detect-3b-omni-is-agnostic-of-content-and-demographics",
+    "title": "DETECT-3B-Omni is Agnostic of Content and Demographics",
+    "year": 2026,
+    "month": 7,
+    "area": "Audio",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.03418",
+    "arxiv_id": "2607.03418",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Bias Analysis",
+      "Demographic Robustness",
+      "Voice Cloning"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-abductive-corroboration-of-probabilistic-ai-models-for-forensic-synthetic-media-detection",
+    "title": "Abductive Corroboration of Probabilistic AI Models for Forensic Synthetic Media Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Multimodal",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.05434",
+    "arxiv_id": "2607.05434",
+    "code_url": "",
+    "project_url": "",
+    "methods": [
+      "Abductive Reasoning",
+      "Classifier Corroboration",
+      "SynthID Evaluation"
+    ],
+    "tags": [
+      "Classification",
+      "Provenance"
+    ],
+    "is_landmark": false,
+    "notes": ""
+  },
+  {
+    "id": "2026-vendorbench-100-a-unified-cross-paradigm-benchmark-for-deepfake-image-detection",
+    "title": "VendorBench-100: A Unified Cross-Paradigm Benchmark for Deepfake Image Detection",
+    "year": 2026,
+    "month": 7,
+    "area": "Image",
+    "venue": "arxiv",
+    "paper_url": "https://arxiv.org/abs/2607.06254",
+    "arxiv_id": "2607.06254",
+    "code_url": "https://github.com/sharayu-20/vendorbench-100",
+    "project_url": "",
+    "methods": [
+      "Benchmark",
+      "Commercial APIs",
+      "Vision-Language Models"
+    ],
+    "tags": [
+      "Classification",
+      "Benchmark"
+    ],
+    "is_landmark": false,
+    "notes": ""
   }
 ]
