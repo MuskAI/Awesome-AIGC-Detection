@@ -151,5 +151,14 @@
     "language": "-",
     "platform": "Web",
     "description": "Website"
+  },
+  {
+    "id": "mydentify-ai-watermark-and-claude-checker",
+    "name": "Mydentify AI Watermark and Claude Checker",
+    "category": "Online Detection Tools",
+    "url": "https://mydentify.com/tools/ai-watermark-detector",
+    "language": "-",
+    "platform": "Web",
+    "description": "Browser-based checker for observable Unicode artifacts and style clues in pasted text; it cannot verify Anthropic's private statistical watermark or prove authorship."
   }
 ]

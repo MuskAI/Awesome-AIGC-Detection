@@ -474,6 +474,7 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 | [Illuminarty](https://app.illuminarty.ai/) | - | Web | Website |
 | [Illuminet](https://illuminet.io) | - | Web | AI image verification |
 | [Is it AI?](https://isitai.com/ai-image-detector) | - | Web | Website |
+| [Mydentify AI Watermark and Claude Checker](https://mydentify.com/tools/ai-watermark-detector) | - | Web | Browser-based checker for observable Unicode artifacts and style clues in pasted text; it cannot verify Anthropic's private statistical watermark or prove authorship. |
 | [Tencent Zhuque AI Detection Assistant](https://matrix.tencent.com/ai-detect/ai_gen_txt) | - | Web | Website |
 | [TruthScan](https://truthscan.com/zh) | - | Web | Website |
 | [Winston AI](https://gowinston.ai/ai-image-detector/) | - | Web | Website |
