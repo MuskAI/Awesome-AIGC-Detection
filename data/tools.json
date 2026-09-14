@@ -151,5 +151,14 @@
     "language": "-",
     "platform": "Web",
     "description": "Website"
+  },
+  {
+    "id": "isthisaigenerated-app",
+    "name": "isthisaigenerated.app",
+    "category": "Online Detection Tools",
+    "url": "https://isthisaigenerated.app/",
+    "language": "-",
+    "platform": "Web/API",
+    "description": "Warning-only multimodal AI detection for images, sampled video, text and documents, with published measured limits"
   }
 ]

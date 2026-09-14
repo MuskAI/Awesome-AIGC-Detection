@@ -474,6 +474,7 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 | [Illuminarty](https://app.illuminarty.ai/) | - | Web | Website |
 | [Illuminet](https://illuminet.io) | - | Web | AI image verification |
 | [Is it AI?](https://isitai.com/ai-image-detector) | - | Web | Website |
+| [isthisaigenerated.app](https://isthisaigenerated.app/) | - | Web/API | Warning-only multimodal AI detection for images, sampled video, text and documents, with published measured limits |
 | [Tencent Zhuque AI Detection Assistant](https://matrix.tencent.com/ai-detect/ai_gen_txt) | - | Web | Website |
 | [TruthScan](https://truthscan.com/zh) | - | Web | Website |
 | [Winston AI](https://gowinston.ai/ai-image-detector/) | - | Web | Website |
