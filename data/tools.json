@@ -36,6 +36,15 @@
     "description": "AI image verification"
   },
   {
+    "id": "ai-image-detection-app",
+    "name": "AI Image Detection",
+    "category": "Online Detection Tools",
+    "url": "https://aiimagedetection.app/",
+    "language": "-",
+    "platform": "Web",
+    "description": "Reads C2PA Content Credentials first, then runs an AI image detector; answers Likely AI / Likely real / Can't tell with reasons, free daily checks"
+  },
+  {
     "id": "hive-ai-detector-extension",
     "name": "Hive AI Detector",
     "category": "Browser Extensions",
