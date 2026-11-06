@@ -467,6 +467,7 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 
 | Tool | Language | Platform | Description |
 | --- | --- | --- | --- |
+| [AI Image Detection](https://aiimagedetection.app/) | - | Web | Reads C2PA Content Credentials first, then runs an AI image detector; answers Likely AI / Likely real / Can't tell with reasons, free daily checks |
 | [AI or Not](https://aiornot.com) | - | Web | AI detection service |
 | [EyeSift](https://www.eyesift.com/) | - | Web | Free online AI text/image/video/audio detector with detailed per-model benchmarks |
 | [Hive AI Detection](https://hive.ai/detection) | - | Web/API | Video and image detection |
@@ -474,6 +475,7 @@ This repository is curated as a map, not just a shelf: use the routes below to j
 | [Illuminarty](https://app.illuminarty.ai/) | - | Web | Website |
 | [Illuminet](https://illuminet.io) | - | Web | AI image verification |
 | [Is it AI?](https://isitai.com/ai-image-detector) | - | Web | Website |
+| [Is This Song AI](https://isthissongai.app/) | - | Web | AI music detector for song links or audio files; combines audio signals, catalog information and platform labels and answers Likely AI / Likely human / Unclear with evidence |
 | [Tencent Zhuque AI Detection Assistant](https://matrix.tencent.com/ai-detect/ai_gen_txt) | - | Web | Website |
 | [TruthScan](https://truthscan.com/zh) | - | Web | Website |
 | [Winston AI](https://gowinston.ai/ai-image-detector/) | - | Web | Website |
