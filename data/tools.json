@@ -45,6 +45,15 @@
     "description": "Reads C2PA Content Credentials first, then runs an AI image detector; answers Likely AI / Likely real / Can't tell with reasons, free daily checks"
   },
   {
+    "id": "is-this-song-ai",
+    "name": "Is This Song AI",
+    "category": "Online Detection Tools",
+    "url": "https://isthissongai.app/",
+    "language": "-",
+    "platform": "Web",
+    "description": "AI music detector for song links or audio files; combines audio signals, catalog information and platform labels and answers Likely AI / Likely human / Unclear with evidence"
+  },
+  {
     "id": "hive-ai-detector-extension",
     "name": "Hive AI Detector",
     "category": "Browser Extensions",
